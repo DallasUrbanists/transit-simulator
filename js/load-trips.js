@@ -8,7 +8,7 @@ const dispatchProgress = () => {
 const dispatchFinished = () => window.dispatchEvent(new CustomEvent('loadFinished'));
 
 try {
-    const response = await fetch('../js/routes-output.json');
+    const response = await fetch('./js/routes-output.json');
     window.ROUTES = await response.json();
     progress++;
     dispatchProgress();
@@ -43,7 +43,7 @@ window.dispatchEvent(new CustomEvent('tripsLoaded'));
 progress++;
 dispatchProgress();
 try {
-    const response = await fetch('../js/trips-sorted-output.json');
+    const response = await fetch('./js/trips-sorted-output.json');
     const sortedTrips = await response.json();
     console.log(`Fetched sorted trips`);
     window.TRIP_SORT = sortedTrips;
