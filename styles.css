@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #555;
+}
+
+#viewport {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+}
+
+#style-select {
+    opacity: 0.75;
+    color: white;
+    background-color: #555;
+    position: fixed;
+    top: calc(50px + 1em);
+    right: 1em;
+    z-index: 1;
+    padding: 1em;
+    border-radius: 0.25em;
+}
+
+#style-select:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#map {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-height: 200px;
+    height: calc(100svh - 50px);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#playback-controls {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    background-color: #555;
+    color: #EEE;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+
+    button,
+    select,
+    option {
+        z-index: 1;
+        background-color: #555;
+        color: white;
+        border: none;
+        font-size: 16px;
+        padding: 0;
+        line-height: 50px;
+        height: 50px;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        opacity: 0.75;
+    }
+
+    #play-button img {
+        width: 50px;
+        height: 50px;
+        padding: 1em;
+    }
+
+    button {
+        text-transform: uppercase;
+        transition: 100ms all;
+
+        img {
+            transition: 100ms all;
+            scale: 1.25;
+        }
+    }
+
+    button:active img {
+        scale: 1;
+    }
+
+
+    button:hover,
+    select:hover,
+    option:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+}
+
+#progress-track {
+    position: relative;
+    height: 50px;
+    flex-grow: 1;
+    line-height: 50px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    background-color: #444;
+}
+
+#progress-track::after {
+    content: ' ';
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    z-index: 2;
+}
+
+#time-indicator {
+    opacity: 0.75;
+    text-align: center;
+    font-size: 26px;
+    margin-left: 16px;
+    z-index: 1;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#progress-bar {
+    top: 0;
+    height: 50px;
+    position: absolute;
+    background-color: #b31932;
+    display: block;
+    line-height: 50px;
+    content: '.';
+    z-index: 0;
+}
+
+.playing {
+    #style-select,
+    .leaflet-control-container {
+        display: none;
+    }
+    a[href="https://www.maptiler.com"] {
+    opacity: 0;
+}
+}
+
+#monitor {
+    border: solid 1px red;
+    overflow-y: scroll;
+    max-height: 200px;
+    display: block;
+    position: fixed;
+    background-color: white;
+    color: black;
+    left: 2em;
+    right: 2em;
+    bottom: 2em;
+    z-index: 999;
+    padding: 1em;
+    font-size: 10px;
+}
+
+.pulsing-element {
+    animation: pulse-glow 3s infinite ease-in-out;
+    /* Add other styles like background-color, width, height, border-radius */
+}
+
+.transit-icon {
+      font-family: "Doppio On", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #f2cc29;
+      color: #002b6f;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      display: block;
+      text-align: center;
+      line-height: 24px;
+      font-size: 12px;
+      /* font-weight: bold; */
+      background-size: contain;
+      background-position: center center;
+      filter: drop-shadow(0 0 1px #333);
+}
+.transit-icon.vehicle-R {
+    background-color: #ff495c;
+    color: #EEE;
+}
+.transit-icon.vehicle-B {
+    background-color: #2095d7;
+    color: #EEE;
+}
+.transit-icon.vehicle-O {
+    background-color: #f89d4f;
+    color: #333;
+}
+.transit-icon.vehicle-G {
+    background-color: #357e5a;
+    color: #EEE;
+}
+.transit-icon.vehicle-S {
+    background-color: silver;
+    color: #333;
+}
+.transit-icon.vehicle-TRE {
+    background-color: #002269;
+    border: solid 1px #ff2147;
+    background-image: url('/icons/tre.png');
+    font-size: 0;
+    color: #EEE;
+}
+.transit-icon.vehicle-M {
+    background-color: #6f1931;
+    background-image: url('/icons/mline.png');
+    font-size: 0;
+    color: #333;
+}
+.transit-icon.vehicle-DSC {
+    background-color: #DDD;
+    border: solid 1px #0a1f31;
+    background-image: url('/icons/streetcar.png');
+    font-size: 0;
+    color: #333;
+}
+
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px 2px rgba(255, 107, 107, 0.75);
+        filter: brightness(115%);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 7px rgba(255, 107, 107, 0);
+        filter: brightness(90%);
+    }
+}
+
+div#loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    h1 {
+        font-weight: bold;
+    }
+}
+
+.leaflet-container .leaflet-control-attribution {
+    opacity: 1;
+}
+
+a[href="https://www.maptiler.com"] {
+    opacity: 1;
+}
+
+.leaflet-map-pane svg {
+    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    z-index: 200;
+}

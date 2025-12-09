@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@turf/turf": "^7.3.1"
+  }
+}

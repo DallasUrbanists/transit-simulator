@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Render</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.umd.min.js"></script>
+  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.css" rel="stylesheet" />
+  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.0/leaflet-maptilersdk.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div id="loading">
+    <h1>Loading <span id="loading-progress"></span></h1>
+    <p>Please wait while trips are loading</p>
+  </div>
+  <div id="viewport">
+    <div id="playback-controls">
+      <button id="play-button"><img src="./icons/play.svg" alt="PLAY" /></button>
+      <div id="progress-track">
+        <div id="time-indicator"></div>
+        <div id="progress-bar"></div>
+      </div>
+      <select id="speed-select">
+        <option value="1">1x</option>
+        <option value="2">2x</option>
+        <option value="4">4x</option>
+        <option value="8" selected>8x</option>
+        <option value="16">16x</option>
+        <option value="32">32x</option>
+        <option value="64">64x</option>
+        <option value="128">128x</option>
+        <option value="256">256x</option>
+        <option value="512">512x</option>
+      </select>
+    </div>
+    <div id="map"></div>
+  </div>
+  <select id="style-select">
+    <optgroup label="Navigation and city exploration">
+      <option value="STREETS">STREETS</option>
+      <option value="STREETS.DARK">STREETS.DARK</option>
+      <option value="STREETS.LIGHT">STREETS.LIGHT</option>
+      <option value="STREETS.PASTEL">STREETS.PASTEL</option>
+    </optgroup>
+    <option value="OUTDOOR">OUTDOOR</option>
+    <option value="WINTER">WINTER</option>
+    <option value="SATELLITE">SATELLITE</option>
+    <option value="HYBRID" selected>HYBRID</option>
+    <optgroup label="Data visualization">
+      <option value="DATAVIZ">DATAVIZ</option>
+      <option value="DATAVIZ.DARK" selected>DATAVIZ.DARK</option>
+      <option value="DATAVIZ.LIGHT">DATAVIZ.LIGHT</option>
+    </optgroup>
+  </select>
+
+  <script src="./js/load-trips.js" type="module"></script>
+  <script src="./utilities.js"></script>
+  <script src="./app.js"></script>
+  <script>
+    const loadingScreen = document.getElementById('loading');
+    const loadProgress = document.getElementById('loading-progress');
+    const viewport = document.getElementById('viewport');
+    const playbackControls = document.getElementById('playback-controls');
+    const progressTrack = document.getElementById('progress-track');
+    const progressBar = document.getElementById('progress-bar');
+    const timeIndicator = document.getElementById('time-indicator');
+    const playButton = document.getElementById('play-button');
+    const playImg = playButton.querySelector('img');
+    const speedSelector = document.getElementById('speed-select');
+    const styleSelector = document.getElementById('style-select');
+    const secondsInDay = 60 * 60 * 24;
+
+    app.setPlayhead(getCurrentTimeInSeconds());
+    speedSelector.addEventListener('change', (e) => app.setPlaySpeed(e.target.value));
+    styleSelector.addEventListener('change', (e) => app.setMapStyle(e.target.value));
+    progressTrack.addEventListener('mousedown', (e) => {
+      handleScrub(e);
+      progressTrack.addEventListener('mousemove', handleScrub, true);
+    });
+    playButton.addEventListener('click', app.togglePlay);
+    window.addEventListener('mouseup', () => progressTrack.removeEventListener('mousemove', handleScrub, true));
+    window.addEventListener('playheadChanged', updateControlBar);
+    window.addEventListener('resize', updateControlBar);
+
+    updateControlBar();
+
+    window.addEventListener('loadProgress', (event) => {
+      loadProgress.innerText = event.detail + '%';
+    });
+    window.addEventListener('loadFinished', (event) => {
+      loadingScreen.style.display = 'none';
+    });
+
+    function handleScrub(event) {
+      const trackX = progressTrack.getBoundingClientRect().left;
+      const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
+      app.setPlayhead(secondsInDay * ratio);
+    }
+
+    function updateControlBar() {
+      const trackWidth = progressTrack.offsetWidth;
+      const progressRatio = Math.max(0, Math.min(window.playhead, secondsInDay) / secondsInDay);
+      const barWidth = trackWidth * progressRatio;
+      timeIndicator.innerText = convertSecondsToTimeString(window.playhead);
+      progressBar.style.width = barWidth + 'px';
+      if (app.isPlaying()) {
+        document.body.classList.add('playing');
+        progressBar.classList.add('pulsing-element');
+        playImg.src = './icons/pause.svg';
+      } else {
+        document.body.classList.remove('playing');
+        progressBar.classList.remove('pulsing-element');
+        playImg.src = './icons/play.svg';
+      }
+    }
+  </script>
+</body>
+
+</html>
