@@ -231,20 +231,20 @@ body {
 .transit-icon.vehicle-TRE {
     background-color: #002269;
     border: solid 1px #ff2147;
-    background-image: url('/icons/tre.png');
+    background-image: url('./icons/tre.png');
     font-size: 0;
     color: #EEE;
 }
 .transit-icon.vehicle-M {
     background-color: #6f1931;
-    background-image: url('/icons/mline.png');
+    background-image: url('./icons/mline.png');
     font-size: 0;
     color: #333;
 }
 .transit-icon.vehicle-DSC {
     background-color: #DDD;
     border: solid 1px #0a1f31;
-    background-image: url('/icons/streetcar.png');
+    background-image: url('./icons/streetcar.png');
     font-size: 0;
     color: #333;
 }
