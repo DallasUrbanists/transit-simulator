@@ -30,15 +30,15 @@ const app = ((settings) => {
             case 'R':
             case 'O':
             case 'G':
-                return { weight: 4, opacity: 1 };
+                return { weight: 8, opacity: 1 };
             case 'S':
             case 'TRE':
-                return { weight: 8, opacity: 1 };
+                return { weight: 12, opacity: 1 };
             case 'M':
             case 'DSC':
-                return { weight: 3, opacity: 0.75 };
+                return { weight: 6, opacity: 0.75 };
             default:
-                return { weight: 2, opacity: 0.75 };
+                return { weight: 4, opacity: 0.75 };
         }
     };
     const choosePane = (label) => {
@@ -254,8 +254,8 @@ const app = ((settings) => {
     defaultCoords: [32.780694233921906, -96.79930204561467],
     maptilerApiKey: '4I9PqHwTZ9xDdwVnOp74',
     defaultZoomLevel: 13,
-    defaultMapStyle: maptilersdk.MapStyle['DATAVIZ']['DARK'],
-    defaultPlaySpeed: 8
+    defaultMapStyle: maptilersdk.MapStyle['STREETS']['DARK'],
+    defaultPlaySpeed: 64
 });
 
 function labelSubstitution(string) {
