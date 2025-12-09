@@ -20,7 +20,7 @@ try {
 const tripsLoaded = [];
 console.log(`Loading trips...`);
 for (let a = 0; a < fileCount; a++) {
-    const filename = `../js/trips-output-${a}.json`;
+    const filename = `./js/trips-output-${a}.json`;
     progress++;
     dispatchProgress();
     try {
