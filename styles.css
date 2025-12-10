@@ -207,6 +207,12 @@ body {
       background-size: contain;
       background-position: center center;
       filter: drop-shadow(0 0 1px #333);
+      transition: opacity 250ms ease-in-out;
+      opacity: 0;
+}
+.transit-icon.parked {
+    background-color: black !important;
+    color: white !important;
 }
 .transit-icon.vehicle-R {
     background-color: #ff495c;

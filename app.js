@@ -1,3 +1,6 @@
+const MILE_IN_FEET = 5280;
+const MILE_IN_METERS = 1609.344;
+const END_OF_DAY = 60 * 60 * 24;
 const app = ((settings) => {
     const map = L.map('map').setView(settings.defaultCoords, settings.defaultZoomLevel);
     const busPane = map.createPane('busPane');
@@ -7,6 +10,8 @@ const app = ((settings) => {
     const tileLayer = L.maptiler.maptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle }).addTo(map);
     const activeTrips = {};
     const fadePile = [];
+    const parkedVehicles = new Map();
+    const allVehicles = L.layerGroup().addTo(map);
     const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
     const isPlaying = () => window.appIsPlaying === true;
     const setPlayhead = (seconds) => {
@@ -58,90 +63,183 @@ const app = ((settings) => {
                 return busPane;
         }
     };
-    const pulse = (timestamp) => {
-        const deltaMilliseconds = Math.max(0, timestamp - window.startTimestamp);
-        const deltaSeconds = (deltaMilliseconds * window.playSpeed) / 1000;
-        const newPlayhead = window.startPlayhead + deltaSeconds;
+    const chooseParkingRadius = (label) => {
+        switch (label) {
+            case 'M':
+            case 'DSC':
+                return MILE_IN_METERS;
+            case 'B':
+            case 'R':
+            case 'O':
+            case 'G':
+            case 'S':
+            case 'TRE':
+                return MILE_IN_METERS * 10;
+            default:
+                return MILE_IN_METERS * 3;
+        }
+    }
+    const choseParkedOpacity = (label) => {
+        switch (label) {
+            case 'M':
+            case 'DSC':
+            case 'B':
+            case 'R':
+            case 'O':
+            case 'G':
+            case 'S':
+            case 'TRE':
+                return 1;
+            default:
+                return 0.25;
+        }
+    };
+    const measureDistanceFeet = (latLng1, latLng2) => {
+        const lat = 0, lng = 1;
+        return turf.distance(
+            turf.point([latLng1[lng], latLng1[lat]]),
+            turf.point([latLng2[lng], latLng2[lat]]),
+            { units: 'feet' }
+        );
+    };
+    const clearParkedVehicles = () => {
+        for (const [key, value] of parkedVehicles) {
+            map.removeLayer(value);
+            parkedVehicles.delete(key);
+        }
+        parkedVehicles.clear();
+    };
+    const render = (targetPlayhead) => {
+        if (!window.TRIPS || !window.TRIP_SORT || !window.ROUTES) {
+            console.log('Not ready to render.');
+            return;
+        }
 
-        if (window.TRIPS && window.TRIP_SORT && window.ROUTES) {
-            const activeHour = getHourFromTimestamp(newPlayhead);
-            window.TRIP_SORT[activeHour]
-                .filter(trip => trip.startSeconds <= newPlayhead && trip.endSeconds >= newPlayhead)
-                .map(trip => {
-                    if (!trip.details) {
-                        trip.details = window.TRIPS.find(t => t.trip_id == trip.trip_id);
-                    }
-                    // Ignore weekend service trips
-                    if (['3', '4'].includes(trip.details.service_id)) {
-                        return;
-                    }
-                    if (!activeTrips[trip.trip_id]) {
-                        activeTrips[trip.trip_id] = trip;
-                    }
-                    if (!trip.route) {
-                        trip.route = window.ROUTES.find(r => r.id == trip.details.route_id);
-                    }
-                });
-            for (let tripId in activeTrips) {
-                const trip = activeTrips[tripId];
-                if (!trip) {
-                    continue;
+        const activeHour = getHourFromTimestamp(targetPlayhead);
+        window.TRIP_SORT[activeHour]
+            .filter(trip => trip.startSeconds <= targetPlayhead && trip.endSeconds >= targetPlayhead)
+            .map(trip => {
+                if (!trip.details) {
+                    trip.details = window.TRIPS.find(t => t.trip_id == trip.trip_id);
                 }
-                if (newPlayhead < trip.startSeconds || newPlayhead > trip.endSeconds) {
-                    trip.history = [];
+                // Ignore weekend service trips
+                if (['3', '4'].includes(trip.details.service_id)) {
+                    return;
+                }
+                if (!activeTrips[trip.trip_id]) {
+                    activeTrips[trip.trip_id] = trip;
+                }
+                if (!trip.route) {
+                    trip.route = window.ROUTES.find(r => r.id == trip.details.route_id);
+                }
+            });
+        for (let tripId in activeTrips) {
+            const trip = activeTrips[tripId];
+            if (!trip) {
+                continue;
+            }
+            if (targetPlayhead < trip.startSeconds || targetPlayhead > trip.endSeconds) {
+                if (isPlaying()) {
                     if (trip.marker) {
-                        map.removeLayer(trip.marker);
+                        if (!parkedVehicles.has(trip.label)) {
+                            parkedVehicles.set(trip.label, [trip.marker]);
+                        } else {
+                            const parkedForTrip = parkedVehicles.get(trip.label);
+                            parkedForTrip.push(trip.marker);
+                        }
+                        trip.marker.setOpacity(targetPlayhead > END_OF_DAY ? 0 : choseParkedOpacity(trip.label));
+                        trip.marker.parkingStart = targetPlayhead;
                         trip.marker = null;
                     }
                     if (trip.tail) {
                         fadePile.push(trip.tail);
                         trip.tail = null;
                     }
-                    activeTrips[tripId] = null;
-                    continue;
+                } else {
+                    if (trip.marker) {
+                        map.removeLayer(trip.marker);
+                        delete trip.marker;
+                    }
+                    if (trip.tail) {
+                        map.removeLayer(trip.tail);
+                        delete trip.tail;
+                    }
                 }
-                const segments = trip.details.trip_segments;
-                if (!trip.label) {
-                    trip.label = labelSubstitution(trip.route.short_name);
-                }
+                trip.history = [];
+                activeTrips[tripId] = null;
+                continue;
+            }
+            const segments = trip.details.trip_segments;
+            if (!trip.label) {
+                trip.label = labelSubstitution(trip.route.short_name);
+            }
+            if (!trip.marker) {
+                const firstPosition = segments[0].geometry.coordinates[0];
+                const latLng = latLngFromCoord(firstPosition);
+
+                // Check if there's a nearby parked vehicle for this trip
+                const parkedForTrip = parkedVehicles.get(trip.label) ?? [];
+                let nearestParked = null;
+                parkedForTrip.forEach((parkedMarker, index) => {
+                    if (nearestParked || !parkedMarker) return;
+                    const distanceMeters = map.distance(latLng, parkedMarker.getLatLng());
+                    if (distanceMeters <= chooseParkingRadius(trip.label)) {
+                        nearestParked = parkedMarker;
+                        parkedForTrip.splice(index, 1);
+                        trip.marker = nearestParked;
+                        trip.marker.setOpacity(1);
+                        //const className = 'transit-icon vehicle-' + trip.label;
+                        //const icon = L.divIcon({ className, html: trip.label, iconSize: [24, 24] });
+                        //trip.marker.setIcon(icon);
+                    }
+                });
                 if (!trip.marker) {
-                    const firstPosition = segments[0].geometry.coordinates[0];
-                    const latLng = latLngFromCoord(firstPosition);
                     const className = 'transit-icon vehicle-' + trip.label;
                     const icon = L.divIcon({ className, html: trip.label, iconSize: [24, 24] });
-                    //console.log(choosePane(trip.label));
-                    trip.marker = L.marker(latLng, { icon, pane: choosePane(trip.label) }).addTo(map);
+                    trip.marker = L.marker(latLng, { icon, pane: choosePane(trip.label) }).addTo(allVehicles);
+                    trip.marker.type = 'vehicle';
+                    trip.marker.label = trip.label;
+                    trip.marker.setOpacity(1);
                 }
-                if (!trip.history) {
-                    const first = trip.marker.getLatLng();
-                    trip.history = [[first.lat, first.lng]];
-                }
-                const minTailLength = 4;
+            }
+            if (!trip.history) {
+                trip.history = [];
+            }
+            if (isPlaying()) {
+                const minTailLength = 8;
                 const maxTailLength = Math.round(8192 / window.playSpeed);
+                const maxTailEndLength = MILE_IN_FEET;
                 if (trip.history.length > maxTailLength) {
                     trip.history = trip.history.slice(maxTailLength * -1);
                 }
                 if (trip.history.length >= minTailLength) {
                     try {
-                        const tailLength = turf.distance(
-                            turf.point([trip.history[0][1], trip.history[0][0]]),
-                            turf.point([trip.history[2][1], trip.history[2][0]]),
-                            { units: 'feet' }
-                        );
-                        // If the base of tail is more than a mile long, it's probably due to an awkward jump from terminal to terminal
-                        // We don't want tails like this, so reset history before drawing tail
-                        if (tailLength > 5280) {
+                        // If either end of tail is more than a few miles long, it's probably due to an awkward jump
+                        // We want to prevent this by resetting history when either end becomes too long
+                        const indexA = trip.history.length - 1;
+                        const positionA = trip.history[indexA];
+                        const positionB = trip.history[indexA - 1];
+                        const tailLengthAB = measureDistanceFeet(positionA, positionB);
+                        if (tailLengthAB > maxTailEndLength) {
                             trip.history = [];
                         } else {
-                            if (!trip.tail) {
-                                const { weight, opacity } = chooseStyle(trip.label);
-                                trip.tail = L.polyline(trip.history, {
-                                    color: `#${trip.route.color}`,
-                                    weight,
-                                    opacity,
-                                }).addTo(map);
+                            const positionC = trip.history[1];
+                            const positionD = trip.history[0];
+                            const tailLengthCD = measureDistanceFeet(positionC, positionD);
+                            if (tailLengthCD > maxTailEndLength) {
+                                trip.history = [];
                             } else {
-                                trip.tail.setLatLngs(trip.history);
+                                if (!trip.tail) {
+                                    const { weight, opacity } = chooseStyle(trip.label);
+                                    trip.tail = L.polyline(trip.history, {
+                                        color: `#${trip.route.color}`,
+                                        weight,
+                                        opacity,
+                                    }).addTo(map);
+                                    trip.tail.type = 'tail';
+                                } else {
+                                    trip.tail.setLatLngs(trip.history);
+                                }
                             }
                         }
                     } catch (e) {
@@ -149,30 +247,41 @@ const app = ((settings) => {
                         console.log(trip.history);
                     }
                 }
+            } else {
+                if (trip.tail) {
+                    fadePile.push(trip.tail);
+                    trip.tail = null;
+                }
+                trip.history = [];
+            }
 
-                for (let i=0; i<segments.length; i++) {
-                    const segment = segments[i];
-                    const startSec = segment.properties.startSeconds;
-                    const endSec = segment.properties.endSeconds;
-                    const duration = segment.properties.durationSeconds;
-                    const distance = segment.properties.distanceFeet;
-                    if (newPlayhead <= startSec) {
-                        const newPos = latLngFromCoord(firstCoord(segment));
-                        trip.marker.setLatLng(newPos);
+            for (let i = 0; i < segments.length; i++) {
+                const segment = segments[i];
+                const startSec = segment.properties.startSeconds;
+                const endSec = segment.properties.endSeconds;
+                const duration = segment.properties.durationSeconds;
+                const distance = segment.properties.distanceFeet;
+                if (targetPlayhead <= startSec) {
+                    const newPos = latLngFromCoord(firstCoord(segment));
+                    trip.marker.setLatLng(newPos);
+                    if (isPlaying()) {
                         trip.history.push(newPos);
-                        break;
                     }
-                    if (newPlayhead <= endSec) {
-                        const elapsedSeconds = newPlayhead - startSec;
-                        const elapsedRatio = elapsedSeconds / duration;
-                        const elapsedDistance = distance * elapsedRatio;
-                        const newPos = turf.flip(
-                            turf.along(segment, elapsedDistance, { units: 'feet' })
-                        ).geometry.coordinates;
-                        trip.marker.setLatLng(newPos);
+                    break;
+                }
+                if (targetPlayhead <= endSec) {
+                    const elapsedSeconds = targetPlayhead - startSec;
+                    const elapsedRatio = elapsedSeconds / duration;
+                    const easedRatio = easeInOutCubic(elapsedRatio);
+                    const elapsedDistance = distance * easedRatio;
+                    const newPos = turf.flip(
+                        turf.along(segment, elapsedDistance, { units: 'feet' })
+                    ).geometry.coordinates;
+                    trip.marker.setLatLng(newPos);
+                    if (isPlaying()) {
                         trip.history.push(newPos);
-                        break;
                     }
+                    break;
                 }
             }
         }
@@ -181,18 +290,85 @@ const app = ((settings) => {
             if (!layer) {
                 return;
             }
-            const latLngs = layer.getLatLngs();
-            if (latLngs.length <= 5) {
+            if (!isPlaying()) {
                 map.removeLayer(layer);
                 fadePile.splice(index, 1);
-            } else {
-                latLngs.shift();
-                layer.setLatLngs(latLngs);
+                return;
+            }
+            switch (layer.type) {
+                case 'tail':
+                    const latLngs = layer.getLatLngs();
+                    if (latLngs.length <= 5) {
+                        map.removeLayer(layer);
+                        fadePile.splice(index, 1);
+                    } else {
+                        latLngs.shift();
+                        layer.setLatLngs(latLngs);
+                    }
+                    break;
+                case 'vehicle':
+                    const secondsInPile = targetPlayhead - layer.timeOfEnd;
+                    const secondsToFade = 2 * window.playSpeed;
+                    if (secondsInPile >= secondsToFade) {
+                        map.removeLayer(layer);
+                        fadePile.splice(index, 1);
+                    } else {
+                        layer.setOpacity(easeOutQuad(1 - secondsInPile / secondsToFade));
+                    }
+                    break;
+                default:
+                    fadePile.splice(index, 1);
+                    map.removeLayer(layer);
+                    break;
             }
         });
 
-        setPlayhead(newPlayhead);
-        window.appAnimation = requestAnimationFrame(pulse);
+        for (const [key, markers] of parkedVehicles) {
+            markers.forEach(marker => {
+                const timeParked = targetPlayhead - marker.parkingStart;
+                const maxParkedTime = 4 * window.playSpeed;
+                if (timeParked > maxParkedTime || timeParked < 0) {
+                    marker.setOpacity(0);
+                    setTimeout(() => {
+                        map.removeLayer(marker);
+                        parkedVehicles.delete(key);
+                    }, 2000);
+                }
+            });
+        }
+    };
+    const emptyHours = new Set();
+    const pulse = (timestamp) => {
+        const deltaMilliseconds = Math.max(0, timestamp - window.startTimestamp);
+        const deltaSeconds = (deltaMilliseconds * window.playSpeed) / 1000;
+        let newPlayhead = window.startPlayhead + deltaSeconds;
+        const activeTripCount = Object.values(activeTrips).filter(t => t).length;
+        const activeHour = getHourFromTimestamp(newPlayhead);
+
+        render(newPlayhead);
+
+        // If last render resulted in zero empty trips and is past midnight
+        // Then reset the clock to restart animation from the beginning on next pulse
+        if (newPlayhead > END_OF_DAY && activeTripCount === 0) {
+            clearParkedVehicles();
+            allVehicles.clearLayers();
+            if (!emptyHours.has(activeHour)) {
+                emptyHours.add(activeHour);
+            }
+        }
+        if (emptyHours.size > 1) {
+            newPlayhead = newPlayhead - END_OF_DAY;
+            window.startTimestamp = timestamp;
+            window.startPlayhead = newPlayhead;
+            setPlayhead(newPlayhead);
+            emptyHours.clear();
+        } else {
+            setPlayhead(newPlayhead);
+        }
+
+        if (isPlaying()) {
+            window.appAnimation = requestAnimationFrame(pulse);
+        }
     };
     const startPlayback = () => {
         window.appIsPlaying = true;
@@ -206,41 +382,24 @@ const app = ((settings) => {
         window.cancelAnimationFrame(window.appAnimation);
         dispatchUpdate();
     };
-    const initiateTrip = (trip) => {
-        const route = window.ROUTES.find(r => r.id == trip.route_id);
-        const latLng = findCurrentTripLatLng(trip);
-        const icon = L.divIcon({
-            className: 'transit-icon',
-            html: route.short_name,
-            iconSize: [24, 24],
-        });
-        try {
-            const marker = L.marker(latLng, { icon }).addTo(map);
-            tripMarkers.set(trip.trip_id, marker);
-        } catch (e) {
-            console.log([route, latLng, trip]);
-            console.error(e);
-        }
-    };
-    const deactivateTrip = (trip_id) => {
-        const marker = tripMarkers.get(trip_id);
-        map.removeLayer(marker);
-        tripMarkers.delete(trip_id);
-    };
-    const moveMarkers = () => {
-
+    const scrub = (newPlayhead) => {
+        stopPlayback();
+        clearParkedVehicles();
+        setPlayhead(newPlayhead);
+        render(newPlayhead);
     };
 
     window.playhead = 0;
     window.playSpeed = settings.defaultPlaySpeed;
 
     return {
+        render,
         isPlaying,
         setPlayhead,
         setPlaySpeed,
-        initiateTrip,
-        deactivateTrip,
-        moveMarkers,
+        scrub,
+        startPlayback,
+        stopPlayback,
         togglePlay: () => isPlaying() ? stopPlayback() : startPlayback(),
         setMapStyle: (style) => {
             const style_code = style.split(".");
@@ -255,7 +414,8 @@ const app = ((settings) => {
     maptilerApiKey: '4I9PqHwTZ9xDdwVnOp74',
     defaultZoomLevel: 13,
     defaultMapStyle: maptilersdk.MapStyle['STREETS']['DARK'],
-    defaultPlaySpeed: 64
+    defaultPlaySpeed: 64,
+    vehicleFadeTTL: 10000,
 });
 
 function labelSubstitution(string) {
@@ -277,14 +437,13 @@ function findCurrentTripLatLng(trip) {
     });
 
     if (!currentSegment) {
-        console.log([trip.trip_segments.map(seg => [seg.properties.startSeconds, seg.properties.endSeconds]), window.playhead]);
         console.error('segment not found');
         return null;
     }
 
     const elapsedSeconds = window.playhead - currentSegment.properties.startSeconds;
     const elapsedRatio = elapsedSeconds / currentSegment.properties.durationSeconds;
-    const elapsedDistance =  currentSegment.properties.distanceFeet * elapsedRatio;
+    const elapsedDistance = currentSegment.properties.distanceFeet * elapsedRatio;
     const point = turf.along(currentSegment, elapsedDistance, { units: 'feet' });
     return turf.flip(point).geometry.coordinates;
 }
@@ -299,4 +458,11 @@ function firstCoord(feature) {
 
 function lastCoord(feature) {
     return feature.geometry.coordinates[feature.geometry.coordinates.length - 1];
+}
+
+function easeOutQuad(x) {
+    return 1 - (1 - x) * (1 - x);
+}
+function easeInOutCubic(x) {
+    return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 }
