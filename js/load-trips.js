@@ -1,4 +1,4 @@
-const fileCount = 44;
+const fileCount = 10;
 const totalSteps = fileCount + 2;
 let progress = 0;
 const dispatchProgress = () => {

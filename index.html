@@ -5,12 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transit Simulator (BETA)</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.umd.min.js"></script>
-  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.css" rel="stylesheet" />
-  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.0/leaflet-maptilersdk.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -61,106 +55,7 @@
 
   <script src="./js/load-trips.js" type="module"></script>
   <script src="./utilities.js"></script>
-  <script src="./app.js"></script>
-  <script>
-    const loadingScreen = document.getElementById('loading');
-    const loadProgress = document.getElementById('loading-progress');
-    const viewport = document.getElementById('viewport');
-    const playbackControls = document.getElementById('playback-controls');
-    const progressTrack = document.getElementById('progress-track');
-    const progressBar = document.getElementById('progress-bar');
-    const timeIndicator = document.getElementById('time-indicator');
-    const playButton = document.getElementById('play-button');
-    const playImg = playButton.querySelector('img');
-    const speedSelector = document.getElementById('speed-select');
-    const styleSelector = document.getElementById('style-select');
-    const secondsInDay = 60 * 60 * 24;
-    let wasPlayingEarlier = false;
-    let scrubInterval = null;
-
-    speedSelector.addEventListener('change', (e) => app.setPlaySpeed(e.target.value));
-    styleSelector.addEventListener('change', (e) => app.setMapStyle(e.target.value));
-    progressTrack.addEventListener('mousedown', (e) => {
-      if (app.isPlaying()) { wasPlayingEarlier = true; }
-      handleScrub(e);
-      progressTrack.addEventListener('mousemove', handleScrubTimed, true);
-    });
-    window.addEventListener('mouseup', () => {
-      if (scrubInterval) {
-        clearInterval(scrubInterval);
-      }
-      if (wasPlayingEarlier === true && app.isPlaying() === false) {
-        document.querySelectorAll('.transit-icon').forEach(marker => {
-          marker.style.transition = "inherit";
-        });
-        wasPlayingEarlier = false;
-        app.togglePlay();
-      }
-      progressTrack.removeEventListener('mousemove', handleScrubTimed, true);
-    });
-    playButton.addEventListener('click', () => {
-      document.querySelectorAll('.transit-icon').forEach(marker => {
-        marker.style.transition = "inherit";
-      });
-      app.togglePlay();
-    });
-    window.addEventListener('playheadChanged', () => updateControlBar());
-    window.addEventListener('resize', () => updateControlBar());
-    window.addEventListener('loadProgress', (event) => loadProgress.innerText = event.detail + '%' );
-    window.addEventListener('loadFinished', (event) => {
-      app.scrub(window.playhead);
-      loadingScreen.style.display = 'none';
-      updateControlBar();
-    });
-
-    app.setPlayhead(getCurrentTimeInSeconds());
-    app.setPlayhead(getCurrentTimeInSeconds());
-    app.scrub(window.playhead);
-    updateControlBar();
-
-    function handleScrub(event) {
-      const trackX = progressTrack.getBoundingClientRect().left;
-      const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
-      const newPlayhead = secondsInDay * ratio;
-      document.querySelectorAll('.transit-icon').forEach(marker => {
-        marker.style.transition = "all 2s";
-      });
-      app.scrub(newPlayhead);
-      document.querySelectorAll('.transit-icon').forEach(marker => {
-        marker.style.transition = "all 2s";
-      });
-      updateControlBar(newPlayhead);
-    }
-
-    function handleScrubTimed(event) {
-      if (scrubInterval) {
-        clearInterval(scrubInterval);
-      }
-      const trackX = progressTrack.getBoundingClientRect().left;
-      const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
-      const newPlayhead = secondsInDay * ratio;
-      updateControlBar(newPlayhead);
-      scrubInterval = setInterval(() => handleScrub(event), 100);
-    }
-
-    function updateControlBar(newPlayhead = null) {
-      const targetPlayhead = newPlayhead === null ? window.playhead : newPlayhead;
-      const trackWidth = progressTrack.offsetWidth;
-      const progressRatio = Math.max(0, Math.min(targetPlayhead, secondsInDay) / secondsInDay);
-      const barWidth = trackWidth * progressRatio;
-      timeIndicator.innerText = convertSecondsToTimeString(parseInt(targetPlayhead));
-      progressBar.style.width = barWidth + 'px';
-      if (app.isPlaying()) {
-        document.body.classList.add('playing');
-        progressBar.classList.add('pulsing-element');
-        playImg.src = './icons/pause.svg';
-      } else {
-        document.body.classList.remove('playing');
-        progressBar.classList.remove('pulsing-element');
-        playImg.src = './icons/play.svg';
-      }
-    }
-  </script>
+  <script type="module" src="./app.js"></script>
 </body>
 
 </html>
