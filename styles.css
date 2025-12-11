@@ -209,6 +209,7 @@ body {
       filter: drop-shadow(0 0 1px #333);
       transition: opacity 250ms ease-in-out;
       opacity: 0;
+      overflow: hidden;
 }
 .transit-icon.parked {
     background-color: black !important;
@@ -297,5 +298,38 @@ a[href="https://www.maptiler.com"] {
 
 .leaflet-map-pane svg {
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
-    z-index: 200;
+    /* z-index: 200; */
+}
+
+.leaflet-map-pane svg .tail-TRE,
+.leaflet-map-pane svg .tail-M,
+.leaflet-map-pane svg .tail-S,
+.leaflet-map-pane svg .tail-DSC {
+    filter: drop-shadow(0px 0px 1px white);
+}
+
+.leaflet-pane.leaflet-bus-pane {
+    z-index: 410;
+}
+.leaflet-pane.leaflet-lightRail-pane {
+    z-index: 430;
+}
+.leaflet-pane.leaflet-commuterRail-pane {
+    z-index: 440;
+}
+.leaflet-pane.leaflet-streetcar-pane {
+    z-index: 420;
+}
+
+.leaflet-pane.leaflet-busPaths-pane {
+    z-index: 310;
+}
+.leaflet-pane.leaflet-lightRailPaths-pane {
+    z-index: 415;
+}
+.leaflet-pane.leaflet-commuterRailPaths-pane {
+    z-index: 425;
+}
+.leaflet-pane.leaflet-streetcarPaths-pane {
+    z-index: 320;
 }

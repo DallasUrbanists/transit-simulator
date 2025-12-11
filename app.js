@@ -4,13 +4,17 @@ const END_OF_DAY = 60 * 60 * 24;
 const app = ((settings) => {
     const map = L.map('map').setView(settings.defaultCoords, settings.defaultZoomLevel);
     const busPane = map.createPane('busPane');
+    const busPathsPane = map.createPane('busPathsPane');
     const lightRailPane = map.createPane('lightRailPane');
+    const lightRailPathsPane = map.createPane('lightRailPathsPane');
     const commuterRailPane = map.createPane('commuterRailPane');
+    const commuterRailPathsPane = map.createPane('commuterRailPathsPane');
     const streetcarPane = map.createPane('streetcarPane');
+    const streetcarPathsPane = map.createPane('streetcarPathsPane');
     const tileLayer = L.maptiler.maptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle }).addTo(map);
     const activeTrips = {};
     const fadePile = [];
-    const parkedVehicles = new Map();
+    //const parkedVehicles = new Map();
     const allVehicles = L.layerGroup().addTo(map);
     const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
     const isPlaying = () => window.appIsPlaying === true;
@@ -63,37 +67,71 @@ const app = ((settings) => {
                 return busPane;
         }
     };
-    const chooseParkingRadius = (label) => {
+    const choosePathsPane = (label) => {
         switch (label) {
-            case 'M':
-            case 'DSC':
-                return MILE_IN_METERS;
             case 'B':
             case 'R':
             case 'O':
             case 'G':
+                return 'lightRailPathsPane';
             case 'S':
             case 'TRE':
-                return MILE_IN_METERS * 10;
-            default:
-                return MILE_IN_METERS * 3;
-        }
-    }
-    const choseParkedOpacity = (label) => {
-        switch (label) {
+                return 'commuterRailPathsPane';
             case 'M':
             case 'DSC':
-            case 'B':
-            case 'R':
-            case 'O':
-            case 'G':
-            case 'S':
-            case 'TRE':
-                return 1;
+                return 'streetcarPathsPane';
             default:
-                return 0.25;
+                return 'busPathsPane';
         }
     };
+    const chooseMarkerClassName = (label) => {
+        switch (label) {
+            case 'B':
+            case 'R':
+            case 'O':
+            case 'G':
+                return 'light-rail train rail';
+            case 'S':
+            case 'TRE':
+                return 'commuter-rail train rail';
+            case 'M':
+            case 'DSC':
+                return 'streetcar rail';
+            default:
+                return 'bus';
+        }
+    };
+    // const chooseParkingRadius = (label) => {
+    //     switch (label) {
+    //         case 'M':
+    //         case 'DSC':
+    //             return MILE_IN_METERS;
+    //         case 'B':
+    //         case 'R':
+    //         case 'O':
+    //         case 'G':
+    //         case 'S':
+    //         case 'TRE':
+    //             return MILE_IN_METERS * 10;
+    //         default:
+    //             return MILE_IN_METERS * 3;
+    //     }
+    // };
+    // const chooseParkedOpacity = (label) => {
+    //     switch (label) {
+    //         case 'M':
+    //         case 'DSC':
+    //         case 'B':
+    //         case 'R':
+    //         case 'O':
+    //         case 'G':
+    //         case 'S':
+    //         case 'TRE':
+    //             return 1;
+    //         default:
+    //             return 0.25;
+    //     }
+    // };
     const measureDistanceFeet = (latLng1, latLng2) => {
         const lat = 0, lng = 1;
         return turf.distance(
@@ -102,48 +140,48 @@ const app = ((settings) => {
             { units: 'feet' }
         );
     };
-    const clearParkedVehicles = () => {
-        for (const [key, value] of parkedVehicles) {
-            map.removeLayer(value);
-            parkedVehicles.delete(key);
-        }
-        parkedVehicles.clear();
-    };
-    const findNearestParked = (tripLabel, latLng) => {
-        const parkedForTrip = parkedVehicles.get(tripLabel) ?? [];
-        for (let i = 0; i < parkedForTrip.length; i++) {
-            const parkedMarker = parkedForTrip[i];
-            const distanceMeters = map.distance(latLng, parkedMarker.getLatLng());
-            if (distanceMeters <= chooseParkingRadius(tripLabel)) {
-                return parkedMarker;
-            }
-        }
-        return undefined;
-    };
-    const parkVehicle = (tripLabel, marker) => {
-        if (!parkedVehicles.has(tripLabel)) {
-            parkedVehicles.set(tripLabel, []);
-        }
-        parkedVehicles.get(tripLabel).push(marker);
-        const parkedForTrip = parkedVehicles.get(tripLabel);
-        console.log(parkedForTrip.length);
-        if (parkedForTrip.length > 2) {
-            parkedVehicles.set(tripLabel, parkedForTrip.slice(-2));
-        }
-        console.log(parkedVehicles.get(tripLabel).length);
-        if (window.playhead > END_OF_DAY) {
-            marker.setOpacity(0);
-        } else {
-            marker.setOpacity(choseParkedOpacity(tripLabel));
-        }
-        marker.parkingStart = window.playhead;
-    };
-    const unparkVehicle = (tripLabel, marker) => {
-        const parked = parkedVehicles.get(tripLabel);
-        if (parked) {
-            parkedVehicles.set(tripLabel, parked.filter(m => m != marker));
-        }
-    };
+    // const clearParkedVehicles = () => {
+    //     for (const [key, value] of parkedVehicles) {
+    //         map.removeLayer(value);
+    //         parkedVehicles.delete(key);
+    //     }
+    //     parkedVehicles.clear();
+    // };
+    // const findNearestParked = (tripLabel, latLng) => {
+    //     const parkedForTrip = parkedVehicles.get(tripLabel) ?? [];
+    //     for (let i = 0; i < parkedForTrip.length; i++) {
+    //         const parkedMarker = parkedForTrip[i];
+    //         const distanceMeters = map.distance(latLng, parkedMarker.getLatLng());
+    //         if (distanceMeters <= chooseParkingRadius(tripLabel)) {
+    //             return parkedMarker;
+    //         }
+    //     }
+    //     return undefined;
+    // };
+    // const parkVehicle = (tripLabel, marker) => {
+    //     if (!parkedVehicles.has(tripLabel)) {
+    //         parkedVehicles.set(tripLabel, []);
+    //     }
+    //     parkedVehicles.get(tripLabel).push(marker);
+    //     const parkedForTrip = parkedVehicles.get(tripLabel);
+    //     console.log(parkedForTrip.length);
+    //     if (parkedForTrip.length > 2) {
+    //         parkedVehicles.set(tripLabel, parkedForTrip.slice(-2));
+    //     }
+    //     console.log(parkedVehicles.get(tripLabel).length);
+    //     if (window.playhead > END_OF_DAY) {
+    //         marker.setOpacity(0);
+    //     } else {
+    //         marker.setOpacity(chooseParkedOpacity(tripLabel));
+    //     }
+    //     marker.parkingStart = window.playhead;
+    // };
+    // const unparkVehicle = (tripLabel, marker) => {
+    //     const parked = parkedVehicles.get(tripLabel);
+    //     if (parked) {
+    //         parkedVehicles.set(tripLabel, parked.filter(m => m != marker));
+    //     }
+    // };
     const render = (targetPlayhead) => {
         if (!window.TRIPS || !window.TRIP_SORT || !window.ROUTES) {
             console.log('Not ready to render.');
@@ -224,7 +262,7 @@ const app = ((settings) => {
                 if (trip.shadow) {
                     trip.shadow.setOpacity(0);
                 }
-                const className = 'transit-icon vehicle-' + trip.label;
+                const className = `transit-icon vehicle-${trip.label} ${chooseMarkerClassName(trip.label)}`;
                 const icon = L.divIcon({ className, html: trip.label, iconSize: [24, 24] });
                 trip.marker = L.marker(latLng, { icon, pane: choosePane(trip.label) }).addTo(allVehicles);
                 trip.marker.type = 'vehicle';
@@ -261,10 +299,13 @@ const app = ((settings) => {
                             } else {
                                 if (!trip.tail) {
                                     const { weight, opacity } = chooseStyle(trip.label);
+                                    const pathPane = choosePathsPane(trip.label);
                                     trip.tail = L.polyline(trip.history, {
+                                        className: `tail-${trip.label} ${chooseMarkerClassName(trip.label)}`,
                                         color: `#${trip.route.color}`,
                                         weight,
                                         opacity,
+                                        pane: pathPane
                                     }).addTo(map);
                                     trip.tail.type = 'tail';
                                 } else {
@@ -394,7 +435,7 @@ const app = ((settings) => {
         // If last render resulted in zero empty trips and is past midnight
         // Then reset the clock to restart animation from the beginning on next pulse
         if (newPlayhead > END_OF_DAY && activeTripCount === 0) {
-            clearParkedVehicles();
+            // clearParkedVehicles();
             allVehicles.clearLayers();
             if (!emptyHours.has(activeHour)) {
                 emptyHours.add(activeHour);
@@ -428,7 +469,7 @@ const app = ((settings) => {
     };
     const scrub = (newPlayhead) => {
         stopPlayback();
-        clearParkedVehicles();
+        //clearParkedVehicles();
         setPlayhead(newPlayhead);
         render(newPlayhead);
     };
@@ -436,10 +477,40 @@ const app = ((settings) => {
     window.playhead = 0;
     window.playSpeed = settings.defaultPlaySpeed;
 
-    // Perform clean up every 5 seconds
-    setInterval(() => {
-        // Make sure no vehicle has more than 
-    }, 5000);
+    const px = (n) => `${n}px`;
+
+    const handleZoomScaling = () => {
+        const currentZoom = map.getZoom();
+        const busIcons = document.querySelectorAll('.transit-icon.bus, .transit-icon.streetcar');
+        const lightRailPathPane = document.querySelector('.leaflet-pane.leaflet-lightRailPaths-pane');
+        const commuterRailPathPane = document.querySelector('.leaflet-pane.leaflet-commuterRailPaths-pane');
+        if (currentZoom < 12) {
+            lightRailPathPane.style.zIndex = 415;
+            commuterRailPathPane.style.zIndex = 420;
+        } else {
+            lightRailPathPane.style.zIndex = 315;
+            commuterRailPathPane.style.zIndex = 320;
+        }
+        busIcons.forEach(icon => {
+            let iconSize, fontSize;
+            if (currentZoom < 12) {
+                iconSize = 12;
+                fontSize = 7;
+            } else {
+                iconSize = 24;
+                fontSize = 12;
+            }
+            icon.style.width = px(iconSize);
+            icon.style.height = px(iconSize);
+            icon.style.fontSize = px(fontSize);
+            icon.style.lineHeight = px(iconSize);
+            icon.style.marginLeft = px(iconSize / -2);
+            icon.style.marginTop = px(iconSize / -2);
+        });
+    };
+
+    map.on('zoomend', handleZoomScaling);
+    map.on('layeradd', handleZoomScaling);
 
     return {
         render,
