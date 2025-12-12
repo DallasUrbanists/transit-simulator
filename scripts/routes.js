@@ -4,6 +4,7 @@ const source = '../gtfs/DART/routes.txt';
 const primaryKey = 'route_id';
 
 export const routes = await convertCSVToDictionary(source, primaryKey);
+console.log(routes);
 const sample = routes.values().next().value;
 
 export function getRoute(search) {

@@ -4,7 +4,7 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { convert, getCurrentTimeInSeconds, getHourFromTimestamp } from './js/utilities.mjs';
+import { convert } from './js/utilities.mjs';
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],
@@ -149,7 +149,7 @@ const render = (targetPlayhead) => {
         return;
     }
 
-    const activeHour = getHourFromTimestamp(targetPlayhead);
+    const activeHour = convert.secondsToHour(targetPlayhead);
     window.TRIP_SORT[activeHour]
         .filter(trip => trip.startSeconds <= targetPlayhead && trip.endSeconds >= targetPlayhead)
         .map(trip => {
@@ -365,7 +365,7 @@ const pulse = (timestamp) => {
     const deltaSeconds = (deltaMilliseconds * window.playSpeed) / 1000;
     let newPlayhead = window.startPlayhead + deltaSeconds;
     const activeTripCount = Object.values(activeTrips).filter(t => t).length;
-    const activeHour = getHourFromTimestamp(newPlayhead);
+    const activeHour = convert.secondsToHour(newPlayhead);
 
     render(newPlayhead);
 
@@ -529,8 +529,7 @@ window.addEventListener('loadFinished', (event) => {
     updateControlBar();
 });
 
-app.setPlayhead(getCurrentTimeInSeconds());
-app.setPlayhead(getCurrentTimeInSeconds());
+app.setPlayhead(convert.nowInSeconds());
 app.scrub(window.playhead);
 updateControlBar();
 

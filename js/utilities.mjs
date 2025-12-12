@@ -1,99 +1,51 @@
-import { DateTime } from "luxon";
 import fs from 'fs';
 
+export function sanitize(string) {
+    if (string === null || string === undefined) return '';
+    return string.toString().trim();
+}
+
 export function sanitizeKey(string) {
-    if (string === null || string === undefined) {
-        return '';
-    }
-    return string.toString().trim().toLowerCase();
-}
-
-export async function convertCSVToDictionary(sourceFile, primaryKey) {
-    const parsedRows = parseCSV((await fs.readFileSync(sourceFile)).toString());    
-    const columnIndex = {};
-    const results = new Map();
-    const pk = primaryKey.trim().toLowerCase();
-
-    parsedRows[0].forEach((value, index) => columnIndex[value.trim().toLowerCase()] = index);
-
-    if (!Object.keys(columnIndex).includes(pk)) {
-        throw new Error(`The CSV contents of ${sourceFile} doesn't have a '${primaryKey}' column.`);
-    }
-
-    parsedRows.slice(1).forEach(row => {
-        const result = new Map();
-        for (let column in columnIndex) {
-            const index = columnIndex[column];
-            const value = row[index];
-            result.set(column, typeof value === 'string' ? value.trim() : null);
-        }
-        if (result.has(pk)) {
-            results.set(result.get(pk), result);
-        }
-    });
-
-    return results;
-}
-
-
-export function parseCSV(data) {
-    const rows = data.split('\n'); // Split into rows
-    const result = rows.map(row => row.split(',')); // Split each row into columns
-    return result;
-}
-export function convertTimeToSeconds(timeStr) {
-    const parts = timeStr.split(':');
-    const hours = parseInt(parts[0], 10);
-    const minutes = parseInt(parts[1], 10);
-    const seconds = parseInt(parts[2], 10);
-    return hours * 3600 + minutes * 60 + seconds;
-}
-export function isNumeric(str) {
-    if (typeof str != "string") return false // we only process strings!  
-    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-        !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
-}
-
-// Function to get current time in seconds since midnight
-export function getCurrentTimeInSeconds() {
-    const now = new Date();
-
-    // Extract hours, minutes, and seconds
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
-
-    // Convert to total seconds
-    return hours * 3600 + minutes * 60 + seconds;
-}
-export function convertSecondsToTimeString(timestamp) {
-    const dateObj = new Date(parseInt(timestamp) * 1000);
-    const hours = dateObj.getUTCHours();
-    const minutes = dateObj.getUTCMinutes();
-    const seconds = dateObj.getSeconds();
-    const meridian = hours >= 12 ? 'PM' : 'AM';
-
-    let h = hours;
-    if (hours === 0) {
-        h = 12;
-    } else if (hours > 12) {
-        h = hours - 12;
-    }
-
-    return h.toString().padStart(2, '0') + ':' +
-        minutes.toString().padStart(2, '0') + ':' +
-        seconds.toString().padStart(2, '0') + ' ' + meridian;
-}
-export function getHourFromTimestamp(timestamp) {
-    const dateObj = new Date(parseInt(timestamp) * 1000);
-    const hours = dateObj.getUTCHours();
-    return parseInt(hours);
+    return sanitize(string).toLowerCase();
 }
 
 export const convert = {
     milesToFeet: (miles = 1) => miles * 5280,
     daysToSeconds: (days = 1) => days * 24 * 60 * 60,
-    secondsToTimeString: (seconds) => DateTime
-        .fromSeconds(parseInt(seconds))
-        .toLocaleString(DateTime.TIME_WITH_SECONDS),
+    secondsToTimeString: timestamp => {
+        const dateObj = new Date(parseInt(timestamp) * 1000);
+        const hours = dateObj.getUTCHours();
+        const f = s => s.toString().padStart(2, '0');
+        let h = hours;
+        if (hours === 0) h = 12;
+        else if (hours > 12) h = hours - 12;
+        return `${f(h)}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
+    },
+    timeStringToSeconds: timeString => {
+        const n = timeString.split(':');
+        return parseInt(n[0]) * 3600 + parseInt(n[1]) * 60 + parseInt(n[2]);
+    },
+    secondsToHour: timestamp => parseInt(new Date(parseInt(timestamp) * 1000).getUTCHours()),
+    nowInSeconds: () => {
+        const now = new Date();
+        return now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+    },
+    csvToArray: string => string.split('\n').map(row => row.split(',')),
 };
+
+export function convertCSVToDictionary(sourceFile, primaryKey) {
+    const rowsAsArray = convert.csvToArray((fs.readFileSync(sourceFile)).toString());
+    const columnIndex = rowsAsArray[0].reduce((map, column, index) => map.set(sanitizeKey(column), index), new Map());
+    const pk = sanitizeKey(primaryKey);
+    if (!columnIndex.has(pk)) throw new Error(`The CSV contents of ${sourceFile} doesn't have a '${primaryKey}' column.`);
+    return rowsAsArray.slice(1).reduce((rowsAsMap, rowAsArray) => {
+        const rowKey = rowAsArray[columnIndex.get(pk)];
+        if (rowKey !== '') {
+            rowsAsMap.set(rowAsArray[columnIndex.get(pk)], columnIndex.entries().reduce((map, entry) => {
+                map.set(entry[0], sanitize(rowAsArray[entry[1]]));
+                return map;
+            }, new Map()));
+        }
+        return rowsAsMap;
+    }, new Map());
+}

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { parseCSV } from './utilities.js';
 import * as turf from '@turf/turf';
-import { convertTimeToSeconds } from './utilities.js';
+import { convert } from './utilities.mjs';
 
 const stopTimesText = await fs.readFileSync('./stop-times-output.json');
 const stopTimes = JSON.parse(stopTimesText.toString());
@@ -53,8 +53,8 @@ const trips = tripsData.slice(1).map((row, index) => {
             segment.properties.start_time = String(stopA.departure_time);
             segment.properties.end_time = String(stopB.arrival_time);
             segment.properties.distanceFeet = distance;
-            segment.properties.startSeconds = convertTimeToSeconds(String(stopA.departure_time)),
-            segment.properties.endSeconds = convertTimeToSeconds(String(stopB.arrival_time)),
+            segment.properties.startSeconds = convert.timeStringToSeconds(String(stopA.departure_time)),
+            segment.properties.endSeconds = convert.timeStringToSeconds(String(stopB.arrival_time)),
             segment.properties.durationSeconds = segment.properties.endSeconds - segment.properties.startSeconds;
             tripDistanceFeet += distance;
 
@@ -63,8 +63,8 @@ const trips = tripsData.slice(1).map((row, index) => {
 
         trip_segments.sort((a, b) => a.properties.start_time.localeCompare(b.properties.start_time));
 
-        startSeconds = convertTimeToSeconds(trip_segments[0].properties.start_time);
-        endSeconds = convertTimeToSeconds(trip_segments[trip_segments.length-1].properties.end_time);
+        startSeconds = convert.timeStringToSeconds(trip_segments[0].properties.start_time);
+        endSeconds = convert.timeStringToSeconds(trip_segments[trip_segments.length-1].properties.end_time);
 
     } catch (e) {
         skippedTrips.push(trip_id);
