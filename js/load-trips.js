@@ -42,7 +42,7 @@ window.dispatchEvent(new CustomEvent('tripsLoaded'));
 
 progress++;
 dispatchProgress();
-try {
+/*try {
     const response = await fetch('./js/trips-sorted-output.json');
     const sortedTrips = await response.json();
     console.log(`Fetched sorted trips`);
@@ -51,5 +51,5 @@ try {
 } catch (e) {
     console.log(`Error while fetching sorted trips`, e);
 }
-
+*/
 dispatchFinished();

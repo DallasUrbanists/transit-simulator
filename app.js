@@ -5,6 +5,8 @@ import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { convert } from './js/utilities.mjs';
+import tripsGroupedByHour from "./preload/trips-grouped-by-hour.json" with { type: "json" };
+import { getTrip } from './scripts/trips';
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],
@@ -13,14 +15,6 @@ const settings = {
     defaultMapStyle: maptilersdk.MapStyle['STREETS']['DARK'],
     defaultPlaySpeed: 64,
 };
-
-/** @var Map<number, string|callable> */
-const labelDictionary = new Map();
-labelDictionary.set(26801, 'B');
-labelDictionary.set(26801, 'B');
-labelDictionary.set(26801, 'B');
-labelDictionary.set(26801, 'B');
-labelDictionary.set(26801, 'B');
 
 function labelSubstitution(string) {
     if (['RED', 'BLUE', 'ORANGE', 'GREEN', 'SILVER'].includes(string)) {
@@ -48,7 +42,6 @@ const streetcarPathsPane = map.createPane('streetcarPathsPane');
 const tileLayer = new MaptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle, opacity: 0.25 }).addTo(map);
 const activeTrips = {};
 const fadePile = [];
-//const parkedVehicles = new Map();
 const allVehicles = L.layerGroup().addTo(map);
 const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
 const isPlaying = () => window.appIsPlaying === true;
@@ -144,15 +137,15 @@ const measureDistanceFeet = (latLng1, latLng2) => {
     );
 };
 const render = (targetPlayhead) => {
-    if (!window.TRIPS || !window.TRIP_SORT || !window.ROUTES) {
+    if (!window.TRIPS || !window.ROUTES) {
         console.log('Not ready to render.');
         return;
     }
 
-    const activeHour = convert.secondsToHour(targetPlayhead);
-    window.TRIP_SORT[activeHour]
+    tripsGroupedByHour[convert.secondsToHour(targetPlayhead)]
         .filter(trip => trip.startSeconds <= targetPlayhead && trip.endSeconds >= targetPlayhead)
-        .map(trip => {
+        .map(t => {
+            const trip = getTrip(t.trip_id);
             if (!trip.details) {
                 trip.details = window.TRIPS.find(t => t.trip_id == trip.trip_id);
                 if (!trip.details) {

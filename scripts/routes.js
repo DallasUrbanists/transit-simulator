@@ -1,10 +1,9 @@
-import { convertCSVToDictionary, sanitizeKey } from '../js/utilities.mjs';
+import { convertCSVToDictionary, saniKey } from '../js/utilities.mjs';
 
 const source = '../gtfs/DART/routes.txt';
 const primaryKey = 'route_id';
 
 export const routes = await convertCSVToDictionary(source, primaryKey);
-console.log(routes);
 const sample = routes.values().next().value;
 
 export function getRoute(search) {
@@ -12,22 +11,22 @@ export function getRoute(search) {
     if (isRouteObject(search)) return search;
     if (search instanceof Map) {
         if (!search.has(primaryKey)) return undefined;
-        return routes.get(sanitizeKey(search.get(primaryKey)));
+        return routes.get(saniKey(search.get(primaryKey)));
     }
     if (typeof search === 'object') {
         if (!Object.hasOwn(search, primaryKey)) return undefined;
-        search = search[sanitizeKey(primaryKey)];
+        search = search[saniKey(primaryKey)];
     }
-    return routes.get(sanitizeKey(search));
+    return routes.get(saniKey(search));
 }
 
 export function hasRoute(search) {
     if (typeof search === 'object') {
         if (isRouteObject(search)) return true;
         if (!Object.hasOwn(search, primaryKey)) return false;
-        return routes.has(sanitizeKey(search[primaryKey]));
+        return routes.has(saniKey(search[primaryKey]));
     }
-    return routes.has(sanitizeKey(search));
+    return routes.has(saniKey(search));
 }
 
 export function isRouteObject(subject) {

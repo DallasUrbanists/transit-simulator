@@ -1,11 +1,21 @@
-import fs from 'fs';
+import { loadEnvFile } from 'node:process';
+loadEnvFile('../.env');
+
+export function absURL(path) {
+    return (new URL(path, process.env.BASE_URL)).href;
+}
+
+export async function fetchText(sourceFile) {
+    const file = await fetch(sourceFile);
+    return file.text();
+}
 
 export function sanitize(string) {
     if (string === null || string === undefined) return '';
     return string.toString().trim();
 }
 
-export function sanitizeKey(string) {
+export function saniKey(string) {
     return sanitize(string).toLowerCase();
 }
 
@@ -31,12 +41,14 @@ export const convert = {
         return now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
     },
     csvToArray: string => string.split('\n').map(row => row.split(',')),
+    arrayToColumnIndex: array => array.reduce((map, column, index) => map.set(saniKey(column), index), new Map()),
 };
 
-export function convertCSVToDictionary(sourceFile, primaryKey) {
-    const rowsAsArray = convert.csvToArray((fs.readFileSync(sourceFile)).toString());
-    const columnIndex = rowsAsArray[0].reduce((map, column, index) => map.set(sanitizeKey(column), index), new Map());
-    const pk = sanitizeKey(primaryKey);
+
+export async function convertCSVToDictionary(sourceFile, primaryKey) {
+    const rowsAsArray = convert.csvToArray(await fetchText(sourceFile));
+    const columnIndex = convert.arrayToColumnIndex(rowsAsArray[0]);
+    const pk = saniKey(primaryKey);
     if (!columnIndex.has(pk)) throw new Error(`The CSV contents of ${sourceFile} doesn't have a '${primaryKey}' column.`);
     return rowsAsArray.slice(1).reduce((rowsAsMap, rowAsArray) => {
         const rowKey = rowAsArray[columnIndex.get(pk)];
@@ -48,4 +60,11 @@ export function convertCSVToDictionary(sourceFile, primaryKey) {
         }
         return rowsAsMap;
     }, new Map());
+}
+
+export function setIfNotHas(property, value, map) {
+    if (!map.has(property)) {
+        map.set(property, value);
+    }
+    return map.get(property);
 }
