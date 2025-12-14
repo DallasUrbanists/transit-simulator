@@ -1,7 +1,7 @@
 import { getRoute } from "./routes.js";
 import { getTrip } from "./trips.js";
 import overrides from "../config/overrides.json" with { type: "json" };
-import { convert } from "../js/utilities.mjs";
+import { convert } from "./utilities.mjs";
 
 const defaults = {
     label: (route, trip) => trip
@@ -15,8 +15,8 @@ const defaults = {
         textColor: (route) => route.get('route_text_color') ?? '#FFFFFF',
         textSize: 12,
         borderColor: '#000000',
-        borderWeight: 1,
-        cornerRadius: '50%',
+        borderWidth: 1,
+        borderRadius: '50%',
         label: (route, trip) => trip
             ? trip.get('trip_headsign')
             : route.get('route_short_name'),

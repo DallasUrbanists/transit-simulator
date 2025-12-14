@@ -1,4 +1,4 @@
-import { absURL, convert, convertCSVToDictionary, saniKey, setIfNotHas as setIfNotHave } from '../js/utilities.mjs';
+import { absURL, convert, convertCSVToDictionary, saniKey, setIfNotHas as setIfNotHave } from './utilities.mjs';
 import { getShape } from './shapes.js';
 import { getTimepointsForTrip } from './stops.js';
 import * as turf from '@turf/turf';
@@ -29,17 +29,6 @@ export const trips = await convertCSVToDictionary(source, primaryKey, (trip) => 
     return trip;
 });
 
-// console.log(tripBlocks.entries().toArray().map(entry => {
-//     return {
-//         blockId: entry[0],
-//         finalCount: entry[1].values().toArray().filter(t => t.get('isFinal') === true).length,
-//         nonFinals: entry[1].values().toArray().filter(t => t.get('isFinal') === false).length,
-//         total: entry[1].size,
-//     };
-// }).filter(obj => {
-//     return obj.nonFinals < 2;
-// }));
-
 export function getTrip(search) {
     let trip;
     if (!search) return undefined;
@@ -65,9 +54,9 @@ export function getTripsInSameBlock(trip) {
 export function getTripSegments(trip) {
     const timeSegments = [];
     const timepoints = trip.get('timepoints');
-    for (let i = 0; i < timepoints.length-1; i++) {
+    for (let i = 0; i < timepoints.length - 1; i++) {
         const thisPoint = timepoints[i];
-        const nextPoint = timepoints[i+1];
+        const nextPoint = timepoints[i + 1];
         const shape = turf.lineSlice(thisPoint, nextPoint, trip.get('shape'));
         const startSeconds = thisPoint.properties.arrival_seconds;
         const endSeconds = nextPoint.properties.arrival_seconds;
@@ -113,5 +102,3 @@ export function hasTrip(search) {
     }
     return trips.has(saniKey(search));
 }
-
-//console.log(getTrip('8856738'));

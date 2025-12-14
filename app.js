@@ -4,10 +4,10 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { convert, ease, DAY, $, $$, minValMax, randomColor, isLight } from './js/utilities.mjs';
 import dictionary from './scripts/dictionary';
-import { findActiveTrips, getTrip, getTripsInSameBlock, searchTrips } from './scripts/trips';
 import { getSegmentsFor } from "./scripts/segments";
+import { findActiveTrips, getTrip } from './scripts/trips';
+import { $, $$, convert, DAY, ease, isLight, minValMax, randomColor } from './scripts/utilities.mjs';
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],
@@ -20,7 +20,6 @@ const settings = {
 const map = L.map('map').setView(settings.defaultCoords, settings.defaultZoomLevel);
 const tileLayer = new MaptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle, opacity: 0.25 }).addTo(map);
 const activeTrips = new Set();
-const allVehicles = new Set();
 const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
 const isPlaying = () => window.appIsPlaying === true;
 const setPlayhead = (seconds) => {
@@ -157,18 +156,11 @@ const render = (targetPlayhead) => {
             const layer = L.marker(latLng, { icon }).addTo(map);
             trip.set('marker', layer);
             trip.set('markerLabel', $(`.tripId-${tripId} .marker-label`));
-            // getTripsInSameBlock(trip).forEach(otherTrip => {
-            //     otherTrip.set('marker', layer);
-            //     otherTrip.set('markerBox', $(`.blockId-${blockId} .marker-box`));
-            //     otherTrip.set('markerLabel', $(`.blockId-${blockId} .marker-label`));
-            // });
         } else {
             if (!map.hasLayer(t('marker'))) {
                 t('marker').addTo(map);
-                // $$(`.blockId-${blockId}`).forEach(node => node.style.opacity = 1);
             }
             t('marker').setLatLng(latLng);
-            //t('markerLabel').innerText = t('block_id');
         }
 
         const tailMaxLength = 5280;
@@ -188,8 +180,6 @@ const render = (targetPlayhead) => {
             }
         }
 
-        //console.log(`Block ${blockId} icons:` + $$(`.blockId-${blockId}.transit-icon`).length);
-
         // Rotate marker based on angle formed by head position and prior position
         if (trip.has('priorPosition')) {
             const priorPosition = trip.get('priorPosition');
@@ -201,15 +191,6 @@ const render = (targetPlayhead) => {
 
     // Delete expired trips from the map
     activeTrips.difference(newActiveTrips).forEach(oldTrip => {
-        // if (oldTrip.get('isFinal') === true) {
-        //     const nodes = $$(`.blockId-${oldTrip.get('block_id')}`);
-        //     console.log(`${oldTrip.get('trip_headsign')} finished final run!`, nodes.length);
-        //     nodes.forEach(node => {
-        //         node.style.opacity = 0;
-        //         console.log(node, node.style.opacity);
-        //     });
-        //     //map.removeLayer(oldTrip.get('marker'));
-        // }
         if (oldTrip.has('marker')) map.removeLayer(oldTrip.get('marker'));
         if (oldTrip.has('tail')) map.removeLayer(oldTrip.get('tail'));
         oldTrip.delete('tail');
@@ -423,3 +404,5 @@ window.debugSegment = (tripId, segmentIndex) => {
         lineLayer
     });
 };
+
+window.dispatchEvent(new CustomEvent('loadFinished'));

@@ -1,5 +1,5 @@
 import * as turf from '@turf/turf';
-import { convert, convertCSVToDictionary, fetchText, sanitize, saniKey, setIfNotHas, absURL } from '../js/utilities.mjs';
+import { convert, convertCSVToDictionary, fetchText, sanitize, saniKey, setIfNotHas, absURL } from './utilities.mjs';
 
 const source = absURL('gtfs/DART/stops.txt');
 const primaryKey = 'stop_id';

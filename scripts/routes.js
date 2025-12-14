@@ -1,4 +1,4 @@
-import { absURL, convertCSVToDictionary, saniKey } from '../js/utilities.mjs';
+import { absURL, convertCSVToDictionary, saniKey } from './utilities.mjs';
 
 const source = absURL('gtfs/DART/routes.txt');
 const primaryKey = 'route_id';

@@ -1,5 +1,5 @@
 import * as turf from '@turf/turf';
-import { absURL, convert, fetchText, saniKey, sanitize } from '../js/utilities.mjs';
+import { absURL, convert, fetchText, saniKey, sanitize } from './utilities.mjs';
 
 const source = absURL('gtfs/DART/shapes.txt');
 const primaryKey = 'shape_id';
