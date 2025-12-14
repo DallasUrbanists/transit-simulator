@@ -1,8 +1,13 @@
-import { loadEnvFile } from 'node:process';
-loadEnvFile('../.env');
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) || 'http://localhost:5173/';
+
+export const $ = query => document.querySelector(query);
+export const $$ = query => document.querySelectorAll(query);
 
 export function absURL(path) {
-    return (new URL(path, process.env.BASE_URL)).href;
+    if (typeof window === 'undefined') {
+        return (new URL(path, BASE_URL)).href;
+    }
+    return path;
 }
 
 export async function fetchText(sourceFile) {
@@ -17,6 +22,20 @@ export function sanitize(string) {
 
 export function saniKey(string) {
     return sanitize(string).toLowerCase();
+}
+
+export function randomColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+export function minValMax(min, val, max) {
+    return Math.min(
+        max,
+        Math.max(
+            min,
+            val
+        )
+    );
 }
 
 export const convert = {
@@ -44,8 +63,11 @@ export const convert = {
     arrayToColumnIndex: array => array.reduce((map, column, index) => map.set(saniKey(column), index), new Map()),
 };
 
+export const ease = {
+    inOutCubic: (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2
+};
 
-export async function convertCSVToDictionary(sourceFile, primaryKey) {
+export async function convertCSVToDictionary(sourceFile, primaryKey, transform) {
     const rowsAsArray = convert.csvToArray(await fetchText(sourceFile));
     const columnIndex = convert.arrayToColumnIndex(rowsAsArray[0]);
     const pk = saniKey(primaryKey);
@@ -53,10 +75,20 @@ export async function convertCSVToDictionary(sourceFile, primaryKey) {
     return rowsAsArray.slice(1).reduce((rowsAsMap, rowAsArray) => {
         const rowKey = rowAsArray[columnIndex.get(pk)];
         if (rowKey !== '') {
-            rowsAsMap.set(rowAsArray[columnIndex.get(pk)], columnIndex.entries().reduce((map, entry) => {
+            const rowId = rowAsArray[columnIndex.get(pk)];
+            const rowAsMap = new Map();
+            columnIndex.entries().reduce((map, entry) => {
                 map.set(entry[0], sanitize(rowAsArray[entry[1]]));
                 return map;
-            }, new Map()));
+            }, rowAsMap);
+            if (typeof transform === 'function') {
+                const transformation = transform(rowAsMap);
+                if (transformation) {
+                    rowsAsMap.set(rowId, transformation);
+                }
+            } else {
+                rowsAsMap.set(rowId, rowAsMap);
+            }
         }
         return rowsAsMap;
     }, new Map());
@@ -68,3 +100,5 @@ export function setIfNotHas(property, value, map) {
     }
     return map.get(property);
 }
+
+export const DAY = convert.daysToSeconds(1);

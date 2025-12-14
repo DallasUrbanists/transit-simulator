@@ -1,12 +1,11 @@
 import * as turf from '@turf/turf';
-import { convert, sanitize, saniKey, fetchText, absURL } from '../js/utilities.mjs';
+import { absURL, convert, fetchText, saniKey, sanitize } from '../js/utilities.mjs';
 
 const source = absURL('gtfs/DART/shapes.txt');
 const primaryKey = 'shape_id';
 const shapePoints = convert.csvToArray(await fetchText(source));
 const columns = convert.arrayToColumnIndex(shapePoints[0]);
-console.log(columns);
-const shapes = shapePoints.slice(1).reduce((map, row) => {
+export const shapes = shapePoints.slice(1).reduce((map, row) => {
     const c = prop => sanitize(row[columns.get(prop)]);
     const f = prop => parseFloat(c(prop));
     const shapeId = c(primaryKey);
@@ -20,12 +19,11 @@ const shapes = shapePoints.slice(1).reduce((map, row) => {
     return map;
 }, new Map());
 
-shapes.forEach((shape, shapeId, map) => {
-    shape.sort((a, b) => a.seq - b.seq);
-    map.set(shapeId, turf.lineString(
-        shape.map(({lon, lat}) => [lon, lat]),
-        { length_in_miles: shape.reduce((total, { dist }) => total += dist, 0) }
-    ));
+shapes.forEach((shapePoints, shapeId, map) => {
+    shapePoints.sort((a, b) => a.seq - b.seq);
+    const shapeFeature = turf.lineString(shapePoints.map(({ lon, lat }) => [lon, lat]));
+    shapeFeature.properties.lengthInFeet = turf.length(shapeFeature, { units: 'feet' });
+    map.set(shapeId, shapeFeature);
 });
 
 export function getShape(search) {

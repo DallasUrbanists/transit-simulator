@@ -161,13 +161,15 @@ body {
 }
 
 .playing {
+
     #style-select,
     .leaflet-control-container {
         display: none;
     }
+
     a[href="https://www.maptiler.com"] {
-    opacity: 0;
-}
+        opacity: 0;
+    }
 }
 
 #monitor {
@@ -192,70 +194,101 @@ body {
 }
 
 .transit-icon {
-      font-family: "Doppio On", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      background-color: #f2cc29;
-      color: #002b6f;
-      border-radius: 50%;
-      aspect-ratio: 1 / 1;
-      display: block;
-      text-align: center;
-      line-height: 24px;
-      font-size: 12px;
-      /* font-weight: bold; */
-      background-size: contain;
-      background-position: center center;
-      filter: drop-shadow(0 0 1px #333);
-      transition: opacity 250ms ease-in-out;
-      opacity: 0;
-      overflow: hidden;
+    position: relative;
+    background: transparent;
+
+    .marker-box {
+        font-family: "Doppio On", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #f2cc29;
+        color: #002b6f;
+        aspect-ratio: 1 / 1;
+        display: block;
+        text-align: center;
+        background-size: contain;
+        background-position: center center;
+        filter: drop-shadow(0 0 1px #333);
+        transition: transform 100ms;
+        transition: none;
+        opacity: 1;
+        text-wrap: nowrap;
+        width: 50%;
+        aspect-ratio: 1 / 2;
+        position: absolute;
+        top: 0;
+        left: 25%;
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+        border: solid 1px black;
+    }
+    .marker-label {
+        font-size: 10px;
+        color: white;
+        line-height: 1em;
+        position: absolute;
+        left: calc(100% + 4px);
+        width: 300%;
+        aspect-ratio: 2 / 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        z-index: 1;
+        text-shadow: 0px 0px 3px black;
+    }
 }
+
 .transit-icon.parked {
     background-color: black !important;
     color: white !important;
 }
+
 .transit-icon.vehicle-R {
     background-color: #ff495c;
     color: #EEE;
 }
+
 .transit-icon.vehicle-B {
     background-color: #2095d7;
     color: #EEE;
 }
+
 .transit-icon.vehicle-O {
     background-color: #f89d4f;
     color: #333;
 }
+
 .transit-icon.vehicle-G {
     background-color: #357e5a;
     color: #EEE;
 }
+
 .transit-icon.vehicle-S {
     background-color: silver;
     color: #333;
 }
+
 .transit-icon.vehicle-TRE {
     background-color: #002269;
     border: solid 1px #ff2147;
-    background-image: url('./icons/tre.png');
+    background-image: url('/icons/tre.png');
     font-size: 0;
     color: #EEE;
 }
+
 .transit-icon.vehicle-M {
     background-color: #6f1931;
-    background-image: url('./icons/mline.png');
-    font-size: 0;
-    color: #333;
-}
-.transit-icon.vehicle-DSC {
-    background-color: #DDD;
-    border: solid 1px #0a1f31;
-    background-image: url('./icons/streetcar.png');
+    background-image: url('/icons/mline.png');
     font-size: 0;
     color: #333;
 }
 
+.transit-icon.vehicle-DSC {
+    background-color: #DDD;
+    border: solid 1px #0a1f31;
+    background-image: url('/icons/streetcar.png');
+    font-size: 0;
+    color: #333;
+}
 
 @keyframes pulse-glow {
 
@@ -283,6 +316,7 @@ div#loading {
     flex-direction: column;
     justify-content: center;
     backdrop-filter: blur(3px);
+
     h1 {
         font-weight: bold;
     }
@@ -311,12 +345,15 @@ a[href="https://www.maptiler.com"] {
 .leaflet-pane.leaflet-bus-pane {
     z-index: 410;
 }
+
 .leaflet-pane.leaflet-lightRail-pane {
     z-index: 430;
 }
+
 .leaflet-pane.leaflet-commuterRail-pane {
     z-index: 440;
 }
+
 .leaflet-pane.leaflet-streetcar-pane {
     z-index: 420;
 }
@@ -324,12 +361,20 @@ a[href="https://www.maptiler.com"] {
 .leaflet-pane.leaflet-busPaths-pane {
     z-index: 310;
 }
+
 .leaflet-pane.leaflet-lightRailPaths-pane {
     z-index: 415;
 }
+
 .leaflet-pane.leaflet-commuterRailPaths-pane {
     z-index: 425;
 }
+
 .leaflet-pane.leaflet-streetcarPaths-pane {
     z-index: 320;
+}
+
+.hidden-initially {
+    transition: transform 2s, opacity 1s;
+    opacity: 0;
 }

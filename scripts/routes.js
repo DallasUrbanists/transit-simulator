@@ -1,8 +1,7 @@
-import { convertCSVToDictionary, saniKey } from '../js/utilities.mjs';
+import { absURL, convertCSVToDictionary, saniKey } from '../js/utilities.mjs';
 
-const source = '../gtfs/DART/routes.txt';
+const source = absURL('gtfs/DART/routes.txt');
 const primaryKey = 'route_id';
-
 export const routes = await convertCSVToDictionary(source, primaryKey);
 const sample = routes.values().next().value;
 

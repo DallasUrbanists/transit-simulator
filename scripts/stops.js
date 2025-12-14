@@ -12,18 +12,27 @@ stops.forEach((stop, stopId, map) => {
         { id: stopId }
     ));
 });
-
 const timingSource = absURL('gtfs/DART/stop_times.txt');
 const timingArray = convert.csvToArray(await fetchText(timingSource));
 const timingColumns = convert.arrayToColumnIndex(timingArray[0]);
 const timepoints = timingArray
+    .slice(1)
+    .sort((pointA, pointB) => {
+        const A = prop => pointA[timingColumns.get(prop)];
+        const B = prop => pointB[timingColumns.get(prop)];
+        if (A('trip_id') !== B('trip_id')) {
+            return A('trip_id').localeCompare(B('trip_id'));
+        }
+        return parseInt(A('stop_sequence')) - parseInt(B('stop_sequence'));
+    })
     .filter(r => sanitize(r[timingColumns.get('timepoint')]) === '1')
-    .reduce((map, row) => {
+    .reduce((acc, row) => {
         const c = prop => sanitize(row[timingColumns.get(prop)]);
         const f = prop => parseFloat(c(prop));
-        const stop = turf.clone(getStop(c('stop_id')));
-        stop.properties = {
-            ...stop.properties,
+        const timepoint = turf.clone(getStop(c('stop_id')));
+        const tripId = c('trip_id');
+        timepoint.properties = {
+            ...timepoint.properties,
             arrival_time: c('arrival_time'),
             arrival_seconds: convert.timeStringToSeconds(c('arrival_time')),
             departure_time: c('departure_time'),
@@ -31,10 +40,29 @@ const timepoints = timingArray
             sequence: parseInt(c('stop_sequence')),
             distance_in_miles: f('shape_dist_traveled'),
         };
-        setIfNotHas(c('trip_id'), turf.featureCollection([]), map).features.push(stop);
-        return map;
+        if (!acc.has(tripId)) {
+            acc.set(tripId, [timepoint]);
+        } else {
+            const x = acc.get(tripId);
+            x.push(timepoint);
+            acc.set(tripId, x);
+        }
+        return acc;
     }, new Map());
 
+//console.log(timepoints);
+
+/**
+ * Retrieve a stop feature from the `stops` dictionary.
+ *
+ * The `search` parameter may be:
+ * - a `Map` (expected to contain `stop_id`),
+ * - a plain object with a `stop_id` property, or
+ * - a stop identifier (string or number).
+ *
+ * @param {Map|Object|string|number} search - Stop reference to look up.
+ * @returns {Object|undefined} The GeoJSON Feature for the stop, or `undefined` if not found.
+ */
 export function getStop(search) {
     if (!search) return undefined;
     if (search instanceof Map) {
@@ -48,25 +76,46 @@ export function getStop(search) {
     return stops.get(saniKey(search));
 }
 
-export function getTimepointsForTrip(search) {
-    let found;
-    if (!search) return undefined;
-    if (search instanceof Map) {
-        if (!search.has('trip_id')) return undefined;
-        found = timepoints.get(saniKey(search.get('trip_id')));
-    } else if (typeof search === 'object') {
-        if (!Object.hasOwn(search, 'trip_id')) return undefined;
-        found = search[saniKey('trip_id')];
-    } else {
-        found = timepoints.get(saniKey(search));
+/**
+ * Find timepoint features for a trip and sort them by arrival time.
+ *
+ * `search` may be a `Map` containing `trip_id`, a plain object with
+ * a `trip_id` property, or a trip id (string/number). If a matching
+ * FeatureCollection is found it will be sorted in-place by
+ * `properties.arrival_seconds`.
+ *
+ * NOTE: this function performs the sort as a side-effect.
+ *
+ * @param {Map|Object|string|number} search - Trip reference to look up.
+ * @returns {Object|undefined} GeoJSON FeatureCollection of stops for given trip, or `undefined` if none found.
+ */
+export function getTimepointsForTrip(trip) {
+    let tripId;
+    if (trip instanceof Map) {
+        if (!trip.has('trip_id')) return [];
+        tripId = trip.get('trip_id');
+    } else if (typeof trip === 'object') {
+        if (!Object.hasOwn(trip, 'trip_id')) return [];
+        tripId = trip['trip_id'];
+    } else if (typeof trip === 'string' || typeof trip === 'number') {
+        tripId = saniKey(trip);
     }
-    if (typeof found === 'object' && found?.type === 'FeatureCollection') {
-        found.features.sort((a, b) => a.properties.arrival_seconds - b.properties.arrival_seconds);
-    }
+    const found = timepoints.get(tripId) ?? [];
+    found.sort((a, b) => a.properties.arrival_seconds - b.properties.arrival_seconds);
+    return found;
 }
 
-console.log(getTimepointsForTrip(8641527));
-
+/**
+ * Determine whether a given stop exists in the `stops` dictionary.
+ *
+ * Accepts a `Map` (with `stop_id`), a plain object containing
+ * `stop_id`, or a stop id (string/number). The function will return
+ * the stored stop feature (truthy) for matches or a boolean/undefined
+ * value depending on the input form.
+ *
+ * @param {Map|Object|string|number} search - Stop reference to check.
+ * @returns {boolean}
+ */
 export function hasStop(search) {
     if (typeof search === 'object') {
         if (search instanceof Map) {
@@ -77,13 +126,3 @@ export function hasStop(search) {
     }
     return stops.has(saniKey(search));
 }
-
-//console.log(getStop(12920));
-
-console.assert(hasStop('12920'));
-console.assert(hasStop(12920));
-console.assert(hasStop({ stop_id: 12920 }));
-
-console.assert(!hasStop('12341234'));
-console.assert(!hasStop(12341234));
-console.assert(!hasStop({ stop_id: 12341234 }));

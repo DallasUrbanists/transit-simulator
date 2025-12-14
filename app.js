@@ -4,9 +4,10 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { convert } from './js/utilities.mjs';
-import tripsGroupedByHour from "./preload/trips-grouped-by-hour.json" with { type: "json" };
-import { getTrip } from './scripts/trips';
+import { convert, ease, DAY, $, $$, minValMax, randomColor } from './js/utilities.mjs';
+import dictionary from './scripts/dictionary';
+import { findActiveTrips, getTrip, searchTrips } from './scripts/trips';
+import { getSegmentsFor } from "./scripts/segments";
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],
@@ -16,33 +17,9 @@ const settings = {
     defaultPlaySpeed: 64,
 };
 
-function labelSubstitution(string) {
-    if (['RED', 'BLUE', 'ORANGE', 'GREEN', 'SILVER'].includes(string)) {
-        return string.charAt(0);
-    }
-    if (string === '620') {
-        return 'DSC';
-    }
-    if (string === '425') {
-        return 'M';
-    }
-    return string;
-}
-
 const map = L.map('map').setView(settings.defaultCoords, settings.defaultZoomLevel);
-
-const busPane = map.createPane('busPane');
-const busPathsPane = map.createPane('busPathsPane');
-const lightRailPane = map.createPane('lightRailPane');
-const lightRailPathsPane = map.createPane('lightRailPathsPane');
-const commuterRailPane = map.createPane('commuterRailPane');
-const commuterRailPathsPane = map.createPane('commuterRailPathsPane');
-const streetcarPane = map.createPane('streetcarPane');
-const streetcarPathsPane = map.createPane('streetcarPathsPane');
 const tileLayer = new MaptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle, opacity: 0.25 }).addTo(map);
-const activeTrips = {};
-const fadePile = [];
-const allVehicles = L.layerGroup().addTo(map);
+const activeTrips = new Set();
 const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
 const isPlaying = () => window.appIsPlaying === true;
 const setPlayhead = (seconds) => {
@@ -60,333 +37,189 @@ const setPlaySpeed = (speed) => {
         dispatchUpdate();
     }
 };
-const chooseStyle = (label) => {
-    switch (label) {
-        case 'B':
-        case 'R':
-        case 'O':
-        case 'G':
-            return { weight: 8, opacity: 1 };
-        case 'S':
-        case 'TRE':
-            return { weight: 12, opacity: 1 };
-        case 'M':
-        case 'DSC':
-            return { weight: 6, opacity: 0.75 };
-        default:
-            return { weight: 4, opacity: 0.75 };
-    }
-};
-const choosePane = (label) => {
-    switch (label) {
-        case 'B':
-        case 'R':
-        case 'O':
-        case 'G':
-            return lightRailPane;
-        case 'S':
-        case 'TRE':
-            return commuterRailPane;
-        case 'M':
-        case 'DSC':
-            return streetcarPane;
-        default:
-            return busPane;
-    }
-};
-const choosePathsPane = (label) => {
-    switch (label) {
-        case 'B':
-        case 'R':
-        case 'O':
-        case 'G':
-            return 'lightRailPathsPane';
-        case 'S':
-        case 'TRE':
-            return 'commuterRailPathsPane';
-        case 'M':
-        case 'DSC':
-            return 'streetcarPathsPane';
-        default:
-            return 'busPathsPane';
-    }
-};
-const chooseMarkerClassName = (label) => {
-    switch (label) {
-        case 'B':
-        case 'R':
-        case 'O':
-        case 'G':
-            return 'light-rail train rail';
-        case 'S':
-        case 'TRE':
-            return 'commuter-rail train rail';
-        case 'M':
-        case 'DSC':
-            return 'streetcar rail';
-        default:
-            return 'bus';
-    }
-};
-const measureDistanceFeet = (latLng1, latLng2) => {
-    const lat = 0, lng = 1;
-    return turf.distance(
-        turf.point([latLng1[lng], latLng1[lat]]),
-        turf.point([latLng2[lng], latLng2[lat]]),
-        { units: 'feet' }
-    );
-};
 const render = (targetPlayhead) => {
-    if (!window.TRIPS || !window.ROUTES) {
-        console.log('Not ready to render.');
-        return;
-    }
+    const newActiveTrips = findActiveTrips(targetPlayhead, (trip => {
+        return !['3', '4'].includes(trip.get('service_id'));
+    }));
+    newActiveTrips.forEach(trip => {
+        activeTrips.add(trip);
+        const t = key => trip.get(key);
+        const tripId = t('trip_id');
+        const d = prop => dictionary(trip).get(prop);
 
-    tripsGroupedByHour[convert.secondsToHour(targetPlayhead)]
-        .filter(trip => trip.startSeconds <= targetPlayhead && trip.endSeconds >= targetPlayhead)
-        .map(t => {
-            const trip = getTrip(t.trip_id);
-            if (!trip.details) {
-                trip.details = window.TRIPS.find(t => t.trip_id == trip.trip_id);
-                if (!trip.details) {
-                    return;
-                }
-            }
-            // Ignore weekend service trips
-            if (['3', '4'].includes(trip.details)) {
-                return;
-            }
-            if (!activeTrips[trip.trip_id]) {
-                activeTrips[trip.trip_id] = trip;
-            }
-            if (!trip.route) {
-                trip.route = window.ROUTES.find(r => r.id == trip.details.route_id);
-            }
-        });
-    for (let tripId in activeTrips) {
-        const trip = activeTrips[tripId];
-        if (!trip) {
-            continue;
-        }
-        const segments = trip.details.trip_segments;
-        const firstPosition = segments[0].geometry.coordinates[0];
-        const latLng = latLngFromCoord(firstPosition);
-        // const nearestParked = findNearestParked(trip.label, latLng);
-        if (targetPlayhead < trip.startSeconds || targetPlayhead > trip.endSeconds) {
-            if (isPlaying()) {
-                // if (trip.marker && !nearestParked) {
-                //     parkVehicle(trip.label, trip.marker);
-                // } else {
-                const marker = trip.marker;
-                marker.setOpacity(0.5);
-                trip.shadow = marker;
-                setTimeout(() => {
-                    marker.setOpacity(0);
-                    setTimeout(() => {
-                        trip.shadow = null;
-                        allVehicles.removeLayer(marker);
-                        map.removeLayer(marker);
-                    }, 1000);
-                }, 2000);
-                // }
-                trip.marker = null;
-                if (trip.tail) {
-                    fadePile.push(trip.tail);
-                    trip.tail = null;
-                }
+        // Just in time load the segments for this trip
+        if (!trip.has('segments')) trip.set('segments', getSegmentsFor(trip));
+
+        // Calculate how many seconds of the current trip has elapsed
+        // taking into account possibility of overnight trips
+        let tripElapsed = 0;
+        const startSeconds = t('startSeconds');
+        const endSeconds = t('endSeconds');
+        if (startSeconds < DAY && endSeconds < DAY) {
+            tripElapsed = targetPlayhead - startSeconds;
+        } else if (startSeconds > DAY && endSeconds > DAY) {
+            tripElapsed = (targetPlayhead + DAY) - startSeconds;
+        } else if (startSeconds <= DAY && endSeconds >= DAY) {
+            if (targetPlayhead >= startSeconds) {
+                tripElapsed = targetPlayhead - startSeconds;
             } else {
-                if (trip.marker) {
-                    map.removeLayer(trip.marker);
-                    delete trip.marker;
-                }
-                if (trip.tail) {
-                    map.removeLayer(trip.tail);
-                    delete trip.tail;
-                }
+                tripElapsed = (DAY - startSeconds) + targetPlayhead;
             }
-            trip.history = [];
-            activeTrips[tripId] = null;
-            continue;
         }
-        if (!trip.label) {
-            trip.label = labelSubstitution(trip.route.short_name);
-        }
-        if (!trip.marker) {
-            if (trip.shadow) {
-                trip.shadow.setOpacity(0);
+        // Calculate the "relative playhead" for this trip
+        const relativePlayhead = startSeconds + tripElapsed;
+
+        // A "trip segment" is a portion of the trip between two timepoints (e.g., the track between two rail stations)
+        // Based on the relative playhead, figure out which trip segment is currently active.
+        const timepoints = t('timepoints');
+        const finalTimepoint = timepoints[timepoints.length - 1];
+        // The "head position" is where we will place the marker
+        // I use the term "head" here in contrast to the "tail" which we'll render later
+        let headPosition = undefined;
+        // We start by assuming the first segment is the current one
+        let currentSegmentIndex = 0;
+        for (let i = 0; i < timepoints.length-1; i++) {
+            const timepoint = timepoints[i];
+            const arrivalSeconds = timepoint.properties.arrival_seconds;
+            // If the trip has already passed the final timepoint
+            // then set final timepoint as our head position and end this calculation early
+            if (timepoint === finalTimepoint) {
+                currentSegmentIndex = i;
+                headPosition = finalTimepoint;
+                break;
+                // If the playhead is already past this timepoint...
+            } else if (relativePlayhead >= arrivalSeconds) {
+                currentSegmentIndex = i;
+            } else if (i === 0) {
+                headPosition = timepoints[0];
+                break;
+            // If the playhead is not already past this timepoint
+            // then the prior timepoint represents the start of the current segment
+            } else {
+                break;
             }
-            const className = `transit-icon vehicle-${trip.label} ${chooseMarkerClassName(trip.label)}`;
-            const icon = L.divIcon({ className, html: trip.label, iconSize: [24, 24] });
-            trip.marker = L.marker(latLng, { icon, pane: choosePane(trip.label) }).addTo(allVehicles);
-            trip.marker.type = 'vehicle';
-            trip.marker.label = trip.label;
         }
-        trip.marker.setOpacity(1);
-        if (!trip.history) {
-            trip.history = [];
+
+        // It's possible we already found our head position while looking for the current segment
+        // If not, then proceed with caculating the head position based on the current segment
+        let segmentTravel = 0;
+        if (!headPosition) {
+            const segment = t('segments')[currentSegmentIndex];
+            const seconds = index => timepoints[index].properties.arrival_seconds;
+            const startSeconds = seconds(currentSegmentIndex);
+            const endSeconds = seconds(currentSegmentIndex + 1);
+            const duration = endSeconds - startSeconds;
+            const segmentElapsed = relativePlayhead - startSeconds;
+            const ratio = Math.min(1, Math.max(0, segmentElapsed / duration));
+            const traveled = segment.properties.lengthInFeet * ease.inOutCubic(ratio);
+            headPosition = turf.along(segment, traveled, { units: 'feet' });
+            segmentTravel = traveled;
         }
-        if (isPlaying()) {
-            const minTailLength = 8;
-            const maxTailLength = Math.round(8192 / window.playSpeed);
-            const maxTailEndLength = convert.milesToFeet(1);
-            if (trip.history.length > maxTailLength) {
-                trip.history = trip.history.slice(maxTailLength * -1);
-            }
-            if (trip.history.length >= minTailLength) {
-                try {
-                    // If either end of tail is more than a few miles long, it's probably due to an awkward jump
-                    // We want to prevent this by resetting history when either end becomes too long
-                    const indexA = trip.history.length - 1;
-                    const positionA = trip.history[indexA];
-                    const positionB = trip.history[indexA - 1];
-                    const tailLengthAB = measureDistanceFeet(positionA, positionB);
-                    if (tailLengthAB > maxTailEndLength) {
-                        trip.history = [];
-                    } else {
-                        const positionC = trip.history[1];
-                        const positionD = trip.history[0];
-                        const tailLengthCD = measureDistanceFeet(positionC, positionD);
-                        if (tailLengthCD > maxTailEndLength) {
-                            trip.history = [];
-                        } else {
-                            if (!trip.tail) {
-                                const { weight, opacity } = chooseStyle(trip.label);
-                                const pathPane = choosePathsPane(trip.label);
-                                trip.tail = L.polyline(trip.history, {
-                                    className: `tail-${trip.label} ${chooseMarkerClassName(trip.label)}`,
-                                    color: `#${trip.route.color}`,
-                                    weight,
-                                    opacity,
-                                    pane: pathPane
-                                }).addTo(map);
-                                trip.tail.type = 'tail';
-                            } else {
-                                trip.tail.setLatLngs(trip.history);
-                            }
-                        }
-                    }
-                } catch (e) {
-                    console.error(e);
-                    console.log(trip.history);
-                }
-            }
+
+        // Count the total trip distance traveled so far
+        const priorSegmentsLength = t('segments').slice(0, currentSegmentIndex).reduce((total, { properties }) => {
+            return total + properties.lengthInFeet;
+        }, 0);
+        const totalLengthTraveled = priorSegmentsLength + segmentTravel;
+
+        // Convert from LngLat (what turf uses) to LatLng (what Leaflet uses)
+        const latLng = L.GeoJSON.coordsToLatLng(turf.getCoord(headPosition));
+
+        // Create marker for trip
+        if (!trip.has('marker')) {
+            const className = `transit-icon tripId-${tripId}`;
+            const size = parseInt(d('marker.size'));
+            const html = document.createElement('div');
+            const markerLabel = document.createElement('div');
+            markerLabel.className = 'marker-label';
+            markerLabel.innerText = d('marker.label');
+            const markerBox = document.createElement('div');
+            markerBox.className = 'marker-box';
+            html.append(markerLabel);
+            html.append(markerBox);
+            const icon = L.divIcon({
+                className,
+                html: html.innerHTML,
+                iconSize: [size, size]
+            });
+            const layer = L.marker(latLng, { icon }).addTo(map);
+            trip.set('marker', layer);
+            trip.set('markerBox', $(`.tripId-${tripId} .marker-box`));
+            trip.set('markerLabel', $(`.tripId-${tripId} .marker-label`));
+            // Make sure marker is on the map and in the right position
         } else {
-            if (trip.tail) {
-                fadePile.push(trip.tail);
-                trip.tail = null;
-            }
-            trip.history = [];
+            if (!map.hasLayer(t('marker'))) t('marker').addTo(map);
+            t('marker').setLatLng(latLng);
         }
 
-        for (let i = 0; i < segments.length; i++) {
-            const segment = segments[i];
-            const startSec = segment.properties.startSeconds;
-            const endSec = segment.properties.endSeconds;
-            const duration = segment.properties.durationSeconds;
-            const distance = segment.properties.distanceFeet;
-            if (targetPlayhead <= startSec) {
-                const newPos = latLngFromCoord(firstCoord(segment));
-                trip.marker.setLatLng(newPos);
-                if (isPlaying()) {
-                    if (
-                        trip.history.length === 0 ||
-                        trip.history[trip.history.length - 1] == newPos
-                    ) {
-                        trip.history.push(newPos);
-                    }
-                }
-                break;
-            }
-            if (targetPlayhead <= endSec) {
-                const elapsedSeconds = targetPlayhead - startSec;
-                const elapsedRatio = elapsedSeconds / duration;
-                const easedRatio = easeInOutCubic(elapsedRatio);
-                const elapsedDistance = distance * easedRatio;
-                const newPos = turf.flip(
-                    turf.along(segment, elapsedDistance, { units: 'feet' })
-                ).geometry.coordinates;
-                trip.marker.setLatLng(newPos);
-                if (isPlaying()) {
-                    trip.history.push(newPos);
-                }
-                break;
+        const tailMaxLength = 5280;
+        const tailLength = minValMax(0, totalLengthTraveled, tailMaxLength);
+        if (tailLength > 0) {
+            const shapeLength = t('shape').properties.lengthInFeet;
+            const tailHead = Math.min(totalLengthTraveled, shapeLength - 50);
+            const tailEnd = Math.max(0, tailHead - tailLength);
+            const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
+            const tailLatLngs = turf.getCoords(turf.flip(tailShape));
+            if (!trip.has('tail')) {
+                const tail = L.polyline(tailLatLngs, { color: d('tail.color') }).addTo(map);
+                trip.set('tail', tail);
+            } else {
+                trip.get('tail').setLatLngs(tailLatLngs);
             }
         }
-    }
 
-    fadePile.forEach((layer, index) => {
-        if (!layer) {
-            return;
+        // Rotate marker based on angle formed by head position and prior position
+        if (trip.has('priorPosition')) {
+            const priorPosition = trip.get('priorPosition');
+            const bearing = turf.bearing(headPosition, priorPosition);
+            rotate(t('markerBox'), bearing);
         }
-        if (!isPlaying()) {
-            map.removeLayer(layer);
-            fadePile.splice(index, 1);
-            return;
-        }
-        switch (layer.type) {
-            case 'tail':
-                const latLngs = layer.getLatLngs();
-                if (latLngs.length <= 5) {
-                    map.removeLayer(layer);
-                    fadePile.splice(index, 1);
-                } else {
-                    latLngs.shift();
-                    layer.setLatLngs(latLngs);
-                }
-                break;
-            case 'vehicle':
-                const secondsInPile = targetPlayhead - layer.timeOfEnd;
-                const secondsToFade = 2 * window.playSpeed;
-                if (secondsInPile >= secondsToFade) {
-                    map.removeLayer(layer);
-                    fadePile.splice(index, 1);
-                } else {
-                    layer.setOpacity(easeOutQuad(1 - secondsInPile / secondsToFade));
-                }
-                break;
-            default:
-                fadePile.splice(index, 1);
-                map.removeLayer(layer);
-                break;
-        }
+        trip.set('priorPosition', headPosition);
     });
 
+    // Delete expired trips from the map
+    activeTrips.difference(newActiveTrips).forEach(oldTrip => {
+        if (oldTrip.has('marker')) map.removeLayer(oldTrip.get('marker'));
+        if (oldTrip.has('tail')) map.removeLayer(oldTrip.get('tail'));
+        oldTrip.delete('markerNode');
+        oldTrip.delete('marker');
+        oldTrip.delete('tail');
+        oldTrip.delete('priorPosition');
+        activeTrips.delete(oldTrip);
+    });
 };
-const emptyHours = new Set();
+
+function rotate(node, bearing) {
+    node.style.webkitTransform = 'rotate(' + bearing + 'deg)';
+    node.style.mozTransform = 'rotate(' + bearing + 'deg)';
+    node.style.msTransform = 'rotate(' + bearing + 'deg)';
+    node.style.oTransform = 'rotate(' + bearing + 'deg)';
+    node.style.transform = 'rotate(' + bearing + 'deg)';
+    return node;
+}
+
 const pulse = (timestamp) => {
     const deltaMilliseconds = Math.max(0, timestamp - window.startTimestamp);
     const deltaSeconds = (deltaMilliseconds * window.playSpeed) / 1000;
     let newPlayhead = window.startPlayhead + deltaSeconds;
-    const activeTripCount = Object.values(activeTrips).filter(t => t).length;
-    const activeHour = convert.secondsToHour(newPlayhead);
-
-    render(newPlayhead);
-
-    // If last render resulted in zero empty trips and is past midnight
-    // Then reset the clock to restart animation from the beginning on next pulse
-    if (newPlayhead > convert.daysToSeconds(1) && activeTripCount === 0) {
-        // clearParkedVehicles();
-        allVehicles.clearLayers();
-        if (!emptyHours.has(activeHour)) {
-            emptyHours.add(activeHour);
-        }
-    }
-    if (emptyHours.size > 1) {
-        newPlayhead = newPlayhead - convert.daysToSeconds(1);
+    if (newPlayhead > DAY) {
+        newPlayhead = newPlayhead - DAY;
         window.startTimestamp = timestamp;
         window.startPlayhead = newPlayhead;
-        setPlayhead(newPlayhead);
-        emptyHours.clear();
-    } else {
-        setPlayhead(newPlayhead);
     }
-
+    render(newPlayhead);
+    setPlayhead(newPlayhead);
     if (isPlaying()) {
         window.appAnimation = requestAnimationFrame(pulse);
     }
 };
 const startPlayback = () => {
+    $$('.transit-icon').forEach(marker => {
+        marker.classList.remove('hidden-initially');
+        marker.style.transition = "none";
+    });
     window.appIsPlaying = true;
+    window.isScrubbing = false;
     window.startTimestamp = performance.now();
     window.startPlayhead = window.playhead;
     window.appAnimation = requestAnimationFrame(pulse);
@@ -402,45 +235,8 @@ const scrub = (newPlayhead) => {
     setPlayhead(newPlayhead);
     render(newPlayhead);
 };
-
-window.playhead = 0;
+window.playhead = 12 * 60 * 60;
 window.playSpeed = settings.defaultPlaySpeed;
-
-const px = (n) => `${n}px`;
-
-const handleZoomScaling = () => {
-    const currentZoom = map.getZoom();
-    const busIcons = document.querySelectorAll('.transit-icon.bus, .transit-icon.streetcar');
-    const lightRailPathPane = document.querySelector('.leaflet-pane.leaflet-lightRailPaths-pane');
-    const commuterRailPathPane = document.querySelector('.leaflet-pane.leaflet-commuterRailPaths-pane');
-    if (currentZoom < 12) {
-        lightRailPathPane.style.zIndex = 415;
-        commuterRailPathPane.style.zIndex = 420;
-    } else {
-        lightRailPathPane.style.zIndex = 315;
-        commuterRailPathPane.style.zIndex = 320;
-    }
-    busIcons.forEach(icon => {
-        let iconSize, fontSize;
-        if (currentZoom < 12) {
-            iconSize = 12;
-            fontSize = 7;
-        } else {
-            iconSize = 24;
-            fontSize = 12;
-        }
-        icon.style.width = px(iconSize);
-        icon.style.height = px(iconSize);
-        icon.style.fontSize = px(fontSize);
-        icon.style.lineHeight = px(iconSize);
-        icon.style.marginLeft = px(iconSize / -2);
-        icon.style.marginTop = px(iconSize / -2);
-    });
-};
-
-map.on('zoomend', handleZoomScaling);
-map.on('layeradd', handleZoomScaling);
-
 const app = {
     render,
     isPlaying,
@@ -458,35 +254,18 @@ const app = {
             ;
     },
 };
-
-function latLngFromCoord(lngLat) {
-    return [lngLat[1], lngLat[0]];
-}
-
-function firstCoord(feature) {
-    return feature.geometry.coordinates[0];
-}
-
-function easeOutQuad(x) {
-    return 1 - (1 - x) * (1 - x);
-}
-function easeInOutCubic(x) {
-    return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-}
-
-const loadingScreen = document.getElementById('loading');
-const loadProgress = document.getElementById('loading-progress');
-const progressTrack = document.getElementById('progress-track');
-const progressBar = document.getElementById('progress-bar');
-const timeIndicator = document.getElementById('time-indicator');
-const playButton = document.getElementById('play-button');
-const playImg = playButton.querySelector('img');
-const speedSelector = document.getElementById('speed-select');
-const styleSelector = document.getElementById('style-select');
+const loadingScreen = $('#loading');
+const loadProgress = $('#loading-progress');
+const progressTrack = $('#progress-track');
+const progressBar = $('#progress-bar');
+const timeIndicator = $('#time-indicator');
+const playButton = $('#play-button');
+const playImg = $('#play-button img');
+const speedSelector = $('#speed-select');
+const styleSelector = $('#style-select');
 const secondsInDay = 60 * 60 * 24;
 let wasPlayingEarlier = false;
 let scrubInterval = null;
-
 speedSelector.addEventListener('change', (e) => app.setPlaySpeed(e.target.value));
 styleSelector.addEventListener('change', (e) => app.setMapStyle(e.target.value));
 progressTrack.addEventListener('mousedown', (e) => {
@@ -495,21 +274,24 @@ progressTrack.addEventListener('mousedown', (e) => {
     progressTrack.addEventListener('mousemove', handleScrubTimed, true);
 });
 window.addEventListener('mouseup', () => {
+    window.isScrubbing = false;
     if (scrubInterval) {
-        clearInterval(scrubInterval);
+        clearTimeout(scrubInterval);
     }
+    $$('.transit-icon').forEach(marker => {
+        marker.classList.remove('hidden-initially');
+        marker.style.transition = "none";
+    });
     if (wasPlayingEarlier === true && app.isPlaying() === false) {
-        document.querySelectorAll('.transit-icon').forEach(marker => {
-            marker.style.transition = "inherit";
-        });
         wasPlayingEarlier = false;
         app.togglePlay();
     }
     progressTrack.removeEventListener('mousemove', handleScrubTimed, true);
 });
 playButton.addEventListener('click', () => {
-    document.querySelectorAll('.transit-icon').forEach(marker => {
-        marker.style.transition = "inherit";
+    $$('.transit-icon').forEach(marker => {
+        marker.classList.remove('hidden-initially');
+        marker.style.transition = "none";
     });
     app.togglePlay();
 });
@@ -521,36 +303,36 @@ window.addEventListener('loadFinished', (event) => {
     loadingScreen.style.display = 'none';
     updateControlBar();
 });
-
-app.setPlayhead(convert.nowInSeconds());
+app.scrub(window.playhead);
+loadingScreen.style.display = 'none';
+updateControlBar();
+app.setPlayhead(12 * 60 * 60);
 app.scrub(window.playhead);
 updateControlBar();
-
 function handleScrub(event) {
+    window.isScrubbing = true;
     const trackX = progressTrack.getBoundingClientRect().left;
     const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
     const newPlayhead = secondsInDay * ratio;
-    document.querySelectorAll('.transit-icon').forEach(marker => {
-        marker.style.transition = "all 2s";
+    $$('.transit-icon').forEach(marker => {
+        marker.style.transition = "transform 2s, opacity 1s";
     });
     app.scrub(newPlayhead);
-    document.querySelectorAll('.transit-icon').forEach(marker => {
-        marker.style.transition = "all 2s";
+    $$('.transit-icon').forEach(marker => {
+        marker.style.transition = "transform 2s, opacity 1s";
     });
     updateControlBar(newPlayhead);
 }
-
 function handleScrubTimed(event) {
     if (scrubInterval) {
-        clearInterval(scrubInterval);
+        clearTimeout(scrubInterval);
     }
     const trackX = progressTrack.getBoundingClientRect().left;
     const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
     const newPlayhead = secondsInDay * ratio;
     updateControlBar(newPlayhead);
-    scrubInterval = setInterval(() => handleScrub(event), 100);
+    scrubInterval = setTimeout(() => handleScrub(event), 100);
 }
-
 function updateControlBar(newPlayhead = null) {
     const targetPlayhead = newPlayhead === null ? window.playhead : newPlayhead;
     const trackWidth = progressTrack.offsetWidth;
@@ -568,3 +350,47 @@ function updateControlBar(newPlayhead = null) {
         playImg.src = './icons/play.svg';
     }
 }
+
+
+let debugTripShape;
+
+window.debugTrip = (tripId) => {
+    const trip = getTrip(tripId);
+    const shape = trip.get('shape');
+    debugTripShape = L.geoJSON(shape, {
+        style: () => ({ color: '#FFFFFF', weight: 10 })
+    }).addTo(map).getLayers()[0];
+    console.log(trip);
+};
+
+window.debugTripSlice = (tripId, index) => {
+    const trip = getTrip(tripId);
+    const shape = trip.get('shape');
+    const coords = turf.getCoords(turf.flip(shape));
+    const sliced = coords.slice(0, index);
+    debugTripShape.setLatLngs(sliced);
+    console.log(sliced);
+};
+
+const debugSegments = new Set();
+
+window.debugSegment = (tripId, segmentIndex) => {
+    const trip = getTrip(tripId);
+    const segments = trip.get('segments');
+    const currentSegment = segments[segmentIndex];
+
+    const geoLayers = L.geoJSON(currentSegment, {
+        style: () => ({ color: randomColor() })
+    }).addTo(map);
+    const lineLayer = geoLayers.getLayers()[0];
+
+    debugSegments.add(lineLayer);
+
+    console.log({
+        trip,
+        segments,
+        currentSegment,
+        geoLayers,
+        lineLayer
+    });
+};

@@ -1,8 +1,9 @@
 import { getRoute } from "./routes.js";
 import { getTrip } from "./trips.js";
 import overrides from "../config/overrides.json" with { type: "json" };
+import { convert } from "../js/utilities.mjs";
 
-const fallback = {
+const defaults = {
     label: (route, trip) => trip
         ? `${trip.get('trip_headsign')}, ${route.get('route_long_name')}`
         : `${route.get('route_short_name')} ${route.get('route_long_name')}`
@@ -10,8 +11,8 @@ const fallback = {
     marker: {
         size: 24,
         bgImage: 'none',
-        bgColor: 'black',
-        textColor: 'white',
+        bgColor: (route) => route.get('route_color') ?? 'black',
+        textColor: (route) => route.get('route_text_color') ?? 'white',
         textSize: 12,
         borderColor: 'transparent',
         borderWeight: 0,
@@ -23,95 +24,64 @@ const fallback = {
     },
     tail: {
         weight: 3,
-        color: 'black',
-        shadowColor: 'transparent'
+        color: (route) => {
+            if (route.has('route_color')) {
+                return '#'+route.get('route_color');
+            }
+            return 'black';
+        },
+        shadowColor: 'transparent',
+        length: convert.milesToFeet(0.5)
     }
 };
 
 export default function dictionary(subject) {
     const trip = getTrip(subject);
     const route = getRoute(trip ?? subject);
-
     if (route === undefined) throw new Error(
         'Subject is not a valid route, nor is it a valid derivative of a route.'
     );
-
-    return {
-        trip,
-        route,
-        get: (pathString) => assess(pathString, route, trip)
-    };
+    return { trip, route, get: (pathString) => assess(pathString, route, trip) };
 }
 
 function callOrUse(outcome, route, trip) {
-    if (typeof outcome === 'function') {
-        return outcome(route, trip);
-    }
-    return outcome;
+    return typeof outcome === 'function' ? outcome(route, trip) : outcome;
 }
 
 function assess(pathString, route, trip = undefined) {
+    const answer = value => callOrUse(value, route, trip);
+
+    // If a trip has been provided, let's look for trip-specific overrides and details
     if (trip) {
+        // Look for overrides targeting this particular trip id
         const overTripId = overrides.tripsById[trip.get('trip_id')] ?? {};
         const overTripValue = traverse(pathString, overTripId);
-        if (overTripValue) return callOrUse(overTripValue, route, trip);
+        if (overTripValue) return answer(overTripValue);
 
+        // Look for matching properties on the trip object itself
         const tripValue = traverse(pathString, trip);
-        if (tripValue) return callOrUse(tripValue, route, trip);
+        if (tripValue) return answer(tripValue);
     }
 
+    // Look for overrides this particular route id
     const overRouteId = overrides.routesById[route.get('route_id')];
     const overRouteValue = traverse(pathString, overRouteId);
-    if (overRouteValue) return callOrUse(overRouteValue, route, trip);
+    if (overRouteValue) return answer(overRouteValue);
 
+    // Look for matching properties on the route object itself
     const routeValue = traverse(pathString, route);
-    if (routeValue) return callOrUse(routeValue, route);
+    if (routeValue) return answer(routeValue);
 
-    let finalAnswer = traverse(pathString, fallback);
-
-    switch (pathString) {
-        case 'marker.bgColor':
-            finalAnswer = route.get('route_color') ?? defaultVal;
-            break;
-        case 'marker.textColor':
-            finalAnswer = route.get('route_text_color') ?? defaultVal
-            break;
-    }
-
-    return callOrUse(finalAnswer, route, trip);
+    // Since we did not find any customizations, let's fall back to default values
+    return answer(traverse(pathString, defaults));
 }
 
 function traverse(pathString, object) {
-    if (object instanceof Map && object.has(pathString)) {
-        return object.get(pathString);
-    }
-
-    if (Object.hasOwn(object, pathString)) {
-        return object[pathString];
-    }
-
-    if (typeof object !== 'object') {
-        return undefined;
-    }
-
-    return pathString.split('.').reduce((a, b) => {
-        if (typeof a === 'object' && Object.hasOwn(a, b)) {
-            return a[b];
-        }
-        return undefined;
-    }, object);
+    if (!object) return object;
+    if (object instanceof Map && object.has(pathString)) return object.get(pathString);
+    if (Object.hasOwn(object, pathString)) return object[pathString];
+    if (typeof object !== 'object') return undefined;
+    return pathString.split('.').reduce((a, b) =>
+        typeof a === 'object' && Object.hasOwn(a, b) ? a[b] : undefined
+    , object);
 }
-
-//console.log(dictionary('26670'));
-//console.log(dictionary(getTrip('8641525')));
-
-//console.log(overrides.routesById['26670']);
-const trip = getTrip(8641525);
-const route = getRoute(trip);
-
-console.log(dictionary(route).get('label'));
-console.log(dictionary(route).get('route_type'));
-// console.log(assess('marker.bgColor', route, trip));
-// console.log(assess('label', route, trip));
-// console.log(assess('marker.label', route, trip));
-// console.log(assess('marker.label', route));

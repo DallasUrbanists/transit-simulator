@@ -3,7 +3,7 @@
         "26670": {
             "tail": {
                 "weight": 10,
-                "color": "red",
+                "color": "pink",
                 "shadowColor": "black"
             }
         }
@@ -11,7 +11,7 @@
     "tripsById": {
         "8641525": {
             "tail": {
-                "color": "red",
+                "color": "pink",
                 "shadowColor": "black"
             }
         }

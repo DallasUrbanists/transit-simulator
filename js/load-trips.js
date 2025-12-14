@@ -1,4 +1,4 @@
-const fileCount = 10;
+const fileCount = 5;
 const totalSteps = fileCount + 2;
 let progress = 0;
 const dispatchProgress = () => {
@@ -6,7 +6,7 @@ const dispatchProgress = () => {
     window.dispatchEvent(new CustomEvent('loadProgress', { detail: delta }))
 };
 const dispatchFinished = () => window.dispatchEvent(new CustomEvent('loadFinished'));
-
+/*
 try {
     const response = await fetch('./js/routes-output.json');
     window.ROUTES = await response.json();
@@ -16,7 +16,7 @@ try {
 } catch (e) {
     console.log(`Error while fetching routes`, e);
 }
-
+/*
 const tripsLoaded = [];
 console.log(`Loading trips...`);
 for (let a = 0; a < fileCount; a++) {
