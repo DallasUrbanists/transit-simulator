@@ -4,9 +4,9 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { convert, ease, DAY, $, $$, minValMax, randomColor } from './js/utilities.mjs';
+import { convert, ease, DAY, $, $$, minValMax, randomColor, isLight } from './js/utilities.mjs';
 import dictionary from './scripts/dictionary';
-import { findActiveTrips, getTrip, searchTrips } from './scripts/trips';
+import { findActiveTrips, getTrip, getTripsInSameBlock, searchTrips } from './scripts/trips';
 import { getSegmentsFor } from "./scripts/segments";
 
 const settings = {
@@ -20,6 +20,7 @@ const settings = {
 const map = L.map('map').setView(settings.defaultCoords, settings.defaultZoomLevel);
 const tileLayer = new MaptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle, opacity: 0.25 }).addTo(map);
 const activeTrips = new Set();
+const allVehicles = new Set();
 const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
 const isPlaying = () => window.appIsPlaying === true;
 const setPlayhead = (seconds) => {
@@ -45,6 +46,7 @@ const render = (targetPlayhead) => {
         activeTrips.add(trip);
         const t = key => trip.get(key);
         const tripId = t('trip_id');
+        const blockId = t('block_id');
         const d = prop => dictionary(trip).get(prop);
 
         // Just in time load the segments for this trip
@@ -127,7 +129,7 @@ const render = (targetPlayhead) => {
 
         // Create marker for trip
         if (!trip.has('marker')) {
-            const className = `transit-icon tripId-${tripId}`;
+            const className = `transit-icon tripId-${tripId} blockId-${blockId}`;
             const size = parseInt(d('marker.size'));
             const html = document.createElement('div');
             const markerLabel = document.createElement('div');
@@ -135,6 +137,16 @@ const render = (targetPlayhead) => {
             markerLabel.innerText = d('marker.label');
             const markerBox = document.createElement('div');
             markerBox.className = 'marker-box';
+            markerBox.style.backgroundColor = d('marker.bgColor');
+            markerBox.style.borderWidth = d('marker.borderWidth');
+            markerBox.style.borderRadius = d('borderRadius');
+            if (isLight(d('marker.bgColor'))) {
+                // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(10, 10, 10, 0.5))';
+                markerBox.style.borderColor = 'rgba(10, 10, 10, 1)';
+            } else {
+                // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))';
+                markerBox.style.borderColor = 'rgba(255, 255, 255, 1)';
+            }
             html.append(markerLabel);
             html.append(markerBox);
             const icon = L.divIcon({
@@ -144,45 +156,62 @@ const render = (targetPlayhead) => {
             });
             const layer = L.marker(latLng, { icon }).addTo(map);
             trip.set('marker', layer);
-            trip.set('markerBox', $(`.tripId-${tripId} .marker-box`));
             trip.set('markerLabel', $(`.tripId-${tripId} .marker-label`));
-            // Make sure marker is on the map and in the right position
+            // getTripsInSameBlock(trip).forEach(otherTrip => {
+            //     otherTrip.set('marker', layer);
+            //     otherTrip.set('markerBox', $(`.blockId-${blockId} .marker-box`));
+            //     otherTrip.set('markerLabel', $(`.blockId-${blockId} .marker-label`));
+            // });
         } else {
-            if (!map.hasLayer(t('marker'))) t('marker').addTo(map);
+            if (!map.hasLayer(t('marker'))) {
+                t('marker').addTo(map);
+                // $$(`.blockId-${blockId}`).forEach(node => node.style.opacity = 1);
+            }
             t('marker').setLatLng(latLng);
+            //t('markerLabel').innerText = t('block_id');
         }
 
         const tailMaxLength = 5280;
         const tailLength = minValMax(0, totalLengthTraveled, tailMaxLength);
         if (tailLength > 0) {
+            const className = `transit-tail tripId-${tripId} blockId-${blockId}`;
             const shapeLength = t('shape').properties.lengthInFeet;
             const tailHead = Math.min(totalLengthTraveled, shapeLength - 50);
             const tailEnd = Math.max(0, tailHead - tailLength);
             const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
             const tailLatLngs = turf.getCoords(turf.flip(tailShape));
             if (!trip.has('tail')) {
-                const tail = L.polyline(tailLatLngs, { color: d('tail.color') }).addTo(map);
+                const tail = L.polyline(tailLatLngs, { color: d('tail.color'), className }).addTo(map);
                 trip.set('tail', tail);
             } else {
                 trip.get('tail').setLatLngs(tailLatLngs);
             }
         }
 
+        //console.log(`Block ${blockId} icons:` + $$(`.blockId-${blockId}.transit-icon`).length);
+
         // Rotate marker based on angle formed by head position and prior position
         if (trip.has('priorPosition')) {
             const priorPosition = trip.get('priorPosition');
             const bearing = turf.bearing(headPosition, priorPosition);
-            rotate(t('markerBox'), bearing);
+            rotate($(`.tripId-${tripId} .marker-box`), bearing);
         }
         trip.set('priorPosition', headPosition);
     });
 
     // Delete expired trips from the map
     activeTrips.difference(newActiveTrips).forEach(oldTrip => {
+        // if (oldTrip.get('isFinal') === true) {
+        //     const nodes = $$(`.blockId-${oldTrip.get('block_id')}`);
+        //     console.log(`${oldTrip.get('trip_headsign')} finished final run!`, nodes.length);
+        //     nodes.forEach(node => {
+        //         node.style.opacity = 0;
+        //         console.log(node, node.style.opacity);
+        //     });
+        //     //map.removeLayer(oldTrip.get('marker'));
+        // }
         if (oldTrip.has('marker')) map.removeLayer(oldTrip.get('marker'));
         if (oldTrip.has('tail')) map.removeLayer(oldTrip.get('tail'));
-        oldTrip.delete('markerNode');
-        oldTrip.delete('marker');
         oldTrip.delete('tail');
         oldTrip.delete('priorPosition');
         activeTrips.delete(oldTrip);

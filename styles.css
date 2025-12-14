@@ -201,7 +201,7 @@ body {
         font-family: "Doppio On", sans-serif;
         font-weight: 400;
         font-style: normal;
-        background-color: #f2cc29;
+        /* background-color: #f2cc29; */
         color: #002b6f;
         aspect-ratio: 1 / 1;
         display: block;
@@ -218,8 +218,8 @@ body {
         position: absolute;
         top: 0;
         left: 25%;
-        border-bottom-left-radius: 30%;
-        border-bottom-right-radius: 30%;
+        /* border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%; */
         border: solid 1px black;
     }
     .marker-label {

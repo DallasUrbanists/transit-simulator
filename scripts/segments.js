@@ -47,6 +47,6 @@ export function getSegmentsFor(trip) {
     return segments.get(shapeId) ?? [];
 }
 
-console.log(getTrip('8666240').get('timepoints').map(({ properties }) => properties));
-console.log(segments.get('146079').map(({properties}) => properties));
+// console.log(getTrip('8666240').get('timepoints').map(({ properties }) => properties));
+// console.log(segments.get('146079').map(({properties}) => properties));
 //console.log(shapes.get('146079'));

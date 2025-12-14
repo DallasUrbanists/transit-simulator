@@ -4,6 +4,7 @@ import { getTimepointsForTrip } from './stops.js';
 import * as turf from '@turf/turf';
 const source = absURL('gtfs/DART/trips.txt');
 const primaryKey = 'trip_id';
+const tripBlocks = new Map();
 export const trips = await convertCSVToDictionary(source, primaryKey, (trip) => {
     if (trip === undefined) return undefined;
     const t = key => trip.get(key);
@@ -18,8 +19,27 @@ export const trips = await convertCSVToDictionary(source, primaryKey, (trip) => 
     set('endPosition', points[points.length - 1]);
     set('endSeconds', t('endPosition').properties.arrival_seconds);
     set('durationSeconds', t('endSeconds') - t('startSeconds'));
+    set('isFinal', true);
+    if (!tripBlocks.has(t('block_id'))) {
+        tripBlocks.set(t('block_id'), new Set());
+    }
+    const tripBlock = tripBlocks.get(t('block_id'));
+    tripBlock.values().forEach(otherTrip => otherTrip.set('isFinal', false));
+    tripBlock.add(trip);
     return trip;
 });
+
+// console.log(tripBlocks.entries().toArray().map(entry => {
+//     return {
+//         blockId: entry[0],
+//         finalCount: entry[1].values().toArray().filter(t => t.get('isFinal') === true).length,
+//         nonFinals: entry[1].values().toArray().filter(t => t.get('isFinal') === false).length,
+//         total: entry[1].size,
+//     };
+// }).filter(obj => {
+//     return obj.nonFinals < 2;
+// }));
+
 export function getTrip(search) {
     let trip;
     if (!search) return undefined;
@@ -36,6 +56,10 @@ export function getTrip(search) {
 
 export function searchTrips(query) {
     return trips.values().filter(trip => query(trip));
+}
+
+export function getTripsInSameBlock(trip) {
+    return tripBlocks.get(trip.get('block_id')) ?? new Set();
 }
 
 export function getTripSegments(trip) {

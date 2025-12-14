@@ -28,6 +28,18 @@ export function randomColor() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
 
+export function isLight(hex) {
+    const bigint = parseInt(hex.slice(1), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+
+    const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    return luminance > 100; // true = light, false = dark
+}
+
+//console.log(isLight("#FAE7E6")); // true
+
 export function minValMax(min, val, max) {
     return Math.min(
         max,

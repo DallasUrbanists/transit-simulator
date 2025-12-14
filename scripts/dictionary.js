@@ -11,12 +11,11 @@ const defaults = {
     marker: {
         size: 24,
         bgImage: 'none',
-        bgColor: (route) => route.get('route_color') ?? 'black',
-        textColor: (route) => route.get('route_text_color') ?? 'white',
+        bgColor: (route) => route.has('route_color') ? '#'+route.get('route_color') : '#000000',
+        textColor: (route) => route.get('route_text_color') ?? '#FFFFFF',
         textSize: 12,
-        borderColor: 'transparent',
-        borderWeight: 0,
-        shadowColor: 'transparent',
+        borderColor: '#000000',
+        borderWeight: 1,
         cornerRadius: '50%',
         label: (route, trip) => trip
             ? trip.get('trip_headsign')
@@ -24,12 +23,7 @@ const defaults = {
     },
     tail: {
         weight: 3,
-        color: (route) => {
-            if (route.has('route_color')) {
-                return '#'+route.get('route_color');
-            }
-            return 'black';
-        },
+        color: (route) => route.has('route_color') ? '#'+route.get('route_color') : '#000000',
         shadowColor: 'transparent',
         length: convert.milesToFeet(0.5)
     }
