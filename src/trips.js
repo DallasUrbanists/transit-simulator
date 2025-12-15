@@ -6,6 +6,7 @@ import * as turf from '@turf/turf';
 const primaryKey = 'trip_id';
 const tripsTxt = await fetchText(absURL('./gtfs/DART/trips.txt'));
 const tripBlocks = new Map();
+const serviceIds = new Set();
 export const trips = convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
     if (trip === undefined) return undefined;
     const t = key => trip.get(key);
@@ -27,6 +28,7 @@ export const trips = convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
     const tripBlock = tripBlocks.get(t('block_id'));
     tripBlock.values().forEach(otherTrip => otherTrip.set('isFinal', false));
     tripBlock.add(trip);
+    serviceIds.add(trip.get('service_id'));
     return trip;
 });
 
