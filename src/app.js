@@ -45,7 +45,9 @@ window.addEventListener('loadFinished', () => {
 // Handle user interaction with UI for playback control
 $('#speed-select').addEventListener('change', (e) => playback.setSpeed(e.target.value));
 $('#style-select').addEventListener('change', (e) => map.setStyle(e.target.value));
-$('#play-button').addEventListener('click', () => playback.toggle());
+$('#play-button').onclick = () => playback.toggle();
+$('#enter-fullscreen').onclick = () => document.body.classList.add('fullscreen-mode');
+$('#leave-fullscreen').onclick = () => document.body.classList.remove('fullscreen-mode');
 
 // Handle when user clicks and drags on progress bar to "scrub" timeline.
 let scrubTimer;
@@ -72,6 +74,14 @@ const stopScrubbing = () => {
 };
 progressTrack.addEventListener('mousedown', startScrubbing);
 window.addEventListener('mouseup', stopScrubbing);
+
+// Briefly show the "Exit Fullscreen" button when user moves mouse
+let showTimeout;
+window.addEventListener('mousemove', () => {
+    $('#leave-fullscreen').classList.add('show');
+    clearTimeout(showTimeout);
+    showTimeout = setTimeout(() => $('#leave-fullscreen').classList.remove('show'), 1000);
+});
 
 // Update the control bar UI to show the current playhead time, adjust progress bar width, and toggle play button
 function updateControlBar() {

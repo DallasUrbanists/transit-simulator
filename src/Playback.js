@@ -1,4 +1,4 @@
-import { DAY } from "./utilities.mjs";
+import { convert, DAY } from "./utilities.mjs";
 
 const playheadChanged = new CustomEvent('playheadChanged');
 
@@ -6,7 +6,7 @@ export default class Playback {
     isPlaying = false;
     isPaused = false;
     speed = localStorage.getItem('playback_speed') ?? 32;
-    playhead = 12 * 60 * 60;
+    playhead = convert.nowInSeconds();
     #animationFrame;
 
     constructor(simulation) {
