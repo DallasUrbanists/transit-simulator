@@ -83,6 +83,9 @@ window.addEventListener('mousemove', () => {
     showTimeout = setTimeout(() => $('#leave-fullscreen').classList.remove('show'), 1000);
 });
 
+// Press spacebar to toggle playback
+window.addEventListener('keypress', e => e.key == " " || e.code == "Space" ? playback.toggle() : null);
+
 // Update the control bar UI to show the current playhead time, adjust progress bar width, and toggle play button
 function updateControlBar() {
     const targetPlayhead = playback.playhead;
