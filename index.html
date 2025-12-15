@@ -10,10 +10,12 @@
 
 <body>
   <div id="loading">
-    <h1>Loading <span id="loading-progress"></span></h1>
-    <p>Please wait while trips are loading</p>
+    <span class="loader"></span>
+    <h1>Loading...</h1>
+    <p>This will take just a few seconds.</p>
   </div>
   <div id="viewport">
+    <div id="map"></div>
     <div id="playback-controls">
       <button id="play-button"><img src="./icons/play.svg" alt="PLAY" /></button>
       <div id="progress-track">
@@ -33,7 +35,6 @@
         <option value="512">512x</option>
       </select>
     </div>
-    <div id="map"></div>
   </div>
   <select id="style-select">
     <optgroup label="Navigation and city exploration">
