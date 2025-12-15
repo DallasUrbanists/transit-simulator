@@ -1,11 +1,12 @@
-import { absURL, convert, convertCSVToDictionary, saniKey, setIfNotHas as setIfNotHave } from './utilities.mjs';
+import { absURL, convert, convertCSVToDictionary, fetchText, saniKey, setIfNotHas as setIfNotHave } from './utilities.mjs';
 import { getShape } from './shapes.js';
 import { getTimepointsForTrip } from './stops.js';
 import * as turf from '@turf/turf';
-const source = absURL('gtfs/DART/trips.txt');
+
 const primaryKey = 'trip_id';
+const tripsTxt = await fetchText('/gtfs/DART/trips.txt');
 const tripBlocks = new Map();
-export const trips = await convertCSVToDictionary(source, primaryKey, (trip) => {
+export const trips = convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
     if (trip === undefined) return undefined;
     const t = key => trip.get(key);
     if (t(primaryKey) === '') return undefined;
@@ -42,6 +43,8 @@ export function getTrip(search) {
     trip = trips.get(saniKey(search));
     return trip;
 }
+
+// console.log(getTrip(8641531));
 
 export function searchTrips(query) {
     return trips.values().filter(trip => query(trip));

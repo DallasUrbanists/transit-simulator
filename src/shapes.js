@@ -1,9 +1,9 @@
 import * as turf from '@turf/turf';
-import { absURL, convert, fetchText, saniKey, sanitize } from './utilities.mjs';
+import { convert, fetchText, saniKey, sanitize } from './utilities.mjs';
 
-const source = absURL('gtfs/DART/shapes.txt');
 const primaryKey = 'shape_id';
-const shapePoints = convert.csvToArray(await fetchText(source));
+const shapesTxt = await fetchText('/gtfs/DART/shapes.txt');
+const shapePoints = convert.csvToArray(shapesTxt);
 const columns = convert.arrayToColumnIndex(shapePoints[0]);
 export const shapes = shapePoints.slice(1).reduce((map, row) => {
     const c = prop => sanitize(row[columns.get(prop)]);

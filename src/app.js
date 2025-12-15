@@ -4,10 +4,10 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import dictionary from './scripts/dictionary';
-import { getSegmentsFor } from "./scripts/segments";
-import { findActiveTrips, getTrip } from './scripts/trips';
-import { $, $$, convert, DAY, ease, isLight, minValMax, randomColor } from './scripts/utilities.mjs';
+import dictionary from './dictionary';
+import { getSegmentsFor } from "./segments";
+import { findActiveTrips, getTrip } from './trips';
+import { $, $$, convert, DAY, ease, isLight, minValMax, randomColor } from './utilities.mjs';
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],

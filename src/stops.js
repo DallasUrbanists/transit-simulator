@@ -1,9 +1,9 @@
 import * as turf from '@turf/turf';
 import { convert, convertCSVToDictionary, fetchText, sanitize, saniKey, setIfNotHas, absURL } from './utilities.mjs';
 
-const source = absURL('gtfs/DART/stops.txt');
 const primaryKey = 'stop_id';
-export const stops = await convertCSVToDictionary(source, primaryKey);
+const stopsTxt = await fetchText('/gtfs/DART/stops.txt');
+export const stops = await convertCSVToDictionary(stopsTxt, primaryKey);
 stops.forEach((stop, stopId, map) => {
     const f = p => parseFloat(stop.get(p));
     map.set(stopId, turf.point(
@@ -12,7 +12,7 @@ stops.forEach((stop, stopId, map) => {
         { id: stopId }
     ));
 });
-const timingSource = absURL('gtfs/DART/stop_times.txt');
+const timingSource = '/gtfs/DART/stop_times.txt';
 const timingArray = convert.csvToArray(await fetchText(timingSource));
 const timingColumns = convert.arrayToColumnIndex(timingArray[0]);
 const timepoints = timingArray

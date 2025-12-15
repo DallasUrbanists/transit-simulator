@@ -11,6 +11,7 @@ export function absURL(path) {
 }
 
 export async function fetchText(sourceFile) {
+    console.log(sourceFile);
     const file = await fetch(sourceFile);
     return file.text();
 }
@@ -77,11 +78,14 @@ export const ease = {
     inOutCubic: (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2
 };
 
-export async function convertCSVToDictionary(sourceFile, primaryKey, transform) {
-    const rowsAsArray = convert.csvToArray(await fetchText(sourceFile));
+export function convertCSVToDictionary(sourceText, primaryKey, transform) {
+    const rowsAsArray = convert.csvToArray(sourceText);
     const columnIndex = convert.arrayToColumnIndex(rowsAsArray[0]);
     const pk = saniKey(primaryKey);
-    if (!columnIndex.has(pk)) throw new Error(`The CSV contents of ${sourceFile} doesn't have a '${primaryKey}' column.`);
+    if (!columnIndex.has(pk)) {
+        console.log(rowsAsArray);
+        throw new Error(`The CSV contents of source text doesn't have a '${primaryKey}' column.`);
+    }
     return rowsAsArray.slice(1).reduce((rowsAsMap, rowAsArray) => {
         const rowKey = rowAsArray[columnIndex.get(pk)];
         if (rowKey !== '') {
