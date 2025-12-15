@@ -1,6 +1,3 @@
-import { MaptilerLayer } from "@maptiler/leaflet-maptilersdk";
-import * as maptilersdk from '@maptiler/sdk';
-import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -9,19 +6,10 @@ import { getSegmentsFor } from "./segments";
 import { findActiveTrips, getTrip } from './trips';
 import { $, $$, convert, DAY, ease, isLight, minValMax, randomColor } from './utilities.mjs';
 import { getSpecialShape, sectionIndex } from "./special";
+import MapContext from "./MapContext";
 import "leaflet-polylineoffset";
 
-const settings = {
-    defaultCoords: [32.780694233921906, -96.79930204561467],
-    maptilerApiKey: import.meta.env.VITE_MAPTILER_API_KEY,
-    defaultZoomLevel: 13,
-    defaultMapStyle: maptilersdk.MapStyle['STREETS']['DARK'],
-    defaultPlaySpeed: 64,
-};
-
-const map = L.map('map').setView(settings.defaultCoords, settings.defaultZoomLevel);
-const tileLayer = new MaptilerLayer({ apiKey: settings.maptilerApiKey, style: settings.defaultMapStyle, opacity: 0.25 }).addTo(map);
-const activeTrips = new Set();
+const map = new MapContext('map');
 const dispatchUpdate = () => window.dispatchEvent(new CustomEvent('playheadChanged'));
 const isPlaying = () => window.appIsPlaying === true;
 const setPlayhead = (seconds) => {
@@ -39,12 +27,15 @@ const setPlaySpeed = (speed) => {
         dispatchUpdate();
     }
 };
+
+function isTripEnabled(trip) {
+    return !['3', '4'].includes(trip.get('service_id'));
+};
+
 const render = (targetPlayhead) => {
-    const newActiveTrips = findActiveTrips(targetPlayhead, (trip => {
-        return !['3', '4'].includes(trip.get('service_id'));
-    }));
+    const newActiveTrips = findActiveTrips(targetPlayhead, isTripEnabled);
     newActiveTrips.forEach(trip => {
-        activeTrips.add(trip);
+        map.activate(trip);
         const t = key => trip.get(key);
         const tripId = t('trip_id');
         const blockId = t('block_id');
@@ -160,13 +151,12 @@ const render = (targetPlayhead) => {
                     html: html.innerHTML,
                     iconSize: [size, size]
                 });
-                const layer = L.marker(latLng, { icon }).addTo(map);
+                const layer = L.marker(latLng, { icon });
+                map.addMarker(trip);
                 trip.set('marker', layer);
                 trip.set('markerLabel', $(`.tripId-${tripId} .marker-label`));
             } else {
-                if (!map.hasLayer(t('marker'))) {
-                    t('marker').addTo(map);
-                }
+                map.addMarker(trip);
                 t('marker').setLatLng(latLng);
             }
         }
@@ -181,8 +171,8 @@ const render = (targetPlayhead) => {
                 const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
                 const tailLatLngs = turf.getCoords(turf.flip(tailShape));
                 if (!trip.has('tail')) {
-                    const tail = L.polyline(tailLatLngs, { color: d('tail.color'), className }).addTo(map);
-                    trip.set('tail', tail);
+                    trip.set('tail', L.polyline(tailLatLngs, { color: d('tail.color'), className }));
+                    map.addTail(trip);                    
                 } else {
                     trip.get('tail').setLatLngs(tailLatLngs);
                 }
@@ -201,12 +191,10 @@ const render = (targetPlayhead) => {
     });
 
     // Delete expired trips from the map
-    activeTrips.difference(newActiveTrips).forEach(oldTrip => {
-        if (oldTrip.has('marker')) map.removeLayer(oldTrip.get('marker'));
-        if (oldTrip.has('tail')) map.removeLayer(oldTrip.get('tail'));
+    map.activeTrips.difference(newActiveTrips).forEach(oldTrip => {
+        map.deactivate(oldTrip);
         oldTrip.delete('tail');
         oldTrip.delete('priorPosition');
-        activeTrips.delete(oldTrip);
     });
 };
 
@@ -248,7 +236,7 @@ const scrub = (newPlayhead) => {
     render(newPlayhead);
 };
 window.playhead = 12 * 60 * 60;
-window.playSpeed = settings.defaultPlaySpeed;
+window.playSpeed = 64;
 const app = {
     render,
     isPlaying,

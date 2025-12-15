@@ -4,12 +4,10 @@ export const $ = query => document.querySelector(query);
 export const $$ = query => document.querySelectorAll(query);
 
 export function absURL(path) {
-    console.log(`base_url: ${BASE_URL}`);
     return (new URL(path, BASE_URL)).href;
 }
 
 export async function fetchText(sourceFile) {
-    console.log(`filepath: ${sourceFile}`);
     const file = await fetch(sourceFile);
     return file.text();
 }
