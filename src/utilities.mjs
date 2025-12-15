@@ -1,9 +1,10 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) || 'http://localhost:5173/';
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) || 'http://localhost:5173/public';
 
 export const $ = query => document.querySelector(query);
 export const $$ = query => document.querySelectorAll(query);
 
 export function absURL(path) {
+    //console.log(BASE_URL);
     if (typeof window === 'undefined') {
         return (new URL(path, BASE_URL)).href;
     }
@@ -11,7 +12,7 @@ export function absURL(path) {
 }
 
 export async function fetchText(sourceFile) {
-    console.log(sourceFile);
+    //console.log(sourceFile);
     const file = await fetch(sourceFile);
     return file.text();
 }
@@ -36,7 +37,7 @@ export function isLight(hex) {
     const b = bigint & 255;
 
     const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    return luminance > 100; // true = light, false = dark
+    return luminance > 120; // true = light, false = dark
 }
 
 export function minValMax(min, val, max) {

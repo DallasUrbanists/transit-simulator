@@ -195,9 +195,9 @@ body {
 .transit-icon {
     position: relative;
     background: transparent;
+    transform-origin: 12px 12px !important;
 
     .marker-box {
-        font-family: "Doppio On", sans-serif;
         font-weight: 400;
         font-style: normal;
         color: #002b6f;
@@ -219,17 +219,23 @@ body {
         border: solid 1px black;
     }
     .marker-label {
-        font-size: 10px;
-        color: white;
-        line-height: 1em;
+        /* font-weight: 600; */
+        font-family: 'Courier New', Courier, monospace;
+        /* text-decoration: underline; */
+        text-align: center;
+        right: 0px;
+        transform: rotate(90deg);
+        top: 7px;
+        font-size: 11px;
+        /* color: white; */
+        line-height: 100%;
         position: absolute;
-        left: calc(100% + 4px);
-        width: 300%;
-        aspect-ratio: 2 / 1;
+        left: 0px;
+        width: 100%;
+        /* aspect-ratio: 2 / 1; */
         overflow: hidden;
-        text-overflow: ellipsis;
+        /* text-overflow: ellipsis; */
         z-index: 1;
-        text-shadow: 0px 0px 3px black;
     }
 }
 

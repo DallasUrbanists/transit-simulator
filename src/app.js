@@ -8,6 +8,8 @@ import dictionary from './dictionary';
 import { getSegmentsFor } from "./segments";
 import { findActiveTrips, getTrip } from './trips';
 import { $, $$, convert, DAY, ease, isLight, minValMax, randomColor } from './utilities.mjs';
+import { getSpecialShape, sectionIndex } from "./special";
+import "leaflet-polylineoffset";
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],
@@ -142,9 +144,13 @@ const render = (targetPlayhead) => {
             if (isLight(d('marker.bgColor'))) {
                 // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(10, 10, 10, 0.5))';
                 markerBox.style.borderColor = 'rgba(10, 10, 10, 1)';
+                markerLabel.style.color = 'black';
+                markerLabel.style.textshadow = '0px 0px 3px white';
             } else {
                 // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))';
                 markerBox.style.borderColor = 'rgba(255, 255, 255, 1)';
+                markerLabel.style.color = 'white';
+                markerLabel.style.textshadow = '0px 0px 3px black';
             }
             html.append(markerLabel);
             html.append(markerBox);
@@ -184,7 +190,8 @@ const render = (targetPlayhead) => {
         if (trip.has('priorPosition')) {
             const priorPosition = trip.get('priorPosition');
             const bearing = turf.bearing(headPosition, priorPosition);
-            rotate($(`.tripId-${tripId} .marker-box`), bearing);
+            rotate($(`.tripId-${tripId}.transit-icon`), bearing);
+            // rotate($(`.tripId-${tripId} .marker-label`), bearing + 90);
         }
         trip.set('priorPosition', headPosition);
     });
@@ -200,11 +207,11 @@ const render = (targetPlayhead) => {
 };
 
 function rotate(node, bearing) {
-    node.style.webkitTransform = 'rotate(' + bearing + 'deg)';
-    node.style.mozTransform = 'rotate(' + bearing + 'deg)';
-    node.style.msTransform = 'rotate(' + bearing + 'deg)';
-    node.style.oTransform = 'rotate(' + bearing + 'deg)';
-    node.style.transform = 'rotate(' + bearing + 'deg)';
+    // node.style.webkitTransform += 'rotate(' + bearing + 'deg)';
+    // node.style.mozTransform += 'rotate(' + bearing + 'deg)';
+    // node.style.msTransform += 'rotate(' + bearing + 'deg)';
+    // node.style.oTransform += 'rotate(' + bearing + 'deg)';
+    node.style.transform += 'rotate(' + bearing + 'deg)';
     return node;
 }
 
@@ -224,10 +231,10 @@ const pulse = (timestamp) => {
     }
 };
 const startPlayback = () => {
-    $$('.transit-icon').forEach(marker => {
-        marker.classList.remove('hidden-initially');
-        marker.style.transition = "none";
-    });
+    // $$('.transit-icon').forEach(marker => {
+    //     marker.classList.remove('hidden-initially');
+    //     marker.style.transition = "none";
+    // });
     window.appIsPlaying = true;
     window.isScrubbing = false;
     window.startTimestamp = performance.now();
@@ -288,10 +295,10 @@ window.addEventListener('mouseup', () => {
     if (scrubInterval) {
         clearTimeout(scrubInterval);
     }
-    $$('.transit-icon').forEach(marker => {
-        marker.classList.remove('hidden-initially');
-        marker.style.transition = "none";
-    });
+    // $$('.transit-icon').forEach(marker => {
+    //     marker.classList.remove('hidden-initially');
+    //     marker.style.transition = "none";
+    // });
     if (wasPlayingEarlier === true && app.isPlaying() === false) {
         wasPlayingEarlier = false;
         app.togglePlay();
@@ -299,10 +306,10 @@ window.addEventListener('mouseup', () => {
     progressTrack.removeEventListener('mousemove', handleScrubTimed, true);
 });
 playButton.addEventListener('click', () => {
-    $$('.transit-icon').forEach(marker => {
-        marker.classList.remove('hidden-initially');
-        marker.style.transition = "none";
-    });
+    // $$('.transit-icon').forEach(marker => {
+    //     marker.classList.remove('hidden-initially');
+    //     marker.style.transition = "none";
+    // });
     app.togglePlay();
 });
 window.addEventListener('playheadChanged', () => updateControlBar());
@@ -324,24 +331,25 @@ function handleScrub(event) {
     const trackX = progressTrack.getBoundingClientRect().left;
     const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
     const newPlayhead = secondsInDay * ratio;
-    $$('.transit-icon').forEach(marker => {
-        marker.style.transition = "transform 2s, opacity 1s";
-    });
+    // $$('.transit-icon').forEach(marker => {
+    //     marker.style.transition = "transform 2s, opacity 1s";
+    // });
     app.scrub(newPlayhead);
-    $$('.transit-icon').forEach(marker => {
-        marker.style.transition = "transform 2s, opacity 1s";
-    });
+    // $$('.transit-icon').forEach(marker => {
+    //     marker.style.transition = "transform 2s, opacity 1s";
+    // });
     updateControlBar(newPlayhead);
 }
 function handleScrubTimed(event) {
-    if (scrubInterval) {
-        clearTimeout(scrubInterval);
-    }
+    // if (scrubInterval) {
+    //     clearTimeout(scrubInterval);
+    // }
     const trackX = progressTrack.getBoundingClientRect().left;
     const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
     const newPlayhead = secondsInDay * ratio;
     updateControlBar(newPlayhead);
-    scrubInterval = setTimeout(() => handleScrub(event), 100);
+    handleScrub(event);
+    //scrubInterval = setTimeout(() => handleScrub(event), 10);
 }
 function updateControlBar(newPlayhead = null) {
     const targetPlayhead = newPlayhead === null ? window.playhead : newPlayhead;
@@ -361,6 +369,10 @@ function updateControlBar(newPlayhead = null) {
     }
 }
 
+map.on('zoomend', () => {
+    console.log(map.getZoom());
+    window.redrawAllSpecialLines();
+});
 
 let debugTripShape;
 
@@ -404,5 +416,69 @@ window.debugSegment = (tripId, segmentIndex) => {
         lineLayer
     });
 };
+
+const testShapes = new Map();
+const totalWidth = 12;
+
+window.drawSpecialLines = (specialIndex) => {
+    if (testShapes.has(specialIndex)) {
+        const prior = testShapes.get(specialIndex);
+        prior.forEach(layer => map.removeLayer(layer));
+        testShapes.delete(specialIndex);
+    }
+//    if (tolerance === null) {
+let tolerance = 1;
+        switch (map.getZoom()) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9: tolerance = 1; break;
+            case 10: tolerance = 0.01; break;
+            case 11: tolerance = 0.001; break;
+            case 12: tolerance = 0.0001; break;
+            case 13: tolerance = 0.0001; break;
+            case 14: tolerance = 0.00001; break;
+            case 15: tolerance = 0.00001; break;
+            case 16: tolerance = 0.00001; break;
+            case 17: tolerance = 0.00001; break;
+            case 18: tolerance = 0.00001; break;
+            case 19: tolerance = 0.00001; break;
+            case 20: tolerance = 0.00001; break;
+        }
+    //}
+    const specialShape = turf.simplify(
+        getSpecialShape(specialIndex),
+        { tolerance }
+    );
+    const colors = specialShape.properties.colors;
+    const widthPerLine = totalWidth / colors.length;
+    const leftShift = (widthPerLine / colors.length) * (colors.length - 1);
+    const newShapes = [];
+    colors.forEach((color, index) => {
+        newShapes.push(L.polyline(
+            turf.getCoords(turf.flip(specialShape)),
+            { color, weight: widthPerLine, offset: 0 - leftShift + (index * widthPerLine) }
+        ).addTo(map));
+    });
+    testShapes.set(specialIndex, newShapes);
+};
+
+window.redrawAllSpecialLines = () => {
+    Object.keys(sectionIndex).forEach(section => {
+        window.drawSpecialLines(section);
+    });
+}
+
+window.clearMap = () => {
+    document.querySelectorAll('.transit-icon, .transit-tail').forEach(node => node.style.display = 'none');
+};
+
+// window.clearMap();
+window.redrawAllSpecialLines();
 
 window.dispatchEvent(new CustomEvent('loadFinished'));

@@ -4,7 +4,7 @@ import { getTimepointsForTrip } from './stops.js';
 import * as turf from '@turf/turf';
 
 const primaryKey = 'trip_id';
-const tripsTxt = await fetchText('./gtfs/DART/trips.txt');
+const tripsTxt = await fetchText(absURL('./gtfs/DART/trips.txt'));
 const tripBlocks = new Map();
 export const trips = convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
     if (trip === undefined) return undefined;

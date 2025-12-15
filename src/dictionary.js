@@ -17,9 +17,14 @@ const defaults = {
         borderColor: '#000000',
         borderWidth: 1,
         borderRadius: '50%',
-        label: (route, trip) => trip
-            ? trip.get('trip_headsign')
-            : route.get('route_short_name'),
+        label: (route, trip) => {
+            const use = trip
+                ? trip.get('trip_headsign')
+                : route.get('route_short_name');
+            return isNumber(use)
+                ? parseInt(use)
+                : use.substring(0, 3);
+        },
     },
     tail: {
         weight: 3,
@@ -78,4 +83,8 @@ function traverse(pathString, object) {
     return pathString.split('.').reduce((a, b) =>
         typeof a === 'object' && Object.hasOwn(a, b) ? a[b] : undefined
     , object);
+}
+
+function isNumber(value) {
+    return !isNaN(value);
 }
