@@ -1,16 +1,15 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) || '/';
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/';
 
 export const $ = query => document.querySelector(query);
 export const $$ = query => document.querySelectorAll(query);
 
 export function absURL(path) {
-    if (typeof window === 'undefined') {
-        return (new URL(path, BASE_URL)).href;
-    }
-    return path;
+    console.log(`base_url: ${BASE_URL}`);
+    return (new URL(path, BASE_URL)).href;
 }
 
 export async function fetchText(sourceFile) {
+    console.log(`filepath: ${sourceFile}`);
     const file = await fetch(sourceFile);
     return file.text();
 }

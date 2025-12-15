@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
-
 html,
 body {
     margin: 0;
@@ -218,78 +216,21 @@ body {
         left: 25%;
         border: solid 1px black;
     }
+
     .marker-label {
-        /* font-weight: 600; */
         font-family: 'Courier New', Courier, monospace;
-        /* text-decoration: underline; */
         text-align: center;
         right: 0px;
         transform: rotate(90deg);
         top: 7px;
         font-size: 11px;
-        /* color: white; */
         line-height: 100%;
         position: absolute;
         left: 0px;
         width: 100%;
-        /* aspect-ratio: 2 / 1; */
         overflow: hidden;
-        /* text-overflow: ellipsis; */
         z-index: 1;
     }
-}
-
-.transit-icon.parked {
-    background-color: black !important;
-    color: white !important;
-}
-
-.transit-icon.vehicle-R {
-    background-color: #ff495c;
-    color: #EEE;
-}
-
-.transit-icon.vehicle-B {
-    background-color: #2095d7;
-    color: #EEE;
-}
-
-.transit-icon.vehicle-O {
-    background-color: #f89d4f;
-    color: #333;
-}
-
-.transit-icon.vehicle-G {
-    background-color: #357e5a;
-    color: #EEE;
-}
-
-.transit-icon.vehicle-S {
-    background-color: silver;
-    color: #333;
-}
-
-.transit-icon.vehicle-TRE {
-    background-color: #002269;
-    border: solid 1px #ff2147;
-    background-image: url('./icons/tre.png');
-    font-size: 0;
-    color: #EEE;
-}
-
-.transit-icon.vehicle-M {
-    background-color: #6f1931;
-    background-image: url('./icons/mline.png');
-    font-size: 0;
-    color: #333;
-}
-
-.transit-icon.vehicle-DSC {
-    background-color: #DDD;
-    border: solid 1px #0a1f31;
-    background-image: url('./icons/streetcar.png');
-    font-size: 0;
-    color: #333;
 }
 
 @keyframes pulse-glow {
@@ -334,48 +275,4 @@ a[href="https://www.maptiler.com"] {
 
 .leaflet-map-pane svg {
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
-}
-
-.leaflet-map-pane svg .tail-TRE,
-.leaflet-map-pane svg .tail-M,
-.leaflet-map-pane svg .tail-S,
-.leaflet-map-pane svg .tail-DSC {
-    filter: drop-shadow(0px 0px 1px white);
-}
-
-.leaflet-pane.leaflet-bus-pane {
-    z-index: 410;
-}
-
-.leaflet-pane.leaflet-lightRail-pane {
-    z-index: 430;
-}
-
-.leaflet-pane.leaflet-commuterRail-pane {
-    z-index: 440;
-}
-
-.leaflet-pane.leaflet-streetcar-pane {
-    z-index: 420;
-}
-
-.leaflet-pane.leaflet-busPaths-pane {
-    z-index: 310;
-}
-
-.leaflet-pane.leaflet-lightRailPaths-pane {
-    z-index: 415;
-}
-
-.leaflet-pane.leaflet-commuterRailPaths-pane {
-    z-index: 425;
-}
-
-.leaflet-pane.leaflet-streetcarPaths-pane {
-    z-index: 320;
-}
-
-.hidden-initially {
-    transition: transform 2s, opacity 1s;
-    opacity: 0;
 }

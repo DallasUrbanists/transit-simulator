@@ -9,6 +9,8 @@ const defaults = {
         : `${route.get('route_short_name')} ${route.get('route_long_name')}`
     ,
     marker: {
+        visible: true,
+        rotationEnabled: true,
         size: 24,
         bgImage: 'none',
         bgColor: (route) => route.has('route_color') ? '#'+route.get('route_color') : '#000000',
@@ -27,10 +29,14 @@ const defaults = {
         },
     },
     tail: {
+        visible: false,
         weight: 3,
         color: (route) => route.has('route_color') ? '#'+route.get('route_color') : '#000000',
         shadowColor: 'transparent',
         length: convert.milesToFeet(0.5)
+    },
+    track: {
+        visible: false
     }
 };
 
@@ -62,10 +68,15 @@ function assess(pathString, route, trip = undefined) {
         if (tripValue) return answer(tripValue);
     }
 
-    // Look for overrides this particular route id
+    // Look for overrides targeting route id
     const overRouteId = overrides.routesById[route.get('route_id')];
     const overRouteValue = traverse(pathString, overRouteId);
     if (overRouteValue) return answer(overRouteValue);
+
+    // Look for overrides targeting route type
+    const overRouteType = overrides.routesByType[route.get('route_type')];
+    const overRouteTypeValue = traverse(pathString, overRouteType);
+    if (overRouteTypeValue) return answer(overRouteTypeValue);
 
     // Look for matching properties on the route object itself
     const routeValue = traverse(pathString, route);

@@ -129,70 +129,75 @@ const render = (targetPlayhead) => {
         const latLng = L.GeoJSON.coordsToLatLng(turf.getCoord(headPosition));
 
         // Create marker for trip
-        if (!trip.has('marker')) {
-            const className = `transit-icon tripId-${tripId} blockId-${blockId}`;
-            const size = parseInt(d('marker.size'));
-            const html = document.createElement('div');
-            const markerLabel = document.createElement('div');
-            markerLabel.className = 'marker-label';
-            markerLabel.innerText = d('marker.label');
-            const markerBox = document.createElement('div');
-            markerBox.className = 'marker-box';
-            markerBox.style.backgroundColor = d('marker.bgColor');
-            markerBox.style.borderWidth = d('marker.borderWidth');
-            markerBox.style.borderRadius = d('borderRadius');
-            if (isLight(d('marker.bgColor'))) {
-                // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(10, 10, 10, 0.5))';
-                markerBox.style.borderColor = 'rgba(10, 10, 10, 1)';
-                markerLabel.style.color = 'black';
-                markerLabel.style.textshadow = '0px 0px 3px white';
+        if (d('marker.visible')) {
+            if (!trip.has('marker')) {
+                const className = `transit-icon tripId-${tripId} blockId-${blockId}`;
+                const size = parseInt(d('marker.size'));
+                const html = document.createElement('div');
+                const markerLabel = document.createElement('div');
+                markerLabel.className = 'marker-label';
+                markerLabel.innerText = d('marker.label');
+                const markerBox = document.createElement('div');
+                markerBox.className = 'marker-box';
+                markerBox.style.backgroundColor = d('marker.bgColor');
+                markerBox.style.borderWidth = d('marker.borderWidth');
+                markerBox.style.borderRadius = d('borderRadius');
+                if (isLight(d('marker.bgColor'))) {
+                    // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(10, 10, 10, 0.5))';
+                    markerBox.style.borderColor = 'rgba(10, 10, 10, 1)';
+                    markerLabel.style.color = 'black';
+                    markerLabel.style.textshadow = '0px 0px 3px white';
+                } else {
+                    // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))';
+                    markerBox.style.borderColor = 'rgba(255, 255, 255, 1)';
+                    markerLabel.style.color = 'white';
+                    markerLabel.style.textshadow = '0px 0px 3px black';
+                }
+                html.append(markerLabel);
+                html.append(markerBox);
+                const icon = L.divIcon({
+                    className,
+                    html: html.innerHTML,
+                    iconSize: [size, size]
+                });
+                const layer = L.marker(latLng, { icon }).addTo(map);
+                trip.set('marker', layer);
+                trip.set('markerLabel', $(`.tripId-${tripId} .marker-label`));
             } else {
-                // markerBox.style.filter = 'drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))';
-                markerBox.style.borderColor = 'rgba(255, 255, 255, 1)';
-                markerLabel.style.color = 'white';
-                markerLabel.style.textshadow = '0px 0px 3px black';
+                if (!map.hasLayer(t('marker'))) {
+                    t('marker').addTo(map);
+                }
+                t('marker').setLatLng(latLng);
             }
-            html.append(markerLabel);
-            html.append(markerBox);
-            const icon = L.divIcon({
-                className,
-                html: html.innerHTML,
-                iconSize: [size, size]
-            });
-            const layer = L.marker(latLng, { icon }).addTo(map);
-            trip.set('marker', layer);
-            trip.set('markerLabel', $(`.tripId-${tripId} .marker-label`));
-        } else {
-            if (!map.hasLayer(t('marker'))) {
-                t('marker').addTo(map);
-            }
-            t('marker').setLatLng(latLng);
         }
 
-        const tailMaxLength = 5280;
-        const tailLength = minValMax(0, totalLengthTraveled, tailMaxLength);
-        if (tailLength > 0) {
-            const className = `transit-tail tripId-${tripId} blockId-${blockId}`;
-            const shapeLength = t('shape').properties.lengthInFeet;
-            const tailHead = Math.min(totalLengthTraveled, shapeLength - 50);
-            const tailEnd = Math.max(0, tailHead - tailLength);
-            const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
-            const tailLatLngs = turf.getCoords(turf.flip(tailShape));
-            if (!trip.has('tail')) {
-                const tail = L.polyline(tailLatLngs, { color: d('tail.color'), className }).addTo(map);
-                trip.set('tail', tail);
-            } else {
-                trip.get('tail').setLatLngs(tailLatLngs);
+        if (d('tail.visible')) {
+            const tailLength = minValMax(0, totalLengthTraveled, d('tail.length'));
+            if (tailLength > 0) {
+                const className = `transit-tail tripId-${tripId} blockId-${blockId}`;
+                const shapeLength = t('shape').properties.lengthInFeet;
+                const tailHead = Math.min(totalLengthTraveled, shapeLength - 50);
+                const tailEnd = Math.max(0, tailHead - tailLength);
+                const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
+                const tailLatLngs = turf.getCoords(turf.flip(tailShape));
+                if (!trip.has('tail')) {
+                    const tail = L.polyline(tailLatLngs, { color: d('tail.color'), className }).addTo(map);
+                    trip.set('tail', tail);
+                } else {
+                    trip.get('tail').setLatLngs(tailLatLngs);
+                }
             }
         }
 
         // Rotate marker based on angle formed by head position and prior position
-        if (trip.has('priorPosition')) {
-            const priorPosition = trip.get('priorPosition');
-            const bearing = turf.bearing(headPosition, priorPosition);
-            rotate($(`.tripId-${tripId}.transit-icon`), bearing);
+        if (d('marker.rotationEnabled')) {
+            if (trip.has('priorPosition')) {
+                const priorPosition = trip.get('priorPosition');
+                const bearing = turf.bearing(headPosition, priorPosition);
+                rotate($(`.tripId-${tripId}.transit-icon`), bearing);
+            }
+            trip.set('priorPosition', headPosition);
         }
-        trip.set('priorPosition', headPosition);
     });
 
     // Delete expired trips from the map
@@ -207,7 +212,6 @@ const render = (targetPlayhead) => {
 
 function rotate(node, bearing) {
     node.style.transform += 'rotate(' + bearing + 'deg)';
-    return node;
 }
 
 const pulse = (timestamp) => {
@@ -455,7 +459,6 @@ window.clearMap = () => {
     document.querySelectorAll('.transit-icon, .transit-tail').forEach(node => node.style.display = 'none');
 };
 
-// window.clearMap();
 window.redrawAllSpecialLines();
 
 window.dispatchEvent(new CustomEvent('loadFinished'));

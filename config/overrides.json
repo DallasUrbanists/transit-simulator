@@ -1,8 +1,30 @@
 {
+    "routesByType": {
+        "3": {
+            "tail": {
+                "visible": true,
+                "length": 2640
+            }
+        },
+        "5": {
+            "track": {
+                "visible": true
+            }
+        }
+    },
     "routesById": {
         "26793": {
+            "marker": {
+                "label": "DAL",
+                "bgColor": "#fbca00"
+            },
             "tail": {
-                "color": "#fbca00"
+                "color": "#6BCCE7"
+            }
+        },
+        "26760": {
+            "marker": {
+                "label": "MAT"
             }
         }
     },
