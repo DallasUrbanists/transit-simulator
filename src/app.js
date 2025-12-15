@@ -13,7 +13,7 @@ import "leaflet-polylineoffset";
 
 const settings = {
     defaultCoords: [32.780694233921906, -96.79930204561467],
-    maptilerApiKey: '4I9PqHwTZ9xDdwVnOp74',
+    maptilerApiKey: import.meta.env.VITE_MAPTILER_API_KEY,
     defaultZoomLevel: 13,
     defaultMapStyle: maptilersdk.MapStyle['STREETS']['DARK'],
     defaultPlaySpeed: 64,
@@ -191,7 +191,6 @@ const render = (targetPlayhead) => {
             const priorPosition = trip.get('priorPosition');
             const bearing = turf.bearing(headPosition, priorPosition);
             rotate($(`.tripId-${tripId}.transit-icon`), bearing);
-            // rotate($(`.tripId-${tripId} .marker-label`), bearing + 90);
         }
         trip.set('priorPosition', headPosition);
     });
@@ -207,10 +206,6 @@ const render = (targetPlayhead) => {
 };
 
 function rotate(node, bearing) {
-    // node.style.webkitTransform += 'rotate(' + bearing + 'deg)';
-    // node.style.mozTransform += 'rotate(' + bearing + 'deg)';
-    // node.style.msTransform += 'rotate(' + bearing + 'deg)';
-    // node.style.oTransform += 'rotate(' + bearing + 'deg)';
     node.style.transform += 'rotate(' + bearing + 'deg)';
     return node;
 }
@@ -231,10 +226,6 @@ const pulse = (timestamp) => {
     }
 };
 const startPlayback = () => {
-    // $$('.transit-icon').forEach(marker => {
-    //     marker.classList.remove('hidden-initially');
-    //     marker.style.transition = "none";
-    // });
     window.appIsPlaying = true;
     window.isScrubbing = false;
     window.startTimestamp = performance.now();
@@ -295,10 +286,6 @@ window.addEventListener('mouseup', () => {
     if (scrubInterval) {
         clearTimeout(scrubInterval);
     }
-    // $$('.transit-icon').forEach(marker => {
-    //     marker.classList.remove('hidden-initially');
-    //     marker.style.transition = "none";
-    // });
     if (wasPlayingEarlier === true && app.isPlaying() === false) {
         wasPlayingEarlier = false;
         app.togglePlay();
@@ -331,25 +318,15 @@ function handleScrub(event) {
     const trackX = progressTrack.getBoundingClientRect().left;
     const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
     const newPlayhead = secondsInDay * ratio;
-    // $$('.transit-icon').forEach(marker => {
-    //     marker.style.transition = "transform 2s, opacity 1s";
-    // });
     app.scrub(newPlayhead);
-    // $$('.transit-icon').forEach(marker => {
-    //     marker.style.transition = "transform 2s, opacity 1s";
-    // });
     updateControlBar(newPlayhead);
 }
 function handleScrubTimed(event) {
-    // if (scrubInterval) {
-    //     clearTimeout(scrubInterval);
-    // }
     const trackX = progressTrack.getBoundingClientRect().left;
     const ratio = Math.max(0, (event.clientX - trackX)) / progressTrack.offsetWidth;
     const newPlayhead = secondsInDay * ratio;
     updateControlBar(newPlayhead);
     handleScrub(event);
-    //scrubInterval = setTimeout(() => handleScrub(event), 10);
 }
 function updateControlBar(newPlayhead = null) {
     const targetPlayhead = newPlayhead === null ? window.playhead : newPlayhead;

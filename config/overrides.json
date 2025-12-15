@@ -1,19 +1,11 @@
 {
     "routesById": {
-        "26670": {
+        "26793": {
             "tail": {
-                "weight": 10,
-                "color": "pink",
-                "shadowColor": "black"
+                "color": "#fbca00"
             }
         }
     },
     "tripsById": {
-        "8641525": {
-            "tail": {
-                "color": "pink",
-                "shadowColor": "black"
-            }
-        }
     }
 }

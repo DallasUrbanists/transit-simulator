@@ -1,10 +1,9 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) || 'http://localhost:5173/public';
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) || '/';
 
 export const $ = query => document.querySelector(query);
 export const $$ = query => document.querySelectorAll(query);
 
 export function absURL(path) {
-    //console.log(BASE_URL);
     if (typeof window === 'undefined') {
         return (new URL(path, BASE_URL)).href;
     }
@@ -12,7 +11,6 @@ export function absURL(path) {
 }
 
 export async function fetchText(sourceFile) {
-    //console.log(sourceFile);
     const file = await fetch(sourceFile);
     return file.text();
 }
