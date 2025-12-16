@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="time-indicator"></div>
   <div id="loading">
     <span class="loader"></span>
     <h1>Loading...</h1>
@@ -19,7 +20,6 @@
     <div id="playback-controls">
       <button id="play-button"><img src="./icons/play.svg" alt="PLAY" /></button>
       <div id="progress-track">
-        <div id="time-indicator"></div>
         <div id="progress-bar"></div>
       </div>
       <button id="enter-fullscreen">Full screen</button>
@@ -30,7 +30,7 @@
         <option value="8">8x</option>
         <option value="16">16x</option>
         <option value="32">32x</option>
-        <option value="64" selected>64x</option>
+        <option value="64">64x</option>
         <option value="128">128x</option>
         <option value="256">256x</option>
         <option value="512">512x</option>
@@ -38,23 +38,46 @@
     </div>
   </div>
   <button id="leave-fullscreen">Exit Full screen</button>
-  <select id="style-select">
-    <optgroup label="Navigation and city exploration">
-      <option value="STREETS">STREETS</option>
-      <option value="STREETS.DARK" selected>STREETS.DARK</option>
-      <option value="STREETS.LIGHT">STREETS.LIGHT</option>
-      <option value="STREETS.PASTEL">STREETS.PASTEL</option>
-    </optgroup>
-    <option value="OUTDOOR">OUTDOOR</option>
-    <option value="WINTER">WINTER</option>
-    <option value="SATELLITE">SATELLITE</option>
-    <option value="HYBRID">HYBRID</option>
-    <optgroup label="Data visualization">
-      <option value="DATAVIZ">DATAVIZ</option>
-      <option value="DATAVIZ.DARK" selected>DATAVIZ.DARK</option>
-      <option value="DATAVIZ.LIGHT">DATAVIZ.LIGHT</option>
-    </optgroup>
-  </select>
+  <div id="floating-options">
+    <label for="clock-fontsize">Map Style</label>
+    <select id="style-select">
+      <optgroup label="Navigation and city exploration">
+        <option value="STREETS">STREETS</option>
+        <option value="STREETS.DARK" selected>STREETS.DARK</option>
+        <option value="STREETS.LIGHT">STREETS.LIGHT</option>
+        <option value="STREETS.PASTEL">STREETS.PASTEL</option>
+      </optgroup>
+      <option value="OUTDOOR">OUTDOOR</option>
+      <option value="WINTER">WINTER</option>
+      <option value="SATELLITE">SATELLITE</option>
+      <option value="HYBRID">HYBRID</option>
+      <optgroup label="Data visualization">
+        <option value="DATAVIZ">DATAVIZ</option>
+        <option value="DATAVIZ.DARK" selected>DATAVIZ.DARK</option>
+        <option value="DATAVIZ.LIGHT">DATAVIZ.LIGHT</option>
+      </optgroup>
+    </select><br />
+    <label for="clock-fontsize">Clock Size</label>
+    <select id="clock-fontsize">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3" selected>3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+    </select>
+    <label for="clock-color">Color</label>
+    <select id="clock-color">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
+
 
   <script type="module" src="./src/app.js"></script>
 </body>

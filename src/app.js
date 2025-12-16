@@ -1,7 +1,7 @@
 import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
 import MapContext from "./MapContext";
-import { $, convert, DAY,  minValMax } from './utilities.mjs';
+import { $, convert, DAY, minValMax } from './utilities.mjs';
 import Playback from './Playback';
 import Simulation from './Simulation';
 
@@ -46,8 +46,8 @@ window.addEventListener('loadFinished', () => {
 $('#speed-select').addEventListener('change', (e) => playback.setSpeed(e.target.value));
 $('#style-select').addEventListener('change', (e) => map.setStyle(e.target.value));
 $('#play-button').onclick = () => playback.toggle();
-$('#enter-fullscreen').onclick = () => document.body.classList.add('fullscreen-mode');
-$('#leave-fullscreen').onclick = () => document.body.classList.remove('fullscreen-mode');
+$('#enter-fullscreen').onclick = openFullscreen;
+$('#leave-fullscreen').onclick = closeFullscreen;
 
 // Handle when user clicks and drags on progress bar to "scrub" timeline.
 let scrubTimer;
@@ -103,5 +103,96 @@ function updateControlBar() {
     }
 }
 
+// Make the time indicator repositionable by click-and-dragging
+const timer = $('#time-indicator');
+dragElement(timer);
+function dragElement(draggable) {
+    let ogTop, ogLeft, mouseX, mouseY;
+    draggable.onmousedown = dragMouseDown;
+    function dragMouseDown(e) {
+        e.preventDefault();
+        ogLeft = draggable.offsetLeft;
+        ogTop = draggable.offsetTop;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
+    function elementDrag(e) {
+        e.preventDefault();
+        // calculate the cursor's change in position
+        let deltaX = mouseX - e.clientX;
+        let deltaY = mouseY - e.clientY;
+        // calculate new object position
+        const newLeft = ogLeft - deltaX;
+        const newTop = ogTop - deltaY;
+        draggable.style.left = newLeft + "px";
+        draggable.style.top = newTop + "px";
+        // store in memory
+        localStorage.setItem('clock-left', newLeft);
+        localStorage.setItem('clock-top', newTop);
+    }
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+const clockLeft = localStorage.getItem('clock-left');
+if (clockLeft) timer.style.left = clockLeft + 'px';
+const clockTop = localStorage.getItem('clock-top');
+if (clockTop) timer.style.top = clockTop + 'px';
+
+// Change size of clock text based on selection
+const setClockSize = size => {
+    timer.style.fontSize = size + 'vw';
+    $('#clock-fontsize').value = size;
+    localStorage.setItem('clock-size', size);
+};
+$('#clock-fontsize').addEventListener('change', e => setClockSize(e.target.value));
+const storedClockSize = localStorage.getItem('clock-size');
+if (storedClockSize) setClockSize(storedClockSize);
+
+// Change color of clock based on selection
+const lightClock = { color: 'white', shadow: 'black' };
+const darkClock = { color: 'black', shadow: 'white' };
+const setClockColor = (choice) => {
+    const theme = choice === 'light' ? lightClock : darkClock;
+    timer.style.color = theme.color;
+    timer.style.textShadow = '0 0 4px ' + theme.shadow;
+    $('#clock-color').value = choice;
+    localStorage.setItem('clock-color', choice);
+};
+$('#clock-color').addEventListener('change', e => setClockColor(e.target.value));
+const storedClockColor = localStorage.getItem('clock-color');
+if (storedClockColor) setClockColor(storedClockColor);
+
+
 // Alert the UI that loading is finished
 window.dispatchEvent(new CustomEvent('loadFinished'));
+
+
+/* Open fullscreen */
+const elem = document.documentElement;
+function openFullscreen() {
+    document.body.classList.add('fullscreen-mode');
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+    document.body.classList.remove('fullscreen-mode');
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+    }
+}

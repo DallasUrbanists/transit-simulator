@@ -55,7 +55,7 @@ export const convert = {
         let h = hours;
         if (hours === 0) h = 12;
         else if (hours > 12) h = hours - 12;
-        return `${f(h)}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
+        return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
     },
     timeStringToSeconds: timeString => {
         const n = timeString.split(':');

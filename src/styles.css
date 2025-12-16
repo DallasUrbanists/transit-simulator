@@ -17,22 +17,34 @@ body {
     overflow: hidden;
 }
 
-#style-select {
-    opacity: 0.75;
-    color: white;
-    background-color: #555;
+#floating-options {
+    text-align: right;
     position: fixed;
     bottom: calc(50px + 2em);
     right: 1em;
     z-index: 1;
-    padding: 1em;
-    border-radius: 0.25em;
+    
+    
+
+    select {
+        margin-bottom: 1em;
+        opacity: 0.75;
+        color: white;
+        background-color: #555;
+        padding: 1em;
+        border-radius: 0.25em;
+    }
+    label {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    select:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
 }
 
-#style-select:hover {
-    opacity: 1;
-    cursor: pointer;
-}
 
 #map {
     margin: 0;
@@ -140,16 +152,24 @@ body {
 }
 
 #time-indicator {
-    opacity: 0.75;
+    white-space: nowrap;
+    font-size: 48px;
+    opacity: 1;
+    color: white;
     text-align: center;
-    font-size: 26px;
-    margin-left: 16px;
-    z-index: 1;
-    position: relative;
+    position: absolute;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: absolute;
+    z-index: 900;
+    cursor: move;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 4px #000;
+    top: 0;
+    left: 60px;
 }
 
 #progress-bar {
@@ -208,7 +228,7 @@ body {
         z-index: 1;
         display: block;
     }
-    #style-select, .leaflet-control-container {
+    #floating-options, .leaflet-control-container {
         display: none;
     }
     #playback-controls {
