@@ -9,7 +9,6 @@ export default class Simulation {
     tripCriteria = (trip) => true;
 
     constructor(map) {
-        console.log(map);
         this.map = map;
     }
 
@@ -145,16 +144,18 @@ export default class Simulation {
                 const tailLength = minValMax(0, totalLengthTraveled, d('tail.length'));
                 if (tailLength > 0) {
                     const className = `transit-tail tripId-${tripId} blockId-${blockId}`;
-                    const shapeLength = t('shape').properties.lengthInFeet;
-                    const tailHead = Math.min(totalLengthTraveled, shapeLength - 50);
-                    const tailEnd = Math.max(0, tailHead - tailLength);
-                    const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
-                    const tailLatLngs = turf.getCoords(turf.flip(tailShape));
-                    if (!trip.has('tail')) {
-                        trip.set('tail', L.polyline(tailLatLngs, { color: d('tail.color'), className }));
-                        this.map.addTail(trip);
-                    } else {
-                        trip.get('tail').setLatLngs(tailLatLngs);
+                    const shapeLength = t('shape')?.properties?.lengthInFeet;
+                    if (shapeLength) {
+                        const tailHead = Math.min(totalLengthTraveled, shapeLength - 50);
+                        const tailEnd = Math.max(0, tailHead - tailLength);
+                        const tailShape = turf.lineSliceAlong(t('shape'), tailEnd, tailHead, { units: 'feet' });
+                        const tailLatLngs = turf.getCoords(turf.flip(tailShape));
+                        if (!trip.has('tail')) {
+                            trip.set('tail', L.polyline(tailLatLngs, { color: d('tail.color'), className }));
+                            this.map.addTail(trip);
+                        } else {
+                            trip.get('tail').setLatLngs(tailLatLngs);
+                        }
                     }
                 }
             }

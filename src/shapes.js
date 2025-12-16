@@ -2,29 +2,45 @@ import * as turf from '@turf/turf';
 import { convert, fetchText, saniKey, sanitize, absURL } from './utilities.mjs';
 
 const primaryKey = 'shape_id';
-const shapesTxt = await fetchText(absURL('gtfs/DART/shapes.txt'));
-const shapePoints = convert.csvToArray(shapesTxt);
-const columns = convert.arrayToColumnIndex(shapePoints[0]);
-export const shapes = shapePoints.slice(1).reduce((map, row) => {
-    const c = prop => sanitize(row[columns.get(prop)]);
-    const f = prop => parseFloat(c(prop));
-    const shapeId = c(primaryKey);
-    if (!map.has(shapeId)) map.set(shapeId, []);
-    map.get(shapeId).push({
-        lat: f('shape_pt_lat'),
-        lon: f('shape_pt_lon'),
-        seq: f('shape_pt_sequence'),
-        dist: f('shape_dist_traveled')
-    });
-    return map;
-}, new Map());
+export const shapes = new Map();
+export async function processShapesFromSource(source) {
+    const shapesTxt = await fetchText(absURL(`./gtfs/${source}/shapes.txt`));
+    const shapePoints = convert.csvToArray(shapesTxt);
+    const columns = convert.arrayToColumnIndex(shapePoints[0]);
+    const sourcedShapes = new Map();
+    const sourcedShapePoints = shapePoints.slice(1).reduce((map, row) => {
+        const c = prop => sanitize(row[columns.get(prop)]);
+        const f = prop => parseFloat(c(prop));
+        const shapeId = c(primaryKey);
+        if (!shapeId || shapeId === '') return undefined;
+        if (!map.has(shapeId)) map.set(shapeId, []);
+        map.get(shapeId).push({
+            lat: f('shape_pt_lat'),
+            lon: f('shape_pt_lon'),
+            seq: f('shape_pt_sequence'),
+            dist: f('shape_dist_traveled')
+        });
+        return map;
+    }, new Map());
 
-shapes.forEach((shapePoints, shapeId, map) => {
-    shapePoints.sort((a, b) => a.seq - b.seq);
-    const shapeFeature = turf.lineString(shapePoints.map(({ lon, lat }) => [lon, lat]));
-    shapeFeature.properties.lengthInFeet = turf.length(shapeFeature, { units: 'feet' });
-    map.set(shapeId, shapeFeature);
-});
+    sourcedShapePoints.forEach((shapePoints, shapeId) => {
+        if (!shapePoints) return;
+        shapePoints.sort((a, b) => a.seq - b.seq);
+        let latLngs, shapeFeature;
+//        try {
+            latLngs = shapePoints.map(({ lon, lat }) => [lon, lat]);
+            shapeFeature = turf.lineString(latLngs);
+            shapeFeature.properties.lengthInFeet = turf.length(shapeFeature, { units: 'feet' });
+        // } catch (e) {
+        //     console.log({latLngs, shapePoints});
+        //     throw e;
+        // }
+        shapes.set(shapeId, shapeFeature);
+        sourcedShapes.set(shapeId, shapeFeature);
+    });
+
+    return sourcedShapes;
+}
 
 export function getShape(search) {
     if (!search) return undefined;

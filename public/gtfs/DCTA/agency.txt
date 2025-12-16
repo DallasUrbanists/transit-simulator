@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_fare_url,agency_lang,agency_email
+581,Denton County Transportation Authority,http://www.dcta.net,America/Chicago,940-243-0077,https://www.dcta.net/fares-passes,en,dctainfo@dcta.net

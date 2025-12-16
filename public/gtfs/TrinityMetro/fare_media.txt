@@ -1,0 +1,5 @@
+fare_media_id,fare_media_name,fare_media_type
+cash,Cash,0
+paper,Paper Ticket,1
+cEMV,Tap-to-pay,3
+mobile,Mobile App,4

@@ -1,0 +1,76 @@
+fare_product_id,fare_product_name,amount,currency,rider_category_id,fare_media_id
+local_single_ride,Local Single Ride,2.00,USD,general,cash
+local_single_ride,Local Single Ride,2.00,USD,general,paper
+local_single_ride,Local Single Ride,2.00,USD,general,cEMV
+local_single_ride,Local Single Ride,2.00,USD,general,mobile
+local_multi_ride_1_day,Local Multi Ride One Day,4.00,USD,general,cash
+local_multi_ride_1_day,Local Multi Ride One Day,4.00,USD,general,paper
+local_multi_ride_1_day,Local Multi Ride One Day,4.00,USD,general,cEMV
+local_multi_ride_1_day,Local Multi Ride One Day,4.00,USD,general,mobile
+local_multi_ride_7_day,Local Multi Ride Seven Day,18.00,USD,general,cash
+local_multi_ride_7_day,Local Multi Ride Seven Day,18.00,USD,general,paper
+local_multi_ride_7_day,Local Multi Ride Seven Day,18.00,USD,general,mobile
+regional_multi_ride_1_day,Regional Multi Ride One Day,12.00,USD,general,cash
+regional_multi_ride_1_day,Regional Multi Ride One Day,12.00,USD,general,paper
+regional_multi_ride_1_day,Regional Multi Ride One Day,12.00,USD,general,mobile
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_y,cash
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_y,paper
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_y,mobile
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_y,cash
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_y,paper
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_y,mobile
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_y,cash
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_y,paper
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_y,mobile
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_y,cash
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_y,paper
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_y,mobile
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_v,cash
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_v,paper
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_v,mobile
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_v,cash
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_v,paper
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_v,mobile
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_v,cash
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_v,paper
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_v,mobile
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_s,cash
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_s,paper
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_s,mobile
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_s,cash
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_s,paper
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_s,mobile
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_s,cash
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_s,paper
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_s,mobile
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_s,cash
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_s,paper
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_s,mobile
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_d,cash
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_d,paper
+local_reduced_single_ride,Local Reduced Single Ride,1.00,USD,reduced_d,mobile
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_d,cash
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_d,paper
+local_reduced_multi_ride_1_day,Local Reduced Multi Ride One Day,2.00,USD,reduced_d,mobile
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_d,cash
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_d,paper
+local_reduced_multi_ride_7_day,Local Reduced Multi Ride Seven Day,9.00,USD,reduced_d,mobile
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_d,cash
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_d,paper
+regional_reduced_Multi_Ride_7_day,Regional Reduced Multi Ride Seven Day,3.00,USD,reduced_d,mobile
+complimentary,Complimentary,0.00,USD,general,cash
+complimentary,Complimentary,0.00,USD,general,paper
+complimentary,Complimentary,0.00,USD,general,cEMV
+complimentary,Complimentary,0.00,USD,general,mobile
+complimentary,Complimentary,0.00,USD,reduced_v,cash
+complimentary,Complimentary,0.00,USD,reduced_v,paper
+complimentary,Complimentary,0.00,USD,reduced_v,mobile
+complimentary,Complimentary,0.00,USD,reduced_y,cash
+complimentary,Complimentary,0.00,USD,reduced_y,paper
+complimentary,Complimentary,0.00,USD,reduced_y,mobile
+complimentary,Complimentary,0.00,USD,reduced_s,cash
+complimentary,Complimentary,0.00,USD,reduced_s,paper
+complimentary,Complimentary,0.00,USD,reduced_s,mobile
+complimentary,Complimentary,0.00,USD,reduced_d,cash
+complimentary,Complimentary,0.00,USD,reduced_d,paper
+complimentary,Complimentary,0.00,USD,reduced_d,mobile

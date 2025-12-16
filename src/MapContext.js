@@ -25,7 +25,7 @@ export default class MapContext extends LeafletMap {
         }).addTo(this);
         this.on('zoomend', this.handleZoom);
         this.on('moveend', this.handleMove);
-        this.redrawFixtures();
+        // this.redrawFixtures();
     }
     setStyle(styleString) {
         const code = styleString.split(".");

@@ -3,34 +3,29 @@ import { getShape } from './shapes.js';
 import { getTimepointsForTrip } from './stops.js';
 import * as turf from '@turf/turf';
 
+export const trips = new Map();
 const primaryKey = 'trip_id';
-const tripsTxt = await fetchText(absURL('./gtfs/DART/trips.txt'));
-const tripBlocks = new Map();
-const serviceIds = new Set();
-export const trips = convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
-    if (trip === undefined) return undefined;
-    const t = key => trip.get(key);
-    if (t(primaryKey) === '') return undefined;
-    const set = (key, value) => setIfNotHave(key, value, trip);
-    const timepoints = getTimepointsForTrip(trip);
-    set('shape', getShape(trip));
-    set('timepoints', timepoints);
-    const points = t('timepoints');
-    set('startPosition', points[0]);
-    set('startSeconds', t('startPosition').properties.arrival_seconds);
-    set('endPosition', points[points.length - 1]);
-    set('endSeconds', t('endPosition').properties.arrival_seconds);
-    set('durationSeconds', t('endSeconds') - t('startSeconds'));
-    set('isFinal', true);
-    if (!tripBlocks.has(t('block_id'))) {
-        tripBlocks.set(t('block_id'), new Set());
-    }
-    const tripBlock = tripBlocks.get(t('block_id'));
-    tripBlock.values().forEach(otherTrip => otherTrip.set('isFinal', false));
-    tripBlock.add(trip);
-    serviceIds.add(trip.get('service_id'));
-    return trip;
-});
+
+export async function processTripsFromSource(agency) {
+    const tripsTxt = await fetchText(absURL(`./gtfs/${agency}/trips.txt`));
+    return convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
+        if (trip === undefined) return undefined;
+        const t = key => trip.get(key);
+        if (t(primaryKey) === '') return undefined;
+        const set = (key, value) => setIfNotHave(key, value, trip);
+        const timepoints = getTimepointsForTrip(trip);
+        set('shape', getShape(trip));
+        set('timepoints', timepoints);
+        const points = t('timepoints');
+        set('startPosition', points[0]);
+        set('startSeconds', t('startPosition').properties.arrival_seconds);
+        set('endPosition', points[points.length - 1]);
+        set('endSeconds', t('endPosition').properties.arrival_seconds);
+        set('durationSeconds', t('endSeconds') - t('startSeconds'));
+        set('isFinal', true);
+        trips.set(t('trip_id'), trip);
+    });
+}
 
 export function getTrip(search) {
     let trip;
@@ -46,19 +41,14 @@ export function getTrip(search) {
     return trip;
 }
 
-// console.log(getTrip(8641531));
-
 export function searchTrips(query) {
     return trips.values().filter(trip => query(trip));
-}
-
-export function getTripsInSameBlock(trip) {
-    return tripBlocks.get(trip.get('block_id')) ?? new Set();
 }
 
 export function getTripSegments(trip) {
     const timeSegments = [];
     const timepoints = trip.get('timepoints');
+    if (timepoints.length === 0) return timeSegments;
     for (let i = 0; i < timepoints.length - 1; i++) {
         const thisPoint = timepoints[i];
         const nextPoint = timepoints[i + 1];

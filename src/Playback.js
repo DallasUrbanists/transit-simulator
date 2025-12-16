@@ -1,3 +1,4 @@
+import { trips } from "./trips";
 import { convert, DAY } from "./utilities.mjs";
 
 const playheadChanged = new CustomEvent('playheadChanged');

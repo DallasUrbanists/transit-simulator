@@ -4,15 +4,19 @@ import MapContext from "./MapContext";
 import { $, convert, DAY, minValMax } from './utilities.mjs';
 import Playback from './Playback';
 import Simulation from './Simulation';
+import { agencies, processSource } from './sources.js';
+
+agencies.forEach(agency => processSource(agency));
 
 const map = new MapContext('map');
 const simulation = new Simulation(map);
 const playback = new Playback(simulation);
 
 // TO-DO:
-// - Find out what each of the Service IDs mean
-// - Attach this to UI checkboxes
+// - Verify what all the various Service IDs mean
+// - Attach each service code to UI checkboxes
 simulation.setTripCriteria(trip => {
+    // DART SERVICE CODES
     const BUS_WEEKDAY_SERVICE = '2';
     const BUS_SATURDAY_SERVICE = '3';
     const BUS_SUNDAY_SERVICE = '4';
@@ -26,9 +30,24 @@ simulation.setTripCriteria(trip => {
     const UTD_IDK2_SERVICE = '1002'; // UTD 883 Routes are covered by BUS_WEEKDAY_SERVICE
     const TRE_IDK1_SERVICE = '1621'; // Trinity Railray Express is covered by RAIL_WEEKDAY_SERVICE
     const TRE_IDK2_SERVICE = '1521'; // Trinity Railray Express is covered by RAIL_WEEKDAY_SERVICE
+
+    // DENTON COUNTY TRANSITY AUTHORITY SERVICE CODES
+    const DCTA_BUS_WEEKDAY = '2026_Spring_-Weekday';
+    const DCTA_RAIL_WEEKDAY = 'A-Train-Mo-Th';
+
+    // TRINITY METRO SERVICE CODES
+    const TRINITY_MON_FRI = '140.0.1';
+    const TRINITY_XMAS_CAPITAL_EXPRESS = '140.CCEX.1';
+    const TRINITY_XMAS_PALACE_THEATRE = '140.CCPT.1';
+
     return [
         BUS_WEEKDAY_SERVICE,
-        RAIL_WEEKDAY_SERVICE
+        RAIL_WEEKDAY_SERVICE,
+        DCTA_BUS_WEEKDAY,
+        DCTA_RAIL_WEEKDAY,
+        TRINITY_MON_FRI,
+        TRINITY_XMAS_CAPITAL_EXPRESS,
+        TRINITY_XMAS_PALACE_THEATRE,
     ].includes(trip.get('service_id'));
 });
 
@@ -105,24 +124,43 @@ function updateControlBar() {
 
 // Make the time indicator repositionable by click-and-dragging
 const timer = $('#time-indicator');
+const isTouch = e => e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel';
+const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave';
 dragElement(timer);
 function dragElement(draggable) {
     let ogTop, ogLeft, mouseX, mouseY;
     draggable.onmousedown = dragMouseDown;
+    draggable.ontouchstart = dragMouseDown;    
     function dragMouseDown(e) {
         e.preventDefault();
         ogLeft = draggable.offsetLeft;
         ogTop = draggable.offsetTop;
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+        if (isClick(e)) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        } else if (isTouch(e)) {
+            var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+            mouseX = touch.pageX;
+            mouseY = touch.pageY;
+        }
         document.onmouseup = closeDragElement;
+        document.ontouchend = closeDragElement;
+        document.ontouchcancel = closeDragElement;
         document.onmousemove = elementDrag;
+        document.ontouchmove = elementDrag;
+        console.log('touch start');
     }
     function elementDrag(e) {
         e.preventDefault();
-        // calculate the cursor's change in position
-        let deltaX = mouseX - e.clientX;
-        let deltaY = mouseY - e.clientY;
+        let deltaX, deltaY;
+        if (isClick(e)) {
+            deltaX = mouseX - e.clientX;
+            deltaY = mouseY - e.clientY;
+        } else if (isTouch(e)) {
+            var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+            deltaX = mouseX - touch.pageX;
+            deltaY = mouseY - touch.pageY;
+        }
         // calculate new object position
         const newLeft = ogLeft - deltaX;
         const newTop = ogTop - deltaY;
@@ -131,11 +169,15 @@ function dragElement(draggable) {
         // store in memory
         localStorage.setItem('clock-left', newLeft);
         localStorage.setItem('clock-top', newTop);
+        console.log('touch move');
     }
     function closeDragElement() {
         // stop moving when mouse button is released:
         document.onmouseup = null;
+        document.ontouchend = null;
         document.onmousemove = null;
+        document.ontouchmove = null;
+        console.log('touch end');
     }
 }
 const clockLeft = localStorage.getItem('clock-left');

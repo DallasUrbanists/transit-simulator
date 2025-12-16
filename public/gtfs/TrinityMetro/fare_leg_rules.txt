@@ -1,0 +1,12 @@
+leg_group_id,network_id,fare_product_id,rule_priority
+default,TM,local_single_ride,1
+default,TM,local_multi_ride_1_day,2
+default,TM,local_multi_ride_7_day,3
+default,TM,regional_multi_ride_1_day,4
+default,TM,local_reduced_single_ride,1
+default,TM,local_reduced_multi_ride_1_day,2
+default,TM,local_reduced_multi_ride_7_day,3
+default,TM,regional_reduced_Multi_Ride_7_day,4
+default,TM_cEMV,local_single_ride,1
+default,TM_cEMV,local_multi_ride_1_day,2
+default,GP,complimentary,1

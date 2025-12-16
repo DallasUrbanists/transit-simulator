@@ -1,0 +1,6 @@
+rider_category_id,rider_category_name,is_default_fare_category,min_age,max_age,eligibility_url
+reduced_s,Senior Citizens,0,65,,https://ridetrinitymetro.org/tickets/#1570824304038-3b829a82-e5f9
+reduced_y,Youth,0,5,19,https://ridetrinitymetro.org/tickets/#1570824253776-a8ea5489-231d
+reduced_d,Disability,0,,,https://ridetrinitymetro.org/tickets/#1570824253747-c93fcb97-d190
+reduced_v,Veterans,0,,,https://ridetrinitymetro.org/tickets/#1570824253747-c93fcb97-d190
+general,General,1,,,https://ridetrinitymetro.org/tickets/

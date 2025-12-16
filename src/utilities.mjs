@@ -1,4 +1,4 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/';
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/transit-simulator/';
 
 export const $ = query => document.querySelector(query);
 export const $$ = query => document.querySelectorAll(query);

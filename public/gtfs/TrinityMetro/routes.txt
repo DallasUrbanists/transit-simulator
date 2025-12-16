@@ -1,0 +1,37 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,network_id
+7650,Trinity Metro,001,Hemphill,,3,https://ridetrinitymetro.org/routes/route-001/,BA55D3,FFFFFF,TM
+7651,Trinity Metro,002,Camp Bowie,,3,https://ridetrinitymetro.org/routes/route-002/,8A2BE2,FFFFFF,TM
+7652,Trinity Metro,004,East Rosedale,,3,https://ridetrinitymetro.org/routes/route-004/,00FFFF,000000,TM
+7653,Trinity Metro,005,Evans/TCC South,,3,https://ridetrinitymetro.org/routes/route-005/,EE82EE,000000,TM
+7654,Trinity Metro,006,8th Ave/Mccart,,3,https://ridetrinitymetro.org/routes/route-006/,E9967A,000000,TM
+7655,Trinity Metro,011,N. Beach/Mercantile Center  Station,,3,https://ridetrinitymetro.org/routes/route-011/,87CEFA,000000,TM
+7657,Trinity Metro,Orange Line,Orange Line,Route connects downtown Fort Worth and TEXRail North Side Station with legendary Fort Worth Stockyards departing every 15 minutes seven days a week,3,https://ridetrinitymetro.org/routes/route-015/,f58220,FFFFFF,TM_cEMV
+7658,Trinity Metro,016,Alliance Center/Merchantile Center,,3,https://ridetrinitymetro.org/routes/route-016/,A0522D,000000,TM
+7659,Trinity Metro,Blue Line,Blue Line,Downtown Shuttle Service,3,https://ridetrinitymetro.org/routes/route-BLUE/,0090d0,FFFFFF,TM
+7660,Trinity Metro,021,Boca Raton,,3,https://ridetrinitymetro.org/routes/route-021/,DA70D6,000000,TM
+7661,Trinity Metro,022,Meadowbrook,,3,https://ridetrinitymetro.org/routes/route-022/,A52A2A,FFFFFF,TM
+7662,Trinity Metro,024,Berry Street,,3,https://ridetrinitymetro.org/routes/route-024/,778899,FFFFFF,TM
+7663,Trinity Metro,025,Miller/E Seminary,,3,https://ridetrinitymetro.org/routes/route-025/,FF00FF,000000,TM
+7664,Trinity Metro,029,W Seminary/Hulen Mall,,3,https://ridetrinitymetro.org/routes/route-029/,8B008B,FFFFFF,TM
+7665,Trinity Metro,030,Centreport Circulator,,3,https://ridetrinitymetro.org/routes/route-030/,FF00FF,FFFFFF,TM
+7666,Trinity Metro,LINK,TRE Link,,3,https://ridetrinitymetro.org/routes/route-031/,FF00FF,FFFFFF,TM
+7667,Trinity Metro,033,Felix/Oak Grove,,3,https://ridetrinitymetro.org/routes/route-033/,FF00FF,FFFFFF,TM
+7668,Trinity Metro,046,Jacksboro Highway,,3,https://ridetrinitymetro.org/routes/route-046/,FFA07A,000000,TM
+7669,Trinity Metro,051,Bryant Irvin,,3,https://ridetrinitymetro.org/routes/route-051/,FFA07A,000000,TM
+7670,Trinity Metro,052,Hulen,,3,https://ridetrinitymetro.org/routes/route-052/,FFA07A,000000,TM
+7671,Trinity Metro,053,University,,3,https://ridetrinitymetro.org/routes/route-053/,FFA07A,000000,TM
+7672,Trinity Metro,054,Riverside/Sierra Vista,,3,https://ridetrinitymetro.org/routes/route-054/,FFA07A,000000,TM
+7673,Trinity Metro,055,Handley,,3,https://ridetrinitymetro.org/routes/route-055/,FFA07A,000000,TM
+7674,Trinity Metro,61X,Normandal Express,,3,https://ridetrinitymetro.org/routes/route-061/,00FF00,000000,TM
+7675,Trinity Metro,63X,North Park & Ride Express,,3,https://ridetrinitymetro.org/routes/route-063/,00FF00,000000,TM
+7676,Trinity Metro,65X,South Park & Ride Express,,3,https://ridetrinitymetro.org/routes/route-065/,00FF00,000000,TM
+7677,Trinity Metro,072,Hemphill/Sycamore School Road,,3,https://ridetrinitymetro.org/routes/route-072/,00FF00,000000,TM
+7678,Trinity Metro,089,Spur/East Lancaster,,3,https://ridetrinitymetro.org/routes/route-089/,87CEEB,000000,TM
+7679,Trinity Metro,091,North Side Station/Normandale,,3,https://ridetrinitymetro.org/routes/route-091/,004D4D,FFFFFF,TM
+7680,Trinity Metro,LL,Burnett Plaza Lunch Line,Lunch Line,3,https://ridetrinitymetro.org/routes/route-LL/,556B2F,000000,TM
+7684,Trinity Metro,991,Juror Shuttle,,3,https://ridetrinitymetro.org/routes/route-991/,A07268,FFFFFF,TM
+7685,Grapevine Visitors Shuttle,BLUE,Blue Route,,3,https://www.grapevinetexasusa.com/plan-your-visit/transportation/grapevine-visitors-shuttle/schedules-routes/,0090d0,FFFFFF,GP
+7686,Grapevine Visitors Shuttle,CCOT,Christmas Capitol Of Texas,Palace theatre route runs by request on December 1st 2nd 8th 9th 18th 19th 22nd 23rd 29th 30th,3,,F51414,FFFFFF,GP
+7687,Grapevine Visitors Shuttle,GREEN,Grapevine Green Route,,3,https://www.grapevinetexasusa.com/plan-your-visit/transportation/grapevine-visitors-shuttle/schedules-routes/,008000,FFFFFF,GP
+7688,Grapevine Visitors Shuttle,MERLOT,Grapevine Merlot Route,,3,https://www.grapevinetexasusa.com/plan-your-visit/transportation/grapevine-visitors-shuttle/schedules-routes/,800080,FFFFFF,GP
+7689,Trinity Metro,TEXRail,TEXRail,,0,https://ridetrinitymetro.org/texrail-schedule/,000000,FFFFFF,TM

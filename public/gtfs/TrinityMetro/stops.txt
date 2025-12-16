@@ -1,0 +1,1576 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+1,,Fort Worth Central Station-FWCS,,32.751831,-97.325773,,,1,,,0
+2,0002,Hemphill & Berry,Northbound - Near Side,32.705343,-97.331525,,,,,,0
+3,,Ridgmar Mall Transfer Center,,32.740036,-97.434167,,,1,,,0
+4,,Dr.Dennis Dunkins Transfer Center,,32.740432,-97.263159,,,1,,,0
+5,,La Gran Plaza Transfer Center,,32.685013,-97.324356,,,1,,,0
+6,0006,Henderson & Peach,Northbound - Far Side,32.756571,-97.340413,,,,,,0
+9,,Sierra Vista Transfer Center,,32.7057,-97.305733,,,1,,,0
+10,,North Park & Ride,,32.921991,-97.318358,,,1,,,0
+11,,TEXRail Mercantile Center Station,,32.819463,-97.293636,,,1,,,0
+12,,TEXRail North side Station,,32.795827,-97.337619,,,1,,,0
+14,,Trinity Lakes Station,,32.805258,-97.209435,,,1,,,0
+15,,DFW Airport(DFW) TEXRail Station,,32.906242,-97.041297,,,1,,,0
+16,0016,Henderson & Peach,Southbound - Far Side,32.75652,-97.340666,,,,,,0
+18,0018,Vickery Transfer Center (Curb Side),,32.743775,-97.327273,,,,,,0
+28,0028,Fort Worth T&P Station,,32.745327,-97.328451,,,,,,0
+78,0078,Fort Worth Central Station,,32.751729,-97.325524,,,,,,0
+131,0131,Main & Exchange,Southbound - Far Side,32.788159,-97.349239,,,,,,0
+217,0217,CentrePort Station,,32.817172,-97.053104,,,,,,0
+255,0255,Berry & Evans,Westbound - Far Side,32.706054,-97.319072,,,,,,0
+305,0305,South Park And Ride,,32.56348,-97.314852,,,,,,0
+339,0339,Sylvania & Yucca,Northbound - Near Side,32.780579,-97.308513,,,,,,0
+380,0380,Amon Carter & Sovereign - Trinity,Southbound - Mid Block,32.82433,-97.049374,,,,,,0
+381,0381,Amon Carter & Trinity - Sovereign,Northbound - Mid Block,32.823933,-97.048914,,,,,,0
+383,0383,Bryant Irvin & River Park,Southbound - Far Side,32.706733,-97.411863,,,,,,0
+384,0384,Oakmont & Harris,Westbound - Near Side,32.662692,-97.418777,,,,,,0
+385,0385,Magnolia & Hurley,Westbound - Near Side,32.730719,-97.342773,,,,,,0
+390,0390,Camp Bowie West & Portales,Eastbound - Far Side,32.724233,-97.467493,,,,,,0
+393,0393,McCart & Altamesa - Finbro,Northbound - Mid Block,32.651475,-97.365547,,,,,,0
+400,0400,South Fwy & Altamesa,Northbound - Near Side,32.652406,-97.320727,,,,,,0
+402,0402,South Fwy & Georgian,Southbound - Near Side,32.639813,-97.321893,,,,,,0
+406,0406,Sycamore School & McCart,Westbound - Near Side,32.63508,-97.368347,,,,,,0
+408,0408,McCart & Park Lake,Southbound - Near Side,32.653562,-97.363886,,,,,,0
+409,0409,Joe B Rushing & C A Roberson,Eastbound - Near Side,32.671929,-97.288071,,,,,,0
+410,0410,Hemphill & Mason,Southbound - Near Side,32.68914,-97.331824,,,,,,0
+411,0411,Seminary & Hemphill,Eastbound - Far Side,32.684759,-97.330813,,,,,,0
+412,0412,Main & 5th - 6th,Northbound - Mid Block,32.765874,-97.338642,,,,,,0
+413,0413,University & Botanic Gardens,Northbound - Far Side,32.740742,-97.361316,,,,,,0
+417,0417,7th & Ballinger - Collier,Westbound - Mid Block,32.751068,-97.340201,,,,,,0
+418,0418,Throckmorton & 6th,Northbound - Near Side,32.752416,-97.33165,,,,,,0
+419,0419,7th & Henderson,Eastbound - Far Side,32.750913,-97.337054,,,,,,0
+420,0420,7th & Henderson - Lexington,Westbound - Mid Block,32.751094,-97.337859,,,,,,0
+421,0421,7th & Fournier,Westbound - Near Side,32.751091,-97.344057,,,,,,0
+422,0422,7th & Harrold,Westbound - Far Side,32.751192,-97.349417,,,,,,0
+423,0423,7th & Woolery,Westbound - Far Side,32.751173,-97.353044,,,,,,0
+425,0425,7th & Currie - Norwood,Westbound - Mid Block,32.751256,-97.358686,,,,,,0
+426,0426,7th & Carroll,Eastbound - Far Side,32.750986,-97.35434,,,,,,0
+429,0429,7th & Fournier - Penn,Eastbound - Mid Block,32.7509,-97.343133,,,,,,0
+431,0431,University & Log Cabin,Southbound - Far Side,32.720084,-97.361476,,,,,,0
+432,0432,University & Bowie,Southbound - Near Side,32.707888,-97.360546,,,,,,0
+433,0433,University & Bowie - Princeton,Northbound - Mid Block,32.710849,-97.360256,,,,,,0
+437,0437,University & Harley - Botanic Gardens,Southbound - Mid Block,32.741406,-97.361598,,,,,,0
+438,0438,University & Rock Springs,Southbound - Near Side,32.737225,-97.361551,,,,,,0
+439,0439,University & Old University,Southbound - Near Side,32.728694,-97.361417,,,,,,0
+440,0440,University & Collinsworth,Southbound - Far Side,32.725882,-97.361383,,,,,,0
+441,0441,University & Colonial,Southbound - Near Side,32.721687,-97.361454,,,,,,0
+442,0442,University & Park Hill,Southbound - Far Side,32.715838,-97.360489,,,,,,0
+443,0443,University & McPherson - Cantey,Southbound - Mid Block,32.713482,-97.36051,,,,,,0
+444,0444,University & Princeton,Southbound - Far Side,32.71041,-97.360531,,,,,,0
+445,0445,University & Berry - Devitt,Southbound - Mid Block,32.704666,-97.360553,,,,,,0
+446,0446,University & Bluebonnet,Southbound - Near Side,32.700083,-97.36057,,,,,,0
+450,0450,University & Bluebonnet,Northbound - Far Side,32.699941,-97.360337,,,,,,0
+451,0451,University & Berry,Northbound - Near Side,32.705646,-97.360274,,,,,,0
+453,0453,University & McPherson,Northbound - Near Side,32.713229,-97.360279,,,,,,0
+455,0455,University & Log Cabin,Northbound - Near Side,32.720531,-97.361128,,,,,,0
+456,0456,University & Riverfront - Collinsworth,Northbound - Mid Block,32.725734,-97.361049,,,,,,0
+457,0457,University & Rosedale,Northbound - Near Side,32.730216,-97.361224,,,,,,0
+459,0459,University & Trinity Park,Northbound - Near Side,32.736616,-97.361214,,,,,,0
+461,0461,7th & Taylor,Eastbound - Near Side,32.751433,-97.332353,,,,,,0
+462,0462,7th & Macon,Westbound - Near Side,32.751096,-97.335476,,,,,,0
+464,0464,Main & Dashwood,Southbound - Near Side,32.734344,-97.325984,,,,,,0
+465,0465,Allen & South Fwy - Evans,Eastbound - Mid Block,32.726005,-97.31921,,,,,,0
+468,0468,Main & I 30,Northbound - Near Side,32.744155,-97.325773,,,,,,0
+469,0469,9th & Main,Westbound - Near Side,32.751557,-97.328916,,,,,,0
+470,0470,Houston & 11th,Southbound - Near Side,32.750084,-97.329359,,,,,,0
+475,0475,Evans & Colvin,Northbound - Near Side,32.713695,-97.318411,,,,,,0
+476,0476,Evans & Marion,Northbound - Near Side,32.716182,-97.318356,,,,,,0
+490,0490,Evans & Richmond - Jefferson,Northbound - Mid Block,32.724171,-97.318303,,,,,,0
+491,0491,Evans & Jefferson - Richmond,Southbound - Mid Block,32.723914,-97.318457,,,,,,0
+492,0492,Evans & Arlington,Southbound - Near Side,32.722014,-97.31849,,,,,,0
+493,0493,Evans & Powell,Southbound - Near Side,32.719179,-97.318495,,,,,,0
+494,0494,Allen & Evans,Westbound - Far Side,32.726243,-97.319017,,,,,,0
+496,0496,Allen & Main,Eastbound - Far Side,32.72579,-97.325845,,,,,,0
+497,0497,Allen & Epps - South Fwy,Eastbound - Mid Block,32.726037,-97.321117,,,,,,0
+499,0499,Main & Morphy,Northbound - Near Side,32.729311,-97.326152,,,,,,0
+500,0500,Main & Morphy,Southbound - Far Side,32.72936,-97.326348,,,,,,0
+501,0501,Main & Magnolia,Northbound - Near Side,32.730285,-97.325814,,,,,,0
+502,0502,Main & Dashwood,Northbound - Far Side,32.734342,-97.325849,,,,,,0
+503,0503,Main & Annie,Northbound - Near Side,32.738481,-97.32584,,,,,,0
+504,0504,Main & Daggett,Northbound - Near Side,32.74238,-97.325823,,,,,,0
+505,0505,Main & Industrial,Southbound - Far Side,32.744218,-97.326013,,,,,,0
+506,0506,Main & Cleveland,Southbound - Near Side,32.740636,-97.325954,,,,,,0
+507,0507,Main & Annie,Southbound - Near Side,32.738752,-97.325965,,,,,,0
+508,0508,Main & Oleander - Magnolia,Southbound - Mid Block,32.731134,-97.32598,,,,,,0
+509,0509,Main & St Joseph,Southbound - Near Side,32.726983,-97.32639,,,,,,0
+510,0510,Houston & 14th,Southbound - Far Side,32.74755,-97.327635,,,,,,0
+514,0514,Riverside & Ennis,Southbound - Far Side,32.759113,-97.301851,,,,,,0
+515,0515,Riverside & 4th - Galvez,Southbound - Mid Block,32.762769,-97.301813,,,,,,0
+527,0527,Sylvania & Virginia - Bird,Northbound - Mid Block,32.776114,-97.308642,,,,,,0
+528,0528,Sylvania & Jeff - Westbrook,Northbound - Mid Block,32.778519,-97.308558,,,,,,0
+530,0530,Sylvania & Honeysuckle,Northbound - Far Side,32.783761,-97.308497,,,,,,0
+531,0531,Sylvania & Springdale,Northbound - Far Side,32.788409,-97.308485,,,,,,0
+532,0532,Sylvania & Hollis - Ivey,Northbound - Mid Block,32.793005,-97.308484,,,,,,0
+537,0537,N Beach & Mccomas - Elinor,Southbound - Mid Block,32.800461,-97.29068,,,,,,0
+549,0549,Throckmorton & 4th,Northbound - Near Side,32.753618,-97.332599,,,,,,0
+553,0553,Camp Bowie & Clarke - Dorothy,Westbound - Mid Block,32.747067,-97.371923,,,,,,0
+554,0554,Camp Bowie & Dorothy,Westbound - Near Side,32.746426,-97.373414,,,,,,0
+555,0555,Camp Bowie & Belle,Westbound - Near Side,32.745446,-97.3758,,,,,,0
+556,0556,Camp Bowie & Thomas,Westbound - Far Side,32.743658,-97.379963,,,,,,0
+557,0557,Camp Bowie & Hulen,Westbound - Near Side,32.740502,-97.387596,,,,,,0
+559,0559,Camp Bowie & Eldridge,Westbound - Near Side,32.738204,-97.393031,,,,,,0
+560,0560,Camp Bowie & Penticost,Westbound - Far Side,32.737319,-97.395249,,,,,,0
+561,0561,Camp Bowie & Neville - Merrick,Westbound - Mid Block,32.736279,-97.39773,,,,,,0
+562,0562,Camp Bowie & Merrick - Pershing,Westbound - Far Side,32.735747,-97.399012,,,,,,0
+563,0563,Camp Bowie & Lovell - Halloran,Westbound - Near Side,32.731305,-97.409626,,,,,,0
+564,0564,Camp Bowie & Bryant Irvin,Westbound - Near Side,32.730015,-97.412697,,,,,,0
+565,0565,Camp Bowie & Winthrop,Westbound - Near Side,32.729169,-97.41472,,,,,,0
+566,0566,Camp Bowie & Ridglea,Westbound - Near Side,32.727023,-97.419847,,,,,,0
+567,0567,Camp Bowie & Ridglea - Hilldale,Westbound - Mid Block,32.726353,-97.421449,,,,,,0
+569,0569,Camp Bowie & Pelham,Westbound - Near Side,32.722731,-97.430178,,,,,,0
+571,0571,Lackland & Hemsell,Northbound - Near Side,32.725058,-97.434645,,,,,,0
+572,0572,Lackland & Garland,Northbound - Near Side,32.727105,-97.434612,,,,,,0
+573,0573,Lackland & Curzon,Northbound - Near Side,32.729473,-97.434585,,,,,,0
+574,0574,Lackland & Calmont,Northbound - Near Side,32.733557,-97.434529,,,,,,0
+575,0575,Green Oaks & West Fwy,Northbound - Far Side,32.736515,-97.4341,,,,,,0
+576,0576,Green Oaks & Calmont - I 30,Northbound - Far Side,32.734606,-97.434408,,,,,,0
+577,0577,Ridgmar Mall Transfer Center,,32.740079,-97.434162,,,,3,,0
+578,0578,Green Oaks & West Fwy,Southbound - Near Side,32.736121,-97.434337,,,,,,0
+579,0579,Green Oaks & Calmont,Southbound - Near Side,32.734341,-97.434712,,,,,,0
+580,0580,Lackland & Locke,Southbound - Far Side,32.731743,-97.434737,,,,,,0
+583,0583,Lackland & Z Boaz,Southbound - Far Side,32.722464,-97.43444,,,,,,0
+584,0584,Camp Bowie & Clayton,Eastbound - Far Side,32.724065,-97.42632,,,,,,0
+585,0585,Camp Bowie & Hilldale,Eastbound - Near Side,32.72545,-97.422994,,,,,,0
+586,0586,Camp Bowie & Bernie Anderson - Fairfield,Eastbound - Mid Block,32.727052,-97.419185,,,,,,0
+587,0587,Camp Bowie & Winthrop,Eastbound - Near Side,32.728706,-97.4152,,,,,,0
+588,0588,Camp Bowie & Curzon - Littlepage,Eastbound - Mid Block,32.730178,-97.411776,,,,,,0
+589,0589,Camp Bowie & Halloran,Eastbound - Near Side,32.730937,-97.409858,,,,,,0
+591,0591,Camp Bowie & Pershing,Eastbound - Far Side,32.735921,-97.397948,,,,,,0
+592,0592,Camp Bowie & Penticost,Eastbound - Near Side,32.737073,-97.395194,,,,,,0
+593,0593,Camp Bowie & Eldridge,Eastbound - Near Side,32.737857,-97.393316,,,,,,0
+595,0595,Camp Bowie & Hulen,Eastbound - Far Side,32.740408,-97.387217,,,,,,0
+596,0596,Camp Bowie & Clover,Eastbound - Near Side,32.743971,-97.378673,,,,,,0
+597,0597,Camp Bowie & Zeloski - Watonga,Eastbound - Mid Block,32.745487,-97.375082,,,,,,0
+598,0598,Camp Bowie & Watonga,Eastbound - Near Side,32.746252,-97.373234,,,,,,0
+599,0599,Camp Bowie & Watonga - Montgomery,Eastbound - Mid Block,32.746898,-97.371653,,,,,,0
+600,0600,Lancaster & Cedar,Eastbound - Far Side,32.746073,-97.314488,,,,,,0
+601,0601,Lancaster & Pine,Eastbound - Far Side,32.746033,-97.311217,,,,,,0
+606,0606,Lancaster & Whitson - Hudson,Eastbound - Mid Block,32.745224,-97.293931,,,,,,0
+607,0607,Lancaster & Anna,Eastbound - Near Side,32.744424,-97.291126,,,,,,0
+608,0608,Lancaster & Sanborn,Eastbound - Far Side,32.74075,-97.284024,,,,,,0
+612,0612,Lancaster & Ayers,Eastbound - Near Side,32.740722,-97.271203,,,,,,0
+614,0614,Lancaster & Oakland - Rand,Eastbound - Mid Block,32.740702,-97.260132,,,,,,0
+615,0615,Lancaster & Rand - Hughes,Eastbound - Mid Block,32.740692,-97.256868,,,,,,0
+616,0616,Lancaster & Edgewood,Eastbound - Far Side,32.7407,-97.252928,,,,,,0
+621,0621,Lancaster & Grandview,Eastbound - Near Side,32.738818,-97.237058,,,,,,0
+627,0627,Handley & Church,Northbound - Far Side,32.734638,-97.217573,,,,,,0
+628,0628,Handley & Beaty,Northbound - Far Side,32.739997,-97.216278,,,,,,0
+629,0629,Handley & Meadowbrook,Northbound - Near Side,32.745592,-97.216201,,,,,,0
+638,0638,Lancaster & Malcolm,Westbound - Far Side,32.733888,-97.222386,,,,,,0
+639,0639,Lancaster & Putnam,Westbound - Near Side,32.736075,-97.22823,,,,,,0
+641,0641,Lancaster & Weiler,Westbound - Near Side,32.738231,-97.23437,,,,,,0
+642,0642,Lancaster & Grandview,Westbound - Far Side,32.739164,-97.237051,,,,,,0
+643,0643,Lancaster & Emily,Westbound - Far Side,32.739888,-97.23908,,,,,,0
+646,0646,Lancaster & Roseland,Westbound - Far Side,32.741074,-97.250476,,,,,,0
+648,0648,Lancaster & Edgewood - Hughes,Westbound - Mid Block,32.740991,-97.254773,,,,,,0
+649,0649,Lancaster & Rand - Oakland,Westbound - Mid Block,32.741017,-97.259709,,,,,,0
+650,0650,Lancaster & Haynes,Westbound - Near Side,32.741041,-97.268363,,,,,,0
+652,0652,Lancaster & Sanderson - Tandy,Westbound - Mid Block,32.740469,-97.275895,,,,,,0
+654,0654,Lancaster & Toronto,Westbound - Near Side,32.740426,-97.282347,,,,,,0
+657,0657,Lancaster & Grafton,Westbound - Near Side,32.746198,-97.300455,,,,,,0
+658,0658,Lancaster & Pine,Westbound - Near Side,32.746286,-97.311763,,,,,,0
+659,0659,Camp Bowie & Westridge,Westbound - Near Side,32.728498,-97.416328,,,,,,0
+660,0660,Camp Bowie & Hilldale,Westbound - Near Side,32.725816,-97.422756,,,,,,0
+661,0661,9th & Throckmorton,Westbound - Near Side,32.750894,-97.330214,,,,,,0
+663,0663,Seminary & College,Eastbound - Near Side,32.68464,-97.335293,,,,,,0
+664,0664,Ederville & Secretariat,Eastbound - Far Side,32.757608,-97.193946,,,,,,0
+666,0666,Boca Raton & Falcon Ridge,Eastbound - Near Side,32.763547,-97.239957,,,,,,0
+667,0667,Oakland & Pyron,Southbound - Far Side,32.754158,-97.261752,,,,,,0
+671,0671,Jacksboro HWY & Belle,Westbound - Far Side,32.782933,-97.376748,,,,,,0
+672,0672,Jacksboro HWY & Capri,Westbound - Near Side,32.792039,-97.39086,,,,,,0
+673,0673,Jacksboro HWY & Beverly Hills,Westbound - Near Side,32.794828,-97.394528,,,,,,0
+678,0678,Jacksboro HWY & Skyline - Beverly Hills,Eastbound - Mid Block,32.795466,-97.397318,,,,,,0
+679,0679,Jacksboro HWY & Capri,Eastbound - Near Side,32.791772,-97.391085,,,,,,0
+680,0680,Jacksboro HWY & Belle,Eastbound - Near Side,32.782695,-97.37691,,,,,,0
+681,0681,Jacksboro HWY & 18th,Southbound - Near Side,32.775844,-97.367757,,,,,,0
+682,0682,Jacksboro HWY & University,Eastbound - Far Side,32.76742,-97.354704,,,,,,0
+684,0684,Calmont & Wrangler,Westbound - Near Side,32.735539,-97.468162,,,,,,0
+685,0685,La Palma & Branch Water,Westbound - Far Side,32.734885,-97.471729,,,,,,0
+690,0690,Calmont & Hammock,Eastbound - Far Side,32.735445,-97.467821,,,,,,0
+698,0698,Calmont & Marquita,Westbound - Near Side,32.734046,-97.443313,,,,,,0
+699,0699,Calmont & Bonnie,Westbound - Far Side,32.734025,-97.446127,,,,,,0
+700,0700,Calmont & Sierra - Rio Vista,Westbound - Mid Block,32.734049,-97.449103,,,,,,0
+701,0701,Calmont & Broadmoor,Westbound - Near Side,32.733697,-97.45344,,,,,,0
+702,0702,Calmont & Shenandoah,Westbound - Near Side,32.733917,-97.456062,,,,,,0
+703,0703,Calmont & Majave,Westbound - Near Side,32.73501,-97.458853,,,,,,0
+704,0704,Calmont & Laredo,Westbound - Far Side,32.736139,-97.463954,,,,,,0
+705,0705,Calmont & Las Vegas,Westbound - Near Side,32.735917,-97.466113,,,,,,0
+706,0706,Las Vegas & Calmont - Mojave,Southbound - Mid Block,32.733893,-97.466594,,,,,,0
+707,0707,Las Vegas & Mojave,Southbound - Far Side,32.732937,-97.466595,,,,,,0
+708,0708,Las Vegas & Las Vegas - Normandale,Southbound - Mid Block,32.732021,-97.466589,,,,,,0
+719,0719,Camp Bowie West & Las Vegas - Portales,Westbound - Mid Block,32.724495,-97.466354,,,,,,0
+720,0720,Camp Bowie West & Portales - Clovis,Westbound - Mid Block,32.724559,-97.470865,,,,,,0
+735,0735,Calmont & Las Vegas,Eastbound - Far Side,32.735737,-97.466025,,,,,,0
+736,0736,Calmont & Laredo,Eastbound - Near Side,32.735976,-97.463943,,,,,,0
+738,0738,Calmont & Shenandoah,Eastbound - Far Side,32.733746,-97.456171,,,,,,0
+739,0739,Calmont & Broadmoor,Eastbound - Far Side,32.733499,-97.453484,,,,,,0
+742,0742,Alta Mere & Ashville,Southbound - Far Side,32.732029,-97.440947,,,,,,0
+743,0743,Alta Mere & Elizabeth,Southbound - Near Side,32.724292,-97.441068,,,,,,0
+744,0744,Camp Bowie West & Joyce - Marquita,Westbound - Mid Block,32.722332,-97.442921,,,,,,0
+745,0745,Camp Bowie West & Bonnie,Westbound - Near Side,32.722688,-97.446187,,,,,,0
+746,0746,Camp Bowie West & Curtis,Westbound - Near Side,32.722974,-97.448834,,,,,,0
+747,0747,Camp Bowie West & Williams - Karen,Westbound - Mid Block,32.723313,-97.45191,,,,,,0
+748,0748,Camp Bowie West & Broadmoor,Westbound - Near Side,32.723676,-97.455251,,,,,,0
+749,0749,Camp Bowie West & Phoenix,Westbound - Near Side,32.724192,-97.458472,,,,,,0
+750,0750,Camp Bowie West & Slade - Brandon,Westbound - Mid Block,32.724415,-97.46274,,,,,,0
+751,0751,Camp Bowie West & Brandon - Slade,Eastbound - Mid Block,32.724104,-97.462308,,,,,,0
+752,0752,Camp Bowie West & Slade,Eastbound - Near Side,32.723868,-97.459385,,,,,,0
+753,0753,Camp Bowie West & Boston,Eastbound - Near Side,32.723318,-97.454804,,,,,,0
+754,0754,Camp Bowie West & Karen - Williams,Eastbound - Mid Block,32.723021,-97.452041,,,,,,0
+755,0755,Camp Bowie West & Cherry - Curtis,Eastbound - Mid Block,32.722872,-97.450101,,,,,,0
+756,0756,Camp Bowie West & Bonnie,Eastbound - Near Side,32.722459,-97.446701,,,,,,0
+757,0757,Camp Bowie West & Ramona - Marquita,Eastbound - Mid Block,32.722205,-97.444206,,,,,,0
+758,0758,Alta Mere & Elizabeth,Northbound - Far Side,32.724615,-97.440679,,,,,,0
+759,0759,Alta Mere & Slocum,Northbound - Near Side,32.728367,-97.440645,,,,,,0
+760,0760,Alta Mere & Slocum - Rosewood,Northbound - Mid Block,32.729972,-97.44063,,,,,,0
+764,0764,Las Vegas & Normandale,Southbound - Near Side,32.730381,-97.466606,,,,,,0
+767,0767,Calmont & Marquita,Eastbound - Far Side,32.733909,-97.443282,,,,,,0
+768,0768,Calmont & Alta Mere - Irene,Eastbound - Mid Block,32.733946,-97.439472,,,,,,0
+770,0770,Meadowbrook & Edgewood,Eastbound - Near Side,32.745683,-97.254004,,,,,,0
+771,0771,Meadowbrook & Montclair,Eastbound - Far Side,32.745668,-97.251374,,,,,,0
+773,0773,Meadowbrook & Jenson,Eastbound - Near Side,32.745606,-97.243779,,,,,,0
+774,0774,Meadowbrook & Green Hill,Eastbound - Far Side,32.745622,-97.240922,,,,,,0
+775,0775,Meadowbrook & San Jose,Eastbound - Far Side,32.746009,-97.235679,,,,,,0
+776,0776,Meadowbrook & Stark,Eastbound - Near Side,32.746025,-97.232347,,,,,,0
+777,0777,Meadowbrook & Pollard,Eastbound - Near Side,32.746,-97.226892,,,,,,0
+778,0778,Meadowbrook & E Loop 820,Eastbound - Near Side,32.746018,-97.223297,,,,,,0
+779,0779,Meadowbrook & McGee,Eastbound - Near Side,32.745977,-97.220448,,,,,,0
+780,0780,Meadowbrook & Forest - Handley,Eastbound - Mid Block,32.745987,-97.21768,,,,,,0
+781,0781,Handley & Meadowbrook,Northbound - Far Side,32.74666,-97.216215,,,,,,0
+783,0783,Handley & Monterrey,Northbound - Far Side,32.751351,-97.2162,,,,,,0
+784,0784,Brentwood Stair & Handley,Eastbound - Far Side,32.754259,-97.214116,,,,,,0
+785,0785,Brentwood Stair & Terbet,Eastbound - Near Side,32.754267,-97.209402,,,,,,0
+786,0786,Brentwood Stair & Meadowlane,Eastbound - Far Side,32.754252,-97.203489,,,,,,0
+787,0787,Sandy & Green Acres - Ederville,Northbound - Mid Block,32.75654,-97.198444,,,,,,0
+788,0788,Ederville & Carol Oaks,Eastbound - Far Side,32.757492,-97.196446,,,,,,0
+789,0789,Ederville & Creekstone,Eastbound - Near Side,32.757305,-97.186159,,,,,,0
+791,0791,Eastchase & Meadowbrook,Southbound - Far Side,32.756186,-97.168607,,,,,,0
+792,0792,Ederville & Creekstone,Westbound - Near Side,32.757515,-97.185777,,,,,,0
+794,0794,Ederville & Secretariat,Westbound - Near Side,32.757741,-97.193957,,,,,,0
+795,0795,Ederville & Carol Oaks,Westbound - Near Side,32.757657,-97.196198,,,,,,0
+797,0797,Sandy & Ederville - Green Acres,Southbound - Mid Block,32.756465,-97.19861,,,,,,0
+798,0798,Brentwood Stair & Meadowlane,Westbound - Far Side,32.754427,-97.203805,,,,,,0
+799,0799,Brentwood Stair & Terbet,Westbound - Near Side,32.754453,-97.209068,,,,,,0
+800,0800,Handley & Monterrey,Southbound - Near Side,32.751257,-97.216344,,,,,,0
+801,0801,Meadowbrook & Handley - Forest,Westbound - Mid Block,32.746159,-97.21756,,,,,,0
+802,0802,Meadowbrook & McGee - E Loop 820,Westbound - Mid Block,32.74616,-97.220805,,,,,,0
+803,0803,Meadowbrook & E Loop 820,Westbound - Far Side,32.746131,-97.223302,,,,,,0
+804,0804,Meadowbrook & Putnam,Westbound - Near Side,32.746133,-97.227817,,,,,,0
+805,0805,Meadowbrook & Stark,Westbound - Far Side,32.746143,-97.232284,,,,,,0
+806,0806,Meadowbrook & San Jose,Westbound - Near Side,32.746129,-97.235634,,,,,,0
+807,0807,Meadowbrook & Jenson,Westbound - Near Side,32.745736,-97.243486,,,,,,0
+808,0808,Meadowbrook & Tierney,Westbound - Far Side,32.745739,-97.245803,,,,,,0
+809,0809,Meadowbrook & Junius,Westbound - Near Side,32.745779,-97.250065,,,,,,0
+810,0810,Meadowbrook & Edgewood,Westbound - Near Side,32.745818,-97.253951,,,,,,0
+812,0812,Meadowbrook & Somerset,Westbound - Near Side,32.745746,-97.260218,,,,,,0
+814,0814,8th & Jessamine,Southbound - Near Side,32.718393,-97.343897,,,,,,0
+815,0815,8th & Jessamine,Northbound - Far Side,32.718387,-97.343696,,,,,,0
+816,0816,8th & Cantey,Southbound - Near Side,32.711898,-97.343954,,,,,,0
+817,0817,8th & Cantey,Northbound - Far Side,32.711794,-97.343722,,,,,,0
+818,0818,Cleburne & Bowie,Southbound - Far Side,32.707468,-97.34643,,,,,,0
+819,0819,Cleburne & Stanley,Northbound - Near Side,32.707421,-97.346207,,,,,,0
+820,0820,McCart & Biddison,Southbound - Far Side,32.698389,-97.353058,,,,,,0
+821,0821,McCart & Gambrell - Royce,Southbound - Mid Block,32.681251,-97.353116,,,,,,0
+824,0824,Berry & Rufus,Eastbound - Near Side,32.713909,-97.268483,,,,,,0
+828,0828,Oakland & Panola,Southbound - Near Side,32.738983,-97.261877,,,,,,0
+829,0829,Oakland & Hampshire,Southbound - Near Side,32.736864,-97.261915,,,,,,0
+830,0830,Miller & Rosedale,Southbound - Far Side,32.730852,-97.262134,,,,,,0
+832,0832,Miller & Ave N,Southbound - Near Side,32.723439,-97.26232,,,,,,0
+833,0833,Miller & Ramey,Southbound - Near Side,32.721367,-97.262988,,,,,,0
+834,0834,Miller & Little John,Southbound - Far Side,32.719605,-97.262997,,,,,,0
+835,0835,Miller & Crenshaw,Southbound - Far Side,32.718025,-97.263009,,,,,,0
+836,0836,Miller & Forbes,Southbound - Near Side,32.716072,-97.263015,,,,,,0
+837,0837,Miller & Berry,Southbound - Far Side,32.71321,-97.263024,,,,,,0
+838,0838,Miller & Richardson,Southbound - Far Side,32.711532,-97.263022,,,,,,0
+839,0839,Miller & Reed,Southbound - Far Side,32.70952,-97.263026,,,,,,0
+840,0840,Miller & Comanche,Southbound - Near Side,32.708491,-97.263034,,,,,,0
+841,0841,Miller & Eastland,Southbound - Near Side,32.706882,-97.263034,,,,,,0
+842,0842,Miller & Hardeman,Southbound - Far Side,32.70225,-97.26305,,,,,,0
+844,0844,Miller & Collin,Southbound - Far Side,32.698723,-97.263052,,,,,,0
+845,0845,Miller & Pierce,Southbound - Far Side,32.694931,-97.26308,,,,,,0
+848,0848,Miller & Moberly,Southbound - Far Side,32.689836,-97.263317,,,,,,0
+849,0849,Miller & Brookline,Southbound - Near Side,32.686852,-97.263295,,,,,,0
+850,0850,Miller & Arbor,Southbound - Far Side,32.684488,-97.263307,,,,,,0
+851,0851,Miller & Algerita,Southbound - Near Side,32.683272,-97.2633,,,,,,0
+852,0852,Miller & Oak Hill - Kelroy,Southbound - Mid Block,32.680227,-97.263296,,,,,,0
+853,0853,Miller & Mansfield HWY,Southbound - Near Side,32.676079,-97.263381,,,,,,0
+854,0854,Mansfield HWY & Miller - Trentman,Westbound - Mid Block,32.676405,-97.264895,,,,,,0
+855,0855,Mansfield HWY & Trentman,Westbound - Far Side,32.677932,-97.268172,,,,,,0
+856,0856,Mansfield HWY & Shackleford,Westbound - Far Side,32.679633,-97.271891,,,,,,0
+858,0858,Mansfield HWY & Wichita - Seminary,Westbound - Mid Block,32.68415,-97.281772,,,,,,0
+860,0860,Mansfield HWY & Old Mansfield,Westbound - Far Side,32.689219,-97.292818,,,,,,0
+861,0861,Campus & Mansfield HWY - Seminary,Southbound - Mid Block,32.688167,-97.295864,,,,,,0
+862,0862,Seminary & Cathedral - Carter Park,Westbound - Mid Block,32.684573,-97.304145,,,,,,0
+863,0863,Seminary & Arrowood,Westbound - Far Side,32.684526,-97.310075,,,,,,0
+864,0864,Seminary & McClure,Westbound - Near Side,32.684502,-97.311645,,,,,,0
+865,0865,Seminary & Fair Park,Westbound - Near Side,32.684488,-97.313451,,,,,,0
+866,0866,Seminary & Cole,Westbound - Far Side,32.684457,-97.316387,,,,,,0
+867,0867,Seminary & Evans,Westbound - Far Side,32.684439,-97.319697,,,,,,0
+868,0868,Seminary & Town Center,Westbound - Far Side,32.685021,-97.32775,,,,,,0
+869,0869,Seminary & Hemphill,Westbound - Far Side,32.685013,-97.33273,,,,,,0
+870,0870,Seminary & College,Westbound - Far Side,32.684809,-97.335557,,,,,,0
+871,0871,Seminary & Henderson - Baldwin,Westbound - Mid Block,32.68479,-97.337799,,,,,,0
+872,0872,Seminary & 6th,Westbound - Far Side,32.68483,-97.340597,,,,,,0
+874,0874,Seminary & Williams Fleming,Westbound - Far Side,32.684639,-97.348664,,,,,,0
+875,0875,Seminary & McCart - Sandage,Westbound - Mid Block,32.684648,-97.353489,,,,,,0
+876,0876,Seminary & Waits,Westbound - Near Side,32.684678,-97.357449,,,,,,0
+877,0877,Seminary & Rutland - Odessa,Westbound - Mid Block,32.684713,-97.362342,,,,,,0
+878,0878,Seminary & Stadium,Westbound - Near Side,32.684727,-97.364353,,,,,,0
+879,0879,Seminary & Wilson - Cherokee,Westbound - Mid Block,32.684726,-97.36805,,,,,,0
+885,0885,South & Westlake,Southbound - Near Side,32.676055,-97.388596,,,,,,0
+886,0886,South & Westhaven,Westbound - Near Side,32.670639,-97.389906,,,,,,0
+887,0887,South & Wentworth,Westbound - Near Side,32.670402,-97.395326,,,,,,0
+888,0888,South & Hulen,Westbound - Near Side,32.671219,-97.399251,,,,,,0
+889,0889,Rock Quarry & Overton Ridge,Northbound - Near Side,32.67583,-97.400563,,,,,,0
+891,0891,Hulen & Barwick - SW Loop 820,Northbound - Mid Block,32.678707,-97.394344,,,,,,0
+892,0892,Hulen & Westdale,Northbound - Near Side,32.682187,-97.392263,,,,,,0
+893,0893,Hulen & Overton,Northbound - Far Side,32.685595,-97.392195,,,,,,0
+898,0898,Hulen & Oak Park,Northbound - Far Side,32.709963,-97.386504,,,,,,0
+900,0900,Hulen & Wellesley,Northbound - Near Side,32.725191,-97.387629,,,,,,0
+901,0901,Hulen & Donnelly,Northbound - Near Side,32.728955,-97.387734,,,,,,0
+902,0902,Hulen & Donnelly - West Fwy,Northbound - Mid Block,32.731376,-97.387711,,,,,,0
+904,0904,Hulen & El Campo,Northbound - Far Side,32.737139,-97.387625,,,,,,0
+907,0907,Hulen & West Fwy - Donnelly,Southbound - Mid Block,32.730688,-97.387971,,,,,,0
+908,0908,Hulen & Diaz,Southbound - Near Side,32.727804,-97.388043,,,,,,0
+909,0909,Hulen & Wellesley,Southbound - Near Side,32.725356,-97.387918,,,,,,0
+910,0910,Hulen & Vickery,Southbound - Near Side,32.721869,-97.386955,,,,,,0
+911,0911,Hulen & Stonegate - River Tree,Southbound - Mid Block,32.712114,-97.386116,,,,,,0
+913,0913,Hulen & Bellaire,Southbound - Near Side,32.704771,-97.389023,,,,,,0
+914,0914,Hulen & Springwillow,Southbound - Far Side,32.694196,-97.393108,,,,,,0
+915,0915,Hulen & Library,Southbound - Near Side,32.689086,-97.393736,,,,,,0
+916,0916,Hulen & Overton - Westdale,Southbound - Mid Block,32.684415,-97.392552,,,,,,0
+917,0917,Hulen & SW Loop 820 - Barwick,Southbound - Mid Block,32.678984,-97.394565,,,,,,0
+918,0918,Hulen & Barwick,Southbound - Far Side,32.677392,-97.395885,,,,,,0
+919,0919,Rock Quarry & Overton Ridge,Southbound - Far Side,32.675762,-97.400805,,,,,,0
+920,0920,South & Hulen,Eastbound - Far Side,32.671031,-97.399107,,,,,,0
+922,0922,South & Segurs,Eastbound - Near Side,32.670574,-97.38965,,,,,,0
+923,0923,South & Belden,Northbound - Far Side,32.677063,-97.387829,,,,,,0
+929,0929,Seminary & Cherokee - Wilson,Eastbound - Mid Block,32.684539,-97.368048,,,,,,0
+930,0930,Seminary & Stadium,Eastbound - Near Side,32.684537,-97.364817,,,,,,0
+931,0931,Seminary & Odessa,Eastbound - Far Side,32.684517,-97.362201,,,,,,0
+932,0932,Seminary & Waits,Eastbound - Far Side,32.68449,-97.357086,,,,,,0
+933,0933,Seminary & McCart,Eastbound - Near Side,32.684455,-97.353205,,,,,,0
+934,0934,Seminary & William Fleming,Eastbound - Near Side,32.684455,-97.348719,,,,,,0
+935,0935,Seminary & James,Eastbound - Near Side,32.684539,-97.345341,,,,,,0
+936,0936,Seminary & 6th,Eastbound - Near Side,32.68461,-97.34142,,,,,,0
+938,0938,Seminary & Evans,Eastbound - Far Side,32.684214,-97.318834,,,,,,0
+939,0939,Seminary & Fair Park,Eastbound - Near Side,32.684297,-97.31307,,,,,,0
+940,0940,Seminary & Arrowood,Eastbound - Far Side,32.684369,-97.309149,,,,,,0
+941,0941,Seminary & Carter Park,Eastbound - Far Side,32.684378,-97.303589,,,,,,0
+942,0942,Seminary & Abbey - Campus,Eastbound - Mid Block,32.684517,-97.297129,,,,,,0
+943,0943,Mansfield HWY & Campus,Eastbound - Far Side,32.689248,-97.293517,,,,,,0
+944,0944,Mansfield HWY & Seminary - Wichita,Eastbound - Far Side,32.684293,-97.282705,,,,,,0
+945,0945,Mansfield HWY & Foard,Eastbound - Far Side,32.681954,-97.277654,,,,,,0
+946,0946,Mansfield HWY & Shackleford,Eastbound - Near Side,32.679362,-97.271952,,,,,,0
+947,0947,Mansfield HWY & Shackleford,Eastbound - Far Side,32.6788,-97.270734,,,,,,0
+948,0948,Mansfield HWY & Trentman - Miller,Eastbound - Mid Block,32.676277,-97.265285,,,,,,0
+949,0949,Miller & Mansfield HWY,Northbound - Far Side,32.676189,-97.263067,,,,,,0
+950,0950,Miller & Oak Hill,Northbound - Near Side,32.680547,-97.263088,,,,,,0
+952,0952,Miller & Arbor,Northbound - Near Side,32.683889,-97.263072,,,,,,0
+953,0953,Miller & Brookline,Northbound - Near Side,32.686418,-97.263083,,,,,,0
+954,0954,Miller & Moberly,Northbound - Near Side,32.689516,-97.263079,,,,,,0
+955,0955,Miller & Martin,Northbound - Near Side,32.691649,-97.263114,,,,,,0
+956,0956,Miller & Fairlane,Northbound - Far Side,32.693418,-97.262901,,,,,,0
+957,0957,Miller & Pierce,Northbound - Near Side,32.69517,-97.262885,,,,,,0
+958,0958,Miller & Martin Luther,Northbound - Far Side,32.700799,-97.262831,,,,,,0
+959,0959,Miller & Killian,Northbound - Near Side,32.701851,-97.26285,,,,,,0
+960,0960,Miller & Eastland,Northbound - Near Side,32.706331,-97.262821,,,,,,0
+961,0961,Miller & Comanche,Northbound - Far Side,32.708685,-97.2628,,,,,,0
+962,0962,Miller & Reed,Northbound - Near Side,32.709696,-97.262816,,,,,,0
+963,0963,Miller & Emerson - Richardson,Northbound - Mid Block,32.711312,-97.262816,,,,,,0
+964,0964,Miller & Burton,Northbound - Near Side,32.714743,-97.262802,,,,,,0
+965,0965,Miller & Forbes,Northbound - Far Side,32.716089,-97.262784,,,,,,0
+966,0966,Miller & Crenshaw,Northbound - Near Side,32.717946,-97.262778,,,,,,0
+967,0967,Miller & Little John,Northbound - Near Side,32.719573,-97.262775,,,,,,0
+968,0968,Miller & Ramey - Millet,Northbound - Mid Block,32.721656,-97.262772,,,,,,0
+969,0969,Miller & Ave N,Northbound - Near Side,32.723209,-97.262149,,,,,,0
+970,0970,Miller & Ave J - Ave H,Northbound - Mid Block,32.728081,-97.261926,,,,,,0
+971,0971,Miller & Rosedale,Northbound - Near Side,32.730818,-97.261833,,,,,,0
+972,0972,Miller & Rosedale,Northbound - Far Side,32.731992,-97.261876,,,,,,0
+973,0973,Oakland & Hampshire,Northbound - Far Side,32.736823,-97.261692,,,,,,0
+974,0974,Oakland & Panola,Northbound - Far Side,32.739012,-97.261664,,,,,,0
+977,0977,Felix & South Fwy - Evans,Eastbound - Mid Block,32.676383,-97.319639,,,,,,0
+978,0978,Oak Grove & Glasgow,Southbound - Near Side,32.663689,-97.304539,,,,,,0
+980,0980,Oak Grove & Whitten,Northbound - Near Side,32.667744,-97.309906,,,,,,0
+982,0982,Berry & Illinois - Mississippi,Eastbound - Mid Block,32.705834,-97.313248,,,,,,0
+984,0984,Berry & Cobb Park - Canberra,Northbound - Mid Block,32.709771,-97.294069,,,,,,0
+985,0985,Berry & Mitchell,Eastbound - Near Side,32.713182,-97.289394,,,,,,0
+988,0988,Berry & Bishop - Little,Eastbound - Mid Block,32.713402,-97.27586,,,,,,0
+989,0989,Berry & Freddie - Miller,Eastbound - Mid Block,32.713842,-97.263713,,,,,,0
+990,0990,Berry & Miller - Pate,Eastbound - Mid Block,32.713623,-97.260917,,,,,,0
+991,0991,Berry & Hughes,Eastbound - Near Side,32.713049,-97.257355,,,,,,0
+1000,1000,Berry & Raphael,Westbound - Far Side,32.708728,-97.239507,,,,,,0
+1001,1001,Berry & Dillard,Westbound - Far Side,32.709346,-97.243136,,,,,,0
+1003,1003,Berry & Village Creek,Westbound - Far Side,32.711844,-97.248849,,,,,,0
+1004,1004,Berry & Sirron,Westbound - Far Side,32.713058,-97.252987,,,,,,0
+1005,1005,Berry & Edgewood,Westbound - Near Side,32.71303,-97.255813,,,,,,0
+1006,1006,Berry & Hatcher,Westbound - Far Side,32.71341,-97.258358,,,,,,0
+1007,1007,Berry & Miller - Freddie,Westbound - Mid Block,32.714086,-97.263736,,,,,,0
+1008,1008,Berry & Bright,Westbound - Near Side,32.714128,-97.271403,,,,,,0
+1009,1009,Berry & Campbell - Little,Westbound - Mid Block,32.713603,-97.274352,,,,,,0
+1013,1013,Berry & Canberra - Cobb Park,Westbound - Mid Block,32.709898,-97.294224,,,,,,0
+1016,1016,Berry & Grove,Westbound - Far Side,32.706076,-97.322458,,,,,,0
+1017,1017,Berry & Main,Westbound - Far Side,32.706061,-97.326769,,,,,,0
+1018,1018,Berry & Hemphill,Westbound - Far Side,32.70597,-97.332253,,,,,,0
+1019,1019,Berry & Willing - Ryan,Westbound - Mid Block,32.706123,-97.342261,,,,,,0
+1022,1022,Berry & Cockrell,Eastbound - Near Side,32.706029,-97.359481,,,,,,0
+1023,1023,Berry & Forest Park,Eastbound - Near Side,32.705944,-97.352932,,,,,,0
+1024,1024,Berry & 6th,Eastbound - Near Side,32.705875,-97.34105,,,,,,0
+1025,1025,Berry & Travis - Hemphill,Eastbound - Mid Block,32.705737,-97.332454,,,,,,0
+1026,1026,Berry & Main,Eastbound - Far Side,32.705801,-97.326054,,,,,,0
+1027,1027,Berry & I 35 - Evans,Eastbound - Mid Block,32.705824,-97.319172,,,,,,0
+1028,1028,Pennsylvania & Lake,Westbound - Far Side,32.738558,-97.339836,,,,,,0
+1029,1029,Pennsylvania & Summit,Westbound - Far Side,32.738558,-97.342657,,,,,,0
+1030,1030,8th & Cooper,Southbound - Near Side,32.736169,-97.343758,,,,,,0
+1031,1031,Magnolia & Hurley,Eastbound - Far Side,32.730574,-97.342663,,,,,,0
+1032,1032,Magnolia & 6th - Lake,Eastbound - Mid Block,32.730588,-97.339848,,,,,,0
+1033,1033,Magnolia & Henderson,Eastbound - Near Side,32.730579,-97.337903,,,,,,0
+1034,1034,Magnolia & College - Alston,Eastbound - Mid Block,32.730567,-97.334687,,,,,,0
+1036,1036,Rosedale & Evans,Eastbound - Far Side,32.731969,-97.317805,,,,,,0
+1038,1038,Rosedale & Fabons,Eastbound - Near Side,32.732058,-97.311685,,,,,,0
+1039,1039,Rosedale & Freeman - Argyle,Eastbound - Mid Block,32.731506,-97.308793,,,,,,0
+1042,1042,Rosedale & Hall,Eastbound - Near Side,32.730825,-97.295403,,,,,,0
+1043,1043,Rosedale & Stearns,Eastbound - Far Side,32.730676,-97.292127,,,,,,0
+1044,1044,Rosedale & Conner,Eastbound - Far Side,32.730652,-97.287033,,,,,,0
+1045,1045,Rosedale & McKenzie,Eastbound - Near Side,32.730647,-97.285102,,,,,,0
+1046,1046,Rosedale & Campbell,Eastbound - Far Side,32.730602,-97.273442,,,,,,0
+1047,1047,Rosedale & Wallace,Eastbound - Far Side,32.731229,-97.2695,,,,,,0
+1048,1048,Rosedale & Arch,Eastbound - Far Side,32.731192,-97.265573,,,,,,0
+1049,1049,Rosedale & Miller - Coleman,Eastbound - Mid Block,32.731122,-97.260965,,,,,,0
+1050,1050,Rosedale & Hughes,Eastbound - Near Side,32.731109,-97.257841,,,,,,0
+1054,1054,Rosedale & Andrew,Eastbound - Near Side,32.730616,-97.241134,,,,,,0
+1055,1055,Stalcup & Mac Arthur - Wainright,Southbound - Mid Block,32.729444,-97.237475,,,,,,0
+1057,1057,Stalcup & Alexander - Truman,Southbound - Mid Block,32.725345,-97.2375,,,,,,0
+1058,1058,Stalcup & Bong,Southbound - Far Side,32.723983,-97.237517,,,,,,0
+1060,1060,Stalcup & Fitzhugh - Anderson,Southbound - Mid Block,32.717766,-97.237992,,,,,,0
+1061,1061,Stalcup & Cottey,Southbound - Near Side,32.715971,-97.237992,,,,,,0
+1066,1066,Berry & Carey,Eastbound - Near Side,32.709331,-97.243502,,,,,,0
+1067,1067,Berry & Raphael,Eastbound - Far Side,32.708538,-97.239155,,,,,,0
+1068,1068,Stalcup & Norris - Pinson,Northbound - Mid Block,32.713489,-97.237864,,,,,,0
+1069,1069,Stalcup & Alter,Northbound - Near Side,32.716251,-97.237838,,,,,,0
+1070,1070,Stalcup & Fitzhugh,Northbound - Near Side,32.717774,-97.237835,,,,,,0
+1072,1072,Stalcup & Bong,Northbound - Near Side,32.723881,-97.237359,,,,,,0
+1073,1073,Stalcup & Alexander,Northbound - Near Side,32.725599,-97.237367,,,,,,0
+1074,1074,Stalcup & Eisenhower,Northbound - Near Side,32.72755,-97.237336,,,,,,0
+1075,1075,Stalcup & Mac Arthur,Northbound - Near Side,32.729261,-97.237335,,,,,,0
+1076,1076,Rosedale & Andrew - Tierney,Westbound - Mid Block,32.730882,-97.240992,,,,,,0
+1077,1077,Rosedale & Tierney,Westbound - Near Side,32.731324,-97.245597,,,,,,0
+1079,1079,Rosedale & Edgewood,Westbound - Far Side,32.731344,-97.25409,,,,,,0
+1080,1080,Rosedale & Hughes,Westbound - Near Side,32.731364,-97.25766,,,,,,0
+1081,1081,Rosedale & Miller,Westbound - Near Side,32.731416,-97.263007,,,,,,0
+1082,1082,Rosedale & Chicago,Westbound - Far Side,32.731345,-97.265586,,,,,,0
+1083,1083,Rosedale & Ayers,Westbound - Near Side,32.731363,-97.269954,,,,,,0
+1084,1084,Rosedale & Campbell,Westbound - Near Side,32.730801,-97.272634,,,,,,0
+1085,1085,Rosedale & Binkley,Westbound - Near Side,32.73082,-97.281988,,,,,,0
+1086,1086,Rosedale & McKenzie,Westbound - Near Side,32.73081,-97.284698,,,,,,0
+1087,1087,Rosedale & Conner,Westbound - Near Side,32.730818,-97.287698,,,,,,0
+1088,1088,Rosedale & Holmes,Westbound - Far Side,32.730848,-97.291016,,,,,,0
+1089,1089,Rosedale & Sycamore Park,Westbound - Far Side,32.730853,-97.292458,,,,,,0
+1090,1090,Rosedale & Hall,Westbound - Far Side,32.731071,-97.295891,,,,,,0
+1091,1091,Rosedale & Ash Crescent,Westbound - Far Side,32.731615,-97.301894,,,,,,0
+1092,1092,Rosedale & Riverside,Westbound - Far Side,32.731666,-97.303944,,,,,,0
+1095,1095,Rosedale & New York,Westbound - Far Side,32.732214,-97.316806,,,,,,0
+1098,1098,Magnolia & Alston - College,Westbound - Mid Block,32.730714,-97.334393,,,,,,0
+1099,1099,Magnolia & Henderson,Westbound - Near Side,32.730719,-97.33748,,,,,,0
+1100,1100,Magnolia & 6th,Westbound - Near Side,32.730713,-97.340077,,,,,,0
+1103,1103,Pennsylvania & 5th,Eastbound - Near Side,32.738364,-97.338948,,,,,,0
+1106,1106,Pine & Presidio,Northbound - Far Side,32.745227,-97.311821,,,,,,0
+1124,1124,Riverside & Richmond,Southbound - Far Side,32.723174,-97.304464,,,,,,0
+1125,1125,Riverside & Harvey,Southbound - Near Side,32.71991,-97.304483,,,,,,0
+1126,1126,Riverside & Robert,Southbound - Near Side,32.715003,-97.304246,,,,,,0
+1127,1127,Riverside & Glen Garden,Southbound - Far Side,32.710108,-97.304149,,,,,,0
+1128,1128,Riverside & Berry,Southbound - Near Side,32.706522,-97.304308,,,,,,0
+1129,1129,S Riverside & Rolling Hills,Southbound - Far Side,32.699646,-97.305259,,,,,,0
+1131,1131,Riverside & Highpoint,Southbound - Near Side,32.692676,-97.300881,,,,,,0
+1132,1132,Campus & Seminary,Southbound - Near Side,32.685203,-97.295861,,,,,,0
+1133,1133,Campus & Regal Ridge,Southbound - Far Side,32.682275,-97.295886,,,,,,0
+1134,1134,C A Roberson & Dub Shaw,Southbound - Near Side,32.668271,-97.285689,,,,,,0
+1136,1136,Resource Connection Transfer Center,,32.675007,-97.299645,,,,,,0
+1137,1137,Campus & Regal Ridge,Northbound - Far Side,32.682546,-97.295571,,,,,,0
+1138,1138,Campus & Seminary,Northbound - Far Side,32.685351,-97.295552,,,,,,0
+1139,1139,Campus & Seminary - Mansfield HWY,Northbound - Mid Block,32.68817,-97.295557,,,,,,0
+1140,1140,Mansfield HWY & Horton - Alcannon,Eastbound - Mid Block,32.687152,-97.288977,,,,,,0
+1145,1145,Riverside & High Point,Westbound - Far Side,32.69244,-97.300045,,,,,,0
+1146,1146,Riverside & Timberline - Rolling Hills,Northbound - Mid Block,32.695885,-97.303853,,,,,,0
+1147,1147,Riverside & Rolling Hills,Northbound - Near Side,32.699645,-97.305002,,,,,,0
+1148,1148,Riverside & Berry,Northbound - Far Side,32.706493,-97.30404,,,,,,0
+1149,1149,Riverside & Glen Garden,Northbound - Near Side,32.709387,-97.303866,,,,,,0
+1151,1151,Riverside & Harvey,Northbound - Near Side,32.719583,-97.30425,,,,,,0
+1152,1152,Riverside & Richmond,Northbound - Near Side,32.72267,-97.304209,,,,,,0
+1162,1162,Seminary & Town Center - Hemphill,Westbound - Mid Block,32.684997,-97.330136,,,,,,0
+1163,1163,Hemphill & Mason - Drew,Northbound - Mid Block,32.689428,-97.331617,,,,,,0
+1164,1164,Hemphill & Waggoman - Dickson,Northbound - Mid Block,32.693115,-97.331597,,,,,,0
+1165,1165,Hemphill & Butler,Northbound - Far Side,32.695805,-97.331593,,,,,,0
+1166,1166,Hemphill & Biddison,Northbound - Near Side,32.698555,-97.331575,,,,,,0
+1167,1167,Hemphill & Bewick - Shaw,Northbound - Mid Block,32.701217,-97.331485,,,,,,0
+1170,1170,Hemphill & Capps,Northbound - Near Side,32.71296,-97.331516,,,,,,0
+1171,1171,Hemphill & Page,Northbound - Far Side,32.717006,-97.331492,,,,,,0
+1172,1172,Hemphill & Lilac,Northbound - Near Side,32.720325,-97.331489,,,,,,0
+1173,1173,Hemphill & Richmond,Northbound - Near Side,32.723831,-97.331468,,,,,,0
+1175,1175,Hemphill & Morphy,Northbound - Near Side,32.729163,-97.331468,,,,,,0
+1176,1176,Hemphill & Magnolia,Northbound - Near Side,32.730503,-97.33146,,,,,,0
+1178,1178,Hemphill & Terrell,Northbound - Near Side,32.735242,-97.331482,,,,,,0
+1179,1179,Hemphill & Pennsylvania,Northbound - Near Side,32.738228,-97.331727,,,,,,0
+1180,1180,Hemphill & Broadway,Northbound - Far Side,32.741132,-97.331586,,,,,,0
+1181,1181,Hemphill & Jarvis - Vickery,Northbound - Mid Block,32.743267,-97.331516,,,,,,0
+1182,1182,Main & 6th,Northbound - Near Side,32.766802,-97.339302,,,,,,0
+1186,1186,Main & North Side - Central,Northbound - Mid Block,32.776915,-97.346031,,,,,,0
+1198,1198,Ephriham & Azle - 26th,Westbound - Mid Block,32.793418,-97.373554,,,,,,0
+1199,1199,Ephriham & McGown,Westbound - Near Side,32.791231,-97.376114,,,,,,0
+1200,1200,Ephriham & 20th,Westbound - Near Side,32.789024,-97.379033,,,,,,0
+1201,1201,Jacksboro HWY & Menefee,Westbound - Near Side,32.787068,-97.38495,,,,,,0
+1218,1218,Main & Central,Southbound - Near Side,32.778093,-97.347111,,,,,,0
+1221,1221,Main & 7th,Southbound - Far Side,32.768187,-97.340499,,,,,,0
+1222,1222,Main & 6th,Southbound - Near Side,32.766938,-97.339653,,,,,,0
+1223,1223,Main & 5th,Southbound - Far Side,32.764878,-97.338302,,,,,,0
+1224,1224,Hemphill & Vickery - Jarvis,Southbound - Mid Block,32.743354,-97.331755,,,,,,0
+1226,1226,Hemphill & Pennsylvania,Southbound - Far Side,32.738067,-97.331945,,,,,,0
+1227,1227,Hemphill & Terrel,Southbound - Far Side,32.7349,-97.331696,,,,,,0
+1228,1228,Hemphill & Oleander,Southbound - Near Side,32.732179,-97.331694,,,,,,0
+1231,1231,Hemphill & Allen,Southbound - Near Side,32.726205,-97.33169,,,,,,0
+1232,1232,Hemphill & Jefferson - Richmond,Southbound - Mid Block,32.724141,-97.331692,,,,,,0
+1234,1234,Hemphill & Page,Southbound - Near Side,32.717017,-97.331691,,,,,,0
+1235,1235,Hemphill & Morningside - Capps,Southbound - Mid Block,32.713867,-97.331718,,,,,,0
+1236,1236,Hemphill & Lowden - Bowie,Southbound - Mid Block,32.708621,-97.331732,,,,,,0
+1237,1237,Hemphill & Berry,Southbound - Near Side,32.706442,-97.331759,,,,,,0
+1238,1238,Hemphill & Devitt,Southbound - Near Side,32.704594,-97.331765,,,,,,0
+1239,1239,Hemphill & Shaw - Bewick,Southbound - Mid Block,32.701072,-97.331772,,,,,,0
+1240,1240,Hemphill & Biddison,Southbound - Near Side,32.69885,-97.331813,,,,,,0
+1241,1241,Hemphill & Butler,Southbound - Near Side,32.695811,-97.331805,,,,,,0
+1247,1247,Vickery & Maidstone,Westbound - Near Side,32.737596,-97.303625,,,,,,0
+1252,1252,Oakland & Barnett,Southbound - Near Side,32.751434,-97.261749,,,,,,0
+1253,1253,Oakland & Arden,Southbound - Near Side,32.748596,-97.261731,,,,,,0
+1254,1254,Oakland & Kenwood,Southbound - Far Side,32.742244,-97.262019,,,,,,0
+1255,1255,Oakland & Lancaster,Northbound - Far Side,32.741749,-97.261764,,,,,,0
+1256,1256,Oakland & Arden,Northbound - Near Side,32.748416,-97.261613,,,,,,0
+1257,1257,Oakland & Barnett,Northbound - Near Side,32.751245,-97.261639,,,,,,0
+1258,1258,Oakland & Pyron,Northbound - Near Side,32.754167,-97.261613,,,,,,0
+1264,1264,Woodhaven & La Paseo,Northbound - Near Side,32.762375,-97.239786,,,,,,0
+1265,1265,Boca Raton & Doral,Eastbound - Far Side,32.76416,-97.237372,,,,,,0
+1267,1267,Boca Raton & Village,Eastbound - Far Side,32.764213,-97.232409,,,,,,0
+1268,1268,Boca Raton & Oakland Hills,Eastbound - Near Side,32.765245,-97.228859,,,,,,0
+1273,1273,Handley Ederville & Pebble,Northbound - Near Side,32.792338,-97.221119,,,,,,0
+1276,1276,Bridge & E Loop 820,Westbound - Far Side,32.766504,-97.214527,,,,,,0
+1277,1277,Bridge & Bridgewood,Westbound - Near Side,32.765278,-97.217721,,,,,,0
+1278,1278,John T White & Anderson,Eastbound - Far Side,32.766159,-97.210445,,,,,,0
+1279,1279,John T White & Sycamore,Eastbound - Near Side,32.766123,-97.208349,,,,,,0
+1280,1280,John T White & Dove,Eastbound - Near Side,32.766069,-97.205894,,,,,,0
+1281,1281,John T White & Williams,Eastbound - Far Side,32.765559,-97.200297,,,,,,0
+1282,1282,John T White & Sandy,Eastbound - Far Side,32.765654,-97.194768,,,,,,0
+1283,1283,John T White & Morrison,Eastbound - Far Side,32.76566,-97.19035,,,,,,0
+1284,1284,John T White & Cooks,Eastbound - Far Side,32.765192,-97.182456,,,,,,0
+1285,1285,Eastchase & John T White - Anderson,Southbound - Mid Block,32.764487,-97.16747,,,,,,0
+1287,1287,John T White & Cooks,Westbound - Near Side,32.76542,-97.182392,,,,,,0
+1288,1288,John T White & Morrison,Westbound - Near Side,32.765919,-97.19032,,,,,,0
+1289,1289,John T White & Sandy,Westbound - Near Side,32.765909,-97.194744,,,,,,0
+1290,1290,John T White & Williams,Westbound - Far Side,32.765794,-97.201091,,,,,,0
+1291,1291,John T White & Egret,Westbound - Far Side,32.766372,-97.206201,,,,,,0
+1292,1292,John T White & Sycamore,Westbound - Far Side,32.766409,-97.207978,,,,,,0
+1299,1299,Boca Raton & Oakland Hills,Westbound - Far Side,32.765224,-97.229076,,,,,,0
+1302,1302,Boca Raton & Doral - Boca Canyon,Westbound - Mid Block,32.764285,-97.237655,,,,,,0
+1303,1303,Boca Raton & Boca Agua,Westbound - Far Side,32.763801,-97.239776,,,,,,0
+1304,1304,Woodhaven & La Paseo,Southbound - Far Side,32.762236,-97.240075,,,,,,0
+1305,1305,Bridge & La Villeta,Westbound - Far Side,32.76098,-97.241363,,,,,,0
+1306,1306,Bridge & Willow Ridge,Westbound - Near Side,32.760376,-97.247144,,,,,,0
+1307,1307,Bridge & Blue Lake,Westbound - Far Side,32.759644,-97.253818,,,,,,0
+1308,1308,Bridge & Viking,Westbound - Near Side,32.759211,-97.255641,,,,,,0
+1309,1309,Bridge & Oakland,Westbound - Near Side,32.758831,-97.260704,,,,,,0
+1313,1313,Vickery & Maidstone,Eastbound - Near Side,32.737611,-97.304049,,,,,,0
+1317,1317,Rosedale & Binkley,Eastbound - Far Side,32.730638,-97.282013,,,,,,0
+1318,1318,Rosedale & Bishop,Eastbound - Near Side,32.730636,-97.276815,,,,,,0
+1333,1333,Ramey & Farrell,Eastbound - Near Side,32.720449,-97.235217,,,,,,0
+1334,1334,Ramey & Carverly,Eastbound - Near Side,32.720432,-97.232324,,,,,,0
+1335,1335,Ramey & Lucas,Eastbound - Near Side,32.720412,-97.228477,,,,,,0
+1355,1355,Rosedale & Bishop,Westbound - Near Side,32.730755,-97.27728,,,,,,0
+1356,1356,Rosedale & Vaughn,Westbound - Near Side,32.730813,-97.279089,,,,,,0
+1359,1359,Bryant Irvin & Southwest  - SW Loop 820,Southbound - Mid Block,32.687067,-97.413706,,,,,,0
+1360,1360,Bryant Irvin & Overton Ridge,Southbound - Far Side,32.676858,-97.416998,,,,,,0
+1363,1363,Oakmont & Harris,Eastbound - Far Side,32.662764,-97.417375,,,,,,0
+1364,1364,Oakmont & Arbor,Eastbound - Near Side,32.662793,-97.410707,,,,,,0
+1365,1365,Oakmont & Oakmont,Eastbound - Far Side,32.662792,-97.407613,,,,,,0
+1366,1366,Hulen & Ledgestone,Northbound - Near Side,32.664129,-97.402038,,,,,,0
+1367,1367,Hulen & South,Northbound - Near Side,32.66983,-97.399783,,,,,,0
+1368,1368,Hulen & South,Southbound - Near Side,32.671415,-97.40007,,,,,,0
+1369,1369,Hulen & Ledgestone,Southbound - Near Side,32.66484,-97.402026,,,,,,0
+1370,1370,Oakmont & Arbor,Westbound - Far Side,32.663076,-97.410685,,,,,,0
+1371,1371,Oakmont & Oakmont,Westbound - Far Side,32.663074,-97.408803,,,,,,0
+1373,1373,Bryant Irvin & Overton Ridge,Northbound - Near Side,32.67695,-97.416473,,,,,,0
+1374,1374,Bryant Irvin & SW Loop 820 - Southwest,Northbound - Mid Block,32.686517,-97.413415,,,,,,0
+1375,1375,Bryant Irvin & Bellaire,Northbound - Far Side,32.694975,-97.41158,,,,,,0
+1380,1380,8th & Morphy,Southbound - Near Side,32.729788,-97.343872,,,,,,0
+1381,1381,8th & Allen - Park Place,Southbound - Mid Block,32.726182,-97.343841,,,,,,0
+1382,1382,8th & Richmond,Southbound - Far Side,32.723797,-97.343894,,,,,,0
+1387,1387,Cleburne & Devitt,Southbound - Near Side,32.704369,-97.349679,,,,,,0
+1388,1388,Cleburne & Gordon,Southbound - Far Side,32.705488,-97.348517,,,,,,0
+1389,1389,Cleburne & Benbrook,Southbound - Near Side,32.701742,-97.352468,,,,,,0
+1390,1390,McCart & Ripy,Southbound - Near Side,32.696658,-97.353075,,,,,,0
+1391,1391,McCart & Pafford,Southbound - Far Side,32.691815,-97.353103,,,,,,0
+1392,1392,McCart & Drew - Bolt,Southbound - Near Side,32.689158,-97.353104,,,,,,0
+1393,1393,McCart & Flint,Southbound - Near Side,32.686844,-97.353115,,,,,,0
+1394,1394,McCart & Seminary,Southbound - Near Side,32.684866,-97.353151,,,,,,0
+1395,1395,McCart & Fuller,Southbound - Far Side,32.678802,-97.353114,,,,,,0
+1396,1396,McCart & Martin Lydon,Southbound - Far Side,32.67519,-97.353112,,,,,,0
+1397,1397,McCart & Covert,Southbound - Far Side,32.671581,-97.353072,,,,,,0
+1398,1398,McCart & Southgate - Walton,Southbound - Mid Block,32.666353,-97.356126,,,,,,0
+1399,1399,McCart & Edgecliff,Southbound - Near Side,32.66196,-97.356126,,,,,,0
+1400,1400,McCart & Duringer,Southbound - Far Side,32.659455,-97.35782,,,,,,0
+1401,1401,McCart & Westcreek,Southbound - Near Side,32.655731,-97.361558,,,,,,0
+1402,1402,McCart & Springleaf,Northbound - Far Side,32.656999,-97.359805,,,,,,0
+1403,1403,McCart & Westcreek,Northbound - Near Side,32.654876,-97.362051,,,,,,0
+1404,1404,McCart & Edgecliff,Northbound - Far Side,32.662023,-97.355924,,,,,,0
+1405,1405,McCart & Southgate,Northbound - Near Side,32.666432,-97.355875,,,,,,0
+1406,1406,McCart & 820 - Covert,Northbound - Mid Block,32.669715,-97.354476,,,,,,0
+1407,1407,McCart & Covert,Northbound - Near Side,32.671717,-97.352919,,,,,,0
+1408,1408,McCart & Martin Lydon,Northbound - Near Side,32.675218,-97.352908,,,,,,0
+1409,1409,McCart & Bilglade - Fuller,Northbound - Mid Block,32.678187,-97.352941,,,,,,0
+1410,1410,McCart & Boyce - Gambrell,Northbound - Mid Block,32.68113,-97.352957,,,,,,0
+1411,1411,McCart & Seminary - Flint,Northbound - Mid Block,32.685267,-97.352943,,,,,,0
+1412,1412,McCart & Drew,Northbound - Far Side,32.690575,-97.352935,,,,,,0
+1413,1413,McCart & Biddison,Northbound - Near Side,32.69846,-97.352924,,,,,,0
+1414,1414,Cleburne & Shaw - Frazier,Northbound - Mid Block,32.703043,-97.35081,,,,,,0
+1419,1419,8th & Arlington,Northbound - Far Side,32.722598,-97.343657,,,,,,0
+1420,1420,8th & Richmond,Northbound - Near Side,32.723993,-97.343688,,,,,,0
+1421,1421,8th & Park Place - Allen,Northbound - Mid Block,32.726222,-97.34363,,,,,,0
+1422,1422,8th & Magnolia,Northbound - Near Side,32.730237,-97.343673,,,,,,0
+1423,1423,8th & Cooper,Northbound - Near Side,32.736337,-97.343596,,,,,,0
+1426,1426,Commerce & Belknap - Weatherford,Northbound - Mid Block,32.757855,-97.3323,,,,,,0
+1428,1428,CentrePort & Stapleton,Southbound - Far Side,32.820793,-97.05609,,,,,,0
+1433,1433,Amon Carter & Sovereign,Northbound - Far Side,32.830035,-97.048891,,,,,,0
+1434,1434,Cambridge & FAA - Soverign,Southbound - Mid Block,32.831072,-97.044086,,,,,,0
+1435,1435,Amon Carter & Sovereign - Trinity,Southbound - Mid Block,32.826976,-97.04935,,,,,,0
+1440,1440,28th & Grover,Westbound - Near Side,32.795264,-97.326594,,,,,,0
+1442,1442,28th & Decatur,Westbound - Near Side,32.795224,-97.336632,,,,,,0
+1443,1443,28th & Commerce,Westbound - Near Side,32.79525,-97.347021,,,,,,0
+1446,1446,Main & 26th - 27th,Northbound - Mid Block,32.792232,-97.349023,,,,,,0
+1464,1464,Plaza & Hickock,Eastbound - Near Side,32.736722,-97.43053,,,,,,0
+1465,1465,Plaza & Hickock,Westbound - Far Side,32.73684,-97.430693,,,,,,0
+1466,1466,Plaza & Ridgmar,Westbound - Near Side,32.736901,-97.426066,,,,,,0
+1467,1467,Plaza & Ridgmar,Eastbound - Near Side,32.736628,-97.425247,,,,,,0
+1468,1468,Plaza & Taxco,Eastbound - Far Side,32.737946,-97.420523,,,,,,0
+1469,1469,Plaza & Taxco,Westbound - Near Side,32.737945,-97.420265,,,,,,0
+1470,1470,Westridge & Pershing,Southbound - Near Side,32.736783,-97.418899,,,,,,0
+1471,1471,Westridge & Pershing,Northbound - Far Side,32.736953,-97.418751,,,,,,0
+1472,1472,Calmont & Westridge,Eastbound - Far Side,32.734284,-97.418097,,,,,,0
+1473,1473,Calmont & Guilford,Eastbound - Near Side,32.734017,-97.414371,,,,,,0
+1486,1486,Bryant Irvin & Manhattan,Northbound - Near Side,32.713586,-97.411647,,,,,,0
+1487,1487,Littlepage & Manhattan,Southbound - Near Side,32.715332,-97.410715,,,,,,0
+1489,1489,Vickery & Bryant Irvin,Westbound - Near Side,32.711064,-97.409916,,,,,,0
+1490,1490,Horne & Carver,Northbound - Far Side,32.716209,-97.408041,,,,,,0
+1491,1491,Horne & Farnsworth - Humbert,Northbound - Mid Block,32.718366,-97.40803,,,,,,0
+1494,1494,Western & Guilford,Westbound - Far Side,32.73502,-97.41409,,,,,,0
+1495,1495,Houston & 6th - 7th,Southbound - Mid Block,32.752392,-97.330879,,,,,,0
+1496,1496,Houston & 4th - 5th,Southbound - Mid Block,32.753767,-97.331783,,,,,,0
+1497,1497,Houston & 2nd,Southbound - Near Side,32.75543,-97.332906,,,,,,0
+1498,1498,Houston & Weatherford,Southbound - Near Side,32.756898,-97.333941,,,,,,0
+1499,1499,Throckmorton & Belknap,Northbound - Near Side,32.756772,-97.334726,,,,,,0
+1500,1500,Throckmorton & 2nd - Weatherford,Northbound - Mid Block,32.755525,-97.333794,,,,,,0
+1504,1504,Jennings & Texas,Northbound - Near Side,32.747371,-97.33017,,,,,,0
+1517,1517,Blanch & White Settlement,Northbound - Near Side,32.758995,-97.362401,,,,,,0
+1521,1521,Sondra & Blanch,Eastbound - Near Side,32.757209,-97.36373,,,,,,0
+1522,1522,Bailey & Sondra,Northbound - Far Side,32.756765,-97.365937,,,,,,0
+1523,1523,Sondra & Bailey,Eastbound - Far Side,32.756517,-97.365164,,,,,,0
+1538,1538,10th & Burnett,Westbound - Near Side,32.750005,-97.333799,,,,,,0
+1543,1543,Throckmorton & 11th - Jennings,Northbound - Mid Block,32.7498,-97.32997,,,,,,0
+1547,1547,Commerce & 5th,Northbound - Near Side,32.754058,-97.329679,,,,,,0
+1549,1549,Jones & 4th,Northbound - Near Side,32.755573,-97.328748,,,,,,0
+1553,1553,Weatherford & Taylor - Throck,Eastbound - Mid Block,32.756087,-97.334918,,,,,,0
+1556,1556,8th & Elizabeth - Robert,Southbound - Mid Block,32.715979,-97.343897,,,,,,0
+1557,1557,McCart & Butler,Southbound - Far Side,32.695239,-97.353081,,,,,,0
+1562,1562,McCart & Butler,Northbound - Near Side,32.695218,-97.352914,,,,,,0
+1563,1563,Cleburne & Townsend - Gordon,Northbound - Mid Block,32.705276,-97.348447,,,,,,0
+1566,1566,8th & Robert - Elizabeth,Northbound - Mid Block,32.715703,-97.343702,,,,,,0
+1752,1752,Dr.Dennis Dunkins Transfer Center # 2 (Rt 21),,32.74034,-97.263099,,,,4,,0
+1753,1753,Dr.Dennis Dunkins Transfer Center # 3 (Rt 25),,32.740269,-97.26323,,,,4,,0
+1754,1754,Dr.Dennis Dunkins Transfer Center # 4 (Spur),,32.740317,-97.263353,,,,4,,0
+1755,1755,Dr.Dennis Dunkins Transfer Center # 5 (Spur),,32.740534,-97.263285,,,,4,,0
+1756,1756,Dr.Dennis Dunkins Transfer Center # 1 (Rt 22),,32.740495,-97.263115,,,,4,,0
+1766,1766,7th & Currie - Foch,Eastbound - Mid Block,32.751013,-97.357481,,,,,,0
+1768,1768,Bryant Irvin & Convair,Southbound - Near Side,32.70007,-97.411889,,,,,,0
+1770,1770,Bryant Irvin & Convair,Northbound - Far Side,32.700161,-97.411608,,,,,,0
+1776,1776,Lancaster & Sanborn,Westbound - Near Side,32.741188,-97.284185,,,,,,0
+1778,1778,Handley & Normandy,Southbound - Far Side,32.748443,-97.216356,,,,,,0
+1779,1779,Handley & Meadowbrook,Southbound - Near Side,32.746391,-97.216427,,,,,,0
+1781,1781,Handley Ederville & Jack Newell,Southbound - Far Side,32.784551,-97.221428,,,,,,0
+1782,1782,John T White & John T White,Westbound - Near Side,32.765151,-97.173292,,,,,,0
+1783,1783,John T White & John T White,Eastbound - Far Side,32.76488,-97.17236,,,,,,0
+1784,1784,Main & 21st,Northbound - Far Side,32.783341,-97.349102,,,,,,0
+1785,1785,Main & 23rd,Northbound - Far Side,32.786469,-97.349111,,,,,,0
+1787,1787,Main & 21st,Southbound - Far Side,32.782379,-97.349314,,,,,,0
+1804,1804,Tarrant & Cumberland,Westbound - Far Side,32.896156,-97.305672,,,,,,0
+1807,1807,Vickery & Galveston,Eastbound - Near Side,32.743553,-97.32733,,,,,,0
+1810,1810,N Beach & Glenview,Northbound - Near Side,32.83152,-97.290397,,,,,,0
+1814,1814,N Beach & Glenview,Southbound - Far Side,32.830927,-97.290755,,,,,,0
+1815,1815,College & Broadway,Southbound - Near Side,32.741049,-97.334732,,,,,,0
+1816,1816,College & Broadway,Northbound - Far Side,32.741327,-97.334617,,,,,,0
+1817,1817,Lancaster & Watson,Eastbound - Near Side,32.740783,-97.248581,,,,,,0
+1823,1823,Tarrant & Arcadia Park,Westbound - Far Side,32.895379,-97.297828,,,,,,0
+1825,1825,University & Crestline,Northbound - Near Side,32.743419,-97.361352,,,,,,0
+1827,1827,Tarrant & Arcadia Park,Eastbound - Far Side,32.894886,-97.296485,,,,,,0
+1828,1828,Hulen & Oakbend Trail,Southbound - Far Side,32.666601,-97.400974,,,,,,0
+1830,1830,Hulen & Hulen Bend,Southbound - Far Side,32.661158,-97.401968,,,,,,0
+1835,1835,McCart & Finbro,Northbound - Far Side,32.653453,-97.363533,,,,,,0
+1859,1859,McCart & Altamesa,Southbound - Near Side,32.651676,-97.365787,,,,,,0
+1860,1860,Main & Leuda,Northbound - Near Side,32.736362,-97.32583,,,,,,0
+1862,1862,McCart & Green Ridge,Southbound - Far Side,32.637573,-97.369923,,,,,,0
+1863,1863,McCart & Green Ridge,Northbound - Near Side,32.637525,-97.369614,,,,,,0
+1864,1864,Sycamore School & McCart,Westbound - Far Side,32.635087,-97.371119,,,,,,0
+1865,1865,Sycamore School & McCart - Cleburne,Westbound - Mid Block,32.634327,-97.376643,,,,,,0
+1867,1867,Hulen & Kingswood,Northbound - Near Side,32.640639,-97.395701,,,,,,0
+1871,1871,Hulen & Fuller,Southbound - Near Side,32.642618,-97.396042,,,,,,0
+1872,1872,Hulen & Kingswood,Southbound - Far Side,32.639771,-97.396026,,,,,,0
+1873,1873,Hulen & Sleepy Ridge,Southbound - Near Side,32.637747,-97.395023,,,,,,0
+1874,1874,Sycamore School & Hulen,Eastbound - Far Side,32.634315,-97.389513,,,,,,0
+1876,1876,Sycamore School & Weatherwood,Eastbound - Near Side,32.635678,-97.381935,,,,,,0
+1877,1877,Sycamore School & Cleburne - McCart,Eastbound - Mid Block,32.634063,-97.37657,,,,,,0
+1878,1878,Sycamore School & McCart,Eastbound - Near Side,32.634795,-97.372332,,,,,,0
+1893,1893,Main & Leuda,Southbound - Near Side,32.736606,-97.32599,,,,,,0
+1900,1900,Riverside & Vanhorn,Southbound - Near Side,32.756852,-97.302114,,,,,,0
+1902,1902,Hulen & Tallow Wind,Southbound - Near Side,32.635179,-97.392096,,,,,,0
+1903,1903,Hulen & Tallow Wind,Northbound - Near Side,32.635517,-97.392096,,,,,,0
+1906,1906,Bryant Irvin & Cityview,Southbound - Far Side,32.67983,-97.414809,,,,,,0
+1907,1907,Bryant Irvin & Trailview,Southbound - Far Side,32.674471,-97.418433,,,,,,0
+1908,1908,Bryant Irvin & Haley,Southbound - Far Side,32.671806,-97.419305,,,,,,0
+1909,1909,Bryant Irvin & Altomonte,Southbound - Far Side,32.668902,-97.419593,,,,,,0
+1910,1910,Bryant Irvin & Broadway Plaza,Northbound - Near Side,32.668922,-97.419262,,,,,,0
+1911,1911,Bryant Irvin & Cameron Creek,Northbound - Far Side,32.672348,-97.418805,,,,,,0
+1912,1912,Bryant Irvin & Trailview,Northbound - Near Side,32.674701,-97.417912,,,,,,0
+1913,1913,Bryant Irvin & Cityview,Northbound - Near Side,32.679787,-97.414494,,,,,,0
+1914,1914,28th & Lulu,Westbound - Near Side,32.795258,-97.333492,,,,,,0
+1923,1923,N Beach & Winterhazel,Northbound - Near Side,32.867735,-97.291131,,,,,,0
+1924,1924,N Beach & Parkhaven,Northbound - Near Side,32.865265,-97.291061,,,,,,0
+1930,1930,N Beach & Marsarie - Buckeye,Northbound - Mid Block,32.875966,-97.289587,,,,,,0
+1931,1931,N Beach & Buckeye - Marserie,Southbound - Mid Block,32.87605,-97.289917,,,,,,0
+1932,1932,N Beach & Pepperbush - Mimosa,Northbound - Mid Block,32.879529,-97.289521,,,,,,0
+1933,1933,N Beach & Mimosa - Pepperbush,Southbound - Mid Block,32.879774,-97.289873,,,,,,0
+1934,1934,N Beach & Mustang,Southbound - Near Side,32.884584,-97.28982,,,,,,0
+1935,1935,N Beach & Mustang,Northbound - Far Side,32.884526,-97.289481,,,,,,0
+1960,1960,Jacksboro HWY & 18th,Northbound - Far Side,32.776114,-97.367585,,,,,,0
+1961,1961,Main & Petersmith,Northbound - Near Side,32.739801,-97.325824,,,,,,0
+1968,1968,Main & Daggett,Southbound - Near Side,32.742517,-97.325937,,,,,,0
+1971,1971,6th & Commerce,Westbound - Far Side,32.753672,-97.329655,,,,,,0
+1980,1980,Hulen & French Lake,Northbound - Near Side,32.637759,-97.394587,,,,,,0
+1981,1981,Hulen & Fuller,Northbound - Near Side,32.642627,-97.395694,,,,,,0
+1982,1982,Hulen & Cinnamon Hill,Northbound - Near Side,32.64588,-97.395755,,,,,,0
+1983,1983,Hulen & Altamesa,Northbound - Near Side,32.647817,-97.395791,,,,,,0
+1985,1985,Hulen & Hulen Bend,Northbound - Near Side,32.661256,-97.401652,,,,,,0
+1988,1988,6th & Throckmorton,Westbound - Far Side,32.752426,-97.332222,,,,,,0
+1989,1989,Calhoun & 3rd,Southbound - Near Side,32.755976,-97.330163,,,,,,0
+2008,2008,University & Colonial - Riverfront,Northbound - Mid Block,32.722723,-97.361097,,,,,,0
+2024,2024,Fitzhugh & Lucas - Cass,Westbound - Mid Block,32.717795,-97.228478,,,,,,0
+2026,2026,N Beach & Long,Southbound - Near Side,32.811829,-97.290753,,,,,,0
+2027,2027,Fitzhugh & Stalcup,Westbound - Near Side,32.71809,-97.237152,,,,,,0
+2032,2032,Rosedale & Argyle,Eastbound - Far Side,32.731407,-97.304936,,,,,,0
+2035,2035,Rosedale & Vaughn,Eastbound - Far Side,32.730618,-97.279098,,,,,,0
+2036,2036,Rosedale & Amanda,Eastbound - Far Side,32.731126,-97.249362,,,,,,0
+2037,2037,7th & Stayton,Westbound - Far Side,32.751151,-97.351705,,,,,,0
+2038,2038,Berry & Ruthann,Eastbound - Far Side,32.710437,-97.245283,,,,,,0
+2039,2039,Berry & Lauretta,Eastbound - Near Side,32.708574,-97.241428,,,,,,0
+2040,2040,Stalcup & Cox,Northbound - Near Side,32.709961,-97.237867,,,,,,0
+2042,2042,Rosedale & Freeman,Westbound - Near Side,32.731763,-97.308714,,,,,,0
+2043,2043,Pennsylvania & 8th - 7th,Eastbound - Mid Block,32.738388,-97.342988,,,,,,0
+2045,2045,N Beach & Basswood,Northbound - Far Side,32.873398,-97.289852,,,,,,0
+2046,2046,Riverside & Morningside,Southbound - Far Side,32.712799,-97.304144,,,,,,0
+2048,2048,Mansfield HWY & Seminary,Eastbound - Near Side,32.685371,-97.285084,,,,,,0
+2049,2049,N Beach & Basswood,Southbound - Far Side,32.872197,-97.29072,,,,,,0
+2050,2050,N Beach & Longstraw,Southbound - Near Side,32.86802,-97.291479,,,,,,0
+2053,2053,Magnolia & Travis,Eastbound - Near Side,32.730576,-97.332592,,,,,,0
+2056,2056,Hemphill & Maddox,Northbound - Far Side,32.727495,-97.331487,,,,,,0
+2058,2058,Hemphill & Fogg,Northbound - Far Side,32.691322,-97.331608,,,,,,0
+2059,2059,Hemphill & Devitt,Southbound - Far Side,32.703244,-97.331745,,,,,,0
+2061,2061,Hemphill & Carlock,Northbound - Near Side,32.718735,-97.33148,,,,,,0
+2063,2063,N Beach & Parkhaven,Southbound - Far Side,32.865007,-97.291364,,,,,,0
+2065,2065,Lancaster & Tandy,Eastbound - Far Side,32.740254,-97.275466,,,,,,0
+2066,2066,N Beach & 28th,Northbound - Far Side,32.795891,-97.290572,,,,,,0
+2069,2069,Camp Bowie & Westridge,Eastbound - Near Side,32.72802,-97.416844,,,,,,0
+2070,2070,Lackland & Locke,Northbound - Far Side,32.732259,-97.434542,,,,,,0
+2072,2072,Lackland & Garland,Southbound - Near Side,32.727617,-97.434781,,,,,,0
+2073,2073,Camp Bowie & Indale,Eastbound - Near Side,32.722799,-97.42934,,,,,,0
+2078,2078,Hulen & Calmont,Southbound - Near Side,32.733914,-97.387802,,,,,,0
+2080,2080,Bryant Irvin & Diaz,Southbound - Near Side,32.727518,-97.413526,,,,,,0
+2083,2083,Hulen & Stonegate,Northbound - Near Side,32.711678,-97.385866,,,,,,0
+2084,2084,Hulen & Ranch View,Southbound - Far Side,32.695921,-97.391366,,,,,,0
+2085,2085,Hulen & Hulen Park,Northbound - Near Side,32.694235,-97.392633,,,,,,0
+2086,2086,Hulen & Arborlawn,Southbound - Far Side,32.691428,-97.394101,,,,,,0
+2087,2087,Seminary & Cockrell,Eastbound - Far Side,32.68451,-97.359322,,,,,,0
+2089,2089,Seminary & Cole,Eastbound - Far Side,32.684285,-97.315611,,,,,,0
+2101,2101,Lancaster & Cedar - Poplar,Westbound - Mid Block,32.746256,-97.315134,,,,,,0
+2109,2109,Hemphill & Flint,Northbound - Far Side,32.687023,-97.331632,,,,,,0
+2112,2112,Hemphill & Devitt,Northbound - Near Side,32.703993,-97.331553,,,,,,0
+2114,2114,Hemphill & Bowie - Lowden,Northbound - Mid Block,32.70833,-97.331506,,,,,,0
+2115,2115,Hemphill & Cantey,Northbound - Near Side,32.711057,-97.331503,,,,,,0
+2116,2116,Hemphill & Cantey,Southbound - Far Side,32.711132,-97.331734,,,,,,0
+2117,2117,Hemphill & Powell - Jessamine,Southbound - Mid Block,32.718731,-97.331695,,,,,,0
+2118,2118,N Beach & Western Center,Northbound - Near Side,32.859845,-97.289867,,,,,,0
+2120,2120,7th & Cherry,Eastbound - Far Side,32.750909,-97.334356,,,,,,0
+2123,2123,N Beach & Western Center,Southbound - Far Side,32.85995,-97.290217,,,,,,0
+2124,2124,Allen & South Fwy,Westbound - Far Side,32.726166,-97.321691,,,,,,0
+2125,2125,N Beach & Thompson,Northbound - Near Side,32.889942,-97.289408,,,,,,0
+2127,2127,N Beach & Thompson,Southbound - Far Side,32.890086,-97.289757,,,,,,0
+2133,2133,Berry & James,Eastbound - Far Side,32.705879,-97.344081,,,,,,0
+2135,2135,McCart & Bolt,Northbound - Near Side,32.688163,-97.352935,,,,,,0
+2146,2146,Lackland & Curzon,Southbound - Near Side,32.7297,-97.434747,,,,,,0
+2151,2151,Tarrant County College,,32.666779,-97.289967,,,,,,0
+2170,2170,Ephriham & 18th,Westbound - Near Side,32.787775,-97.380752,,,,,,0
+2171,2171,Jacksboro HWY & University,Westbound - Near Side,32.767654,-97.354676,,,,,,0
+2174,2174,Hemphill & Berry - Bowie,Northbound - Mid Block,32.707072,-97.331535,,,,,,0
+2193,2193,Brentwood Stair & Handley,Eastbound - Near Side,32.754255,-97.215402,,,,,,0
+2194,2194,Brentwood Stair & Brentwood,Southbound - Far Side,32.755518,-97.217822,,,,,,0
+2195,2195,Bridgewood & Brentwood Stair,Southbound - Near Side,32.757408,-97.217788,,,,,,0
+2196,2196,Bridgewood & Bridge - I 30,Southbound - Mid Block,32.763032,-97.21765,,,,,,0
+2198,2198,Bridgewood & Bridge - Bocaraton,Northbound - Near Side,32.768147,-97.217692,,,,,,0
+2201,2201,Brentwood Stair & Brentwood,Northbound - Near Side,32.755804,-97.217752,,,,,,0
+2206,2206,Handley & Greenlee - Jewell,Northbound - Mid Block,32.742085,-97.216272,,,,,,0
+2207,2207,Handley & Craig,Northbound - Near Side,32.736812,-97.216887,,,,,,0
+2208,2208,Lancaster & Tierney,Eastbound - Far Side,32.740292,-97.24135,,,,,,0
+2220,2220,Lancaster & Kentucky,Westbound - Near Side,32.746249,-97.317138,,,,,,0
+2228,2228,Camp Bowie & Sanguinet,Eastbound - Far Side,32.73885,-97.390955,,,,,,0
+2252,2252,Brentwood Stair & Handley - E Loop 820,Westbound - Mid Block,32.754435,-97.215382,,,,,,0
+2264,2264,Hemphill & Hammond,Northbound - Near Side,32.680531,-97.331627,,,,,,0
+2265,2265,Berry & Old Mansfield,Eastbound - Near Side,32.706133,-97.29879,,,,,,0
+2283,2283,Berry & Glen Garden - Old Mansfield,Westbound - Mid Block,32.706789,-97.297506,,,,,,0
+2284,2284,Campus & SE Loop 820,Southbound - Far Side,32.663487,-97.295731,,,,,,0
+2285,2285,Campus & SE Loop 820,Northbound - Near Side,32.663846,-97.294893,,,,,,0
+2286,2286,Glen Garden & Yuma,Westbound - Near Side,32.710535,-97.307074,,,,,,0
+2292,2292,Evans & Jessamine,Southbound - Far Side,32.717985,-97.318512,,,,,,0
+2293,2293,Evans & Marion,Southbound - Far Side,32.71581,-97.318543,,,,,,0
+2294,2294,Evans & Morningside - Colvin,Southbound - Mid Block,32.713386,-97.318549,,,,,,0
+2297,2297,Oak Grove & Glasgow,Northbound - Near Side,32.662411,-97.304158,,,,,,0
+2298,2298,Felix & Fuller,Northbound - Near Side,32.675629,-97.318272,,,,,,0
+2300,2300,Felix & South - Oak Grove,Southbound - Mid Block,32.675515,-97.318457,,,,,,0
+2302,2302,Felix & Evans,Westbound - Far Side,32.676548,-97.319417,,,,,,0
+2303,2303,Oak Grove & SE Loop 820,Northbound - Near Side,32.670986,-97.312616,,,,,,0
+2304,2304,Oak Grove & Brown - SE Loop 820,Southbound - Mid Block,32.670962,-97.312789,,,,,,0
+2305,2305,Oak Grove & Mansel,Southbound - Near Side,32.666993,-97.308952,,,,,,0
+2312,2312,Hemphill & Gambrell,Southbound - Near Side,32.681866,-97.331876,,,,,,0
+2313,2313,Hemphill & Hammond,Southbound - Near Side,32.680766,-97.331873,,,,,,0
+2326,2326,James & Yates - Southcrest,Southbound - Mid Block,32.672348,-97.345149,,,,,,0
+2331,2331,Main & 27th,Northbound - Near Side,32.793195,-97.349025,,,,,,0
+2332,2332,Main & 26th,Southbound - Far Side,32.791254,-97.349237,,,,,,0
+2333,2333,Hemphill & Thelin,Northbound - Near Side,32.668435,-97.331728,,,,,,0
+2337,2337,Hemphill & Beddell,Northbound - Near Side,32.682273,-97.331664,,,,,,0
+2338,2338,Hemphill & Kellis,Northbound - Far Side,32.684461,-97.331589,,,,,,0
+2343,2343,Riverside & Vanhorn,Northbound - Far Side,32.756933,-97.301858,,,,,,0
+2344,2344,Riverside & Ennis,Northbound - Near Side,32.758791,-97.301625,,,,,,0
+2357,2357,28th & Braswell,Westbound - Near Side,32.795299,-97.318856,,,,,,0
+2358,2358,28th & Sterling - Deen,Westbound - Mid Block,32.795308,-97.324981,,,,,,0
+2359,2359,28th & Commerce,Eastbound - Far Side,32.795069,-97.347278,,,,,,0
+2362,2362,28th & Braswell,Eastbound - Near Side,32.795079,-97.318832,,,,,,0
+2365,2365,Sylvania & Watauga,Southbound - Near Side,32.789926,-97.30866,,,,,,0
+2366,2366,Sylvania & Carnation,Southbound - Far Side,32.785015,-97.308659,,,,,,0
+2367,2367,Sylvania & Yucca,Southbound - Far Side,32.780541,-97.308678,,,,,,0
+2368,2368,Sylvania & Westbrook - Dalford,Southbound - Mid Block,32.778951,-97.30873,,,,,,0
+2369,2369,Sylvania & Lillian,Southbound - Near Side,32.776601,-97.308787,,,,,,0
+2470,2470,9th & Main,Eastbound - Far Side,32.751459,-97.328853,,,,,,0
+2495,2495,Sylvania & Race,Northbound - Far Side,32.773601,-97.308705,,,,,,0
+2513,2513,Seminary & South Fwy,Westbound - Far Side,32.684525,-97.32282,,,,,,0
+2525,2525,Seminary & Town Center,Eastbound - Near Side,32.684701,-97.327522,,,,,,0
+2744,2744,Randol Mill & Cottonwood Village,Northbound - Far Side,32.761884,-97.160175,,,,,,0
+2746,2746,Alta Mere & Margaux,Eastbound - Far Side,32.753671,-97.429886,,,,,,0
+2747,2747,Alta Mere & Margaux,Westbound - Near Side,32.75278,-97.431266,,,,,,0
+2755,2755,Meadowbrook & Vanderbilt,Eastbound - Near Side,32.757152,-97.164959,,,,,,0
+2757,2757,Meadowbrook & Randol Mill,Eastbound - Near Side,32.757512,-97.158435,,,,,,0
+2758,2758,Randol Mill & Mill Valley,Northbound - Far Side,32.759254,-97.1572,,,,,,0
+2763,2763,Eastchase & Brentwood Stair,Southbound - Near Side,32.752918,-97.171406,,,,,,0
+2765,2765,Brentwood Stair & T Square,Westbound - Far Side,32.753684,-97.175875,,,,,,0
+2766,2766,Cooks & Brentwood Stair,Northbound - Far Side,32.754489,-97.183049,,,,,,0
+2767,2767,Cooks & Ederville,Northbound - Near Side,32.757094,-97.183052,,,,,,0
+2768,2768,University & Bristol,Southbound - Far Side,32.75526,-97.361296,,,,,,0
+2770,2770,Westcreek & Altamesa - Creek,Southbound - Mid Block,32.648017,-97.360957,,,,,,0
+2771,2771,Westcreek & Carlton - Currie,Southbound - Mid Block,32.645525,-97.365482,,,,,,0
+2772,2772,Southpark & Amber - McCart,Westbound - Mid Block,32.643747,-97.368566,,,,,,0
+2773,2773,Altamesa & McCart,Eastbound - Far Side,32.649424,-97.366117,,,,,,0
+2774,2774,Altamesa & Westcreek,Eastbound - Near Side,32.648933,-97.361079,,,,,,0
+2780,2780,Rogers & Devitt - Berry,Northbound - Mid Block,32.705209,-97.361469,,,,,,0
+2784,2784,White Settlement & University,Eastbound - Near Side,32.759072,-97.361388,,,,,,0
+2785,2785,FWCS - Bay - H,,32.751834,-97.326013,,,,1,,0
+2815,2815,Main & North Side,Southbound - Near Side,32.77585,-97.345633,,,,,,0
+2821,2821,Hulen & Overton Ridge,Southbound - Far Side,32.673668,-97.39953,,,,,,0
+2939,2939,Mansfield HWY & Trueland,Westbound - Far Side,32.685525,-97.284761,,,,,,0
+2954,2954,Vickery & Saintlouis,Eastbound - Near Side,32.743657,-97.328878,,,,,,0
+2957,2957,Vickery & Jennings,Westbound - Near Side,32.743832,-97.329271,,,,,,0
+3043,3043,Handley & Meadowbrook - Oak Forest,Southbound - Mid Block,32.745486,-97.21643,,,,,,0
+3058,3058,28th & Lulu,Eastbound - Near Side,32.795068,-97.333925,,,,,,0
+3064,3064,Rosedale & Etta - Tierney,Eastbound - Mid Block,32.731075,-97.246754,,,,,,0
+3065,3065,Stalcup & Pinson,Southbound - Far Side,32.713687,-97.237993,,,,,,0
+3068,3068,Riverside & Colvin - Roberts,Northbound - Mid Block,32.714331,-97.303944,,,,,,0
+3073,3073,Bryant Irvin & Edward Ranch Rd,Northbound - Near Side,32.706879,-97.411563,,,,,,0
+3076,3076,Calmont & Green Oaks,Eastbound - Near Side,32.734022,-97.435764,,,,,,0
+3077,3077,Oakland & Hawlet,Southbound - Far Side,32.734601,-97.262044,,,,,,0
+3078,3078,Oakland & Hawlet,Northbound - Near Side,32.734767,-97.26183,,,,,,0
+3080,3080,John T White & Eastchase,Westbound - Far Side,32.765826,-97.168289,,,,,,0
+3084,3084,N Beach & 28th,Southbound - Near Side,32.795569,-97.290721,,,,,,0
+3090,3090,Stalcup & Eisenhower,Southbound - Far Side,32.727543,-97.237478,,,,,,0
+3096,3096,La Gran Plaza Transfer Center #E,,32.685086,-97.324531,,,,5,,0
+3097,3097,La Gran Plaza Transfer Center #A,,32.685129,-97.324276,,,,5,,0
+3098,3098,La Gran Plaza Transfer Center #B,,32.685015,-97.324216,,,,5,,0
+3099,3099,La Gran Plaza Transfer Center #C,,32.684918,-97.324307,,,,5,,0
+3100,3100,La Gran Plaza Transfer Center #D,,32.684924,-97.324429,,,,5,,0
+3104,3104,SE Loop 820 & Campus,Eastbound - Near Side,32.667195,-97.297869,,,,,,0
+3113,3113,Berry & Old Mansfield,Westbound - Far Side,32.706084,-97.299631,,,,,,0
+3114,3114,Berry & Riverside - Old Mansfield,Eastbound - Mid Block,32.705754,-97.303309,,,,,,0
+3116,3116,Berry & New York,Westbound - Near Side,32.706004,-97.315531,,,,,,0
+3117,3117,Hemphill & California Pkwy,Southbound - Far Side,32.663028,-97.331944,,,,,,0
+3118,3118,Altamesa & Hemphill,Westbound - Far Side,32.648437,-97.336211,,,,,,0
+3119,3119,Crowley & Altamesa,Southbound - Far Side,32.648066,-97.348668,,,,,,0
+3120,3120,Sycamore School & Crowley,Westbound - Far Side,32.635055,-97.351796,,,,,,0
+3121,3121,Sycamore School & Ridge,Westbound - Near Side,32.635039,-97.363298,,,,,,0
+3123,3123,Cleburne & Sycamore School,Northbound - Far Side,32.635756,-97.379054,,,,,,0
+3124,3124,Cleburne & Woodacre,Northbound - Near Side,32.641492,-97.374028,,,,,,0
+3125,3125,McCart & South Meadow,Southbound - Near Side,32.641102,-97.369814,,,,,,0
+3126,3126,Sycamore School & McCart,Eastbound - Far Side,32.634748,-97.369001,,,,,,0
+3127,3127,Sycamore School & Meadow Creek,Eastbound - Near Side,32.634743,-97.362608,,,,,,0
+3128,3128,Sycamore School & Samantha,Eastbound - Far Side,32.634771,-97.352102,,,,,,0
+3129,3129,Crowley & Altamesa,Northbound - Near Side,32.648181,-97.348315,,,,,,0
+3130,3130,Hemphill & Altamesa,Northbound - Far Side,32.649636,-97.335271,,,,,,0
+3132,3132,Hemphill & Edney,Northbound - Near Side,32.666183,-97.331894,,,,,,0
+3136,3136,Airport Fwy & Harper,Westbound - Far Side,32.773623,-97.291809,,,,,,0
+3141,3141,Campus & Las Brisas,Northbound - Far Side,32.680296,-97.296037,,,,,,0
+3142,3142,Campus & S Campus,Southbound - Far Side,32.661797,-97.296848,,,,,,0
+3145,3145,Evans & Powell,Northbound - Near Side,32.718968,-97.318309,,,,,,0
+3147,3147,Main & 14th,Southbound - Near Side,32.779628,-97.348114,,,,,,0
+3148,3148,Main & 14th,Northbound - Near Side,32.779541,-97.347823,,,,,,0
+3149,3149,8th & Humbolt - Worth,Southbound - Mid Block,32.734291,-97.343838,,,,,,0
+3150,3150,McCart & Wellview,Southbound - Near Side,32.669499,-97.355455,,,,,,0
+3154,3154,Altamesa & Trail Lake - Granbury,Westbound - Mid Block,32.643985,-97.405812,,,,,,0
+3155,3155,Granbury & Altamesa,Northbound - Far Side,32.645099,-97.409549,,,,,,0
+3156,3156,Granbury & Dutch Branch,Northbound - Far Side,32.649746,-97.409469,,,,,,0
+3157,3157,Granbury & Dan Danciger,Northbound - Near Side,32.652935,-97.407252,,,,,,0
+3159,3159,Granbury & Washer - Hulen,Northbound - Mid Block,32.658049,-97.400998,,,,,,0
+3160,3160,Granbury & Hulen - Washer,Southbound - Mid Block,32.658464,-97.40104,,,,,,0
+3161,3161,Granbury & Granbury Cut Off,Southbound - Near Side,32.654975,-97.405196,,,,,,0
+3162,3162,Granbury & Dan Danciger,Southbound - Far Side,32.652919,-97.407699,,,,,,0
+3163,3163,Granbury & Dutch Branch,Southbound - Far Side,32.64873,-97.409844,,,,,,0
+3164,3164,Granbury & Altamesa,Southbound - Near Side,32.64513,-97.409882,,,,,,0
+3165,3165,Altamesa & Granbury,Eastbound - Far Side,32.64366,-97.407949,,,,,,0
+3166,3166,Altamesa & Trail Lake,Eastbound - Far Side,32.644823,-97.401647,,,,,,0
+3167,3167,Altamesa & Hulen,Eastbound - Near Side,32.647887,-97.39618,,,,,,0
+3168,3168,Belknap & Burnett,Westbound - Near Side,32.756092,-97.337046,,,,,,0
+3169,3169,Oak Grove & Hazel Leigh - Engelad,Southbound - Mid Block,32.660796,-97.304384,,,,,,0
+3170,3170,Oak Grove & Engelad,Northbound - Near Side,32.660868,-97.304176,,,,,,0
+3171,3171,Hemphill & Felix,Southbound - Far Side,32.677596,-97.331879,,,,,,0
+3180,3180,Hemphill & Edney,Southbound - Near Side,32.666641,-97.331903,,,,,,0
+3181,3181,Crowley & Parkwest,Southbound - Near Side,32.639297,-97.348674,,,,,,0
+3182,3182,Cleburne & Misty Meadow,Eastbound - Far Side,32.643553,-97.370273,,,,,,0
+3183,3183,Crowley & Parkwest,Northbound - Near Side,32.639057,-97.348359,,,,,,0
+3187,3187,Berry & Village Creek,Eastbound - Near Side,32.711709,-97.249232,,,,,,0
+3188,3188,Hemphill & John B Sans Memorial,Northbound - Far Side,32.66164,-97.332181,,,,,,0
+3189,3189,Hemphill & Felix - Spurgeon,Northbound - Mid Block,32.678843,-97.33165,,,,,,0
+3191,3191,Rosedale & Amanda,Westbound - Near Side,32.73133,-97.249198,,,,,,0
+3196,3196,Ederville & Sandy,Westbound - Near Side,32.757432,-97.197921,,,,,,0
+3197,3197,Brentwood Stair & Warren - Barron,Westbound - Mid Block,32.754444,-97.206889,,,,,,0
+3199,3199,Ederville & Morrison,Eastbound - Near Side,32.757645,-97.191563,,,,,,0
+3200,3200,Handley & Normandy,Northbound - Near Side,32.748575,-97.216235,,,,,,0
+3209,3209,28th & Hale,Eastbound - Near Side,32.795087,-97.329406,,,,,,0
+3210,3210,28th & Deen,Eastbound - Near Side,32.795071,-97.326162,,,,,,0
+3214,3214,Shady Oaks Manor & Quebec,Southbound - Near Side,32.802109,-97.42461,,,,,,0
+3215,3215,Old Mill Creek & Jacksboro,Southbound - Far Side,32.805345,-97.414431,,,,,,0
+3216,3216,Jacksboro HWY & University,Southbound - Near Side,32.769413,-97.358199,,,,,,0
+3217,3217,Jacksboro HWY & Ohio Garden,Southbound - Near Side,32.781406,-97.372763,,,,,,0
+3218,3218,Bridgewood & J. W. Delaney,Northbound - Far Side,32.775644,-97.215624,,,,,,0
+3219,3219,Bridgewood & Canyon Oak,Southbound - Far Side,32.775108,-97.215561,,,,,,0
+3221,3221,Bryant Irvin & Bellaire,Southbound - Near Side,32.695553,-97.411927,,,,,,0
+3225,3225,Empire & Frye,Northbound - Far Side,32.823973,-97.038094,,,,,,0
+3226,3226,Empire & FAA,Northbound - Near Side,32.827309,-97.038035,,,,,,0
+3231,3231,Miller & Quails,Southbound - Near Side,32.704711,-97.263036,,,,,,0
+3233,3233,Miller & Martin,Southbound - Far Side,32.691944,-97.263288,,,,,,0
+3234,3234,Mansfield HWY & Paris,Westbound - Near Side,32.681688,-97.27641,,,,,,0
+3235,3235,Hulen & Bellaire,Northbound - Near Side,32.704096,-97.389009,,,,,,0
+3236,3236,Hulen & Glenwood,Northbound - Far Side,32.707123,-97.387715,,,,,,0
+3237,3237,Hulen & Diaz,Northbound - Near Side,32.727054,-97.38776,,,,,,0
+3238,3238,Hulen & Glenwood,Southbound - Near Side,32.706906,-97.387948,,,,,,0
+3243,3243,Green Oaks & Alta Mere,Northbound - Near Side,32.748232,-97.432927,,,,,,0
+3256,3256,Plaza Pkwy & Ridgmar Plaza,Eastbound - Near Side,32.736818,-97.42296,,,,,,0
+3259,3259,Horne & Libbey - Goodman,Northbound - Mid Block,32.721162,-97.407991,,,,,,0
+3261,3261,Plaza Pkwy & Ridgmar Plaza,Westbound - Far Side,32.737074,-97.422962,,,,,,0
+3262,3262,South Fwy & Sycamore School,Southbound - Far Side,32.633491,-97.322084,,,,,,0
+3263,3263,Camp Bowie & Bryant Irvin,Eastbound - Near Side,32.729164,-97.41409,,,,,,0
+3264,3264,Bryant Irvin & Donnelly,Northbound - Near Side,32.728991,-97.413328,,,,,,0
+3265,3265,Bryant Irvin & Curzon,Northbound - Near Side,32.730157,-97.413318,,,,,,0
+3266,3266,Bryant Irvin & Locke,Northbound - Near Side,32.732068,-97.413293,,,,,,0
+3267,3267,Camp Bowie & Hillcrest,Eastbound - Near Side,32.742895,-97.381267,,,,,,0
+3273,3273,Hulen & Collinwood,Southbound - Near Side,32.737724,-97.387723,,,,,,0
+3274,3274,Seminary & 5th,Eastbound - Near Side,32.684611,-97.339598,,,,,,0
+3275,3275,Miller & Martin Luther,Northbound - Near Side,32.698665,-97.262842,,,,,,0
+3276,3276,Miller & Quails,Northbound - Near Side,32.704214,-97.262809,,,,,,0
+3277,3277,Berry & Pate,Westbound - Far Side,32.713865,-97.26112,,,,,,0
+3279,3279,Berry & Sirron,Eastbound - Near Side,32.71283,-97.253278,,,,,,0
+3280,3280,Lancaster & Toronto,Eastbound - Far Side,32.739943,-97.281826,,,,,,0
+3282,3282,Green Oaks & Alta Mere,Southbound - Far Side,32.74832,-97.433355,,,,,,0
+3285,3285,Riverside & Timberline,Southbound - Near Side,32.695752,-97.304067,,,,,,0
+3287,3287,Ephriham & 22nd,Northbound - Near Side,32.789968,-97.377432,,,,,,0
+3294,3294,Handley Ederville. & Jack Newell,Northbound - Near Side,32.784605,-97.221213,,,,,,0
+3296,3296,Oakland & Benmar,Southbound - Far Side,32.755442,-97.261759,,,,,,0
+3300,3300,Shady Oak & Watermark,Westbound - Near Side,32.805353,-97.418739,,,,,,0
+3303,3303,Lancaster & Wilson,Westbound - Near Side,32.740706,-97.241529,,,,,,0
+3304,3304,Plaza Pkwy & Aden,Westbound - Far Side,32.737001,-97.42855,,,,,,0
+3305,3305,Plaza Pkwy & Aden,Eastbound - Far Side,32.736812,-97.428009,,,,,,0
+3313,3313,Belknap & Cleckler,Eastbound - Near Side,32.773459,-97.300959,,,,,,0
+3314,3314,Belknap & Bonnie Brae,Eastbound - Far Side,32.774932,-97.29892,,,,,,0
+3315,3315,Maurice & Eagle,Eastbound - Near Side,32.775732,-97.295832,,,,,,0
+3317,3317,Maurice & Sylvania Park,Eastbound - Near Side,32.775682,-97.292018,,,,,,0
+3318,3318,Beach & Race - Beach Mill,Southbound - Mid Block,32.772905,-97.287578,,,,,,0
+3320,3320,Beach & Gilmore,Southbound - Far Side,32.765911,-97.287772,,,,,,0
+3330,3330,Carroll & Wingate,Southbound - Far Side,32.755659,-97.354735,,,,,,0
+3331,3331,Carroll & Mercedes,Northbound - Far Side,32.754821,-97.354562,,,,,,0
+3332,3332,Carroll & 5th - 6th,Southbound - Mid Block,32.752512,-97.354783,,,,,,0
+3334,3334,Race & Blandin,Westbound - Far Side,32.773173,-97.306582,,,,,,0
+3336,3336,Race & Blandin,Eastbound - Far Side,32.773102,-97.306104,,,,,,0
+3344,3344,Beach & Gilmore,Northbound - Near Side,32.765974,-97.287572,,,,,,0
+3346,3346,Race & Colonial,Westbound - Near Side,32.773131,-97.299094,,,,,,0
+3347,3347,Seminary & Frazier,Eastbound - Near Side,32.68445,-97.350777,,,,,,0
+3357,3357,Riverside & Glen Eden,Westbound - Far Side,32.690999,-97.296691,,,,,,0
+3359,3359,Lancaster & Beach,Eastbound - Far Side,32.74282,-97.288024,,,,,,0
+3361,3361,Beach & King Oaks,Northbound - Far Side,32.76964,-97.287366,,,,,,0
+3363,3363,Crowley & Sycamore School,Southbound - Near Side,32.636631,-97.348709,,,,,,0
+3364,3364,Crowley & Sycamore School,Northbound - Far Side,32.636527,-97.348383,,,,,,0
+3373,3373,Pine & Presidio,Southbound - Near Side,32.745208,-97.311973,,,,,,0
+3380,3380,Jacksboro HWY & Ephriham,Northbound - Near Side,32.784991,-97.382434,,,,,,0
+3385,3385,Westridge & Western,Northbound - Far Side,32.735349,-97.418593,,,,,,0
+3398,3398,University & Lancaster,Southbound - Far Side,32.745965,-97.361955,,,,,,0
+3399,3399,University & University Park,Southbound - Far Side,32.727874,-97.361385,,,,,,0
+3400,3400,University & Lancaster,Northbound - Near Side,32.746128,-97.361734,,,,,,0
+3404,3404,Bryant Irvin & Oakmont,Southbound - Near Side,32.663933,-97.421527,,,,,,0
+3405,3405,Bryant Irvin & Oakmont,Northbound - Far Side,32.662316,-97.422152,,,,,,0
+3412,3412,Rosedale & Fabons,Westbound - Far Side,32.732289,-97.312225,,,,,,0
+3413,3413,N Beach & Fossil Vista,Northbound - Near Side,32.841757,-97.290377,,,,,,0
+3415,3415,University & Old University,Northbound - Far Side,32.728979,-97.361146,,,,,,0
+3416,3416,University & Park Hill,Northbound - Far Side,32.717084,-97.360274,,,,,,0
+3417,3417,Mansfield HWY & Alcannon,Westbound - Far Side,32.687609,-97.289376,,,,,,0
+3422,3422,Glen Garden & Lowden,Eastbound - Near Side,32.710385,-97.310609,,,,,,0
+3423,3423,Glen Garden & Yuma,Eastbound - Near Side,32.710416,-97.307108,,,,,,0
+3424,3424,Glen Garden & Lowden,Westbound - Near Side,32.710511,-97.310281,,,,,,0
+3425,3425,N Riverside & Texas Sage,Northbound - Near Side,32.911742,-97.307109,,,,,,0
+3426,3426,N Riverside & General Worth,Southbound - Far Side,32.906386,-97.307096,,,,,,0
+3427,3427,Berry & Vancouver,Westbound - Near Side,32.711153,-97.246046,,,,,,0
+3428,3428,Berry & College,Eastbound - Far Side,32.705842,-97.335389,,,,,,0
+3429,3429,Berry & Adams,Westbound - Near Side,32.706118,-97.336693,,,,,,0
+3430,3430,Berry & New York,Eastbound - Far Side,32.705844,-97.315321,,,,,,0
+3431,3431,Berry & Canberra,Eastbound - Far Side,32.712556,-97.290759,,,,,,0
+3432,3432,Berry & Canberra,Westbound - Near Side,32.712564,-97.291193,,,,,,0
+3433,3433,Berry & Bishop,Westbound - Far Side,32.713529,-97.277878,,,,,,0
+3434,3434,Berry & Bright,Eastbound - Near Side,32.713947,-97.271799,,,,,,0
+3435,3435,Berry & Donalee,Westbound - Far Side,32.714097,-97.267621,,,,,,0
+3436,3436,N Riverside & General Worth,Northbound - Far Side,32.906381,-97.306822,,,,,,0
+3437,3437,Bryant Irvin & Bryan Henderson,Northbound - Far Side,32.691693,-97.411626,,,,,,0
+3438,3438,N Beach & Tarrant,Southbound - Far Side,32.893278,-97.289808,,,,,,0
+3440,3440,Horne & Shiloh,Southbound - Near Side,32.712567,-97.408255,,,,,,0
+3441,3441,N Beach & Fossil Creek,Southbound - Far Side,32.848835,-97.290262,,,,,,0
+3442,3442,N Beach & Fossil Creek,Northbound - Near Side,32.849261,-97.289842,,,,,,0
+3444,3444,N Beach & Meacham,Southbound - Near Side,32.826078,-97.290726,,,,,,0
+3446,3446,Campus & Las Brisas,Southbound - Near Side,32.680407,-97.296341,,,,,,0
+3447,3447,N Beach & Sandshell,Southbound - Far Side,32.840927,-97.290761,,,,,,0
+3448,3448,Seminary & Frazier,Westbound - Far Side,32.684641,-97.351291,,,,,,0
+3449,3449,Sandy & Green Acres,Northbound - Near Side,32.755256,-97.198481,,,,,,0
+3450,3450,Sandy & Green Acres,Southbound - Far Side,32.755086,-97.198649,,,,,,0
+3451,3451,Brentwood Stair & Handley,Westbound - Near Side,32.754436,-97.213608,,,,,,0
+3452,3452,N Beach & Meacham,Northbound - Far Side,32.82544,-97.29038,,,,,,0
+3453,3453,N Beach & Northern Cross,Southbound - Near Side,32.835942,-97.290687,,,,,,0
+3454,3454,N Beach & Northern Cross,Northbound - Far Side,32.83594,-97.290331,,,,,,0
+3457,3457,Fitzhugh & Fitzhugh,Westbound - Far Side,32.718027,-97.23298,,,,,,0
+3459,3459,University & Benbrook,Southbound - Near Side,32.701598,-97.360532,,,,,,0
+3460,3460,Oak Grove & Flanders,Northbound - Far Side,32.665214,-97.305477,,,,,,0
+3461,3461,Oak Grove & Flanders,Southbound - Far Side,32.664713,-97.305207,,,,,,0
+3463,3463,Vickery & Lipscomb,Eastbound - Far Side,32.743611,-97.332426,,,,,,0
+3465,3465,Lancaster & Haynie,Eastbound - Far Side,32.733263,-97.221351,,,,,,0
+3473,3473,N Beach & Chesser Boyer,Northbound - Far Side,32.801941,-97.290462,,,,,,0
+3475,3475,Hemphill & Waggoman,Southbound - Near Side,32.693366,-97.33182,,,,,,0
+3477,3477,Tarrant & Beach,Westbound - Far Side,32.894585,-97.290665,,,,,,0
+3478,3478,Horne & Fernander,Northbound - Near Side,32.714822,-97.408062,,,,,,0
+3479,3479,Jacksboro HWY & Manefee,Southbound - Far Side,32.787069,-97.385472,,,,,,0
+3506,3506,Chase,,32.819058,-97.046632,,,,,,0
+3508,3508,N Riverside & Texas Sage,Southbound - Far Side,32.911688,-97.307382,,,,,,0
+3511,3511,Quebec & NW Loop 820,Northbound - Near Side,32.805571,-97.427149,,,,,,0
+3512,3512,Northwest Centre & 199 Access,Northbound - Near Side,32.809215,-97.428796,,,,,,0
+3513,3513,Boat Club & SH 199,Northbound - Near Side,32.808614,-97.42252,,,,,,0
+3519,3519,River Oaks & Jacksboro,Westbound - Far Side,32.784899,-97.384701,,,,,,0
+3520,3520,Matador Ranch,,32.62803,-97.349461,,,,,,0
+3521,3521,Sheraton Hotel,,32.747543,-97.325275,,,,,,0
+3522,3522,Worthington Hotel,,32.755626,-97.332535,,,,,,0
+3523,3523,Omni Hotel,,32.748782,-97.328449,,,,,,0
+3542,3542,N Beach & Chesser Boyer,Southbound - Far Side,32.802093,-97.290662,,,,,,0
+3551,3551,7th & Collier,Eastbound - Near Side,32.750909,-97.340229,,,,,,0
+3564,3564,7th & Summit,Westbound - Far Side,32.751094,-97.342294,,,,,,0
+3567,3567,7th & Commerce,Eastbound - Far Side,32.753203,-97.32867,,,,,,0
+3574,3574,Carey & Martin,Southbound - Near Side,32.690646,-97.243329,,,,,,0
+3576,3576,Hemphill & Shaw,Northbound - Far Side,32.702849,-97.331539,,,,,,0
+3578,3578,Hemphill & Allen,Northbound - Far Side,32.726265,-97.331461,,,,,,0
+3593,3593,Bridge Library,,32.760588,-97.222885,,,,,,0
+3598,3598,Main & 27th,Southbound - Near Side,32.793931,-97.349215,,,,,,0
+3600,3600,Weatherford & Burnett,Eastbound - Near Side,32.755212,-97.336711,,,,,,0
+3602,3602,Hemphill & Hawthorne,Southbound - Near Side,32.721454,-97.331701,,,,,,0
+3603,3603,Hemphill & Pafford - Fogg,Southbound - Mid Block,32.691388,-97.331812,,,,,,0
+3606,3606,Raymond Barber & Campus,Eastbound - Near Side,32.674816,-97.297956,,,,,,0
+3607,3607,Riverside & Mulkey,Northbound - Far Side,32.716184,-97.304108,,,,,,0
+3609,3609,Campus & Raymond Barber,Southbound - Near Side,32.676006,-97.297941,,,,,,0
+3611,3611,SE Loop 820 & Resource,Westbound - Near Side,32.669009,-97.299662,,,,,,0
+3612,3612,Altamesa & Trail Lake - Granbury,Eastbound - Mid Block,32.643703,-97.405175,,,,,,0
+3613,3613,Hulen & Cinnamon Hill,Southbound - Far Side,32.645863,-97.39603,,,,,,0
+3614,3614,Sycamore School & Cleburne,Eastbound - Near Side,32.63498,-97.380387,,,,,,0
+3615,3615,McCart & South Meadow,Northbound - Far Side,32.641625,-97.369463,,,,,,0
+3618,3618,8th & Pulaski,Northbound - Far Side,32.733916,-97.343619,,,,,,0
+3619,3619,8th & Oleander,Southbound - Far Side,32.7321,-97.343874,,,,,,0
+3624,3624,Altamesa & Winesanker,Westbound - Near Side,32.648159,-97.396303,,,,,,0
+3625,3625,Altamesa & Whitman - Lancelot,Westbound - Mid Block,32.646231,-97.400235,,,,,,0
+3626,3626,Altamesa & Trail Lake,Westbound - Far Side,32.644466,-97.402731,,,,,,0
+3627,3627,Granbury & Wolens,Northbound - Far Side,32.654685,-97.405154,,,,,,0
+3628,3628,Granbury & Wendel,Northbound - Near Side,32.655941,-97.403621,,,,,,0
+3629,3629,Hulen & Oakbend,Northbound - Near Side,32.66647,-97.400638,,,,,,0
+3630,3630,University & Benbrook,Northbound - Far Side,32.702538,-97.360316,,,,,,0
+3631,3631,Lancaster & Taylor,Eastbound - Far Side,32.746661,-97.331894,,,,,,0
+3633,3633,John T White & Medical,Eastbound - Far Side,32.764879,-97.176083,,,,,,0
+3634,3634,Meadowbrook & Anchors,Eastbound - Near Side,32.757529,-97.160061,,,,,,0
+3636,3636,John T White & Medical,Westbound - Far Side,32.765163,-97.176519,,,,,,0
+3637,3637,John T White & Anderson,Westbound - Far Side,32.76647,-97.211544,,,,,,0
+3639,3639,Boca Raton & Country Club - Village,Westbound - Mid Block,32.764373,-97.232157,,,,,,0
+3640,3640,Berry & Mississippi,Westbound - Near Side,32.705975,-97.31062,,,,,,0
+3641,3641,Evans & Davis,Northbound - Far Side,32.7213,-97.318309,,,,,,0
+3642,3642,Evans & Baltimore,Northbound - Far Side,32.722912,-97.318306,,,,,,0
+3643,3643,Main & St Joseph,Northbound - Near Side,32.726287,-97.326316,,,,,,0
+3644,3644,Rosedale & New York,Eastbound - Far Side,32.732015,-97.31539,,,,,,0
+3646,3646,Race & Chandler,Westbound - Near Side,32.773219,-97.30285,,,,,,0
+3650,3650,N Beach & Legend Point,Northbound - Near Side,32.81194,-97.290393,,,,,,0
+3651,3651,N Beach & Meacham,Northbound - Near Side,32.822128,-97.29038,,,,,,0
+3668,3668,N Beach & Meacham,Southbound - Far Side,32.822123,-97.290719,,,,,,0
+3669,3669,N Beach & Fossil,Southbound - Near Side,32.804136,-97.290683,,,,,,0
+3670,3670,N Beach & Elinor - 28th,Southbound - Mid Block,32.797016,-97.290695,,,,,,0
+3674,3674,Race & Sylvania,Eastbound - Far Side,32.773105,-97.30824,,,,,,0
+3675,3675,Race & Chandler,Eastbound - Far Side,32.773064,-97.302817,,,,,,0
+3676,3676,Meadowbrook & Rand,Eastbound - Far Side,32.745647,-97.257525,,,,,,0
+3677,3677,Meadowbrook & Emily,Eastbound - Near Side,32.745848,-97.23871,,,,,,0
+3678,3678,Brentwood Stair & Downey,Eastbound - Near Side,32.754239,-97.211378,,,,,,0
+3679,3679,Brentwood Stair & Barron,Eastbound - Far Side,32.754272,-97.207089,,,,,,0
+3680,3680,Ederville & Morrison,Westbound - Near Side,32.757723,-97.190505,,,,,,0
+3681,3681,Brentwood Stair & Downey,Westbound - Far Side,32.754419,-97.211041,,,,,,0
+3683,3683,Meadowbrook & Emily,Westbound - Near Side,32.746023,-97.238541,,,,,,0
+3684,3684,Main & 22nd,Southbound - Near Side,32.78454,-97.349316,,,,,,0
+3686,3686,Main & Exchange - 24th,Northbound - Mid Block,32.788604,-97.349055,,,,,,0
+3687,3687,Calmont & Irene,Westbound - Near Side,32.734113,-97.438669,,,,,,0
+3691,3691,Alta Mere & Rosewood,Southbound - Far Side,32.72985,-97.441006,,,,,,0
+3692,3692,Calmont & Glenrock,Eastbound - Near Side,32.735926,-97.460885,,,,,,0
+3693,3693,Calmont & Phoenix,Eastbound - Near Side,32.734359,-97.458081,,,,,,0
+3694,3694,Calmont & Rio Vista,Eastbound - Near Side,32.733861,-97.449828,,,,,,0
+3696,3696,Oakmont & Gabbert,Westbound - Far Side,32.66305,-97.405595,,,,,,0
+3697,3697,Bryant Irvin & Oakbend,Northbound - Near Side,32.666315,-97.419834,,,,,,0
+3701,3701,Bryant Irvin & Oakbend,Southbound - Near Side,32.666653,-97.420078,,,,,,0
+3702,3702,Oakmont & Hulen,Eastbound - Near Side,32.662766,-97.403556,,,,,,0
+3707,3707,Shady Oaks & Old Mill Creek,Northbound - Far Side,32.805176,-97.41547,,,,,,0
+3708,3708,Shady Oaks Manor & Observation,Westbound - Near Side,32.803864,-97.420891,,,,,,0
+3710,3710,Jacksboro HWY & 21st,Southbound - Far Side,32.779091,-97.370089,,,,,,0
+3711,3711,Jacksboro HWY & Fielder,Northbound - Far Side,32.781592,-97.372461,,,,,,0
+3712,3712,Jacksboro HWY & Long,Northbound - Far Side,32.789729,-97.388167,,,,,,0
+3713,3713,Hulen & Oak Park - Hartwood,Southbound - Mid Block,32.709266,-97.387077,,,,,,0
+3714,3714,Seminary & Adams,Eastbound - Near Side,32.684593,-97.336483,,,,,,0
+3715,3715,Seminary & Vermont,Eastbound - Far Side,32.684236,-97.322566,,,,,,0
+3716,3716,Mansfield HWY & Alcannon,Eastbound - Far Side,32.686035,-97.286551,,,,,,0
+3717,3717,Mansfield HWY & Forest Hill,Eastbound - Near Side,32.680526,-97.274498,,,,,,0
+3718,3718,Miller & Ave J,Southbound - Near Side,32.727333,-97.262165,,,,,,0
+3720,3720,Mansfield HWY & Nolan,Westbound - Near Side,32.680655,-97.27416,,,,,,0
+3721,3721,Mansfield HWY & Ollie - Wichita,Westbound - Mid Block,32.683085,-97.279443,,,,,,0
+3722,3722,Mansfield HWY & Alcannon,Westbound - Near Side,32.686387,-97.286666,,,,,,0
+3723,3723,Seminary & Campus,Westbound - Far Side,32.684787,-97.296424,,,,,,0
+3724,3724,Hulen & Fieldcrest,Northbound - Far Side,32.690013,-97.393711,,,,,,0
+3725,3725,Hulen & Valentine,Northbound - Near Side,32.722791,-97.386622,,,,,,0
+3726,3726,Wabash & Gambrell,Southbound - Far Side,32.682805,-97.371718,,,,,,0
+3731,3731,Hemphill & Thelin,Southbound - Near Side,32.66935,-97.33192,,,,,,0
+3733,3733,Village & Altamesa,Southbound - Near Side,32.649769,-97.335762,,,,,,0
+3734,3734,Altamesa & Camelot,Westbound - Far Side,32.648284,-97.341368,,,,,,0
+3735,3735,Crowley & Whittenburg,Southbound - Near Side,32.644567,-97.348654,,,,,,0
+3736,3736,Crowley & Country Manor,Southbound - Far Side,32.642923,-97.348659,,,,,,0
+3737,3737,Sycamore School & Ranger,Westbound - Far Side,32.635046,-97.356065,,,,,,0
+3738,3738,Sycamore School & Laurelhill,Westbound - Near Side,32.635043,-97.358426,,,,,,0
+3739,3739,Cleburne & Memphis,Northbound - Near Side,32.639694,-97.376368,,,,,,0
+3740,3740,Sycamore School & Ashbourne,Eastbound - Near Side,32.634757,-97.356515,,,,,,0
+3741,3741,Crowley & Country Manor,Northbound - Near Side,32.642896,-97.348339,,,,,,0
+3742,3742,Crowley & Whittenburg,Northbound - Far Side,32.645555,-97.348348,,,,,,0
+3743,3743,Altamesa & Camelot,Eastbound - Far Side,32.647891,-97.339742,,,,,,0
+3744,3744,Altamesa & Hemphill,Eastbound - Near Side,32.647963,-97.336762,,,,,,0
+3749,3749,Ramey & E Loop 820 S,Eastbound - Near Side,32.720408,-97.226369,,,,,,0
+3755,3755,Rosedale & Belzise,Eastbound - Far Side,32.731303,-97.300427,,,,,,0
+3756,3756,Stalcup & Rickenbacker,Northbound - Far Side,32.722405,-97.237389,,,,,,0
+3761,3761,Magnolia & Hemphill,Westbound - Far Side,32.730725,-97.332305,,,,,,0
+3763,3763,Campus & Oak Grove,Westbound - Near Side,32.656394,-97.301996,,,,,,0
+3764,3764,Fuller & Felix,Westbound - Far Side,32.677274,-97.333893,,,,,,0
+3765,3765,Fuller & 5th,Westbound - Far Side,32.677245,-97.339174,,,,,,0
+3766,3766,Fuller & Ryan,Westbound - Near Side,32.677221,-97.342837,,,,,,0
+3767,3767,Southcrest & James,Westbound - Far Side,32.670644,-97.345629,,,,,,0
+3768,3768,Townsend & Southcrest,Northbound - Far Side,32.670829,-97.348672,,,,,,0
+3769,3769,Townsend & Yates,Northbound - Far Side,32.673993,-97.348699,,,,,,0
+3770,3770,Fuller & Stanley,Eastbound - Near Side,32.677164,-97.34646,,,,,,0
+3776,3776,Fuller & Ryan,Eastbound - Far Side,32.677075,-97.34251,,,,,,0
+3777,3777,Fuller & 5th,Eastbound - Far Side,32.677088,-97.338247,,,,,,0
+3778,3778,Fuller & Felix,Eastbound - Near Side,32.677141,-97.333789,,,,,,0
+3779,3779,Oak Grove & Hensley,Southbound - Near Side,32.668209,-97.311019,,,,,,0
+3780,3780,Oak Grove & Campus,Southbound - Near Side,32.65683,-97.302942,,,,,,0
+3782,3782,Mississippi & Cantey,Southbound - Near Side,32.711457,-97.312671,,,,,,0
+3783,3783,Berry & Glen Garden,Eastbound - Near Side,32.706633,-97.297387,,,,,,0
+3787,3787,Mississippi & Cantey,Northbound - Near Side,32.71109,-97.312554,,,,,,0
+3789,3789,28th & Ellis,Eastbound - Near Side,32.795166,-97.350492,,,,,,0
+3790,3790,28th & Deen,Eastbound - Far Side,32.795079,-97.32492,,,,,,0
+3792,3792,Lancaster & Poplar,Eastbound - Far Side,32.746066,-97.315926,,,,,,0
+3793,3793,Lancaster & Grafton,Eastbound - Far Side,32.745906,-97.300498,,,,,,0
+3794,3794,Lancaster & Clairemont,Eastbound - Near Side,32.74071,-97.267232,,,,,,0
+3795,3795,Lancaster & Tierney,Eastbound - Far Side,32.740687,-97.244157,,,,,,0
+3796,3796,Lancaster & Weiler,Eastbound - Far Side,32.737522,-97.233204,,,,,,0
+3797,3797,Lancaster & Canton,Eastbound - Far Side,32.736049,-97.229156,,,,,,0
+3801,3801,Halbert & Kerr,Southbound - Far Side,32.732562,-97.21711,,,,,,0
+3802,3802,Lancaster & Tierney,Westbound - Far Side,32.741069,-97.246047,,,,,,0
+3803,3803,Lancaster & Ayers,Westbound - Far Side,32.741059,-97.271306,,,,,,0
+3804,3804,Lancaster & Collard,Westbound - Far Side,32.739948,-97.278826,,,,,,0
+3805,3805,Lancaster & Ward,Westbound - Far Side,32.743302,-97.288196,,,,,,0
+3806,3806,Lancaster & Anna,Westbound - Far Side,32.744795,-97.291252,,,,,,0
+3809,3809,N Beach & Beach Mill,Southbound - Far Side,32.769636,-97.287596,,,,,,0
+3816,3816,Beach & Marsalis,Northbound - Near Side,32.772636,-97.287326,,,,,,0
+3818,3818,28th & Ellis,Westbound - Near Side,32.795337,-97.349935,,,,,,0
+3819,3819,Bridgewood & Bridge,Northbound - Far Side,32.766367,-97.218237,,,,,,0
+3820,3820,Handley & Beaty,Southbound - Near Side,32.739772,-97.216365,,,,,,0
+3821,3821,Handley & Craig,Southbound - Near Side,32.737751,-97.216729,,,,,,0
+3822,3822,Berry & Townsend,Eastbound - Near Side,32.705898,-97.349742,,,,,,0
+3823,3823,Berry & Townsend,Eastbound - Far Side,32.705885,-97.348828,,,,,,0
+3824,3824,Berry & Grove,Eastbound - Near Side,32.705789,-97.322478,,,,,,0
+3825,3825,Berry & Lauretta,Westbound - Near Side,32.708719,-97.240917,,,,,,0
+3827,3827,Berry & James - Stanley,Westbound - Mid Block,32.706126,-97.345419,,,,,,0
+3828,3828,Berry & Townsend,Westbound - Near Side,32.706147,-97.348913,,,,,,0
+3830,3830,Berry & Forest Park - McCart,Westbound - Far Side,32.706127,-97.352932,,,,,,0
+3831,3831,Berry & Greene,Westbound - Near Side,32.706228,-97.357792,,,,,,0
+3832,3832,South Fwy & Everman,Northbound - Far Side,32.629095,-97.321072,,,,,,0
+3833,3833,South Fwy & Sycamore School,Northbound - Far Side,32.636652,-97.320998,,,,,,0
+3834,3834,South Fwy & Highland,Southbound - Near Side,32.649633,-97.321881,,,,,,0
+3839,3839,Lackland & Hemsell,Southbound - Near Side,32.725601,-97.4348,,,,,,0
+3840,3840,Camp Bowie & Carleton,Westbound - Near Side,32.741577,-97.384982,,,,,,0
+3841,3841,Lancaster & Lamar,Westbound - Near Side,32.746864,-97.332411,,,,,,0
+3843,3843,University & Rosedale,Southbound - Far Side,32.730307,-97.36154,,,,,,0
+3850,3850,Oakland Hills & Raton,Northbound - Near Side,32.765118,-97.228057,,,,,,0
+3851,3851,Oakland Hills & Oakland Hills,Northbound - Far Side,32.763436,-97.225097,,,,,,0
+3852,3852,Oakland Hills & Oakland Hills,Southbound - Far Side,32.763139,-97.224802,,,,,,0
+3853,3853,Oakland Hills & Goldenwood,Southbound - Near Side,32.765171,-97.228346,,,,,,0
+3854,3854,Bridge & Oakland Hills,Westbound - Near Side,32.760776,-97.222941,,,,,,0
+3855,3855,Oakland Hills & Farnswood,Northbound - Far Side,32.762155,-97.224022,,,,,,0
+3856,3856,Oakland Hills & Oakway,Southbound - Near Side,32.762015,-97.224173,,,,,,0
+3857,3857,Rosedale & Plaza,Eastbound - Far Side,32.72944,-97.228589,,,,,,0
+3862,3862,Amon Carter & Sovereign,Northbound - Near Side,32.828784,-97.0489,,,,,,0
+3871,3871,Oakland & Meadowbrook - Kenwood,Northbound - Mid Block,32.744922,-97.261762,,,,,,0
+3872,3872,8th & Robert,Southbound - Far Side,32.713952,-97.343906,,,,,,0
+3875,3875,Mansfield HWY & Glen Eden,Southbound - Far Side,32.690375,-97.295961,,,,,,0
+3881,3881,Camp Bowie & Bigham,Westbound - Far Side,32.7237,-97.427832,,,,,,0
+3883,3883,Hemphill & Broadway,Southbound - Far Side,32.74056,-97.331828,,,,,,0
+3887,3887,9th & Throckmorton,Eastbound - Near Side,32.75084,-97.330171,,,,,,0
+3893,3893,Stalcup & Cox,Southbound - Far Side,32.710068,-97.23801,,,,,,0
+3894,3894,Seminary & 8th,Westbound - Near Side,32.684806,-97.343676,,,,,,0
+3896,3896,N Beach & Western Center,Northbound - Far Side,32.862798,-97.2902,,,,,,0
+3903,3903,Oakmont & Harris,Eastbound - Far Side,32.661797,-97.42004,,,,,,0
+3907,3907,Randol Mill & Mill Valley Cir,Northbound - Far Side,32.75858,-97.156638,,,,,,0
+3908,3908,John T White & Sandy,Eastbound - Near Side,32.765655,-97.197587,,,,,,0
+3909,3909,John T White & Sandy,Westbound - Far Side,32.765913,-97.196511,,,,,,0
+3912,3912,Riverside & 4th,Northbound - Near Side,32.762847,-97.301634,,,,,,0
+3914,3914,Brentwood Stair & Hollowbrook - Wilson,Eastbound - Mid Block,32.758915,-97.244811,,,,,,0
+3915,3915,Brentwood Stair & Holt,Eastbound - Far Side,32.758313,-97.249854,,,,,,0
+3916,3916,Brentwood Stair & Reflection,Eastbound - Near Side,32.75812,-97.255588,,,,,,0
+3917,3917,Brentwood Stair & Oakland,Eastbound - Far Side,32.75735,-97.261235,,,,,,0
+3920,3920,Townsend & Fuller,Northbound - Near Side,32.676794,-97.348718,,,,,,0
+3922,3922,Lamar & 6th - 7th,Southbound - Mid Block,32.751448,-97.333242,,,,,,0
+3924,3924,Village Creek & Martin,Northbound - Mid Block,32.690604,-97.251189,,,,,,0
+3925,3925,Village Creek & Wilbarger,Northbound - Far Side,32.698484,-97.248302,,,,,,0
+3926,3926,Grate Wolf Lodge,,32.94248,-97.060045,,,,,,0
+3932,3932,Walmart At Berry St,,32.712334,-97.283098,,,,,,0
+3933,3933,Calhoun & 15th,Southbound - Near Side,32.748197,-97.324932,,,,,,0
+3934,3934,Camp Bowie & Hilldale - Bernie Anderson,Eastbound - Mid Block,32.726233,-97.421126,,,,,,0
+3935,3935,Lackland & Camp Bowie,Northbound - Far Side,32.722177,-97.434275,,,,,,0
+3937,3937,Brentwood Stair & Beauvior,Westbound - Far Side,32.753041,-97.173532,,,,,,0
+3938,3938,Trinity & Skyview,Westbound - Far Side,32.822747,-97.065193,,,,,,0
+3939,3939,Berry & Wesleyan,Southbound - Near Side,32.713425,-97.287535,,,,,,0
+3943,3943,Sierra Vista Transfer Center Bay - 3,,32.705401,-97.305452,,,,9,,0
+3944,3944,Commerce & 3rd,Northbound - Near Side,32.755426,-97.330606,,,,,,0
+3951,3951,SW Loop 820 & Inverness,Eastbound - Far Side,32.676446,-97.384655,,,,,,0
+3952,3952,SW Loop 820 & Inverness,Westbound - Near Side,32.677061,-97.383949,,,,,,0
+3953,3953,Granbury & SW Loop 820,Northbound - Far Side,32.676062,-97.379543,,,,,,0
+3954,3954,Granbury & SW Loop 820,Southbound - Near Side,32.675949,-97.379933,,,,,,0
+3955,3955,Granbury & Bilglade,Northbound - Far Side,32.678337,-97.376828,,,,,,0
+3956,3956,Granbury & Billglade,Southbound - Far Side,32.678055,-97.377421,,,,,,0
+3957,3957,Wabash & Trail Lake,Northbound - Far Side,32.682361,-97.371972,,,,,,0
+3958,3958,Granbury & Trail Lake,Southbound - Far Side,32.680955,-97.373706,,,,,,0
+3959,3959,Lake Worth & Old Mill Creek,Southbound - Near Side,32.805724,-97.414537,,,,,,0
+3963,3963,C A Roberson & Dub Shaw,Northbound - Near Side,32.665147,-97.286652,,,,,,0
+3965,3965,SE Loop 820 & Campus,Eastbound - Near Side,32.668251,-97.300265,,,,,,0
+3966,3966,Ephriham & Jacksboro,Eastbound - Far Side,32.786806,-97.381763,,,,,,0
+3977,3977,Martin & Village,Westbound - Near Side,32.689093,-97.250372,,,,,,0
+3978,3978,N Beach & Fossil,Northbound - Far Side,32.804754,-97.290485,,,,,,0
+3979,3979,28th & Hutchinson,Westbound - Near Side,32.795288,-97.330112,,,,,,0
+3980,3980,University & Sondra,Southbound - Far Side,32.7562,-97.361255,,,,,,0
+3981,3981,North Park And Ride Bay - 1,,32.922026,-97.318661,,,,10,,0
+3982,3982,S Normandale & Image Circle,Eastbound - Near Side,32.726368,-97.475413,,,,,,0
+3983,3983,W Normandale & Shalako,Southbound - Near Side,32.73301,-97.479122,,,,,,0
+3984,3984,W Normandale & Chaminta,Southbound - Far Side,32.729397,-97.47942,,,,,,0
+3986,3986,S Normandale & Softwind,Eastbound - Far Side,32.727876,-97.473705,,,,,,0
+3987,3987,Normandale & Encino Dr,Eastbound - Far Side,32.728453,-97.472086,,,,,,0
+3988,3988,S Normandale & Portales,Eastbound - Far Side,32.728529,-97.469039,,,,,,0
+3989,3989,N Normandale & Cortier,Westbound - Near Side,32.730278,-97.46775,,,,,,0
+3990,3990,N Normandale & Crosstie,Westbound - Near Side,32.731496,-97.469501,,,,,,0
+3991,3991,N Normandale & La Palma,Westbound - Near Side,32.733534,-97.472225,,,,,,0
+3992,3992,N Normandale & Randall,Westbound - Near Side,32.734998,-97.473545,,,,,,0
+3993,3993,N Normandale & Cliffridge,Westbound - Near Side,32.734187,-97.477657,,,,,,0
+3994,3994,N Normandale & Dale,Westbound - Far Side,32.734945,-97.476545,,,,,,0
+3996,3996,6th & Main,Westbound - Near Side,32.753395,-97.330291,,,,,,0
+3998,3998,Hemphill & Oleander,Northbound - Near Side,32.73164,-97.331508,,,,,,0
+3999,3999,Lancaster & Collard,Eastbound - Far Side,32.739744,-97.277635,,,,,,0
+4000,4000,Calmont & Glenrock,Westbound - Near Side,32.736023,-97.460178,,,,,,0
+4001,4001,Jacksboro HWY & Ephriham,Southbound - Far Side,32.784249,-97.381778,,,,,,0
+4006,4006,Bridgewood & Bridge,Northbound - Near Side,32.763062,-97.217426,,,,,,0
+4007,4007,5th & Commerce,Westbound - Near Side,32.766305,-97.337464,,,,,,0
+4008,4008,N Beach & Stanley Keller,Northbound - Near Side,32.813966,-97.290499,,,,,,0
+4009,4009,N Beach & Stanley Keller,Southbound - Far Side,32.814407,-97.290808,,,,,,0
+4010,4010,N Beach & Broadway,Northbound - Near Side,32.809542,-97.290503,,,,,,0
+4011,4011,N Beach & Broadway,Southbound - Far Side,32.808912,-97.290688,,,,,,0
+4012,4012,Hemphill & Flint,Southbound - Near Side,32.686997,-97.33184,,,,,,0
+4013,4013,Hemphill & Feliks Gwozdz,Southbound - Far Side,32.728003,-97.331652,,,,,,0
+4015,4015,Camp Bowie & Prevost,Eastbound - Far Side,32.735131,-97.399895,,,,,,0
+4016,4016,Campus & Dub Shaw,Southbound - Far Side,32.669065,-97.293361,,,,,,0
+4017,4017,Pennsylvania & Henderson,Westbound - Far Side,32.738553,-97.33872,,,,,,0
+4020,4020,White Settlement & Adrian,Eastbound - Far Side,32.759045,-97.359399,,,,,,0
+4021,4021,White Settlement & Wimberly,Westbound - Near Side,32.759207,-97.358694,,,,,,0
+4022,4022,White Settlement & Foch,Eastbound - Far Side,32.759017,-97.356807,,,,,,0
+4023,4023,White Settlement & Foch,Westbound - Near Side,32.759181,-97.355135,,,,,,0
+4025,4025,Brentwood Stair & Wilson,Eastbound - Near Side,32.75995,-97.240712,,,,,,0
+4026,4026,Jacksboro HWY & Belle - Ephriham,Westbound - Mid Block,32.784127,-97.380592,,,,,,0
+4027,4027,Jacksboro HWY & Ephriham - Belle,Eastbound - Mid Block,32.783594,-97.379604,,,,,,0
+4028,4028,N Beach & Harper,Southbound - Near Side,32.776646,-97.289209,,,,,,0
+4029,4029,Hulen & Pershing,Southbound - Far Side,32.735399,-97.387758,,,,,,0
+4030,4030,Seminary & Fair Park,Westbound - Far Side,32.684485,-97.314449,,,,,,0
+4031,4031,Berry & Mississippi,Westbound - Far Side,32.706007,-97.313594,,,,,,0
+4032,4032,Cleburne & Church Park,Northbound - Far Side,32.6379,-97.377601,,,,,,0
+4033,4033,Crowley & San Rafael,Southbound - Near Side,32.632677,-97.348711,,,,,,0
+4034,4034,Crowley & San Rafael,Northbound - Far Side,32.632531,-97.348425,,,,,,0
+4037,4037,W Normandale & Bridge Hill,Southbound - Far Side,32.727185,-97.478255,,,,,,0
+4038,4038,Alta Mere & Slocum,Southbound - Far Side,32.727927,-97.441039,,,,,,0
+4040,4040,Martin & Carey,Westbound - Far Side,32.689043,-97.243549,,,,,,0
+4041,4041,Hemphill & Thelin,Northbound - Far Side,32.67134,-97.331712,,,,,,0
+4046,4046,Henderson & White Settlement,Northbound - Far Side,32.759217,-97.343495,,,,,,0
+4047,4047,Henderson & White Settlement,Southbound - Far Side,32.758666,-97.343226,,,,,,0
+4048,4048,Houston & 8th - 9th,Southbound - Mid Block,32.751342,-97.330215,,,,,,0
+4050,4050,Sylvania & Ivey,Southbound - Far Side,32.793539,-97.308632,,,,,,0
+4051,4051,John T White & Eastchase,Eastbound - Near Side,32.765555,-97.167846,,,,,,0
+4052,4052,FWCS - Bay - A,,32.752179,-97.325814,,,,1,,0
+4054,4054,FWCS - Bay - C,,32.751863,-97.325599,,,,1,,0
+4055,4055,FWCS - Bay - D,,32.751547,-97.325407,,,,1,,0
+4056,4056,FWCS - Bay - E,,32.751398,-97.325298,,,,1,,0
+4057,4057,FWCS - Bay - F,,32.752109,-97.325961,,,,1,,0
+4058,4058,FWCS - Bay - G,,32.751966,-97.325791,,,,1,,0
+4059,4059,FWCS - Bay - I,,32.75155,-97.325619,,,,1,,0
+4060,4060,FWCS - Bay - J,,32.751407,-97.32549,,,,1,,0
+4061,4061,FWCS - Bay - K,,32.751262,-97.325337,,,,1,,0
+4065,4065,FWCS - S2,,32.751857,-97.326204,,,,1,,0
+4066,4066,FWCS - S3,,32.751725,-97.326162,,,,1,,0
+4071,4071,Sierra Vista Transfer Center Bay - 1,,32.705509,-97.305926,,,,9,,0
+4073,4073,Sierra Vista Transfer Center Bay - 2,,32.705403,-97.305665,,,,9,,0
+4074,4074,Eastchase & John T White,Northbound - Near Side,32.764732,-97.167465,,,,,,0
+4088,4088,North Park And Ride Bay - 2,,32.921889,-97.318608,,,,10,,0
+4091,4091,Erie & Hart,Southbound - Far Side,32.731947,-97.220669,,,,,,0
+4101,4101,Westcreek & Loma Vista,Southbound - Near Side,32.646456,-97.363865,,,,,,0
+4143,4143,Commerce & 3rd,Southbound - Near Side,32.755546,-97.330925,,,,,,0
+4147,4147,Crowley & Pantego,Northbound - Far Side,32.644671,-97.348345,,,,,,0
+4149,4149,N Beach & Silver Sage,Northbound - Far Side,32.856437,-97.28985,,,,,,0
+4151,4151,North Side Station Bay - A,,32.795563,-97.337949,,,,12,,0
+4152,4152,Mercantile Center Station Bay - 1,,32.820306,-97.293768,,,,11,,0
+4153,4153,Iron Horse Station,,32.84483,-97.249426,,,,,,0
+4154,4154,Smithfield Station,,32.865039,-97.211384,,,,,,0
+4155,4155,Grapevine Main Street  Station,,32.933686,-97.077306,,,,,,0
+4156,4156,DFW Airport North Station,,32.933399,-97.054133,,,,,,0
+4158,4158,DFW Airport Terminal B Station,,32.906253,-97.041287,,,,15,,0
+4159,4159,Mercantile Center Station Bay - 2,,32.820054,-97.293678,,,,11,,0
+4161,4161,North Side Station Bay - B,,32.795831,-97.337947,,,,12,,0
+4162,4162,North Side Station Bay - C,,32.795898,-97.337747,,,,12,,0
+4163,4163,N Beach & Spoonwood,Southbound - Far Side,32.856839,-97.290209,,,,,,0
+4166,4166,North Side Station,,32.795414,-97.338023,,,,12,,0
+4167,4167,Mercantile Center Station,,32.819365,-97.293582,,,,11,,0
+4169,4169,Grapevine Convention Visitors Bureau,,32.934459,-97.078466,,,,,,0
+4170,4170,Torian Cabin,,32.939056,-97.078303,,,,,,0
+4172,4172,Gaylord Texan,,32.951769,-97.062439,,,,,,0
+4173,4173,Grapevine Mills,,32.965685,-97.040765,,,,,,0
+4174,4174,Embassy Suites,,32.958112,-97.044599,,,,,,0
+4175,4175,Hyatt Regency DFW,,32.897509,-97.038766,,,,,,0
+4179,4179,Grapevine Town Center One,,32.931717,-97.088522,,,,,,0
+4193,4193,Sylvania & Goldenrod,Southbound - Far Side,32.787364,-97.308657,,,,,,0
+4194,4194,Texrail & GVVR Depot,,32.933912,-97.078252,,,,,,0
+4200,4200,College & Pennsylvania,Southbound - Near Side,32.738831,-97.334894,,,,,,0
+4201,4201,College & Petersmith,Northbound - Near Side,32.739728,-97.334685,,,,,,0
+4202,4202,Cooks & Windsong,Southbound - Far Side,32.755435,-97.183377,,,,,,0
+4203,4203,Brentwood Stair & T Square,Eastbound - Far Side,32.753516,-97.175636,,,,,,0
+4204,4204,Brentwood Stair & Beauvior,Eastbound - Near Side,32.752947,-97.173642,,,,,,0
+4205,4205,Eastchase & Brentwood Stair,Northbound - Far Side,32.75285,-97.171068,,,,,,0
+4206,4206,Eastchase & Ederville,Northbound - Far Side,32.754785,-97.169582,,,,,,0
+4207,4207,Anderson & Eastchase,Westbound - Far Side,32.762545,-97.168181,,,,,,0
+4208,4208,John T White N & John T White,Northbound - Near Side,32.763909,-97.172689,,,,,,0
+4209,4209,Amador & Calera,Eastbound - Far Side,32.917965,-97.30817,,,,,,0
+4210,4210,Calmont & S Cherry,Westbound - Far Side,32.734058,-97.45119,,,,,,0
+4211,4211,N Beach & Fossil Vista,Southbound - Near Side,32.845056,-97.290673,,,,,,0
+4212,4212,N Beach & Fossil Vista,Northbound - Far Side,32.844292,-97.290382,,,,,,0
+4213,4213,N Beach & Fossil Creek,Southbound - Near Side,32.850984,-97.290228,,,,,,0
+4214,4214,N Beach & Western Center,Southbound - Near Side,32.862529,-97.290471,,,,,,0
+4215,4215,N Tarrant & Cumberland Gap,Westbound - Near Side,32.895939,-97.303197,,,,,,0
+4216,4216,N Tarrant & Cumberland Gap,Eastbound - Mid Block,32.895765,-97.304472,,,,,,0
+4217,4217,N Riverside & Shiver,Northbound - Near Side,32.902868,-97.3069,,,,,,0
+4218,4218,N Riverside & Shiver,Southbound - Far Side,32.902641,-97.307086,,,,,,0
+4219,4219,NW Center &  Quebec,Northbound - Far Side,32.806324,-97.429625,,,,,,0
+4226,4226,7th & Stayton,Eastbound - Far Side,32.750925,-97.350212,,,,,,0
+4227,4227,Ephriham & Jacksboro,Eastbound - Far Side,32.785944,-97.382867,,,,,,0
+4231,4231,American & Post Oak,Northbound - Far Side,32.826137,-97.070512,,,,,,0
+4240,4240,Berry & Binkley,Westbound - Near Side,32.713371,-97.281549,,,,,,0
+4242,4242,Horne & Helmick,Southbound - Far Side,32.71623,-97.408194,,,,,,0
+4245,4245,Ohio Garden & Garden - Quail,Westbound - Mid Block,32.781296,-97.379441,,,,,,0
+4246,4246,Ohio Garden & Garden,Westbound - Far Side,32.781318,-97.377528,,,,,,0
+4250,4250,South Hills & Carolyn,Eastbound - Far Side,32.696318,-97.36784,,,,,,0
+4251,4251,South Hills & Winston,Eastbound - Near Side,32.696329,-97.366494,,,,,,0
+4252,4252,Handley & Oak Forest,Southbound - Near Side,32.743539,-97.216403,,,,,,0
+4253,4253,Handley & Oak Forest,Northbound - Far Side,32.74352,-97.216247,,,,,,0
+4261,4261,Race & Sylvania,Westbound - Near Side,32.773225,-97.308144,,,,,,0
+4262,4262,FAA & American,Eastbound - Far Side,32.83201,-97.069059,,,,,,0
+4263,4263,FAA & HWY 360,Eastbound - Far Side,32.832309,-97.063021,,,,,,0
+4266,4266,Willbarger & Hilldale,Eastbound - Far Side,32.698864,-97.245692,,,,,,0
+4267,4267,Carey & Martin Luther King,Southbound - Near Side,32.694073,-97.243412,,,,,,0
+4268,4268,American & Transformational,Northbound - Far Side,32.82977,-97.069401,,,,,,0
+4269,4269,Statler & Woodforest,Eastbound - Far Side,32.819039,-97.053967,,,,,,0
+4273,4273,Bridgewood & Bridge,Southbound - Near Side,32.766387,-97.218448,,,,,,0
+4274,4274,Bridge & Bridgewood,Eastbound - Far Side,32.764164,-97.218521,,,,,,0
+4277,4277,Trail Lake & Granbury,Northbound - Near Side,32.682974,-97.373695,,,,,,0
+4281,4281,North Fwy & Heritage Trace,Northbound - Far Side,32.916559,-97.316483,,,,,,0
+4282,4282,Laredo & West Fwy,Southbound - Far Side,32.737161,-97.46346,,,,,,0
+4283,4283,Calmont & Green Oaks,Westbound - Far Side,32.734183,-97.435679,,,,,,0
+4284,4284,Stalcup & Fitzhugh,Northbound - Far Side,32.718346,-97.237835,,,,,,0
+4290,4290,South Hills & Carolyn,Westbound - Near Side,32.696461,-97.367889,,,,,,0
+4291,4291,Evans & Murphy,Northbound - Near Side,32.728673,-97.318263,,,,,,0
+4292,4292,Evans & Morphy,Southbound - Far Side,32.728247,-97.318465,,,,,,0
+4293,4293,Magnolia & Jennings,Westbound - Near Side,32.730712,-97.32933,,,,,,0
+4294,4294,Magnolia & St Lewis,Eastbound - Near Side,32.730575,-97.328215,,,,,,0
+4296,4296,Westcreek & Westvista,Northbound - Far Side,32.645424,-97.365366,,,,,,0
+4297,4297,Westcreek & Altamesa,Northbound - Near Side,32.648018,-97.360774,,,,,,0
+4298,4298,McCart & Clovermeadow,Southbound - Far Side,32.631869,-97.370006,,,,,,0
+4299,4299,Columbus & McCart,Westbound - Far Side,32.628019,-97.371136,,,,,,0
+4300,4300,Columbus &  Tree Leaf,Westbound - Near Side,32.628079,-97.380455,,,,,,0
+4301,4301,Cleburne & Yellow Leaf,Northbound - Near Side,32.630272,-97.382851,,,,,,0
+4302,4302,Cleburne & Sycamore School,Northbound - Near Side,32.634115,-97.380194,,,,,,0
+4303,4303,Belknap & Grace,Eastbound - Near Side,32.76996,-97.308077,,,,,,0
+4304,4304,Belknap & Grace,Westbound - Near Side,32.770345,-97.307695,,,,,,0
+4305,4305,Belknap & Retta,Eastbound - Near Side,32.771544,-97.304845,,,,,,0
+4307,4307,Belknap & Riverside,Eastbound - Near Side,32.772673,-97.302434,,,,,,0
+4308,4308,Beach & Wheeler,Northbound - Far Side,32.779893,-97.290509,,,,,,0
+4309,4309,Beach & Belknap,Northbound - Far Side,32.783246,-97.290538,,,,,,0
+4310,4310,Beach & Marigold,Southbound - Near Side,32.783185,-97.290718,,,,,,0
+4311,4311,Beach & Springdale,Northbound - Near Side,32.787818,-97.290488,,,,,,0
+4312,4312,Beach & Springdale,Southbound - Near Side,32.788451,-97.290703,,,,,,0
+4313,4313,Beach & 28th,Southbound - Far Side,32.793733,-97.290689,,,,,,0
+4314,4314,Oakland & Meadowbrook,Southbound - Far Side,32.743688,-97.262027,,,,,,0
+4315,4315,South Fwy & Felix St,Southbound - Near Side,32.677528,-97.32084,,,,,,0
+4316,4316,South Fwy & Seminary,Northbound - Near Side,32.682387,-97.320039,,,,,,0
+4317,4317,Horne & Bonnell,Northbound - Far Side,32.724351,-97.407928,,,,,,0
+4318,4318,McCart & Columbus,Southbound - Far Side,32.627374,-97.370069,,,,,,0
+4319,4319,McCart & Blue Springs,Southbound - Near Side,32.622827,-97.370007,,,,,,0
+4320,4320,Hulen & Barwick,Northbound - Near Side,32.677399,-97.395326,,,,,,0
+4321,4321,Risinger Rd & Cove Meadows,Westbound - Near Side,32.615611,-97.374835,,,,,,0
+4322,4322,Hulen & Risinger,Northbound - Far Side,32.618446,-97.388314,,,,,,0
+4323,4323,Hulen & Langside,Northbound - Near Side,32.623079,-97.388278,,,,,,0
+4324,4324,Hulen & Columbus Trail,Northbound - Near Side,32.627468,-97.387456,,,,,,0
+4325,4325,Hulen & Sycamore School,Northbound - Near Side,32.633466,-97.38969,,,,,,0
+4326,4326,Bryant Irvin & Wellesley,Southbound - Near Side,32.725846,-97.413541,,,,,,0
+4327,4327,Isbell & Poinsetta,Northbound - Far Side,32.768757,-97.38611,,,,,,0
+4328,4328,Isbell & Poinsetta,Southbound - Near Side,32.768729,-97.386261,,,,,,0
+4329,4329,Isbell & Inez,Northbound - Near Side,32.773448,-97.38525,,,,,,0
+4330,4330,Isbell & Inez,Southbound - Near Side,32.77376,-97.385204,,,,,,0
+4331,4331,Ohio Garden & Irving,Northbound - Mid Block,32.777454,-97.382187,,,,,,0
+4332,4332,Ohio Garden & Pumpkin,Southbound - Far Side,32.777525,-97.382312,,,,,,0
+4333,4333,Riverside & E Maddox,Northbound - Far Side,32.72727,-97.303135,,,,,,0
+4334,4334,Riverside & E Maddox,Southbound - Near Side,32.727066,-97.303391,,,,,,0
+4335,4335,Riverside & Rosedale,Southbound - Far Side,32.731038,-97.303282,,,,,,0
+4336,4336,Riverside & Rosedale,Northbound - Near Side,32.732128,-97.303034,,,,,,0
+4337,4337,Vickery & Tennessee,Westbound - Near Side,32.741842,-97.311727,,,,,,0
+4339,4339,1st & Brandies,Westbound - Near Side,32.765298,-97.291845,,,,,,0
+4340,4340,1st & Brandies,Eastbound - Far Side,32.765154,-97.291562,,,,,,0
+4341,4341,Bridgewood & Boca Raton,Southbound - Far Side,32.768076,-97.217957,,,,,,0
+4344,4344,Village Creek & Eastland,Northbound - Far Side,32.707606,-97.248367,,,,,,0
+4345,4345,Village Creek & Eastland,Southbound - Near Side,32.70772,-97.248538,,,,,,0
+4346,4346,Belknap & Retta,Westbound - Far Side,32.771701,-97.30489,,,,,,0
+4347,4347,Wilbarger & Village Creek,Eastbound - Far Side,32.698832,-97.247873,,,,,,0
+4348,4348,Amon Carter & FAA,Southbound - Far Side,32.83265,-97.049354,,,,,,0
+4353,4353,Green Oaks & Green Oaks,Southbound - Far Side,32.740204,-97.433938,,,,,,0
+4354,4354,Normandale & Normandale,Northbound - Far Side,32.725833,-97.476001,,,,,,0
+4355,4355,Normandale & Bridge Hill,Northbound - Near Side,32.727794,-97.478581,,,,,,0
+4356,4356,Normandale & Chamita,Northbound - Far Side,32.729968,-97.479291,,,,,,0
+4357,4357,Normandale & Shalako,Northbound - Far Side,32.732804,-97.47888,,,,,,0
+4358,4358,Normandale & Cliffridge,Eastbound - Near Side,32.734696,-97.47655,,,,,,0
+4359,4359,Normandale & La Palma,Eastbound - Near Side,32.734802,-97.473632,,,,,,0
+4360,4360,La Palma & Calmont,Eastbound - Near Side,32.734682,-97.471484,,,,,,0
+4365,4365,Southgate & Global,Northbound - Far Side,32.854443,-97.038021,,,,,,0
+4366,4366,CentrePort Station West Loop,,32.817179,-97.053551,,,,,,0
+4367,4367,CentrePort Station Amon Carter Loop,,32.817182,-97.053768,,,,,,0
+4368,4368,CentrePort Station East Loop,,32.817171,-97.053335,,,,,,0
+4370,4370,Bryant Irvin & Campbowie,Southbound - Far Side,32.728623,-97.413503,,,,,,0
+4371,4371,Hillwood & Amador,Northbound - Near Side,32.916081,-97.310791,,,,,,0
+4372,4372,Sondra & Blanch,Westbound - Near Side,32.756927,-97.362786,,,,,,0
+4373,4373,Horne & Goodman - Libbey,Southbound - Mid Block,32.721205,-97.408124,,,,,,0
+4374,4374,Bridge & E Loop 820,Eastbound - Near Side,32.766145,-97.214855,,,,,,0
+4375,4375,Riverside & Chamas,Southbound - Far Side,32.70779,-97.304172,,,,,,0
+4376,4376,Riverside & Chamas,Northbound - Near Side,32.707599,-97.30391,,,,,,0
+4377,4377,Horne & Fletcher,Southbound - Far Side,32.724066,-97.408071,,,,,,0
+4378,4378,Horne & Farnsworth,Southbound - Near Side,32.71824,-97.408185,,,,,,0
+4379,4379,Bryant Irvin & Wellesley,Northbound - Far Side,32.725963,-97.41337,,,,,,0
+4385,4385,Ephriham & NW 26th,Eastbound - Far Side,32.793125,-97.373616,,,,,,0
+4386,4386,James & Yates,Southbound - Near Side,32.673882,-97.345166,,,,,,0
+4388,4388,Carroll & 5th,Northbound - Far Side,32.753325,-97.354617,,,,,,0
+4389,4389,Campus & SE Loop 820,Northbound - Far Side,32.66853,-97.292858,,,,,,0
+4390,4390,28th & Roosevelt,Eastbound - Near Side,32.795375,-97.368489,,,,,,0
+4391,4391,28th & Roosevelt,Westbound - Far Side,32.795556,-97.368607,,,,,,0
+4392,4392,Normandale & Normandale,Southbound - Near Side,32.726432,-97.476886,,,,,,0
+4393,4393,Rock Quarry & Overton Ridge,Northbound - Near Side,32.675478,-97.400887,,,,,,0
+4394,4394,Fletcher & Littlepage,Eastbound - Near Side,32.724499,-97.411773,,,,,,0
+4395,4395,Fletcher & Littlepage,Westbound - Near Side,32.724616,-97.411515,,,,,,0
+4396,4396,Henderson & Cullen,Southbound - Near Side,32.763497,-97.349298,,,,,,0
+4397,4397,Evans & Oleander,Southbound - Far Side,32.731486,-97.31845,,,,,,0
+4399,4399,Miller & Chickasaw,Southbound - Near Side,32.69732,-97.263079,,,,,,0
+4400,4400,Miller & Chikasaw,Northbound - Near Side,32.697084,-97.262854,,,,,,0
+4401,4401,Henderson & Cullen,Northbound - Far Side,32.763594,-97.349145,,,,,,0
+4402,4402,Meadowbrook & Tierney,Eastbound - Near Side,32.745598,-97.245474,,,,,,0
+4403,4403,Quail & Shenna,Westbound - Far Side,32.78121,-97.385201,,,,,,0
+4404,4404,8th & Oleander,Northbound - Near Side,32.731919,-97.343681,,,,,,0
+4405,4405,SE Loop 820 & Revolutionary,Westbound - Near Side,32.670131,-97.303172,,,,,,0
+4406,4406,Portalis & Avril,Southbound - Mid Block,32.727495,-97.469497,,,,,,0
+4407,4407,Eastchase & Meadowbrook,Northbound - Far Side,32.758277,-97.167057,,,,,,0
+4408,4408,West Fwy & Las Vegas,Westbound - Far Side,32.737732,-97.465528,,,,,,0
+4410,4410,White Settlement & Bailey,Westbound - Far Side,32.759355,-97.370664,,,,,,0
+4411,4411,Riverside & Huffman,Southbound - Far Side,32.755068,-97.303101,,,,,,0
+4413,4413,William D Tate & Huges,Southbound - Far Side,32.886333,-97.098551,,,,,,0
+4414,4414,William D Tate & Hall Johnson,Northbound - Near Side,32.891872,-97.098419,,,,,,0
+4415,4415,William D Tate & Stone Myers,Northbound - Far Side,32.904201,-97.096733,,,,,,0
+4416,4416,Hwy 114 & Main,Eastbound - Near Side,32.92174,-97.082157,,,,,,0
+4418,4418,Rosedale & 8th,Eastbound - Near Side,32.733004,-97.344935,,,,,,0
+4419,4419,Hemphill & Morphy,Southbound - Far Side,32.72921,-97.33163,,,,,,0
+4420,4420,West Fwy & Loredo,Eastbound - Near Side,32.737712,-97.464481,,,,,,0
+4422,4422,Mistletoe & 9th,Westbound - Near Side,32.731434,-97.34657,,,,,,0
+4423,4423,W Rosedale & 8th,Westbound - Far Side,32.733292,-97.344972,,,,,,0
+4424,4424,Rosedale & Edgewood,Eastbound - Far Side,32.731087,-97.253381,,,,,,0
+4425,4425,Grapevine Public Library,,32.929267,-97.076726,,,,,,0
+4426,4426,Grapevine Christmas Market,,32.937815,-97.075982,,,,,,0
+4427,4427,Grapevine Palace Theater,,32.939156,-97.079067,,,,,,0
+4428,4428,Trinity Lakes Station Bay D,,32.805329,-97.20893,,,,14,,0
+4432,4432,Trinity & Handley Ederville,Eastbound - Far Side,32.797898,-97.219595,,,,,,0
+4433,4433,Trinity & Handley Ederville,Westbound - Near Side,32.798086,-97.219515,,,,,,0
+4434,4434,Handley Ederville & Pebbles,Southbound - Far Side,32.792296,-97.221308,,,,,,0
+4435,4435,Campus & Oak Grove,Southbound - Far Side,32.657583,-97.30041,,,,,,0
+4436,4436,Campus & Oak Grove,Northbound - Far Side,32.657243,-97.30034,,,,,,0
+4437,4437,Village Creek & Richerdson,Southbound - Far Side,32.710692,-97.248557,,,,,,0
+4440,4440,Stalcup & Macarthur,Southbound - Near Side,32.729517,-97.237478,,,,,,0
+4441,4441,Stalcup & Rickenbacker,Southbound - Near Side,32.722444,-97.237515,,,,,,0
+4442,4442,Village Creek & Reed,Northbound - Far Side,32.709997,-97.248348,,,,,,0
+4446,4446,Ephriham & Jacksboro,Westbound - Near Side,32.786296,-97.382788,,,,,,0
+4447,4447,28th & Prospect,Westbound - Near Side,32.795327,-97.355937,,,,,,0
+4448,4448,28th & Angle,Westbound - Far Side,32.794525,-97.359405,,,,,,0
+4449,4449,Ephriham & 20th,Eastbound - Near Side,32.788679,-97.379192,,,,,,0
+4452,4452,28th & Cliff,Westbound - Far Side,32.795059,-97.357411,,,,,,0
+4454,4454,Riverside & Heritage Trace,Southbound - Near Side,32.915397,-97.307024,,,,,,0
+4456,4456,NW 28th & Columbus,Eastbound - Near Side,32.795166,-97.365388,,,,,,0
+4457,4457,NW 28th & Columbus,Westbound - Far Side,32.795373,-97.365377,,,,,,
+4458,4458,NW 28th & Pearl,Eastbound - Far Side,32.794622,-97.362251,,,,,,
+4460,4460,NW 28th & Lincoln,Eastbound - Near Side,32.794363,-97.359276,,,,,,
+4462,4462,Lancaster & Throckmorton,Eastbound - Far Side,32.746529,-97.327765,,,,,,
+4463,4463,Commerce & 7th,Northbound - Near Side,32.752998,-97.328965,,,,,,
+4464,4464,Main & 7th,Northbound - Near Side,32.76828,-97.340265,,,,,,
+4466,4466,Cambridge & Trinity,Southbound - Near Side,32.822729,-97.044275,,,,,,
+4468,4468,Terminal D Upper Level,,32.897118,-97.044176,,,,,,
+4469,4469,Main & 5th,Northbound - Near Side,32.764868,-97.338006,,,,,,

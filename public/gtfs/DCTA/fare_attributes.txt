@@ -1,0 +1,8 @@
+fare_id,price,currency_type,payment_method,transfers,transfer_duration,agency_id
+Local Day Pass,3.0,USD,0,,,581
+Regional Day Pass,12.0,USD,0,,,581
+Reduced Local AM/PM,0.75,USD,0,0,,581
+Reduced Regional Day Pass,3.0,USD,0,,,581
+Local AM/PM Pass,1.5,USD,0,0,,581
+Reduced Local Day Pass,1.5,USD,0,,,581
+Children 5 & Under,0.0,USD,0,,,581

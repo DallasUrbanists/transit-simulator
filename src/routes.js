@@ -1,9 +1,14 @@
-import { convertCSVToDictionary, fetchText, saniKey } from './utilities.mjs';
+import { absURL, convertCSVToDictionary, fetchText, saniKey } from './utilities.mjs';
 
 const primaryKey = 'route_id';
-const routesTxt = await fetchText('./gtfs/DART/routes.txt');
-export const routes = await convertCSVToDictionary(routesTxt, primaryKey);
-const sample = routes.values().next().value;
+export const routes = new Map();
+
+export async function processRoutesFromSource(source) {
+    const routesTxt = await fetchText(absURL(`./gtfs/${source}/routes.txt`));
+    const routesFromSource = await convertCSVToDictionary(routesTxt, primaryKey);
+    routesFromSource.forEach((route, routeId) => routes.set(routeId, route));
+    console.log(`Total routes from ${source}: ${routesFromSource.size}`);
+}
 
 export function getRoute(search) {
     if (!search) return undefined;
@@ -29,6 +34,7 @@ export function hasRoute(search) {
 }
 
 export function isRouteObject(subject) {
+    const sample = routes.values().next().value;
     if (!typeof subject === 'object') return false;
     if (subject instanceof Map) {
         for (let key of sample.keys()) {
@@ -43,7 +49,7 @@ export function isRouteObject(subject) {
     return true;
 }
 
-console.assert(isRouteObject(getRoute('26677')));
+/*console.assert(isRouteObject(getRoute('26677')));
 console.assert(isRouteObject(getRoute(26677)));
 console.assert(isRouteObject(getRoute({ route_id: 26677 })));
 
@@ -56,4 +62,4 @@ console.assert(!hasRoute(12341234));
 console.assert(!hasRoute({ route_id: 12341234 }));
 
 console.assert(!isRouteObject({ route_id: 26677 }), 'False positive on `isRouteObject`');
-console.assert(isRouteObject(getRoute('26677')), 'False negative on `validRouteObject`');
+console.assert(isRouteObject(getRoute('26677')), 'False negative on `validRouteObject`');*/

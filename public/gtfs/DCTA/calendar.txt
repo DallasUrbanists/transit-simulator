@@ -1,0 +1,10 @@
+service_id,start_date,end_date,monday,tuesday,wednesday,thursday,friday,saturday,sunday
+2026_Spring_-Su,20260112,20260510,0,0,0,0,0,0,1
+A-Train-Mo-Th,20251215,20260510,1,1,1,1,0,0,0
+A-Train-Sa,20251215,20260510,0,0,0,0,0,1,0
+2026_Spring_-Weekday,20260112,20260510,1,1,1,1,1,0,0
+2026_Spring_-Sa,20260112,20260510,0,0,0,0,0,1,0
+A-Train-Fr,20251215,20260510,0,0,0,0,1,0,0
+Holiday-Weekday,20251215,20260315,1,1,1,1,1,0,0
+Holiday-Sa,20251215,20260315,0,0,0,0,0,1,0
+Holiday-Su,20251215,20260315,0,0,0,0,0,0,1

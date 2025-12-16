@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_contact_url,feed_contact_email,feed_start_date,feed_end_date,feed_version
+Denton County Transportation Authority,http://www.dcta.net,en,,dctainfo@dcta.net,20251215,20260510,"Updated: Dec 15, 2025, 6:04 AM"

@@ -1,0 +1,1902 @@
+trip_id,route_id,service_id,direction_id,shape_id,trip_headsign,trip_headsign_code,trip_short_name,wheelchair_accessible,bikes_allowed,block_id
+2026_Spring_-Sa-4902-A-IB-0750-0024888,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4902-A-IB-1709-00375a1,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4906-A-OB-1739-005a37d,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+Holiday-Sa-4919-1-A-OB-1109-0060825,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-19571-A-OB-1138-009b305,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Su-4919-1-B-OB-0910-00b4cff,4919-1,Holiday-Su,1,4919-1-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4918-A-OB-2141-00e9753,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4902-A-OB-1131-00faa56,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Sa-4918-A-OB-1159-01288bf,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4906-A-IB-0759-013e284,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-5740-A-IB-0826-0190dc8,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Weekday-4918-1-A-IB-0840-01c4a01,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Sa-4918-A-OB-1959-01dd515,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4906-1-A-IB-0659-01f2ed3,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-19568-A-IB-1632-022cbbc,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4902-A-OB-0951-0233191,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5740-A-IB-1611-02af386,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4919-A-IB-1750-02bb08c,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4905-1-A-IB-2039-031d703,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Sa-4905-A-IB-1400-03af0be,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5743-A-OB-1910-03df07b,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19568-A-IB-1902-0416a57,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4902-A-IB-1649-04295f8,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-19571-A-OB-0958-04432ef,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4902-3-A-OB-1831-0453892,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5740-A-IB-0841-0472a66,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4921-A-IB-1420-04aa7d9,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Sa-4919-1-A-IB-1859-04f2f85,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5743-A-IB-1506-04f5c77,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4902-3-A-OB-1851-04ffc70,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Su-4919-A-IB-2023-052464a,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4902-3-A-IB-0809-05765ac,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4921-A-OB-1408-05ebec9,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+Holiday-Weekday-4905-1-A-IB-2019-05f5d32,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4919-A-IB-1220-0645058,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+A-Train-Mo-Th-4911-A-OB-1100-064b432,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1100-064b432,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4902-3-A-OB-0931-065e91d,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4905-1-A-IB-1520-066a08d,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-5742-A-IB-1306-06b33f4,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-5743-A-IB-0951-06e3abd,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4906-1-A-OB-1139-06eeced,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-5743-A-OB-0840-06f25bd,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4918-A-IB-1612-0729485,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-74423-A-IB-1230-0729fb0,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4919-1-A-OB-1023-072e243,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4906-A-OB-1139-0734603,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+Holiday-Weekday-4902-3-A-IB-1249-075b3a9,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4906-A-OB-1259-076172c,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-5742-A-IB-0939-077ad7e,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+Holiday-Weekday-4906-1-A-IB-2039-077cda1,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-4918-A-OB-1726-0781ceb,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+Holiday-Su-4919-1-A-IB-1352-07b7b0c,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4906-1-A-IB-1239-07c93a0,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-19571-A-IB-1420-07f7d11,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+A-Train-Mo-Th-4911-A-IB-1230-083d1b2,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1230-083d1b2,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Sa-4919-1-A-OB-0835-084d5b6,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+Holiday-Sa-4905-1-A-OB-1503-0859675,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4918-A-IB-1127-08786ab,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-74423-A-OB-0838-087c608,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4906-A-IB-1539-08822e6,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-74423-A-OB-0808-08a97b6,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4918-A-IB-1227-08ae024,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4918-A-OB-0941-08c52aa,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Sa-4902-A-OB-0900-08d17d1,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4906-A-OB-0919-08e5457,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-4919-A-OB-1811-0904c3c,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4918-A-IB-0812-09290de,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-5743-A-OB-0725-099f0e8,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Sa-4918-A-IB-2030-09ba63a,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4918-A-OB-1026-09c9431,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4902-A-OB-0911-09cc119,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5740-A-IB-1626-09da2d9,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4905-A-IB-1939-09e16d0,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4906-1-A-OB-1819-09f9f24,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-4919-A-OB-2241-0a1b64f,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Su-4919-A-IB-0832-0a33b78,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4918-A-OB-0956-0abf937,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4918-A-IB-1157-0ac758e,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Sa-4918-A-OB-0929-0ad8ced,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5740-A-OB-1530-0b01804,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+A-Train-Sa-4911-A-IB-1000-0b0eead,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Su-4919-A-OB-1819-0b2a160,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5742-A-OB-1500-0b34279,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Sa-4918-A-OB-1329-0b5f94b,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-IB-1519-0b6df2e,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+Holiday-Weekday-4905-1-A-OB-1944-0b768c1,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-5742-A-OB-1040-0bbd8df,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-4919-A-OB-1125-0bc0694,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+A-Train-Mo-Th-4911-A-OB-1730-0bd6ef2,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1730-0bd6ef2,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Su-4919-1-A-OB-0835-0c0051b,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5742-A-IB-1436-0c1ea9d,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-4919-A-OB-2111-0c2da5d,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4906-A-OB-1159-0c6db05,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-4918-A-OB-1056-0c7d9df,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4918-A-OB-1111-0d27a31,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-19568-A-IB-0702-0d2dac1,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-19568-A-IB-2132-0d3a857,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4905-A-IB-1319-0d83b63,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4905-A-OB-0824-0d98952,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Su-4919-A-OB-0740-0d991f6,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4906-1-A-IB-1019-0d9a458,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-0815-0dfd140,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4921-A-IB-1450-0e098f2,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Sa-4918-1-A-IB-1750-0e3c177,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Sa-4902-3-A-IB-1520-0e54e68,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5740-A-IB-1711-0e58235,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4918-A-OB-1426-0e98437,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4919-A-OB-1625-0ee3098,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4919-A-IB-2120-0ef42d8,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5742-A-IB-1119-0ef9455,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+A-Train-Mo-Th-4911-A-OB-1230-0f12155,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1230-0f12155,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4906-A-OB-1719-0f5b437,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-19568-A-IB-1732-0f675cb,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4905-A-OB-0724-0f7acf4,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-4902-A-OB-1651-101636f,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+Holiday-Weekday-4902-3-A-OB-1011-1019117,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4918-1-A-OB-1906-10d96f8,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Sa-4902-A-IB-0835-110302a,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+Holiday-Sa-4902-3-A-IB-1650-1108393,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-1725-1132f75,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-19568-A-OB-1223-11564c3,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4902-3-A-IB-0709-1198faa,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4902-3-A-OB-1051-11f4f9a,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4902-A-IB-0929-12787e0,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4919-1-A-IB-1117-12798d9,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4918-1-A-IB-1610-127bc86,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+Holiday-Sa-4918-1-A-OB-1819-12b74a3,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-IB-1319-12e66e2,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+A-Train-Fr-4911-A-OB-2200-12f362c,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Sa-4911-A-OB-1800-130818a,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Sa-4911-A-OB-1200-1312c29,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-74423-A-IB-1000-133072d,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Sa-4919-1-B-IB-2010-13a9d8f,4919-1,Holiday-Sa,0,4919-1-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-4918-A-OB-1411-13b927a,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-4906-A-OB-1059-13bb003,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+Holiday-Weekday-4905-1-A-IB-1219-13cd46c,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+Holiday-Weekday-4906-1-A-OB-2159-1468d5c,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-74423-A-OB-1038-147bce3,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4905-A-OB-1623-14d2343,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5742-A-OB-1930-151d235,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-4902-A-OB-1751-152a475,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4919-A-OB-2011-152e7a4,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4919-1-A-OB-1653-153b515,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4902-A-IB-1109-154b2be,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-5743-A-OB-1140-15b355b,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+Holiday-Weekday-4905-1-A-IB-2059-15d4181,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+A-Train-Mo-Th-4911-A-IB-0900-15f01f8,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0900-15f01f8,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4918-A-IB-1312-15f6c33,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4906-A-OB-2119-160aeca,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+Holiday-Sa-4919-1-A-OB-1307-16195cb,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+Holiday-Sa-4905-1-A-IB-1120-1639449,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+A-Train-Mo-Th-4911-A-OB-0730-163e01d,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0730-163e01d,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Su-4919-1-B-OB-1651-1645c06,4919-1,Holiday-Su,1,4919-1-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4902-A-OB-1431-164c227,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4906-A-OB-1619-1659896,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+Holiday-Sa-4905-1-A-OB-1423-1673785,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4906-A-IB-1859-167670b,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-5743-A-IB-1521-1689a5d,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4918-A-IB-0800-169264f,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4905-1-A-IB-1119-16949c3,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-4906-A-OB-2159-16ac375,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-74423-A-OB-1353-16bdd91,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4918-A-IB-1142-16d0e71,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4919-B-OB-1129-16d2aa9,4919,2026_Spring_-Sa,1,4919-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-4906-A-OB-1519-173559f,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4921-A-IB-1850-17570aa,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4905-1-A-IB-1159-1759c79,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-4906-A-IB-0919-176fee5,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4905-A-IB-1959-17802a3,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+Holiday-Sa-4902-3-A-IB-1305-1780978,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4918-A-IB-1712-17942b1,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+Holiday-Weekday-4906-1-A-OB-1019-17e6481,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4906-1-A-IB-1159-1849485,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4902-3-A-OB-1331-185c90d,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4902-A-IB-0829-185e351,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4921-A-IB-1350-1870c9b,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+A-Train-Mo-Th-4911-A-IB-0830-1883706,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0830-1883706,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Sa-4918-A-IB-1300-188c414,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5740-A-OB-1415-18b1717,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Sa-4918-1-A-OB-0959-18ba98d,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4919-A-IB-1620-18c0cd0,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+A-Train-Mo-Th-4911-A-OB-0900-18c4b00,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0900-18c4b00,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4919-1-A-OB-1523-18d0189,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-19571-A-OB-1458-190db1f,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19571-A-IB-1100-192c89d,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19571-A-IB-1215-192e6d1,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Su-4919-A-OB-2049-1946b26,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4906-1-A-OB-0819-196efdc,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-4906-A-IB-1559-19a8641,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Sa-4918-A-IB-1900-19ad561,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5743-A-OB-2040-19b3523,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4905-A-OB-1343-19d29e3,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5743-A-IB-1121-19e8bd4,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Su-4919-1-A-OB-1850-19f49d7,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Su-4919-B-OB-1129-1a003da,4919,2026_Spring_-Su,1,4919-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Su-4919-B-IB-1208-1a1fb5b,4919,2026_Spring_-Su,0,4919-B-IB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4921-A-OB-1738-1a3024b,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+Holiday-Weekday-4902-3-A-OB-1631-1a3243d,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5740-A-OB-1515-1a5a04a,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Weekday-4919-1-A-IB-0730-1a68885,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4906-1-A-IB-1939-1a92976,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-5743-A-IB-0821-1aef90e,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4921-A-OB-1808-1b14f61,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4919-A-OB-1505-1b218ea,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4918-1-A-OB-1226-1b2e321,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+Holiday-Su-4919-1-A-OB-1342-1b8801c,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4906-A-IB-1939-1b9b8ba,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-5740-A-IB-1456-1b9bc94,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4918-A-IB-1342-1bdc7bc,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+Holiday-Sa-4918-1-A-OB-1409-1bed843,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+A-Train-Mo-Th-4911-B-IB-0514-1c080bf,4911,A-Train-Mo-Th,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-B-IB-0514-1c080bf,4911,A-Train-Fr,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4921-A-IB-2020-1c13945,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Su-4919-A-IB-1832-1c497b9,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4919-1-A-IB-1200-1c851e3,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4919-A-OB-1425-1c852a5,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4919-1-A-OB-0953-1cc0593,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Sa-4902-A-IB-1220-1cce15d,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+Holiday-Weekday-4906-1-A-OB-1059-1cfc1b7,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-19568-A-OB-1553-1d32696,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4906-1-A-IB-1959-1d35687,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4919-1-A-IB-1530-1d8aa55,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Sa-4918-A-OB-1059-1dc3815,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Sa-4919-1-A-IB-1316-1dc43b8,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4902-A-OB-2011-1de2e49,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+Holiday-Weekday-4905-1-A-IB-1839-1e0b3c3,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Sa-4919-B-IB-1708-1e1a1b6,4919,2026_Spring_-Sa,0,4919-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Sa-4905-A-OB-0823-1e53fcc,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4921-A-IB-1820-1e5443b,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5743-A-IB-0721-1e8cf06,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19571-A-IB-1035-1ea69e1,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4902-3-A-OB-1131-1eb9151,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4906-1-A-OB-0719-1ebb978,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-5742-A-OB-1120-1ec7cc3,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-4921-A-IB-1050-1ee60d2,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4902-3-A-IB-1949-1efa2c8,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4902-3-A-OB-1951-1f13364,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-74423-A-OB-1423-1f194af,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4918-A-OB-1356-1f49113,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+Holiday-Weekday-4905-1-A-IB-1859-1f6ae5f,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+Holiday-Weekday-4918-1-A-OB-1046-1f951e7,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+Holiday-Weekday-4906-1-A-OB-1119-1f9749b,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Sa-4918-A-OB-0759-1fa334b,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4906-A-IB-2119-1fbec58,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4919-A-IB-0820-203a36c,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+Holiday-Weekday-4919-1-A-OB-1923-20633be,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4919-A-OB-1445-20d602f,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+Holiday-Weekday-4918-1-A-IB-1250-20d8fd0,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+Holiday-Weekday-4918-1-A-IB-1750-213a395,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4919-A-OB-2211-21686b2,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Su-4919-B-IB-1438-21adc3b,4919,2026_Spring_-Su,0,4919-B-IB,Eagle Point B,15,,1,1,1
+Holiday-Sa-4919-1-B-OB-1651-21b6eb3,4919-1,Holiday-Sa,1,4919-1-B-OB,Eagle Point B,15,,1,1,4
+Holiday-Weekday-4905-1-A-IB-1419-21b7e87,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Sa-4918-A-IB-1500-21bc1a7,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-19659-1-A-IB-1723-21bfa27,19659-1,Holiday-Weekday,0,19659-1-A-IB,North Tex Exp,16,,1,1,10
+2026_Spring_-Weekday-4902-A-IB-1509-21cb797,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4918-A-IB-0757-22157db,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4919-A-OB-1005-2217be1,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-4921-A-IB-2120-222d3b5,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4905-A-OB-1344-225e918,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Sa-4902-A-IB-1350-2284aea,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Su-4919-A-OB-1010-228c8ae,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4918-1-A-OB-1406-229c6c8,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4919-A-OB-0905-22abf71,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4918-A-OB-1541-22ac6c7,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+Holiday-Weekday-4902-3-A-OB-1031-22b405c,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Sa-4919-A-IB-0832-22bdd3b,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4905-1-A-IB-0959-22eb82c,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+Holiday-Weekday-4906-1-A-IB-1819-23181f7,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-4921-A-IB-2050-2321fc3,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4918-A-IB-2057-232754e,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-5742-A-OB-1845-232f274,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+Holiday-Weekday-4905-1-A-IB-1259-23aca1d,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Su-4919-A-IB-0753-23dfddb,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+Holiday-Su-4919-1-A-OB-2049-24406b3,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5740-A-IB-1511-246ad11,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Sa-4902-A-OB-1030-247157c,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4919-A-IB-1340-2487b33,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-4921-A-IB-2150-249f5e4,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Sa-4919-1-A-OB-2049-24de879,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4902-A-OB-1311-24f28b6,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4905-1-A-OB-0823-24ffc99,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-5740-A-IB-1056-254939f,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Sa-4905-1-A-IB-1640-255a3e3,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Sa-4918-1-A-IB-2110-255d095,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4919-A-OB-1705-256165e,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4902-A-OB-1631-25a012b,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5742-A-OB-0820-25aa48a,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+2026_Spring_-Weekday-5743-A-OB-1755-25e637d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4902-3-A-OB-0951-25fc469,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4921-A-IB-1720-2602283,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4918-A-OB-1211-2614be8,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+Holiday-Weekday-4902-3-A-OB-1531-2626d8a,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-1741-2636e19,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Sa-4906-A-IB-1444-2644738,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-4902-A-IB-1529-266a6cb,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4905-1-A-OB-0903-269f6e6,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4906-1-A-IB-0919-271bb20,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-5743-A-OB-1325-271f002,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4902-3-A-OB-1711-27339e0,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+Holiday-Sa-4919-1-B-OB-1143-2735110,4919-1,Holiday-Sa,1,4919-1-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-0800-275ae4a,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-74423-A-IB-1530-276b405,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4905-1-A-OB-1404-27905ba,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-5740-A-OB-1300-2799a1e,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-19571-A-OB-1728-27aede0,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4902-A-OB-1711-27fe981,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5742-A-OB-0720-28068c6,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+Holiday-Weekday-4902-3-A-IB-1549-280b895,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Su-4919-1-A-IB-1900-2812c30,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5743-A-OB-1010-283047e,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4918-A-OB-2029-285a046,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4902-A-IB-1629-2861e39,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-5743-A-OB-1525-286735e,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4919-A-OB-1225-286b526,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Sa-4902-A-OB-0815-288f2f2,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+A-Train-Sa-4911-B-IB-0720-28acd9a,4911,A-Train-Sa,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4906-1-A-OB-0859-28be262,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-19568-A-OB-1523-28d1877,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Sa-4902-3-A-OB-1415-28d7ee1,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19571-A-OB-0933-28f33ec,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+A-Train-Mo-Th-4911-A-OB-0600-2903d97,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0600-2903d97,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4919-A-OB-2311-2904419,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Sa-4918-1-A-OB-1319-29336e5,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Sa-4919-A-OB-1549-2949bd5,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-19568-A-OB-0753-294e3fb,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4918-1-A-IB-1340-2965ecb,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+Holiday-Weekday-4905-1-A-OB-1844-298088a,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4918-A-OB-1556-298130b,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4906-A-IB-1439-29c998b,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-5743-A-IB-0751-29fff6d,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4902-3-A-OB-0911-2a260fa,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-4902-3-A-OB-1651-2a369f0,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5740-A-OB-0930-2a5d184,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Sa-4902-A-OB-1500-2a717ab,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Sa-4918-A-OB-0829-2a7c677,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Sa-4918-A-OB-0859-2a99dcf,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4902-3-A-IB-1729-2aba475,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Sa-4902-A-IB-1735-2ad8dec,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4918-A-IB-0857-2b508fb,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4906-A-OB-1019-2b6a113,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+A-Train-Mo-Th-4911-A-IB-2100-2b8bd92,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-2100-2b8bd92,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Sa-4902-3-A-OB-0945-2bb9b38,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5742-A-OB-1000-2bbb40d,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-4905-A-OB-1204-2bc249d,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-5742-A-IB-1521-2bd0b4f,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Sa-4906-A-OB-0826-2c1a408,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Sa-4906-A-IB-1614-2c1b354,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+A-Train-Mo-Th-4911-B-IB-0420-2c2e7e5,4911,A-Train-Mo-Th,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-B-IB-0420-2c2e7e5,4911,A-Train-Fr,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Mo-Th-4911-A-OB-1200-2c466d0,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1200-2c466d0,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4905-A-IB-1619-2cf3417,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-5743-A-IB-1236-2d3a1f4,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4905-A-IB-0659-2d47ca5,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+Holiday-Weekday-4905-1-A-OB-1524-2d6d77a,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Sa-4918-A-IB-1800-2dc9839,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4919-1-A-IB-1230-2de8fdc,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4902-A-OB-1411-2dedc94,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4919-A-IB-1720-2e21388,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4902-3-A-IB-1609-2e28d28,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Sa-4905-A-OB-1103-2e6217d,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5743-A-IB-1321-2e66e5d,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-5740-A-IB-0811-2ea298a,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-19568-A-IB-1802-2ea98a9,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+Holiday-Sa-4902-3-A-IB-1735-2ec4f22,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19571-A-IB-1330-2ec85b9,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4919-A-IB-1400-2eeb47d,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Su-4919-1-B-IB-1502-2eec31d,4919-1,Holiday-Su,0,4919-1-B-IB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4918-A-OB-1526-2ef8334,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4919-A-IB-1920-2efbe59,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4906-1-A-OB-1459-2f35f94,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-4902-A-OB-1331-2f398f7,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-74423-A-OB-1023-2f3cabe,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-IB-0749-2f429a2,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5743-A-OB-1555-2f445ef,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4919-A-IB-1540-2f7853f,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5743-A-IB-0736-2f78b76,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4905-1-A-OB-1804-2f79b16,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4921-A-IB-1250-2f8719e,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4919-A-IB-0740-2f903b3,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-4906-A-IB-1639-2fb4b88,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Sa-4918-A-IB-2000-2fc80cc,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4919-A-OB-1941-2fcc3d5,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Sa-4919-1-B-IB-1736-3022e36,4919-1,Holiday-Sa,0,4919-1-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-4918-A-IB-0912-303ddc4,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4905-A-IB-1759-307775c,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-4902-A-IB-1049-3087995,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4905-1-A-OB-1023-30c5f74,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+Holiday-Su-4919-1-A-IB-1551-30d51eb,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5740-A-IB-1226-30e1131,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Weekday-4902-3-A-OB-1611-311f88a,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4906-1-A-OB-0839-312c582,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+Holiday-Su-4919-1-A-OB-1034-313e3e2,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Sa-4905-A-IB-1040-31acc6a,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-19568-A-IB-2102-31b07a8,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4902-A-IB-1209-31d490c,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+A-Train-Sa-4911-A-OB-1900-31f676f,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4918-1-A-IB-1520-3246487,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-5740-A-OB-1115-325d8bf,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-74423-A-OB-0908-3273d2a,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+A-Train-Mo-Th-4911-A-OB-1530-3288083,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1530-3288083,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-74423-A-IB-1115-32cb305,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-19571-A-IB-1510-32e83da,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4919-A-OB-1025-32ebfc3,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4919-A-IB-1240-330b052,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4902-A-OB-0751-33297a5,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5740-A-IB-0856-33571f3,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4902-A-IB-0949-335dae4,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-19568-A-IB-2002-336963b,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4906-A-OB-1359-338a2c6,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-5743-A-OB-1425-3391ed2,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4902-3-A-OB-1731-339a0df,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4919-1-A-IB-2133-33acee9,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+A-Train-Mo-Th-4911-A-IB-1530-33b497a,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1530-33b497a,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Mo-Th-4911-A-IB-1200-33dc612,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1200-33dc612,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4919-A-IB-1100-340366e,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-4902-A-IB-1729-341dd0a,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4919-A-IB-1020-342704e,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-19571-A-OB-1318-34282a0,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4902-3-A-OB-2011-34737c5,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Sa-4905-A-OB-1223-34a196a,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4906-A-OB-1339-34ad614,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-4921-A-IB-0950-34be1ea,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4906-A-OB-0739-34e7157,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+Holiday-Su-4919-1-A-IB-2059-3508fd3,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4919-1-A-OB-1253-35411a3,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+A-Train-Mo-Th-4911-A-OB-1300-35444b7,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1300-35444b7,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5743-A-IB-1051-355987f,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19571-A-IB-0805-3563121,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4906-1-A-OB-1219-356602a,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Sa-4918-A-IB-0930-3574f38,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-5743-A-IB-1406-357cba2,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4905-A-IB-1159-357eca3,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-19568-A-OB-0723-3587e48,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4921-A-OB-1608-35ba4b3,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+A-Train-Mo-Th-4911-A-OB-1630-35ce7b9,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1630-35ce7b9,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4921-A-OB-1038-3623217,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4918-A-OB-2056-3683c7d,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4905-A-OB-1504-369fd7e,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-4902-A-OB-1531-36c9410,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+Holiday-Sa-4902-3-A-OB-1200-37121aa,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Su-4919-1-A-IB-1044-37317a5,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4905-A-IB-1559-3734ca4,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4918-A-OB-1256-374d4b1,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-5743-A-OB-1055-3760339,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+A-Train-Mo-Th-4911-A-OB-0830-376b8dd,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0830-376b8dd,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Su-4919-1-B-IB-1736-37703c7,4919-1,Holiday-Su,0,4919-1-B-IB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-5740-A-OB-1315-3782a30,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-19568-A-IB-1032-37d17f3,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+Holiday-Sa-4918-1-A-IB-1930-37df30e,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4919-1-A-IB-1100-381dd8c,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4902-3-A-IB-1849-3836781,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5740-A-OB-1215-385e149,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Weekday-4902-3-A-OB-1751-3894a34,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+A-Train-Mo-Th-4911-A-IB-0700-38a4a06,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0700-38a4a06,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4906-1-A-OB-2059-38d97ea,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4918-1-A-IB-1200-38f4000,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-19568-A-IB-1832-38f8535,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4905-A-OB-2044-3909e66,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-5740-A-OB-0815-393764b,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4905-A-OB-1104-394bf1d,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+Holiday-Weekday-4902-3-A-OB-1431-3988968,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-74423-A-OB-1138-399598a,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-19571-A-IB-0855-39a3536,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4906-1-A-IB-1659-39e1b48,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-19568-A-IB-1332-3a2f676,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4902-3-A-OB-1211-3a9122e,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4921-A-IB-1220-3ac849b,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Sa-4918-A-OB-1629-3ade652,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-OB-1919-3ae42ba,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-5740-A-OB-1445-3af85a2,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4918-A-IB-1212-3afec75,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+Holiday-Weekday-4905-1-A-OB-0824-3b0f55e,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-5743-A-OB-1655-3b1973a,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Sa-4919-1-A-IB-1351-3b225f3,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4905-1-A-IB-1139-3b6e1d0,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4902-A-IB-1029-3bb5cb1,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4906-A-IB-1119-3bd4e9f,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+A-Train-Mo-Th-4911-A-IB-1930-3c01515,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1930-3c01515,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4905-A-OB-1544-3c2327a,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4902-A-IB-1009-3c3f5ca,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4918-1-A-OB-1049-3c4bf02,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5740-A-OB-1330-3cfa868,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Sa-4902-3-A-IB-1350-3d824ad,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4905-1-A-OB-1824-3d82b89,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4905-1-A-IB-1239-3de7068,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-5743-A-OB-0825-3de959b,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4905-A-IB-0839-3dea2b0,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Sa-4906-A-IB-0844-3e2f05d,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-19568-A-IB-1002-3e46a3d,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+Holiday-Sa-4905-1-A-IB-1840-3e4b010,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Sa-4902-3-A-IB-1050-3e5a8ed,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4906-A-OB-0819-3ee861a,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+Holiday-Weekday-4902-3-A-OB-1931-3ef4d37,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4902-A-IB-2009-3f0a3b5,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4918-1-A-IB-1700-3f3c18c,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Sa-4906-A-OB-1341-3fa5b5e,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+Holiday-Weekday-4902-3-A-IB-1649-3fd6a61,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+A-Train-Sa-4911-A-IB-1800-3fd7d27,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4906-A-IB-1059-3fee636,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-5743-A-OB-0810-3ffde3a,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+A-Train-Mo-Th-4911-A-IB-0800-403873a,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0800-403873a,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4906-1-A-IB-1419-40a5cc4,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Su-4919-B-IB-1708-40b9d2e,4919,2026_Spring_-Su,0,4919-B-IB,Eagle Point B,15,,1,1,1
+Holiday-Weekday-4906-1-A-OB-2139-40fe380,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4902-3-A-OB-0831-415448c,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-4919-1-A-IB-1500-416a3c9,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4919-1-A-IB-1600-416e63f,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-74423-A-IB-1430-4186d6a,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4919-B-IB-1438-41c55ee,4919,2026_Spring_-Sa,0,4919-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-74423-A-OB-1453-422ba33,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4919-A-IB-1850-423eaf4,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5742-A-IB-0839-424517b,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+Holiday-Weekday-4902-3-A-OB-0731-426c59e,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4918-A-IB-1027-42eda90,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4918-A-OB-1626-42ef6ff,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-74423-A-IB-0845-430c1a6,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4906-1-A-IB-2139-4330fd0,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-4902-A-OB-1151-4336c92,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4918-A-OB-0911-43b2fbe,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+Holiday-Weekday-4906-1-A-OB-2019-43f649b,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-5740-A-IB-1441-4436214,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+A-Train-Mo-Th-4911-A-IB-1830-443c551,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1830-443c551,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-74423-A-OB-1238-4492c9e,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-74423-A-IB-1215-4507030,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4905-1-A-OB-1124-4558146,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-19571-A-OB-1638-455c5e4,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Sa-4906-A-OB-1211-455dab7,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-5740-A-OB-0915-4570699,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Weekday-4906-1-A-IB-2159-4577b73,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+Holiday-Sa-4906-1-A-OB-1641-4591da8,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+Holiday-Sa-4919-1-A-OB-0800-45c3c4f,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+Holiday-Sa-4905-1-A-IB-1720-45ef7ea,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Sa-4918-A-IB-1730-4609535,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+Holiday-Sa-4902-3-A-OB-1115-46116b5,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19568-A-OB-1723-4631d19,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4905-1-A-OB-0924-465df90,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+Holiday-Weekday-4902-3-A-IB-0849-4699210,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5743-A-IB-1251-46a0d44,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4919-1-A-OB-1553-46f3d54,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Su-4919-1-A-IB-1317-46f5877,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5742-A-OB-0800-46fe2a7,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-4921-A-OB-1238-475b352,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Sa-4918-A-IB-1100-475c52d,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5742-A-OB-1245-476629b,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-4918-A-OB-1041-477104a,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+Holiday-Weekday-4902-3-A-OB-1151-477d339,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4918-A-OB-0726-4792251,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4921-A-IB-0650-47a7e71,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4919-1-A-IB-1300-47fac12,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Sa-4902-3-A-IB-1820-482d846,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4919-1-A-OB-1850-4855155,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Sa-4902-A-IB-1005-489f043,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-5743-A-IB-2150-48d100d,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Sa-4918-1-A-OB-1549-48d7e16,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4921-A-IB-0850-48e1676,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4906-A-IB-0839-48e752d,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-4906-A-IB-1319-48f24e9,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4918-A-IB-1527-4906d28,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-19571-A-IB-0715-4977afc,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4905-A-OB-1744-49efcb9,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-19659-A-OB-0600-49f385b,19659,2026_Spring_-Weekday,1,19659-A-OB,North Tex Exp,16,,1,1,10
+2026_Spring_-Weekday-74423-A-IB-1245-4a505b6,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Sa-4919-1-B-IB-1228-4a5f6ad,4919-1,Holiday-Sa,0,4919-1-B-IB,Eagle Point B,15,,1,1,4
+Holiday-Weekday-4918-1-A-OB-0816-4a6a292,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4919-A-IB-0840-4a830d3,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4921-A-IB-1750-4ab33c2,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-74423-A-IB-1330-4b46b75,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4902-A-IB-1449-4bdafeb,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Su-4919-1-A-IB-1825-4bf81cd,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Sa-4906-A-OB-1641-4c023d0,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+Holiday-Sa-4918-1-A-OB-1909-4c20368,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4918-A-IB-1727-4c36fdf,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-5740-A-OB-0800-4c64e3e,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-5743-A-IB-2050-4c7a07e,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4918-A-OB-1829-4c8d2b3,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Sa-4902-3-A-OB-1630-4cafd27,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5742-A-OB-1200-4cc644f,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+Holiday-Weekday-4919-1-A-OB-0823-4cc6990,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-19571-A-OB-1753-4ccdb8e,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4905-1-A-OB-1224-4cd3316,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Sa-4902-A-IB-1435-4d739c5,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+Holiday-Weekday-4905-1-A-OB-0804-4d75e85,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+Holiday-Sa-4905-1-A-IB-1400-4d81514,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Sa-4919-B-OB-0859-4dc639f,4919,2026_Spring_-Sa,1,4919-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-5743-A-IB-0851-4dd3ac7,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19571-A-OB-0908-4dede67,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4905-A-IB-0739-4df4487,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Sa-4919-A-IB-1102-4e467c2,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4905-1-A-OB-1544-4e8eb20,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4906-1-A-OB-1859-4eb7d1b,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Sa-4918-A-OB-1129-4efe23b,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4905-A-OB-1824-4eff803,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-5743-A-IB-0836-4f0c0c8,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4905-1-A-OB-1324-4f34e14,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+Holiday-Weekday-4919-1-A-IB-0900-4f64d7c,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5740-A-IB-1241-4f68f77,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-5743-A-OB-1710-4f6a73d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4918-A-IB-2200-4fbc28c,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-IB-1459-4ff208c,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4906-1-A-IB-0959-5001427,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Sa-4905-A-IB-1000-5016f5d,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+A-Train-Sa-4911-A-OB-1600-504360e,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-74423-A-IB-0830-506216f,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4919-A-OB-2128-5081838,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4906-A-OB-0759-50d9469,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-74423-A-IB-1030-50e9fbf,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4921-A-OB-1338-5127c63,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4906-A-OB-1539-512df5e,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Sa-4906-A-IB-1659-5139158,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-5742-A-IB-1059-51bb417,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+Holiday-Sa-4919-1-A-IB-2058-521f300,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+A-Train-Sa-4911-A-OB-0800-5223429,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5743-A-IB-1436-5249703,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-19568-A-OB-0823-5275146,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Sa-4902-3-A-IB-1220-5307120,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-0845-5312ba7,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+Holiday-Su-4919-1-B-IB-1228-5315288,4919-1,Holiday-Su,0,4919-1-B-IB,Eagle Point B,15,,1,1,1
+Holiday-Weekday-4919-1-A-IB-1000-53596cc,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+A-Train-Mo-Th-4911-A-IB-2000-539e3d2,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-2000-539e3d2,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4919-A-OB-1911-53aaa00,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5743-A-IB-1636-53af8bb,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-5742-A-OB-0740-53e84c1,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+2026_Spring_-Weekday-4902-A-IB-1749-53e8e92,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+Holiday-Sa-4905-1-A-OB-1743-53f5b6f,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Sa-4918-A-OB-1929-54207a3,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4918-A-IB-1542-542d9c4,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4902-A-OB-1630-544146a,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-5742-A-IB-1351-5462f8d,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-19568-A-OB-1053-5466a1d,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Sa-4919-1-A-OB-1616-5487ee7,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+A-Train-Mo-Th-4911-A-OB-0700-549d7e6,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0700-549d7e6,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Sa-4918-A-OB-1529-54c1fa3,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-19659-1-A-IB-0650-5521ca9,19659-1,Holiday-Weekday,0,19659-1-A-IB,North Tex Exp,16,,1,1,3
+2026_Spring_-Weekday-19571-A-IB-1715-5529aa0,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4906-1-A-OB-0659-554b99f,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+Holiday-Weekday-4906-1-A-IB-0939-5557522,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+Holiday-Su-4919-1-A-OB-2124-559b499,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5742-A-OB-1330-55a5cb2,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-19571-A-IB-1355-55f46ae,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4905-1-A-IB-1739-562b2f7,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-5740-A-IB-1256-5658d93,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4919-A-IB-2150-56a9483,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5742-A-IB-1139-56ebe8a,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+2026_Spring_-Sa-4902-A-OB-1200-56f82c1,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-19571-A-OB-1253-5700e3a,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-74423-A-OB-1253-5725d61,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4906-A-IB-1739-575bdf4,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-5740-A-IB-1041-575d35e,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4919-A-IB-1440-57733d3,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-74423-A-IB-0900-579d3fa,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4921-A-IB-1120-57ab62d,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4905-1-A-OB-1624-57b0bd6,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+A-Train-Mo-Th-4911-A-OB-1700-57c5547,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1700-57c5547,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4902-A-OB-1731-57e874a,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+Holiday-Weekday-4905-1-A-IB-1659-57ffee9,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4905-A-IB-1819-5815a89,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4906-1-A-OB-1039-5822142,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-4906-A-OB-1759-5826031,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4919-A-IB-1300-5829b85,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5743-A-OB-1210-582a5e1,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4905-A-IB-1119-5868ac6,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+Holiday-Sa-4919-1-A-IB-1043-58731ef,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5743-A-OB-2110-589d41e,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4919-B-OB-1359-58a2c99,4919,2026_Spring_-Sa,1,4919-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-19568-A-IB-1602-58e2a74,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4921-A-OB-1308-58eee7c,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4905-A-OB-1924-594335f,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-19571-A-OB-1343-59a608b,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-5742-A-OB-1100-59f4f17,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+Holiday-Weekday-4918-1-A-OB-2136-5a1621c,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4918-A-IB-1912-5a8f81a,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4906-A-OB-2039-5a9be32,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-5740-A-IB-0911-5ae2d36,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4921-A-OB-1208-5aee4c2,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5743-A-IB-1306-5aef0de,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-74423-A-IB-1500-5b697b7,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4918-1-A-OB-1316-5b7f1bd,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+Holiday-Sa-4906-1-A-OB-1511-5b829cc,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+Holiday-Sa-4906-1-A-OB-1556-5b9a899,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Sa-4906-A-IB-1359-5b9bd79,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-4906-A-IB-1239-5ba66c2,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-4902-A-OB-0811-5bbf4bf,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4918-A-OB-1312-5bc5cc7,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-4918-A-IB-1842-5c084e7,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-4906-A-OB-0719-5c08f6a,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4905-A-IB-0919-5c122a8,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+Holiday-Sa-4905-1-A-IB-1000-5c4abd7,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4906-A-OB-1459-5c67663,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-4919-A-IB-1200-5cd7526,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4902-A-IB-1409-5d146fb,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4905-1-A-OB-1303-5dda3d5,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-74423-A-IB-1045-5dfdf04,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Sa-4902-3-A-OB-1030-5e3a98c,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+A-Train-Mo-Th-4911-A-IB-1300-5e6444e,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1300-5e6444e,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-5743-A-IB-2020-5e6f363,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Sa-4919-1-B-IB-1502-5e708f1,4919-1,Holiday-Sa,0,4919-1-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-4905-A-OB-1044-5ee5524,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-4905-A-IB-1059-5f15b15,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-5743-A-OB-1540-5f2955b,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+Holiday-Sa-4905-1-A-IB-1600-5f31aca,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4921-A-OB-0908-5f3f5b9,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4902-A-IB-0809-5f55690,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4919-A-IB-0940-5f9d620,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-19568-A-IB-1532-5fa8a62,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4921-A-IB-1020-5fde230,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4919-A-IB-2050-601a2df,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-74423-A-OB-1438-60444e1,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-IB-2009-60c610f,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-19568-A-IB-1502-60d21fa,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+Holiday-Sa-4919-1-A-OB-2124-60dff84,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4919-1-A-OB-2153-60f723a,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-19568-A-OB-1023-60f8493,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Sa-4918-A-IB-0900-60ff1e7,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+A-Train-Sa-4911-A-IB-1400-611b501,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-5743-A-IB-1721-612d02c,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4918-A-IB-1812-61421ee,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-5740-A-OB-1230-618300d,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Weekday-4906-1-A-IB-0739-6188516,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+Holiday-Su-4919-1-A-OB-1541-61a98af,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4906-A-IB-1259-61d6708,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+Holiday-Weekday-19659-1-A-OB-1625-61e209e,19659-1,Holiday-Weekday,1,19659-1-A-OB,North Tex Exp,16,,1,1,10
+2026_Spring_-Sa-4906-A-IB-1014-6213f0e,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-5743-A-OB-1255-621ee8d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4918-1-A-OB-0726-6230233,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+A-Train-Sa-4911-A-IB-1900-623f520,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Sa-4905-1-A-IB-0800-6278b0d,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Sa-4906-1-A-IB-1529-6285de3,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-4918-A-IB-1512-62cc83e,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+Holiday-Sa-4918-1-A-OB-0909-632800d,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4918-A-IB-1927-635ceea,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+Holiday-Weekday-4902-3-A-OB-1411-638e2ef,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4919-1-A-OB-1034-639f1f7,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4919-1-A-IB-1700-6446143,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4905-1-A-IB-1319-645a6d7,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-4919-A-IB-1120-64677d1,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4919-A-OB-0825-647f4e6,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4906-A-OB-1239-649a134,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+A-Train-Mo-Th-4911-A-OB-1030-649ebb6,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1030-649ebb6,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4905-A-OB-0944-64a10db,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+A-Train-Mo-Th-4911-A-OB-1400-65119d0,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1400-65119d0,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Mo-Th-4911-A-OB-0800-65816e4,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0800-65816e4,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Mo-Th-4911-A-IB-1600-65970c6,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1600-65970c6,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-74423-A-OB-1308-65e30fc,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4918-A-OB-0841-662e80f,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4902-A-IB-1829-664ad08,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-5740-A-IB-1411-6652d0b,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4918-A-OB-2011-66642e8,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-4902-A-OB-1051-66705bd,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4902-A-OB-1451-66818eb,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Sa-4919-A-IB-1602-66d0e2a,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Sa-4918-A-IB-1630-67365bf,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4918-A-IB-0942-6752adc,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-4918-A-OB-0656-67ecd1e,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-19568-A-OB-1153-6820290,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-5743-A-OB-0925-68343f7,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-5740-A-IB-0956-6837b44,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4906-A-IB-2039-68519e7,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+Holiday-Weekday-4905-1-A-IB-1059-687884f,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+Holiday-Sa-4905-1-A-OB-1623-68a6a92,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-19568-A-OB-1353-68dd8a7,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-19571-A-IB-1805-68f601c,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-5743-A-OB-1455-68fb779,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4921-A-OB-2008-690c169,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+A-Train-Mo-Th-4911-A-IB-1400-6928b3f,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1400-6928b3f,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4919-A-IB-1320-69309d0,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4906-A-OB-0959-6946c8f,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-5740-A-OB-1000-6947d28,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Su-4919-B-OB-1859-6948817,4919,2026_Spring_-Su,1,4919-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4918-A-IB-2112-6958c01,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-5743-A-OB-1110-6967040,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Su-4919-B-OB-0859-6997298,4919,2026_Spring_-Su,1,4919-B-OB,Eagle Point B,15,,1,1,1
+Holiday-Sa-4902-3-A-OB-1500-699c6ae,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4919-A-IB-1820-69c0604,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4905-A-IB-1019-69eb3e8,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-5740-A-OB-1500-6a139bf,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Sa-4902-3-A-IB-0750-6a2b872,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4905-1-A-OB-2044-6a3f5e6,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-74423-A-OB-0953-6a46a2d,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-IB-1009-6a52584,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4921-A-OB-1708-6a6855a,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-19571-A-OB-1818-6a785be,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+A-Train-Mo-Th-4911-A-OB-1500-6acf234,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1500-6acf234,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5743-A-IB-0906-6ad65ff,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Sa-4918-1-A-IB-0700-6ad76d2,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-19571-A-IB-1305-6aee070,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4918-A-IB-2127-6af37b5,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4918-A-IB-1057-6afc220,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4906-A-OB-1039-6b23621,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+A-Train-Mo-Th-4911-A-OB-1000-6b94b4b,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1000-6b94b4b,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-19571-A-IB-1240-6be65c3,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4906-1-A-OB-1559-6bef734,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-4902-A-OB-1111-6bf46c4,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-74423-A-IB-0730-6c0d762,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4905-A-IB-1720-6c3dba0,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4918-A-OB-1259-6c4a848,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4906-1-A-OB-2119-6ceb405,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-5743-A-IB-1351-6cf6393,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4918-A-IB-0842-6d20697,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-19571-A-IB-1010-6ddd9d0,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4905-1-A-OB-1604-6e24c59,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+Holiday-Weekday-4905-1-A-IB-1619-6e3ad6c,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-0915-6e4272a,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4905-1-A-IB-0939-6ebc2d8,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4919-A-IB-1000-6ebd473,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4905-1-A-OB-1304-6ee571b,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-4918-A-OB-0756-6ee7692,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4919-A-OB-1145-6f071a7,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4905-A-OB-2104-6f1704d,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4905-A-IB-1839-6f3aa04,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Su-4919-B-OB-1629-6f570b1,4919,2026_Spring_-Su,1,4919-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-0745-6f6c173,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4902-3-A-IB-2029-6faf72e,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4918-1-A-OB-2139-6fb2692,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4921-A-OB-1008-6fdf8e2,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-19568-A-IB-1202-6ff5e9d,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Su-4919-B-IB-0938-702e5a3,4919,2026_Spring_-Su,0,4919-B-IB,Eagle Point B,15,,1,1,1
+2026_Spring_-Sa-4918-A-IB-1000-7046907,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-IB-1059-7082d5f,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4919-1-A-IB-2100-708978d,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-IB-1112-711fd83,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+A-Train-Sa-4911-A-IB-1700-718a968,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Sa-4918-A-IB-0730-719b14f,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Sa-4919-B-IB-1938-71d3770,4919,2026_Spring_-Sa,0,4919-B-IB,Eagle Point B,15,,1,1,4
+A-Train-Mo-Th-4911-A-IB-0600-721c049,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0600-721c049,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Sa-4918-A-IB-0830-7240b08,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-5742-A-IB-1606-725d204,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-5742-A-OB-0900-726749f,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+Holiday-Sa-4906-1-A-OB-0956-7267e50,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-4902-A-IB-1129-727c997,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4906-1-A-IB-0839-7284399,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-4919-A-IB-0720-728b924,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5743-A-OB-1640-7297788,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4902-A-OB-0931-72d9ce1,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-74423-A-IB-0945-7311098,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Su-4919-1-B-IB-2010-7315aac,4919-1,Holiday-Su,0,4919-1-B-IB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4921-A-OB-0708-736b625,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-19568-A-IB-1432-738d1ee,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4918-A-IB-1357-745362e,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+A-Train-Sa-4911-A-OB-2200-7470a46,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4902-3-A-IB-1709-74b3b71,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Su-4919-A-IB-1102-753c3aa,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Sa-4918-A-OB-1659-75a3948,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4906-A-OB-1839-75dce7a,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-4918-A-IB-1827-762e15f,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4905-A-IB-1919-763f00b,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+A-Train-Mo-Th-4911-A-IB-1900-7648621,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1900-7648621,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Su-4919-A-OB-0819-7658bc2,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4906-A-IB-0659-76c70cd,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+Holiday-Weekday-4902-3-A-OB-0751-76d5119,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4905-A-OB-1604-76de212,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-74423-A-IB-1345-76e2c9b,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-IB-1109-76f451b,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4906-A-OB-1819-76fadc9,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+A-Train-Sa-4911-A-IB-1600-770d281,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4918-A-OB-0741-7727d45,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-19571-A-IB-1650-77638dc,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4902-3-A-OB-0811-77653c4,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4906-A-OB-0839-7793a3a,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4906-A-IB-1759-7795221,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-5743-A-OB-2140-77ba58c,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4919-A-OB-1740-77d378b,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Sa-4905-A-IB-1440-7805dcc,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4906-A-OB-1041-78218fc,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Sa-4902-A-OB-1115-787fe29,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-5742-A-IB-1736-788a0a4,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-19568-A-OB-1453-789893d,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4906-A-IB-1159-78dcc32,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4906-A-OB-1419-78e3621,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+Holiday-Weekday-4906-1-A-OB-1519-7910b0f,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+Holiday-Weekday-4906-1-A-IB-1719-7938e4c,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+Holiday-Sa-4918-1-A-OB-0819-799fa74,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-OB-1359-79d871f,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-4902-A-IB-0849-79de599,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4902-3-A-IB-1209-79e0826,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-4902-3-A-IB-1229-79eef35,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+A-Train-Mo-Th-4911-A-IB-1800-79f2829,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1800-79f2829,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4902-A-IB-1549-79f3d8f,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4906-A-IB-1339-79f6676,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Sa-4905-A-IB-1520-7a44436,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4919-A-OB-2049-7a689ff,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5743-A-OB-0940-7a7a417,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+Holiday-Sa-4905-1-A-IB-1200-7ab8fcb,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4918-A-IB-1442-7ac54af,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Su-4919-A-OB-2010-7af33cc,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5743-A-IB-1621-7af6301,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4902-3-A-OB-1911-7afca9f,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4919-A-IB-2250-7b09eda,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Sa-4902-3-A-IB-1605-7b2665e,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+A-Train-Sa-4911-A-IB-2000-7b8f89b,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4918-1-A-OB-1956-7bb71b7,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4906-A-OB-1439-7bd1fe3,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Sa-4919-A-OB-1819-7bd4c05,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-19571-A-IB-0740-7bda9a0,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-5740-A-OB-0715-7c2f1dd,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Sa-4918-A-IB-1230-7c44eed,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-19571-A-OB-1408-7c69379,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-1130-7cb938a,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-74423-A-OB-0923-7cebf35,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-IB-1509-7d9560d,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Su-4919-A-OB-1240-7da2d10,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4919-1-A-IB-2030-7dc442e,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-IB-1042-7dcbdce,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+A-Train-Mo-Th-4911-A-OB-1130-7ded5aa,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1130-7ded5aa,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4902-A-OB-1811-7df722e,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4919-A-OB-1545-7e38818,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4918-1-A-OB-1726-7e49bc6,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-5740-A-IB-1211-7e70283,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+Holiday-Weekday-4906-1-A-IB-1639-7e92c7b,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+Holiday-Weekday-4906-1-A-OB-1839-7ebb84b,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4906-1-A-IB-1619-7ece04b,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-4902-A-IB-1349-7ee83ff,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4918-A-IB-2157-7eeb858,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4905-A-OB-2024-7ef0eca,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-4906-A-OB-1859-7efbb6b,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+Holiday-Sa-4919-1-A-IB-1550-7effc09,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5742-A-IB-0959-7f32db4,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+Holiday-Weekday-4905-1-A-IB-1559-7f4057a,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4905-1-A-OB-1104-7f53bec,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Sa-4905-A-OB-1743-7fbae2c,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4902-3-A-IB-1309-80190b1,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4902-3-A-OB-1351-801b50b,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Sa-4918-A-OB-2229-8029e8c,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-19571-A-OB-0728-804eb09,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4919-A-IB-0800-8068855,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5742-A-OB-1415-80a0a4a,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-4902-A-OB-0831-80a475e,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-74423-A-OB-0738-80d7f76,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4906-1-A-IB-1039-8111fbf,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Su-4919-A-IB-1523-8151ca5,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4906-1-A-OB-2039-8197f7b,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-1315-81c0192,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-5743-A-OB-0755-81fba8f,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4906-1-A-IB-1919-81ff440,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-5743-A-OB-1355-8224429,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Sa-4905-A-IB-1800-8262bb7,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4906-1-A-OB-1939-8269dc0,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-4918-A-IB-1257-82dd6f3,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4902-A-OB-1931-82e9185,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+Holiday-Weekday-4906-1-A-IB-1259-82f97b5,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Sa-4905-A-IB-1320-831e96a,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4905-1-A-IB-1439-83412cd,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-5743-A-IB-1920-8372435,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4919-A-IB-1040-838ba30,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4918-A-IB-2042-83e031a,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4919-A-IB-2141-83f2964,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4918-A-IB-1642-83fc08c,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-74423-A-OB-1523-843b27b,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4905-1-A-OB-0744-84451c9,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-4918-A-IB-1857-84727af,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+A-Train-Sa-4911-A-OB-1700-848986c,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4918-A-IB-0727-8498140,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-74423-A-IB-0930-84a9119,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4905-A-OB-1424-84cd9a5,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+A-Train-Mo-Th-4911-A-OB-2030-84ceeb0,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-2030-84ceeb0,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Mo-Th-4911-A-IB-1630-84d720a,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1630-84d720a,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4919-1-A-IB-1430-84d82e1,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4918-1-A-IB-0930-84f49f7,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+Holiday-Sa-4906-1-A-OB-0911-84faf05,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-74423-A-IB-1400-84fd1aa,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4918-A-OB-2129-85066fe,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5740-A-IB-1326-853e772,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+A-Train-Mo-Th-4911-A-OB-1600-854324f,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1600-854324f,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Sa-4906-1-A-OB-1041-85846a6,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Sa-4902-A-IB-1650-8599a74,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-5740-A-IB-1111-85b7593,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Sa-4905-A-OB-1823-85e7974,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5742-A-IB-0859-85f1afd,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-5743-A-IB-1106-863d438,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Sa-4902-A-OB-1415-86519b9,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4905-A-IB-2019-867e0c9,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-19568-A-OB-1923-869b452,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4906-1-A-IB-1219-86c9f45,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-5742-A-OB-0840-86ec5dc,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+Holiday-Sa-4905-1-A-OB-1823-86fd788,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4905-1-A-IB-1719-86fe57e,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-5740-A-IB-1126-872cd39,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Weekday-4905-1-A-OB-2024-8751214,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Sa-4918-A-IB-1930-875395d,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4902-3-A-IB-0929-8754538,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-4918-1-A-OB-1456-87732dc,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+Holiday-Sa-4906-1-A-IB-0929-87b394a,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-5743-A-OB-1740-87d8e02,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+Holiday-Sa-4918-1-A-IB-1200-880e27f,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+A-Train-Mo-Th-4911-A-OB-1330-881a441,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1330-881a441,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4918-1-A-IB-1110-8867df1,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4918-A-OB-1341-886d652,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Su-4919-A-OB-2128-89217de,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4921-A-OB-2038-89274dd,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-19571-A-IB-0920-895bd95,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19571-A-OB-1523-897f4ed,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Su-4919-1-A-IB-0845-899391c,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4919-A-IB-1640-899c60f,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4921-A-IB-1320-89bb0eb,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4906-A-OB-1959-89bfbf6,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-4906-A-IB-1459-89d4cc7,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Sa-4919-B-OB-1629-89dd767,4919,2026_Spring_-Sa,1,4919-B-OB,Eagle Point B,15,,1,1,4
+A-Train-Fr-4911-A-IB-2200-89fffe7,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4905-A-IB-1439-8a18b49,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4902-A-IB-1249-8a831bd,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4919-1-A-OB-1453-8a9cb82,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4919-A-IB-1420-8ab8091,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-74423-A-IB-0745-8af0ebe,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4906-1-A-OB-1639-8af621e,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-19568-A-IB-0832-8b0284e,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-5743-A-IB-1221-8b1bf9f,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4919-1-A-OB-1753-8b21029,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5740-A-IB-0941-8b382e1,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+A-Train-Sa-4911-A-OB-2000-8b3b3f8,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-19659-A-OB-1625-8b3e12e,19659,2026_Spring_-Weekday,1,19659-A-OB,North Tex Exp,16,,1,1,24
+2026_Spring_-Weekday-5742-A-IB-1651-8b73689,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-4902-A-IB-0709-8b9b5a4,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4902-A-IB-1149-8c182c2,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-5743-A-OB-1810-8c1f33c,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19568-A-OB-1423-8c48a64,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Sa-4919-1-B-IB-0955-8c86c1a,4919-1,Holiday-Sa,0,4919-1-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-4902-A-OB-1551-8c8dacf,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4919-1-A-IB-1800-8c9a05f,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4902-3-A-OB-1551-8cb3837,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+Holiday-Sa-4902-3-A-IB-1435-8d10f88,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19568-A-IB-1402-8d44dfe,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4918-A-IB-1427-8d6c39d,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-5743-A-OB-0955-8d6efb7,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Sa-4905-A-IB-1600-8d85daf,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4906-1-A-IB-0819-8d91a77,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-5743-A-IB-1536-8dccdce,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4905-1-A-IB-1339-8de7a17,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4919-A-OB-2141-8e0a065,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4905-1-A-OB-1504-8e3df7f,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+Holiday-Sa-4902-3-A-OB-1715-8e71153,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4905-A-IB-1659-8e7fc19,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4905-1-A-OB-1424-8e88d3b,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+A-Train-Mo-Th-4911-A-IB-1030-8eb4448,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1030-8eb4448,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4905-1-A-IB-1639-8ecdb2c,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-4918-A-OB-1156-8eeacbf,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-19568-A-IB-1232-8efbde3,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4905-1-A-IB-0759-8f1235b,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4906-1-A-OB-1159-8f1622b,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Sa-4902-A-IB-1050-8f1994d,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-19571-A-IB-1625-8f1f19c,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4902-3-A-IB-0949-8f9333b,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Sa-4918-A-IB-1700-8fa7608,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+A-Train-Sa-4911-A-OB-1400-8fb994c,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5740-A-OB-0900-9027550,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-74423-A-IB-1600-9062b1c,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4906-A-OB-0911-90a650f,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-19568-A-IB-1932-90a8cfd,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4905-A-OB-1004-90ae245,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-19568-A-OB-1753-90c2d71,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-5742-A-IB-0719-90d4fb8,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+A-Train-Mo-Th-4911-A-OB-2000-90e2a07,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-2000-90e2a07,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4905-1-A-IB-0659-90e507f,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-5743-A-IB-2120-90f0dd9,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-5740-A-IB-1311-910b413,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-5740-A-OB-1600-911c8c0,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Sa-4918-1-A-OB-2049-9137912,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5740-A-IB-1141-915156c,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4918-A-OB-1456-91c41c9,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+Holiday-Weekday-4919-1-A-OB-1123-91fa5e6,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Sa-4919-B-IB-1208-925abb6,4919,2026_Spring_-Sa,0,4919-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-4905-A-IB-1539-925dfa8,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4905-1-A-OB-1644-926018e,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+Holiday-Weekday-4906-1-A-OB-1319-92679a2,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+A-Train-Mo-Th-4911-A-IB-0930-9283786,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0930-9283786,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Sa-4902-3-A-IB-0920-92965da,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4902-3-A-OB-0900-930fc4a,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4918-1-A-IB-0700-9339e6c,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+A-Train-Sa-4911-A-OB-1000-933ea3f,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5743-A-IB-1651-9372de7,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4905-A-OB-1503-93adf2b,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4905-A-OB-1124-93cbabf,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Sa-4919-A-IB-2102-93f2ca8,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4918-A-OB-0926-9411e6f,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-19571-A-OB-1228-941b303,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19571-A-OB-1548-942169d,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Sa-4905-1-A-IB-1240-9431721,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4906-1-A-OB-0959-9466969,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-5740-A-OB-1100-947710a,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Sa-4919-1-A-IB-0844-948fbda,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4919-A-IB-1520-94bef16,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4905-1-A-IB-0859-9508458,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-5742-A-IB-1951-9520a21,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-4905-A-IB-1239-956692e,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-5743-A-IB-1451-959fc4d,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Su-4919-A-IB-1023-95c190e,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4905-A-OB-1224-96138b5,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-4906-A-OB-2019-96692f0,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+A-Train-Mo-Th-4911-A-OB-0500-96a2ba3,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0500-96a2ba3,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4919-A-IB-0900-96cd1e7,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5743-A-IB-1606-96d095b,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4919-1-A-OB-1823-970377a,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-IB-1242-9715a35,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4918-A-IB-1200-9749d75,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+A-Train-Mo-Th-4911-A-IB-1730-975ca1e,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1730-975ca1e,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4919-1-A-OB-1423-97738eb,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5743-A-IB-1336-9885d1a,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Sa-4905-A-IB-0840-98887b4,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4905-A-IB-1459-98a2ecb,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+Holiday-Weekday-4918-1-A-OB-0956-98b7102,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+A-Train-Sa-4911-A-OB-1100-98cac93,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Mo-Th-4911-A-OB-2100-98db4f9,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-2100-98db4f9,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4905-A-IB-0859-990a3a7,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-4906-A-OB-1119-993aa96,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4906-A-IB-1819-99720b2,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+Holiday-Sa-4906-1-A-OB-1211-9980246,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-5743-A-OB-1225-999de79,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-5743-A-OB-0910-99edd64,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-5740-A-OB-1130-9a10de3,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4902-A-OB-1231-9a1160b,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Sa-4919-A-OB-2010-9a4e7a6,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5740-A-OB-1245-9a506fe,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-19568-A-OB-2123-9a71377,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4918-A-OB-1241-9a75c45,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4918-A-IB-1742-9ab53de,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+A-Train-Mo-Th-4911-A-IB-0730-9b3f4cc,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0730-9b3f4cc,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4921-A-IB-1150-9b657a6,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5740-A-IB-0756-9b6adca,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4905-A-OB-1804-9b8d28a,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+Holiday-Sa-4919-1-A-IB-1824-9bf55fc,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Sa-4905-A-OB-1143-9c6708a,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4918-A-OB-0811-9c83acc,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+Holiday-Weekday-4902-3-A-IB-1449-9ca9713,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+A-Train-Mo-Th-4911-A-OB-1900-9cb6299,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1900-9cb6299,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Sa-4905-1-A-IB-1040-9ce42dc,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4906-1-A-IB-2019-9d0c3f7,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4906-1-A-OB-0939-9d28710,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-19568-A-OB-2223-9d51bd4,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4905-1-A-OB-1904-9d67d44,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-74423-A-OB-1408-9d7b9d0,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4919-A-OB-1205-9d86c1a,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+Holiday-Weekday-4902-3-A-OB-0711-9db9abe,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5740-A-IB-1026-9e48b05,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4918-A-IB-1012-9e8dff7,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4906-A-IB-1419-9e8f4b1,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+A-Train-Mo-Th-4911-A-IB-1500-9ea4347,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1500-9ea4347,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4905-1-A-IB-1819-9ef588d,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-19571-A-OB-1023-9f63d7b,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4918-A-OB-1941-9f6a5f5,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-19571-A-IB-1150-9f751b5,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Su-4919-1-A-OB-0800-9f788fd,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Sa-4902-A-OB-1245-9fafe7c,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+Holiday-Sa-4918-1-A-OB-1139-9fd9625,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Su-4919-A-OB-1740-a04bb9f,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4919-1-A-OB-2023-a0b5629,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-19568-A-OB-0853-a0cc3c0,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4919-A-OB-1305-a0e4193,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5743-A-IB-1806-a102bd7,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4902-A-OB-1851-a10d560,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Sa-4905-A-IB-1840-a125724,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4918-A-IB-1830-a134393,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+Holiday-Sa-4902-3-A-OB-1245-a13b181,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4905-A-OB-0744-a1740e5,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4902-A-IB-0909-a191238,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4906-A-OB-2059-a1db861,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4921-A-IB-1550-a1e3dbe,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Sa-4918-A-OB-2159-a1eb26c,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Sa-4918-1-A-OB-1459-a231e71,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-19571-A-IB-1125-a26ec9e,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4902-A-IB-0749-a2a250a,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Sa-4905-A-IB-1640-a2c5bae,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-19568-A-OB-1653-a2cc403,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4905-1-A-IB-1359-a2e15d2,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+A-Train-Mo-Th-4911-B-IB-0544-a300836,4911,A-Train-Mo-Th,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-B-IB-0544-a300836,4911,A-Train-Fr,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4906-A-OB-1639-a34cbd0,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+Holiday-Sa-4918-1-A-IB-0840-a363649,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-OB-1239-a38d123,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-1415-a39b08f,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4918-A-OB-1741-a3b75ad,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-5742-A-OB-1140-a410535,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+2026_Spring_-Weekday-4918-A-OB-1756-a42f941,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+A-Train-Sa-4911-A-IB-2100-a43be45,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-5742-A-OB-0940-a46ba23,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+Holiday-Sa-4919-1-A-IB-0809-a47b2bd,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5740-A-OB-1430-a4808ef,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Weekday-4902-3-A-IB-1349-a4e3935,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4902-A-IB-1329-a4ec920,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4918-A-OB-2126-a5060c0,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4902-A-OB-0851-a519eb4,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4921-A-IB-1520-a5390e6,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4905-1-A-IB-0719-a5487aa,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-74423-A-OB-1338-a5a0393,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Sa-4905-1-A-OB-1143-a5af19c,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Sa-4918-A-OB-1759-a5bd82e,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4905-A-OB-1944-a64c0f3,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4919-A-IB-0700-a66eb7a,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+Holiday-Weekday-4902-3-A-IB-1329-a67f463,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4905-A-OB-0804-a69efc7,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+Holiday-Sa-4918-1-A-IB-0930-a6a624d,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4921-A-OB-2108-a7305a4,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4905-A-OB-2124-a7308dc,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-74423-A-IB-1515-a74388a,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-OB-1111-a75bbb1,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4919-A-OB-1605-a76fd55,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-4921-A-OB-0938-a79281a,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4919-A-OB-1345-a798dc1,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4918-A-IB-1557-a7bb86a,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+Holiday-Sa-4918-1-A-IB-1250-a82282d,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+A-Train-Sa-4911-A-IB-1100-a832fba,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4902-3-A-OB-1311-a8332f5,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5743-A-OB-1125-a837ebd,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4918-A-IB-1957-a88c122,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-19571-A-OB-1048-a8ab18b,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19568-A-IB-1302-a915941,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-19571-A-OB-1843-a936402,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4918-A-OB-1641-a942110,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+Holiday-Sa-4906-1-A-IB-1144-a95b9a8,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-74423-A-IB-1445-a9778f4,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Weekday-4902-3-A-OB-1451-a98a5d6,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19659-A-IB-0650-a9a94d5,19659,2026_Spring_-Weekday,0,19659-A-IB,North Tex Exp,16,,1,1,10
+2026_Spring_-Weekday-4918-A-IB-1757-a9e2495,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-19571-A-OB-0843-aa14d07,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4918-1-A-IB-1930-aa216fa,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+Holiday-Su-4919-1-B-IB-0955-aa4a6dd,4919-1,Holiday-Su,0,4919-1-B-IB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4905-A-OB-0924-aa53145,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+Holiday-Weekday-4919-1-A-OB-0853-aa9b841,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Sa-4918-1-A-OB-1959-aaaea50,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4921-A-OB-1438-aabd3e9,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+Holiday-Weekday-4906-1-A-OB-1619-aac4843,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-4906-A-IB-0939-aaf3812,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-5740-A-IB-0711-ab09aaf,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+Holiday-Weekday-4905-1-A-IB-1939-ab0a6b2,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4919-A-IB-0920-ab2cecc,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4919-A-IB-1500-ab39d05,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5743-A-IB-1136-ab3da75,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-19568-A-OB-1623-ab73d67,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Sa-4919-A-OB-1240-ab78964,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5740-A-IB-1656-aba95ef,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4906-A-OB-1219-abe941d,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-5742-A-IB-0759-ac3e94f,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+2026_Spring_-Weekday-4902-A-OB-0731-ac7236c,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4919-A-OB-1045-ac750f8,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-74423-A-IB-1145-ac7d3f6,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Sa-4918-1-A-OB-1639-aca49ae,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4919-1-A-IB-1630-acb9752,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Sa-4905-1-A-OB-0943-acc4ee5,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4918-1-A-OB-1136-ad0ba4a,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+Holiday-Su-4919-1-A-OB-1109-ad1e660,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4918-A-IB-1657-ad431d4,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+Holiday-Weekday-4919-1-A-IB-1030-ad474e9,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4902-3-A-OB-1511-ad69687,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4905-A-OB-0844-ad8b0d8,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4905-1-A-IB-0819-ad8f3ba,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-19568-A-OB-0923-ada5ab6,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-5743-A-OB-1155-add5b3d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4919-1-A-OB-1053-add648f,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4902-3-A-OB-1231-adf7d99,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4905-A-OB-1404-ae26d38,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4906-1-A-OB-1419-ae325b7,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4902-3-A-OB-0651-ae767ad,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5740-A-IB-1641-ae85230,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4902-A-IB-1429-ae8ad33,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+Holiday-Weekday-4902-3-A-IB-1629-ae9e7db,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Su-4919-1-B-OB-1143-af191aa,4919-1,Holiday-Su,1,4919-1-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Weekday-4918-A-IB-1412-af43dde,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Sa-4905-A-IB-0800-af7abeb,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Su-4919-B-OB-1359-af8793c,4919,2026_Spring_-Su,1,4919-B-OB,Eagle Point B,15,,1,1,1
+A-Train-Mo-Th-4911-A-OB-1800-af94670,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1800-af94670,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-19568-A-IB-2032-af95a56,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4921-A-IB-1950-afa58b0,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4919-1-A-IB-1400-afc2f91,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-OB-1226-afe9fe6,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4918-A-OB-0826-b000426,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4919-A-OB-1245-b035545,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5740-A-OB-0730-b05734c,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-5740-A-OB-1030-b1091dd,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-19568-A-IB-0802-b186f84,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-5743-A-OB-1340-b1997e8,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4921-A-OB-1938-b19bb44,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4905-A-OB-1444-b1b50ed,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-4919-A-OB-2041-b1b72f9,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Sa-4906-A-IB-1314-b1facc0,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-4918-A-OB-1126-b201d97,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+Holiday-Weekday-4906-1-A-IB-0719-b20aa66,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-5743-A-OB-1310-b21848d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-5743-A-IB-0936-b230832,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4906-1-A-IB-1759-b23b613,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-5743-A-IB-1820-b2d3a3c,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-74423-A-OB-1053-b2d9dee,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4905-A-IB-1419-b2ecfd8,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Sa-4906-A-IB-0929-b2f0884,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-4905-A-IB-0759-b2fd18c,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-19568-A-IB-1702-b327b15,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-19571-A-IB-1535-b333578,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19659-A-IB-1723-b33bf68,19659,2026_Spring_-Weekday,0,19659-A-IB,North Tex Exp,16,,1,1,24
+2026_Spring_-Weekday-4921-A-OB-0808-b35f283,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+A-Train-Sa-4911-A-IB-1500-b3aed3d,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Sa-4911-A-IB-2200-b3c392c,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Sa-4906-1-A-IB-1314-b3ee988,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+A-Train-Mo-Th-4911-B-IB-0444-b408e23,4911,A-Train-Mo-Th,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-B-IB-0444-b408e23,4911,A-Train-Fr,0,4911-B-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4906-1-A-OB-1659-b4118d7,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4918-1-A-OB-1546-b41ba97,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+Holiday-Sa-4906-1-A-IB-1659-b432181,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+A-Train-Mo-Th-4911-A-IB-1000-b488bbf,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1000-b488bbf,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4905-1-A-OB-1144-b48f5c5,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4906-1-A-IB-0859-b495873,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-4905-A-IB-2059-b4d2837,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+Holiday-Weekday-4919-1-A-OB-1953-b502ec4,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-OB-1656-b56cc57,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4918-A-IB-0957-b593c26,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+Holiday-Weekday-4906-1-A-IB-1859-b5b2ae2,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-5742-A-OB-1800-b5c6187,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-74423-A-OB-1123-b5f4edd,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4906-1-A-OB-1339-b5f637e,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Sa-4918-A-IB-1430-b63d903,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-5740-A-IB-1541-b698cc8,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4902-A-IB-1929-b6ace87,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4905-1-A-OB-1244-b6f271c,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4918-A-OB-1441-b76d016,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4902-A-OB-1951-b779194,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Sa-4902-A-OB-1715-b77c52f,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4905-A-IB-2039-b7b015f,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+A-Train-Sa-4911-A-IB-1200-b7ce9d0,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Su-4919-A-IB-1602-b7f6ab3,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4919-1-A-IB-1830-b842b0e,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-74423-A-OB-1153-b8515e7,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4906-A-OB-1126-b87cd79,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+Holiday-Weekday-4919-1-A-OB-1223-b882d67,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4906-A-OB-0659-b889b8d,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Sa-4918-A-IB-1130-b891d3a,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4906-A-IB-0859-b8de524,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-19571-A-IB-1600-b8ff3a8,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Sa-4906-1-A-OB-1426-b918a9a,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Su-4919-A-OB-1319-b95cc51,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-0725-b9ab1d5,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Sa-4918-A-IB-1600-b9cdbc6,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4905-1-A-OB-1744-ba25b16,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+Holiday-Weekday-4905-1-A-OB-0904-ba30320,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4906-1-A-IB-1119-ba4fede,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Weekday-4918-A-OB-1011-ba54013,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-5740-A-IB-1526-ba5409b,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Su-4919-A-IB-2141-ba556b8,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+Holiday-Sa-4918-1-A-OB-1229-ba61490,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4905-A-OB-1644-ba7fd40,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+Holiday-Sa-4918-1-A-OB-0729-ba8805f,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Sa-4919-1-B-OB-0910-ba905a1,4919-1,Holiday-Sa,1,4919-1-B-OB,Eagle Point B,15,,1,1,4
+A-Train-Sa-4911-A-OB-1500-bad40a6,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4906-1-A-IB-2059-bae1475,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-4918-A-IB-1457-baf2b44,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-19568-A-IB-1132-baf58e4,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4918-A-IB-1627-bb11189,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4902-A-IB-1309-bb1dbad,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Sa-4906-A-OB-0956-bb34fa2,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-5743-A-IB-1736-bb53ed7,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Weekday-4905-1-A-OB-1004-bb757da,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+A-Train-Mo-Th-4911-A-OB-1430-bb763cb,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1430-bb763cb,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4918-A-IB-1327-bbd0811,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+Holiday-Weekday-4905-1-A-OB-1924-bbfe015,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-5740-A-IB-1356-bc02397,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Sa-4918-1-A-IB-1340-bc0251b,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4906-1-A-OB-1759-bc4adf7,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Sa-4902-A-IB-1305-bc5e9f4,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+Holiday-Weekday-4919-1-A-OB-1853-bc68ed9,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-74423-A-OB-1323-bc9b354,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4918-A-IB-0657-bd02747,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-5742-A-IB-1821-bd2e50b,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+Holiday-Weekday-4918-1-A-IB-1020-bd60730,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Sa-4905-A-OB-1023-bd9845d,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+Holiday-Sa-4918-1-A-IB-1020-bda299d,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5740-A-OB-0700-bdb8916,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Sa-4919-1-B-OB-1417-bddd5e8,4919-1,Holiday-Sa,1,4919-1-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-19571-A-OB-0818-bded8ac,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-5740-A-IB-1156-be43253,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Sa-4919-B-IB-0938-be478ac,4919,2026_Spring_-Sa,0,4919-B-IB,Eagle Point B,15,,1,1,4
+2026_Spring_-Sa-4902-A-OB-1330-be60abc,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+Holiday-Weekday-4902-3-A-IB-2049-be76256,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-19571-A-IB-1830-be8ad64,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-5743-A-OB-1440-bedf225,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+Holiday-Weekday-4905-1-A-OB-1444-bf0c8c6,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4905-A-OB-0904-bf21f82,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-74423-A-OB-1223-bf7aec5,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4906-A-OB-0939-bf9c620,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,16
+Holiday-Weekday-4906-1-A-IB-1559-bfa93dc,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Sa-4919-A-IB-1753-bfc3985,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4918-A-IB-0827-bfd8255,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-4919-A-IB-1140-bfe2425,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5743-A-OB-1940-c00362d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-74423-A-IB-1200-c01e108,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4906-A-IB-0719-c039088,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-4905-A-IB-1359-c0613ee,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+Holiday-Sa-4905-1-A-IB-0840-c07852d,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4905-1-A-OB-2104-c0a678e,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Weekday-4905-A-OB-1304-c0dc47d,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-5742-A-OB-1020-c0e91d0,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+Holiday-Su-4919-1-A-OB-1616-c102f99,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4905-1-A-OB-2124-c119c7a,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4906-A-IB-1659-c12f085,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-5740-A-IB-0726-c14eb92,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4902-A-OB-1251-c15549e,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4905-A-OB-1144-c15dece,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+Holiday-Weekday-4919-1-A-IB-1730-c18f008,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5740-A-OB-0945-c1dac3c,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Weekday-4906-1-A-IB-0759-c2222b2,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Sa-4918-A-OB-1729-c236a91,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Sa-4902-3-A-IB-1135-c256ee2,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-0925-c274562,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-4906-A-OB-1559-c2a74f7,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Sa-4918-A-OB-1559-c2ac9b9,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4902-3-A-IB-1929-c2b051c,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4918-A-OB-1856-c2e7ba6,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-74423-A-OB-1508-c30b5b4,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-5743-A-IB-1036-c3137d4,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4906-A-IB-2139-c31b540,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+Holiday-Sa-4906-1-A-IB-1014-c34c37c,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Sa-4905-A-OB-1303-c34d1dd,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4919-1-A-OB-1353-c365d2e,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Sa-4919-A-OB-1510-c3681cc,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Su-4919-A-IB-1253-c390e46,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4919-A-OB-1525-c391f9c,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Sa-4919-A-OB-0740-c3c9bef,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4906-1-A-IB-1339-c3ce2b1,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4906-1-A-OB-1959-c3e55fb,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4902-3-A-OB-1251-c3ee841,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4906-1-A-IB-1444-c443b80,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+Holiday-Weekday-4902-3-A-IB-0729-c44645c,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-4906-1-A-OB-0759-c44eb20,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-4918-A-OB-1811-c488cad,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-5743-A-IB-1950-c517e68,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-5743-A-IB-1021-c530246,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4902-A-OB-1011-c542f00,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Sa-4902-A-OB-1800-c5803f9,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4905-A-OB-1904-c58ca64,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+Holiday-Weekday-4902-3-A-IB-1409-c58d917,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4919-A-IB-1950-c5f3543,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-5742-A-IB-1039-c5f62d5,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+Holiday-Weekday-4905-1-A-OB-1044-c631899,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Sa-4918-A-OB-0729-c6390f5,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+A-Train-Sa-4911-A-OB-2100-c67108c,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5743-A-OB-1240-c67af6d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4906-A-OB-0859-c67d1d3,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+Holiday-Weekday-4905-1-A-IB-1539-c689277,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4918-A-IB-2012-c6ae782,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Weekday-4902-A-IB-2029-c6c8988,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4905-A-OB-2004-c6e5fe4,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-5740-A-OB-1400-c6f5691,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Sa-4918-1-A-IB-1110-c7bb0e6,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5742-A-IB-1221-c806488,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-5743-A-IB-1421-c80b1bb,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Su-4919-A-IB-1753-c830170,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5743-A-OB-1410-c8306b3,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-74423-A-OB-1538-c85dcae,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4919-1-A-OB-0723-c867acf,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4919-1-A-OB-2053-c88cf3c,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Su-4919-1-A-IB-1118-c8a6590,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+A-Train-Mo-Th-4911-A-OB-1830-c8e2a8f,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1830-c8e2a8f,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Mo-Th-4911-A-OB-0930-c8f83fc,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0930-c8f83fc,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4905-A-OB-1844-c97009c,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+Holiday-Weekday-4906-1-A-IB-1139-c972cc9,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-1300-c9875fb,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4918-A-IB-1400-c998241,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4906-A-IB-1919-c9d7aa7,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Sa-4919-A-IB-2023-c9e27c1,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4905-1-A-IB-0919-ca5ae1c,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+A-Train-Mo-Th-4911-A-OB-0630-ca60edf,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0630-ca60edf,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4906-1-A-IB-1539-ca9aa6d,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,4
+2026_Spring_-Weekday-4906-A-IB-1959-cad8ada,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+Holiday-Weekday-4906-1-A-IB-1839-cafeb59,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4919-1-A-IB-0930-cb13361,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5740-A-IB-0926-cb328f3,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-5743-A-IB-1006-cb43351,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4906-A-OB-1659-cb492e4,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4906-A-OB-1319-cb7307f,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,15
+Holiday-Sa-4918-1-A-IB-0750-cb8b035,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Sa-4918-1-A-IB-1520-cb9d681,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-74423-A-OB-0753-cbbb2c8,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4921-A-OB-1108-cbbbd83,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4902-A-IB-0729-cbcd524,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4906-1-A-OB-1256-cc04d39,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Sa-4906-A-OB-1511-cc1f77d,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Sa-4902-A-OB-0945-cc23cf8,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+Holiday-Weekday-4918-1-A-IB-1840-cc349b3,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4921-A-OB-1908-cc37276,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5740-A-IB-1556-cc41ed7,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Weekday-4902-3-A-IB-1909-cc4f769,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5743-A-IB-1706-cc58a8f,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4902-A-IB-1909-cc71f6f,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4921-A-OB-2138-cc99053,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5743-A-OB-1510-cc9d54c,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19571-A-OB-1113-ccc267b,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-19571-A-OB-1613-cd0278f,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4921-A-IB-1620-cd1dbed,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4902-A-OB-0651-cd2624f,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-74423-A-OB-0853-cd315a1,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4906-A-IB-2159-cd522b0,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Su-4919-A-OB-1549-cd85694,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5740-A-OB-1630-cd8c0a1,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4906-A-IB-1839-cde0edc,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-4905-A-IB-0939-cdefb11,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+Holiday-Sa-4918-1-A-IB-1610-ce41ba5,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Sa-4919-A-IB-1832-ce74ead,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Sa-4919-A-OB-1010-cea7903,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Sa-4906-A-OB-1556-cea7d6e,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+Holiday-Weekday-4902-3-A-IB-1749-cec2242,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4905-1-A-OB-0844-cecb1a4,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-5742-A-IB-1159-cecf1c4,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+2026_Spring_-Weekday-5743-A-OB-1625-cef0032,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4906-1-A-OB-0739-cef9822,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-4905-A-IB-1739-cf04331,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-5743-A-OB-1040-cf23681,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4919-A-IB-1700-cf23710,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,18
+2026_Spring_-Sa-4919-A-IB-1332-cf602b4,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-19568-A-IB-0732-cf61077,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+A-Train-Sa-4911-A-IB-0800-cf63ec0,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-19568-A-IB-0932-cf7294e,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-74423-A-IB-1545-cf78a2d,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+A-Train-Mo-Th-4911-A-OB-1930-cfb7689,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-1930-cfb7689,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-5740-A-OB-0830-cfe5168,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4906-A-IB-1619-cff3a65,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Sa-4918-A-IB-1530-cff7c56,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Sa-4905-A-IB-1120-d0069a9,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5742-A-OB-0700-d0214ae,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,17
+2026_Spring_-Sa-4902-A-IB-1820-d026320,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Sa-4906-A-OB-1256-d0b4611,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-19568-A-OB-0953-d0eb4d2,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Sa-4918-A-IB-2130-d101def,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-5742-A-IB-0919-d114664,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,17
+Holiday-Sa-4905-1-A-OB-1543-d135558,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Sa-4918-A-OB-2059-d14b31a,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4906-1-A-IB-1439-d1b4128,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4918-1-A-IB-1430-d1b84b7,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4905-A-OB-1524-d1e4e8e,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-4921-A-IB-0820-d20162d,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-19571-A-OB-1433-d21ad05,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4919-A-OB-1105-d21ced3,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+Holiday-Weekday-4906-1-A-OB-0919-d280126,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Weekday-19568-A-OB-1953-d281e20,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Su-4919-1-B-OB-1925-d28df5b,4919-1,Holiday-Su,1,4919-1-B-OB,Eagle Point B,15,,1,1,1
+Holiday-Sa-4905-1-A-IB-1320-d2a8b37,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4905-A-IB-1139-d356441,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+2026_Spring_-Weekday-19568-A-OB-1253-d37af2c,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4905-1-A-OB-1704-d3a37ee,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+Holiday-Sa-4906-1-A-OB-0826-d4287f2,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-4918-A-OB-1911-d42ae46,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4918-A-OB-1229-d42da38,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-19568-A-OB-1853-d4615fa,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4905-1-A-OB-1344-d46e930,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-4906-A-IB-1019-d4a5907,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4918-A-OB-1956-d4e5a1a,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+Holiday-Sa-4905-1-A-IB-1440-d4e6f02,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Sa-4906-1-A-IB-1059-d5027ea,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-5740-A-OB-1145-d5045d8,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4905-A-OB-1624-d51146e,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,21
+Holiday-Su-4919-1-A-IB-1626-d5485e4,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+Holiday-Sa-4906-1-A-IB-1229-d548b00,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-5743-A-IB-1206-d568ee5,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+Holiday-Sa-4919-1-A-IB-1625-d577408,4919-1,Holiday-Sa,0,4919-1-A-IB,Eagle Point,14,,1,1,4
+Holiday-Weekday-4918-1-A-IB-0750-d5b0f4a,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-5740-A-OB-1045-d5e4f12,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4918-A-OB-1511-d61bc5d,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+Holiday-Weekday-4919-1-A-IB-2000-d62112a,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-19568-A-OB-2153-d63d171,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Sa-4906-A-IB-1529-d63ece9,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-5742-A-OB-1545-d669983,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Sa-4918-A-OB-1429-d68a511,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Sa-4906-A-OB-1426-d6e7496,4906,2026_Spring_-Sa,0,4906-A-OB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-4919-A-IB-1600-d7339a7,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4902-A-OB-1611-d735c13,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4918-A-IB-1942-d7778ca,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4919-A-IB-1023-d77c6a6,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+Holiday-Sa-4902-3-A-OB-1545-d79a8d6,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19568-A-IB-0902-d7b065d,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Su-4919-B-IB-1938-d7b88f1,4919,2026_Spring_-Su,0,4919-B-IB,Eagle Point B,15,,1,1,1
+Holiday-Weekday-4902-3-A-IB-1029-d7fb568,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Sa-4918-A-OB-1459-d84f329,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+Holiday-Weekday-4902-3-A-OB-0851-d85bbff,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Sa-4902-3-A-OB-1800-d867b01,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4906-A-OB-1919-d876983,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Sa-4919-A-IB-0753-d895afd,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-5743-A-OB-0740-d89edc4,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-74423-A-OB-1108-d8c4a8d,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4905-1-A-OB-0944-d8cbbb7,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-5740-A-OB-1345-d8e619d,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-5742-A-IB-0819-d8f1e40,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+Holiday-Sa-4906-1-A-IB-1614-d983da6,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+Holiday-Weekday-4919-1-A-IB-1330-d9c33b5,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4921-A-OB-0838-da138b5,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4918-A-OB-1326-da1c5ec,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-19568-A-OB-2053-da6ce86,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Weekday-4919-1-A-IB-0830-da77573,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4902-3-A-OB-2031-da8e4a0,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-4918-A-OB-1611-dad4f78,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-74423-A-OB-1008-daec48e,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+A-Train-Sa-4911-A-OB-1300-db267ad,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4905-A-IB-1719-db3bf22,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-5740-A-OB-1015-db6a9b5,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+A-Train-Sa-4911-A-OB-0900-db7aafb,4911,A-Train-Sa,1,4911-A-OB,Trinity Mills Station,,,0,0,
+Holiday-Weekday-4902-3-A-IB-0909-db954cc,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5743-A-IB-1551-dba0cb0,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Sa-4918-A-OB-1859-dbdba33,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4921-A-IB-0920-dbf4a03,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4906-1-A-IB-1739-dc0260d,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,6
+Holiday-Weekday-4919-1-A-OB-0923-dc4bff4,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Sa-4919-1-B-OB-1925-dcd3bc7,4919-1,Holiday-Sa,1,4919-1-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-74423-A-IB-1015-dce9d8c,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+A-Train-Mo-Th-4911-A-IB-0630-dced251,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-0630-dced251,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Mo-Th-4911-A-OB-0530-dd02e1e,4911,A-Train-Mo-Th,1,4911-A-OB,Trinity Mills Station,,,0,0,
+A-Train-Fr-4911-A-OB-0530-dd02e1e,4911,A-Train-Fr,1,4911-A-OB,Trinity Mills Station,,,0,0,
+2026_Spring_-Weekday-4906-A-OB-1939-dd0f697,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+2026_Spring_-Weekday-19568-A-IB-1102-dd29356,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4902-A-IB-1809-dd37e62,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+Holiday-Sa-4906-1-A-IB-0844-dd735cc,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+Holiday-Sa-4902-3-A-IB-1005-dd9f5df,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4918-A-OB-1711-ddc447a,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+Holiday-Sa-4906-1-A-OB-1341-ddce4ea,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-4902-A-IB-1609-dde9d6b,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4918-A-OB-2111-de1247f,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-4921-A-OB-0738-de16714,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5740-A-IB-1426-de16db8,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,6
+Holiday-Weekday-4918-1-A-IB-2020-de1afc4,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+2026_Spring_-Sa-4905-A-IB-1200-de252aa,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4905-A-IB-0819-de38321,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-19571-A-IB-1740-de397c3,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Sa-4902-3-A-IB-0835-de6395a,4902-3,Holiday-Sa,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4905-A-IB-1639-de7b943,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+Holiday-Weekday-4902-3-A-IB-0829-de8289e,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4921-A-IB-1920-deb46bf,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+2026_Spring_-Su-4919-A-OB-1049-df1d798,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+Holiday-Weekday-4918-1-A-OB-1816-df2370e,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-5740-A-OB-1645-df882f1,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Weekday-4905-1-A-IB-1039-df98064,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Sa-4919-A-OB-1319-dfb8763,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+Holiday-Sa-4905-1-A-OB-1703-dfcfe0c,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+Holiday-Weekday-4905-1-A-IB-0839-dfd1343,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+Holiday-Weekday-4906-1-A-OB-1739-e018907,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,8
+2026_Spring_-Sa-4902-A-IB-0920-e09c304,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4918-A-IB-0927-e0a9e72,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Sa-4919-A-IB-1523-e0dcb97,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+A-Train-Mo-Th-4911-A-IB-1130-e0f64bc,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1130-e0f64bc,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-19568-A-OB-1823-e0f73a2,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-5743-A-IB-0706-e1056f9,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4918-A-OB-2026-e11cda9,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-5743-A-OB-1025-e15c95b,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4905-1-A-IB-1019-e1912c6,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+Holiday-Weekday-4902-3-A-IB-1829-e199b4e,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4902-A-OB-1351-e1dbe50,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4918-1-A-OB-1636-e1dc631,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4919-A-IB-2220-e1e2656,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4902-A-OB-1911-e212ff7,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5740-A-IB-1011-e22e590,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4921-A-IB-0750-e2864f9,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4905-1-A-OB-0724-e297fda,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,6
+2026_Spring_-Weekday-4906-A-IB-0959-e2f8116,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+Holiday-Sa-4902-3-A-OB-0815-e32611e,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+Holiday-Weekday-4919-1-A-IB-1130-e352c3f,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-74423-A-OB-1553-e36b6a0,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+Holiday-Weekday-4906-1-A-IB-1359-e3a06ec,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,8
+Holiday-Weekday-4919-1-A-OB-1723-e3aa852,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5742-A-IB-1019-e3bfd76,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-5743-A-IB-1151-e3deaab,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-4906-A-IB-2059-e3fb90c,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-5743-A-OB-1610-e407f35,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-5743-A-OB-0710-e488bbb,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-19571-A-IB-1445-e4b08a9,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-5742-A-IB-0739-e4c4b33,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,0,0,22
+2026_Spring_-Sa-4918-A-OB-0959-e4c7706,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4905-A-OB-1724-e4e2559,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-5743-A-IB-1751-e50ca36,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4902-3-A-IB-1529-e519a29,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+Holiday-Sa-4918-1-A-IB-1430-e51fd0c,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Sa-4906-A-IB-1229-e55611e,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+Holiday-Weekday-4902-3-A-IB-1149-e583cfe,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4905-A-IB-1259-e5bbf8d,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,15
+A-Train-Mo-Th-4911-A-IB-1330-e5d5c15,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1330-e5d5c15,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Weekday-4902-3-A-OB-1811-e5eba50,4902-3,Holiday-Weekday,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-4902-A-OB-1831-e614a75,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+Holiday-Su-4919-1-A-IB-0810-e617e93,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+A-Train-Sa-4911-A-IB-0900-e62d55e,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Su-4919-1-A-OB-1307-e677d9d,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5740-A-OB-0845-e6b5289,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-5743-A-OB-2010-e6b701c,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+Holiday-Weekday-4906-1-A-OB-1719-e6d4286,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+2026_Spring_-Sa-4918-A-OB-1029-e6d7285,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-5743-A-IB-0921-e705ed0,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+2026_Spring_-Weekday-74423-A-OB-1208-e751aaf,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4905-A-IB-1219-e7768e4,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Sa-4902-A-OB-1545-e7a0a5d,4902,2026_Spring_-Sa,1,4902-A-OB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Su-4919-A-IB-2102-e7b6461,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-19571-A-IB-0830-e7fb032,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4919-1-A-OB-2123-e81092a,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4905-1-A-IB-1759-e82cba0,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-4902-A-OB-2031-e82f9ee,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4902-A-IB-1229-e869437,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-5742-A-OB-0920-e87a93d,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,0,0,22
+2026_Spring_-Weekday-5740-A-IB-1341-e891b43,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4906-A-OB-2139-e897d85,4906,2026_Spring_-Weekday,0,4906-A-OB,Connect Rt 7,7,,1,1,21
+Holiday-Weekday-4919-1-A-OB-1623-e8a1ea8,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-OB-2041-e8acca6,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+Holiday-Weekday-4905-1-A-IB-1519-e8f395c,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Sa-4905-A-OB-1543-e93d2f3,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-4918-A-IB-0742-e9467e8,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+2026_Spring_-Weekday-19568-A-OB-2023-e94d202,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-19571-A-OB-1203-e963bf0,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Sa-4905-A-IB-0920-e96c9fa,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4906-1-A-OB-1439-e9addfe,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,6
+Holiday-Sa-4906-1-A-IB-1359-e9fc610,4906-1,Holiday-Sa,1,4906-1-A-IB,Connect Rt 7,7,,1,1,5
+2026_Spring_-Weekday-19571-A-IB-0945-ea2f013,19571,2026_Spring_-Weekday,0,19571-A-IB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-4921-A-IB-0720-ea3407b,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4919-1-A-OB-1323-ea81fa1,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-5740-A-OB-1700-eaa4966,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4919-A-OB-1841-eaf6b6d,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Sa-4905-A-OB-1703-eb1637b,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4918-A-IB-1030-eb1c9b8,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4918-A-OB-1826-eb22d44,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-4921-A-OB-1838-eb23964,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4906-A-IB-1359-eb4ec4b,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+Holiday-Weekday-4906-1-A-IB-2119-ebbbaa2,4906-1,Holiday-Weekday,1,4906-1-A-IB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-4902-A-IB-1849-ec4f264,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Sa-4906-A-IB-1059-ec51ca5,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+Holiday-Weekday-4918-1-A-IB-2110-ec52664,4918-1,Holiday-Weekday,0,4918-1-A-IB,Discovery Prk,12,,1,1,5
+Holiday-Weekday-4919-1-A-OB-0753-ec6301b,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4918-A-OB-0856-ec6e471,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,14
+Holiday-Sa-4919-1-A-OB-1815-ec96a90,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4906-A-IB-1519-ec9d420,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,16
+2026_Spring_-Weekday-4905-A-IB-0959-ed0403c,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-4918-A-OB-1841-ed1e7ef,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+2026_Spring_-Su-4919-A-IB-1332-ed4f8b6,4919,2026_Spring_-Su,0,4919-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-4905-A-OB-1024-ed5351b,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Sa-4918-A-IB-0700-ed5cbab,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+A-Train-Mo-Th-4911-A-IB-1700-ed603f0,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1700-ed603f0,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4919-A-OB-0805-ed92a29,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+Holiday-Weekday-4918-1-A-OB-2046-eda051f,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4902-A-OB-1031-edcdfe5,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4905-A-IB-1859-ee987eb,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-4906-A-IB-1039-ee9c554,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+Holiday-Weekday-4902-3-A-IB-1429-eeff0c2,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-5740-A-OB-0745-ef0fd38,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Sa-4918-A-IB-2100-ef2a26d,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Weekday-4918-A-OB-1141-ef5a2ba,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,19
+Holiday-Weekday-4906-1-A-OB-1539-ef6489d,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+Holiday-Weekday-4905-1-A-IB-1919-ef89aca,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,9
+2026_Spring_-Weekday-5743-A-IB-0806-ef95a54,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4902-A-IB-1949-efab4e6,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4902-A-OB-0711-eff06ad,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+Holiday-Weekday-4919-1-A-IB-1930-eff4ef5,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+Holiday-Weekday-4905-1-A-OB-2004-f000157,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4921-A-OB-1138-f026bef,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-74423-A-OB-0938-f04ad94,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Weekday-4905-A-IB-1339-f062b73,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,13
+2026_Spring_-Weekday-4905-A-IB-0719-f0a72f3,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+Holiday-Weekday-4905-1-A-IB-0739-f10f4de,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,6
+Holiday-Sa-4905-1-A-IB-1800-f1e7ab5,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4918-A-IB-2142-f1e91fb,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,20
+Holiday-Sa-4905-1-A-OB-1223-f1f8a19,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4902-A-OB-1211-f21867d,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,7
+2026_Spring_-Weekday-4921-A-OB-2208-f21d04b,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5740-A-OB-1200-f29c94a,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,2
+Holiday-Weekday-4905-1-A-OB-1204-f29fde7,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-19571-A-OB-0753-f323063,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+2026_Spring_-Weekday-74423-A-OB-0823-f379856,74423,2026_Spring_-Weekday,1,74423-A-OB,AC 101,8,,1,1,9
+2026_Spring_-Sa-4902-A-IB-1520-f38e753,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-74423-A-IB-1100-f3cab16,74423,2026_Spring_-Weekday,0,74423-A-IB,AC 101,8,,1,1,9
+Holiday-Sa-4919-1-A-OB-1541-f3e06ff,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4905-A-IB-1519-f3ed129,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,21
+2026_Spring_-Weekday-4918-A-IB-0712-f40fe52,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,19
+2026_Spring_-Sa-4919-A-OB-0819-f4b858b,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4918-A-OB-1926-f4e6a56,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,12
+2026_Spring_-Weekday-5742-A-OB-1715-f510e55,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+2026_Spring_-Weekday-19568-A-OB-1123-f5491e8,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4918-A-IB-2027-f557746,4918,2026_Spring_-Weekday,0,4918-A-IB,Discovery Prk,12,,0,0,14
+2026_Spring_-Weekday-19568-A-IB-2202-f5aba7e,19568,2026_Spring_-Weekday,0,19568-A-IB,Daugherty St,13,,0,0,3
+2026_Spring_-Weekday-4906-A-IB-0819-f5b8c52,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-4906-A-IB-0739-f5d42d5,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+Holiday-Sa-4906-1-A-OB-1126-f5ebc34,4906-1,Holiday-Sa,0,4906-1-A-OB,Connect Rt 7,7,,1,1,5
+Holiday-Weekday-4919-1-A-IB-0700-f5fc92a,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+A-Train-Mo-Th-4911-A-IB-1100-f6038b1,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1100-f6038b1,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4905-A-IB-1039-f603b9b,4905,2026_Spring_-Weekday,0,4905-A-IB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Sa-4905-A-OB-1423-f61230b,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Weekday-5742-A-OB-1630-f632bcc,5742,2026_Spring_-Weekday,0,5742-A-OB,Colorado Exp,10,,1,1,22
+Holiday-Sa-4905-1-A-OB-1103-f6393fa,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Sa-4919-B-OB-1859-f6748a9,4919,2026_Spring_-Sa,1,4919-B-OB,Eagle Point B,15,,1,1,4
+2026_Spring_-Weekday-5740-A-OB-1545-f688c5d,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+Holiday-Weekday-4905-1-A-IB-1959-f690dcf,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,8
+Holiday-Weekday-4905-1-A-OB-1724-f6aea3a,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,4
+Holiday-Weekday-4902-3-A-IB-1049-f6b2b07,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+2026_Spring_-Weekday-5742-A-IB-1906-f7043ac,5742,2026_Spring_-Weekday,1,5742-A-IB,Colorado Exp,10,,1,1,22
+Holiday-Su-4919-1-B-OB-1417-f709ce1,4919-1,Holiday-Su,1,4919-1-B-OB,Eagle Point B,15,,1,1,1
+2026_Spring_-Sa-4905-A-OB-0903-f71a782,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+Holiday-Weekday-4919-1-A-IB-1900-f72aca9,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-4906-A-IB-2019-f739a7c,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+2026_Spring_-Weekday-4905-A-OB-1324-f73e9b3,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,13
+Holiday-Weekday-4918-1-A-OB-0906-f755d8d,4918-1,Holiday-Weekday,1,4918-1-A-OB,Discovery Prk,12,,1,1,5
+2026_Spring_-Weekday-4919-A-OB-0945-f75cb5f,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,23
+2026_Spring_-Sa-4902-A-IB-1605-f76d650,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+Holiday-Su-4919-1-A-OB-1815-f7ad327,4919-1,Holiday-Su,1,4919-1-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Sa-4918-A-IB-1330-f7ae230,4918,2026_Spring_-Sa,0,4918-A-IB,Discovery Prk,12,,1,1,3
+Holiday-Sa-4905-1-A-OB-1343-f7bf47b,4905-1,Holiday-Sa,1,4905-1-A-OB,Connect Rt 6,6,,1,1,3
+2026_Spring_-Weekday-4921-A-OB-1638-f7f8ab0,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Sa-4919-A-OB-1049-f8186a6,4919,2026_Spring_-Sa,1,4919-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4902-A-OB-1511-f8292a6,4902,2026_Spring_-Weekday,1,4902-A-OB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-4905-A-OB-1244-f82a8cb,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,15
+A-Train-Mo-Th-4911-A-IB-1430-f836bf4,4911,A-Train-Mo-Th,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+A-Train-Fr-4911-A-IB-1430-f836bf4,4911,A-Train-Fr,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+2026_Spring_-Weekday-4918-A-OB-0711-f837d7c,4918,2026_Spring_-Weekday,1,4918-A-OB,Discovery Prk,12,,0,0,20
+2026_Spring_-Sa-4905-A-OB-0943-f845e45,4905,2026_Spring_-Sa,1,4905-A-OB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4919-A-IB-1253-f8859e8,4919,2026_Spring_-Sa,0,4919-A-IB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4902-A-IB-2049-f88c9d5,4902,2026_Spring_-Weekday,0,4902-A-IB,Connect Rt 3,5,,1,1,8
+2026_Spring_-Weekday-5743-A-OB-0655-f8cb493,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+2026_Spring_-Weekday-4906-A-IB-1139-fa26432,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,13
+2026_Spring_-Weekday-4905-A-OB-1704-fa3bca9,4905,2026_Spring_-Weekday,1,4905-A-OB,Connect Rt 6,6,,1,1,16
+2026_Spring_-Weekday-4919-A-OB-1405-fa508fd,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+Holiday-Weekday-4902-3-A-IB-1809-fa51cda,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-4919-1-A-OB-1153-faa4e21,4919-1,Holiday-Weekday,1,4919-1-A-OB,Eagle Point,14,,1,1,7
+2026_Spring_-Weekday-19571-A-OB-1703-faa52d1,19571,2026_Spring_-Weekday,1,19571-A-OB,Park Exp A,18,,1,1,4
+Holiday-Weekday-4906-1-A-OB-1259-faac2a2,4906-1,Holiday-Weekday,0,4906-1-A-OB,Connect Rt 7,7,,1,1,9
+2026_Spring_-Weekday-5740-A-IB-0741-fac3f37,5740,2026_Spring_-Weekday,1,5740-A-IB,Bernard St,9,,0,0,2
+2026_Spring_-Weekday-4921-A-OB-1508-fb41ef8,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-4906-A-IB-1219-fb494e4,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,15
+Holiday-Sa-4902-3-A-OB-1330-fb709ac,4902-3,Holiday-Sa,1,4902-3-A-OB,Connect Rt 3,5,,1,1,1
+2026_Spring_-Weekday-19568-A-OB-1323-fb81db3,19568,2026_Spring_-Weekday,1,19568-A-OB,Daugherty St,13,,0,0,3
+Holiday-Sa-4918-1-A-IB-2020-fb82c61,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+2026_Spring_-Sa-4905-A-IB-1240-fb872ee,4905,2026_Spring_-Sa,0,4905-A-IB,Connect Rt 6,6,,1,1,5
+2026_Spring_-Sa-4902-A-IB-1135-fbb123c,4902,2026_Spring_-Sa,0,4902-A-IB,Connect Rt 3,5,,0,0,1
+2026_Spring_-Weekday-4919-A-IB-2020-fbc880a,4919,2026_Spring_-Weekday,0,4919-A-IB,Eagle Point,14,,1,1,23
+2026_Spring_-Weekday-4921-A-OB-1538-fc0b0ab,4921,2026_Spring_-Weekday,1,4921-A-OB,North Texan,17,,0,0,11
+2026_Spring_-Weekday-5743-A-IB-1850-fc26975,5743,2026_Spring_-Weekday,1,5743-A-IB,Centre Place,11,,0,0,1
+Holiday-Weekday-4905-1-A-IB-1459-fc44b13,4905-1,Holiday-Weekday,0,4905-1-A-IB,Connect Rt 6,6,,1,1,4
+2026_Spring_-Weekday-4921-A-IB-1650-fc4abcb,4921,2026_Spring_-Weekday,0,4921-A-IB,North Texan,17,,0,0,11
+Holiday-Weekday-4902-3-A-IB-1129-fc6e756,4902-3,Holiday-Weekday,0,4902-3-A-IB,Connect Rt 3,5,,1,1,2
+Holiday-Weekday-19659-1-A-OB-0600-fc8b971,19659-1,Holiday-Weekday,1,19659-1-A-OB,North Tex Exp,16,,1,1,3
+Holiday-Sa-4919-1-A-OB-1342-fcc3323,4919-1,Holiday-Sa,1,4919-1-A-OB,Eagle Point,14,,1,1,4
+2026_Spring_-Weekday-4919-A-OB-1645-fcc7d01,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Su-4919-A-OB-1510-fce32cb,4919,2026_Spring_-Su,1,4919-A-OB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5743-A-OB-1840-fcf432f,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,1
+A-Train-Sa-4911-A-IB-1300-fcf5d2f,4911,A-Train-Sa,0,4911-A-IB,Downtown Denton Transit Center,,,0,0,
+Holiday-Sa-4918-1-A-OB-1729-fcfbec2,4918-1,Holiday-Sa,1,4918-1-A-OB,Discovery Prk,12,,1,1,2
+Holiday-Sa-4918-1-A-IB-1840-fd01be9,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4905-1-A-OB-1024-fd57871,4905-1,Holiday-Weekday,1,4905-1-A-OB,Connect Rt 6,6,,1,1,8
+2026_Spring_-Sa-4906-A-IB-1144-fdc180d,4906,2026_Spring_-Sa,1,4906-A-IB,Connect Rt 7,7,,0,0,6
+2026_Spring_-Weekday-5740-A-OB-1615-fe18f12,5740,2026_Spring_-Weekday,0,5740-A-OB,Bernard St,9,,0,0,6
+2026_Spring_-Weekday-4919-A-OB-1325-fe1a8bf,4919,2026_Spring_-Weekday,1,4919-A-OB,Eagle Point,14,,1,1,18
+2026_Spring_-Weekday-5743-A-OB-0855-fe1c39d,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Weekday-4919-1-A-IB-2130-feac1cf,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7
+2026_Spring_-Sa-4918-A-OB-1359-feebb6b,4918,2026_Spring_-Sa,1,4918-A-OB,Discovery Prk,12,,1,1,3
+2026_Spring_-Weekday-4906-A-IB-1719-fef329f,4906,2026_Spring_-Weekday,1,4906-A-IB,Connect Rt 7,7,,1,1,21
+Holiday-Su-4919-1-A-IB-2134-ff0dd31,4919-1,Holiday-Su,0,4919-1-A-IB,Eagle Point,14,,1,1,1
+2026_Spring_-Weekday-5743-A-OB-1725-ff6625b,5743,2026_Spring_-Weekday,0,5743-A-OB,Centre Place,11,,0,0,5
+Holiday-Sa-4905-1-A-IB-0920-ff8763c,4905-1,Holiday-Sa,0,4905-1-A-IB,Connect Rt 6,6,,1,1,3
+Holiday-Sa-4918-1-A-IB-1700-ff973fe,4918-1,Holiday-Sa,0,4918-1-A-IB,Discovery Prk,12,,1,1,2
+Holiday-Weekday-4919-1-A-IB-0800-fff59fb,4919-1,Holiday-Weekday,0,4919-1-A-IB,Eagle Point,14,,1,1,7

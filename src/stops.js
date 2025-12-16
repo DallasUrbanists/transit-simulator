@@ -2,55 +2,57 @@ import * as turf from '@turf/turf';
 import { convert, convertCSVToDictionary, fetchText, sanitize, saniKey, absURL } from './utilities.mjs';
 
 const primaryKey = 'stop_id';
-const stopsTxt = await fetchText(absURL('./gtfs/DART/stops.txt'));
-export const stops = await convertCSVToDictionary(stopsTxt, primaryKey);
-stops.forEach((stop, stopId, map) => {
-    const f = p => parseFloat(stop.get(p));
-    map.set(stopId, turf.point(
-        [f('stop_lon'), f('stop_lat')],
-        { name: stop.get('stop_name'), description: stop.get('stop_desc') },
-        { id: stopId }
-    ));
-});
-const timingSource = absURL('./gtfs/DART/stop_times.txt');
-const timingArray = convert.csvToArray(await fetchText(timingSource));
-const timingColumns = convert.arrayToColumnIndex(timingArray[0]);
-const timepoints = timingArray
-    .slice(1)
-    .sort((pointA, pointB) => {
-        const A = prop => pointA[timingColumns.get(prop)];
-        const B = prop => pointB[timingColumns.get(prop)];
-        if (A('trip_id') !== B('trip_id')) {
-            return A('trip_id').localeCompare(B('trip_id'));
-        }
-        return parseInt(A('stop_sequence')) - parseInt(B('stop_sequence'));
-    })
-    .filter(r => sanitize(r[timingColumns.get('timepoint')]) === '1')
-    .reduce((acc, row) => {
-        const c = prop => sanitize(row[timingColumns.get(prop)]);
-        const f = prop => parseFloat(c(prop));
-        const timepoint = turf.clone(getStop(c('stop_id')));
-        const tripId = c('trip_id');
-        timepoint.properties = {
-            ...timepoint.properties,
-            arrival_time: c('arrival_time'),
-            arrival_seconds: convert.timeStringToSeconds(c('arrival_time')),
-            departure_time: c('departure_time'),
-            departure_seconds: convert.timeStringToSeconds(c('departure_time')),
-            sequence: parseInt(c('stop_sequence')),
-            distance_in_miles: f('shape_dist_traveled'),
-        };
-        if (!acc.has(tripId)) {
-            acc.set(tripId, [timepoint]);
-        } else {
-            const x = acc.get(tripId);
-            x.push(timepoint);
-            acc.set(tripId, x);
-        }
-        return acc;
-    }, new Map());
+export const stops = new Map();
+export const timepoints = new Map();
+export async function processStopsFromSource(source) {
+    const stopsTxt = await fetchText(absURL(`./gtfs/${source}/stops.txt`));
+    const stopsFromSource = await convertCSVToDictionary(stopsTxt, primaryKey);
+    stopsFromSource.forEach((stop, stopId) => {
+        const f = p => parseFloat(stop.get(p));
+        stops.set(stopId, turf.point(
+            [f('stop_lon'), f('stop_lat')],
+            { name: stop.get('stop_name'), description: stop.get('stop_desc') },
+            { id: stopId }
+        ));
+    });
 
-//console.log(timepoints);
+    const timingSource = absURL(`./gtfs/${source}/stop_times.txt`);
+    const timingArray = convert.csvToArray(await fetchText(timingSource));
+    const timingColumns = convert.arrayToColumnIndex(timingArray[0]);
+    timingArray
+        .slice(1)
+        .sort((pointA, pointB) => {
+            const A = prop => pointA[timingColumns.get(prop)];
+            const B = prop => pointB[timingColumns.get(prop)];
+            if (A('trip_id') !== B('trip_id')) {
+                return A('trip_id').localeCompare(B('trip_id'));
+            }
+            return parseInt(A('stop_sequence')) - parseInt(B('stop_sequence'));
+        })
+        .filter(r => sanitize(r[timingColumns.get('timepoint')]) === '1')
+        .forEach((row) => {
+            const c = prop => sanitize(row[timingColumns.get(prop)]);
+            const f = prop => parseFloat(c(prop));
+            const timepoint = turf.clone(getStop(c('stop_id')));
+            const tripId = c('trip_id');
+            timepoint.properties = {
+                ...timepoint.properties,
+                arrival_time: c('arrival_time'),
+                arrival_seconds: convert.timeStringToSeconds(c('arrival_time')),
+                departure_time: c('departure_time'),
+                departure_seconds: convert.timeStringToSeconds(c('departure_time')),
+                sequence: parseInt(c('stop_sequence')),
+                distance_in_miles: f('shape_dist_traveled'),
+            };
+            if (!timepoints.has(tripId)) {
+                timepoints.set(tripId, [timepoint]);
+            } else {
+                const x = timepoints.get(tripId);
+                x.push(timepoint);
+                timepoints.set(tripId, x);
+            }
+        });
+}
 
 /**
  * Retrieve a stop feature from the `stops` dictionary.
