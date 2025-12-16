@@ -27,3 +27,15 @@ export async function processSource(agency) {
     source.processedSegments = true;
     console.log(`Finished processing all GTFS data for ${agency}`);
 }
+
+export function isFullyLoaded() {
+    const sourcesAsArray = Array.from(sources.values());
+    for (let i = 0; i < sources.size; i++) {
+        for (let x in sourcesAsArray[i]) {            
+            if (sourcesAsArray[i][x] === false) {
+                return false;
+            }
+        }
+    }
+    return true;
+}

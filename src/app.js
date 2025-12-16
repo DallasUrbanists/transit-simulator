@@ -4,13 +4,21 @@ import MapContext from "./MapContext";
 import { $, convert, DAY, minValMax } from './utilities.mjs';
 import Playback from './Playback';
 import Simulation from './Simulation';
-import { agencies, processSource } from './sources.js';
-
-agencies.forEach(agency => processSource(agency));
+import { agencies, isFullyLoaded, processSource } from './sources.js';
 
 const map = new MapContext('map');
 const simulation = new Simulation(map);
 const playback = new Playback(simulation);
+
+agencies.forEach(agency => processSource(agency).then(() => {
+    if (isFullyLoaded()) {
+        console.log('Finished loading all available agency sources.');
+        map.redrawFixtures();
+        window.dispatchEvent(new CustomEvent('loadFinished'));
+    } else {
+        console.log('Not yet finished. More agencies left to load.');
+    }
+}));
 
 // TO-DO:
 // - Verify what all the various Service IDs mean
@@ -208,11 +216,6 @@ const setClockColor = (choice) => {
 $('#clock-color').addEventListener('change', e => setClockColor(e.target.value));
 const storedClockColor = localStorage.getItem('clock-color');
 if (storedClockColor) setClockColor(storedClockColor);
-
-
-// Alert the UI that loading is finished
-window.dispatchEvent(new CustomEvent('loadFinished'));
-
 
 /* Open fullscreen */
 const elem = document.documentElement;
