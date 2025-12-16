@@ -1,6 +1,6 @@
 import { getRoute } from "./routes.js";
 import { getTrip } from "./trips.js";
-import overrides from "../config/overrides.json" with { type: "json" };
+import overrides from "../config/dictionary-overrides.json" with { type: "json" };
 import { convert } from "./utilities.mjs";
 
 const defaults = {
@@ -99,3 +99,5 @@ function traverse(pathString, object) {
 function isNumber(value) {
     return !isNaN(value);
 }
+
+window.overrides = overrides;
