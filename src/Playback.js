@@ -1,4 +1,4 @@
-import { convert, DAY, dispatch, store } from "./utilities.mjs";
+import { convert, DAY, dispatch, store } from "./misc/utilities.mjs";
 
 const playheadChanged = new CustomEvent('playheadChanged');
 

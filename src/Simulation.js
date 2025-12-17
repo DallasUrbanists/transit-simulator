@@ -1,9 +1,9 @@
 import * as turf from '@turf/turf';
 import L from 'leaflet';
-import dictionary from './dictionary';
-import { getSegmentsFor } from "./segments";
-import { findActiveTrips } from './trips';
-import { $, DAY, ease, isLight, minValMax } from './utilities.mjs';
+import dictionary from './models/dictionary';
+import { getSegmentsFor } from "./models/segments";
+import { findActiveTrips } from './models/trips';
+import { $, DAY, ease, isLight, minValMax } from './misc/utilities.mjs';
 
 export default class Simulation {
     tripCriteria = (trip) => true;
@@ -22,7 +22,6 @@ export default class Simulation {
             this.map.activate(trip);
             const t = key => trip.get(key);
             const tripId = t('trip_id');
-            const blockId = t('block_id');
             const tripDuration = parseInt(t('durationSeconds'));
             const d = prop => dictionary(trip).get(prop);
             if (!trip.has('segments')) trip.set('segments', getSegmentsFor(trip));

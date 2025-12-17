@@ -1,7 +1,7 @@
 import { getRoute } from "./routes.js";
 import { getTrip } from "./trips.js";
-import overrides from "../config/dictionary-overrides.json" with { type: "json" };
-import { convert } from "./utilities.mjs";
+import overrides from "../../config/dictionary-overrides.json" with { type: "json" };
+import { convert } from "../misc/utilities.mjs";
 
 const defaults = {
     label: (route, trip) => trip

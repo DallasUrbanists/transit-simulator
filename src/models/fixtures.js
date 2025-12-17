@@ -7,7 +7,7 @@ const GREEN = '#006F38';
 const ORANGE = '#F68B1F';
 const SILVER = '#C0C0C0';
 
-export const sectionIndex = {
+export const fixtureIndex = {
     texRail: { refShape: '33493', refIndexes: [1, 2, 3, 4, 5, 6], colors: ['#e91c2e']},
     silverTexRail: { refShape: '146593', refIndexes: [0], colors: ['#e91c2e', SILVER] },
     silverWest: { refShape: '146593', refIndexes: [1, 2, 3, 4, 5, 6], colors: [SILVER] },
@@ -36,8 +36,8 @@ export const sectionIndex = {
     treTexRail: { refShape: '33493', refIndexes: [0], colors: ['#e91c2e', '#002579']},
 };
 
-export function getSpecialShape(key) {
-    const details = sectionIndex[key];
+export function getFixtureShape(key) {
+    const details = fixtureIndex[key];
     const refShape = segments.get(details.refShape);
     if (!refShape) return undefined;
     const refSegments = refShape.filter((v, index) => details.refIndexes.includes(index));

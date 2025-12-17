@@ -1,10 +1,9 @@
 import * as turf from '@turf/turf';
 import L from 'leaflet';
-import { getTrip } from './trips';
+import { getTrip } from '../models/trips';
 
 let debugTripShape;
 const debugSegments = new Set();
-let map;
 
 export const debug = (map) => ({
     debugTrip: (tripId) => {

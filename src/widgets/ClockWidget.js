@@ -1,5 +1,5 @@
-import Playback from "./Playback";
-import { $, convert, isTouch, isClick, getStored, store, dispatch, when } from "./utilities.mjs";
+import Playback from "../Playback";
+import { $, convert, isTouch, isClick, getStored, store, dispatch, when } from "../misc/utilities.mjs";
 
 const defaultPosition = { left: '60px', top: '60px' };
 const defaultSize = '48px';

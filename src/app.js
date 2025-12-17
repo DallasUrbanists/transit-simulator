@@ -1,12 +1,12 @@
 import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
 import MapContext from "./MapContext";
-import { $, convert, DAY, minValMax, when} from './utilities.mjs';
+import { debug } from './misc/debug.js';
+import { $, closeFullscreen, convert, DAY, minValMax, openFullscreen, when } from './misc/utilities.mjs';
+import { loadAgencies } from './models/sources.js';
 import Playback from './Playback';
 import Simulation from './Simulation';
-import { loadAgencies } from './sources.js';
-import { debug } from './debug.js';
-import ClockWidget from "./ClockWidget.js";
+import ClockWidget from "./widgets/ClockWidget.js";
 
 const map = new MapContext('map');
 const simulation = new Simulation(map);
@@ -154,30 +154,5 @@ function updateControlBar() {
         document.body.classList.remove('playing');
         $('#progress-bar').classList.remove('pulsing-element');
         $('#play-button img').src = './icons/play.svg';
-    }
-}
-
-/* Open fullscreen */
-const elem = document.documentElement;
-function openFullscreen() {
-    document.body.classList.add('fullscreen-mode');
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    }
-}
-
-/* Close fullscreen */
-function closeFullscreen() {
-    document.body.classList.remove('fullscreen-mode');
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) { /* IE11 */
-        document.msExitFullscreen();
     }
 }

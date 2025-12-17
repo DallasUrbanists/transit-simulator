@@ -1,5 +1,5 @@
 import * as turf from '@turf/turf';
-import { convert, fetchText, saniKey, sanitize, absURL } from './utilities.mjs';
+import { convert, fetchText, saniKey, sanitize, absURL } from '../misc/utilities.mjs';
 
 const primaryKey = 'shape_id';
 export const shapes = new Map();

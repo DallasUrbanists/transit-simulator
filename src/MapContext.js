@@ -3,8 +3,8 @@ import * as maptilersdk from '@maptiler/sdk';
 import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L, { Map as LeafletMap } from 'leaflet';
-import { sectionIndex as fixtures, getSpecialShape as getFixtureShape } from './special';
-import { dispatch, getStored, store } from './utilities.mjs';
+import { fixtureIndex as fixtures, getFixtureShape as getFixtureShape } from './models/fixtures';
+import { dispatch, getStored, store } from './misc/utilities.mjs';
 
 const defaultCoords = [32.780694233921906, -96.79930204561467]; // Downtown Dallas
 const defaultZoomLevel = 13;
