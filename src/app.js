@@ -1,19 +1,21 @@
 import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
-import MapContext, { getStoredMapStyle } from "./MapContext";
-import { $, convert, DAY, minValMax } from './utilities.mjs';
+import MapContext from "./MapContext";
+import { $, convert, DAY, minValMax, when} from './utilities.mjs';
 import Playback from './Playback';
 import Simulation from './Simulation';
 import { loadAgencies } from './sources.js';
 import { debug } from './debug.js';
+import ClockWidget from "./ClockWidget.js";
 
 const map = new MapContext('map');
 const simulation = new Simulation(map);
 const playback = new Playback(simulation);
+const clock = new ClockWidget('clock', playback);
 
 window.debug = debug(map);
 
-loadAgencies(['DART', 'TrinityMetro', 'DCTA']).then(() => {
+loadAgencies([/*'DART', 'TrinityMetro',*/ 'DCTA']).then(() => {
     console.log('Finished loading agency sources.');
     map.redrawFixtures();
     window.dispatchEvent(new CustomEvent('loadFinished'));
@@ -73,37 +75,34 @@ simulation.setTripCriteria(trip => {
 });
 
 // Listen for non-UI events
-window.addEventListener('playheadChanged', updateControlBar);
-window.addEventListener('resize', updateControlBar);
-window.addEventListener('loadProgress', (event) => $('#loading-progress').innerText = event.detail + '%');
-window.addEventListener('loadFinished', () => {
+when('resize', updateControlBar);
+when('loadFinished', () => {
     playback.scrub(playback.playhead);
     $('#loading').style.display = 'none';
-    $('#speed-select').value = localStorage.getItem('playback_speed') ?? 32;
-    $('#style-select').value = localStorage.getItem('last_map_style') ?? 'STREETS.DARK';
-    // updateControlBar();
+    $('#speed-select').value = playback.speed;
+    $('#style-select').value = map.style;
+    $('#clock-size').value = clock.size;
+    $('#clock-color').value = clock.color;
 });
+when(Playback.PLAYHEAD_CHANGED, updateControlBar);
+when(Playback.SPEED_CHANGED, speed => $('#speed-select').value = speed);
+when(ClockWidget.COLOR_CHANGED, color => $('#clock-color').value = color);
+when(MapContext.STYLE_CHANGED, style => $('#style-select').value = style);
 
-// Handle user interaction with UI for playback control
-$('#speed-select').addEventListener('change', (e) => playback.setSpeed(e.target.value));
-$('#style-select').addEventListener('change', (e) => map.setStyle(e.target.value));
+// Handle user interaction with UI
+$('#speed-select').onchange = e => playback.setSpeed(e.target.value);
+$('#style-select').onchange = e => map.setStyle(e.target.value);
+$('#clock-size').onchange = e => clock.setSize(e.target.value);
+$('#clock-color').onchange = e => clock.setColor(e.target.value);
 $('#play-button').onclick = () => playback.toggle();
 $('#enter-fullscreen').onclick = openFullscreen;
 $('#leave-fullscreen').onclick = closeFullscreen;
+$('#reset-clock-pos').onclick = () => clock.resetPosition();
 $('#reset-time').onclick = () => {
-    if (playback.isPlaying) {
-        playback.pause();
-    }
+    if (playback.isPlaying) playback.pause();
     playback.setPlayhead(convert.nowInSeconds());
     playback.unpause();
 };
-$('#reset-clock-pos').onclick = () => {
-    $('#time-indicator').style.left = '60px';
-    $('#time-indicator').style.top = '60px';
-    localStorage.setItem('clock-left', 60);
-    localStorage.setItem('clock-top', 60);
-};
-
 
 // Handle when user clicks and drags on progress bar to "scrub" timeline.
 let scrubTimer;
@@ -146,7 +145,6 @@ window.addEventListener('keypress', e => e.key == " " || e.code == "Space" ? pla
 function updateControlBar() {
     const targetPlayhead = playback.playhead;
     const barWidth = progressTrack.offsetWidth * minValMax(0, targetPlayhead / DAY, 1);
-    $('#time-indicator').innerText = convert.secondsToTimeString(targetPlayhead);
     $('#progress-bar').style.width = barWidth + 'px';
     if (playback.isPlaying) {
         document.body.classList.add('playing');
@@ -158,93 +156,6 @@ function updateControlBar() {
         $('#play-button img').src = './icons/play.svg';
     }
 }
-
-// Make the time indicator repositionable by click-and-dragging
-const timer = $('#time-indicator');
-const isTouch = e => e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel';
-const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave';
-dragElement(timer);
-function dragElement(draggable) {
-    let ogTop, ogLeft, mouseX, mouseY;
-    draggable.onmousedown = dragMouseDown;
-    draggable.ontouchstart = dragMouseDown;    
-    function dragMouseDown(e) {
-        e.preventDefault();
-        ogLeft = draggable.offsetLeft;
-        ogTop = draggable.offsetTop;
-        if (isClick(e)) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        } else if (isTouch(e)) {
-            var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-            mouseX = touch.pageX;
-            mouseY = touch.pageY;
-        }
-        document.onmouseup = closeDragElement;
-        document.ontouchend = closeDragElement;
-        document.ontouchcancel = closeDragElement;
-        document.onmousemove = elementDrag;
-        document.ontouchmove = elementDrag;
-        console.log('touch start');
-    }
-    function elementDrag(e) {
-        e.preventDefault();
-        let deltaX, deltaY;
-        if (isClick(e)) {
-            deltaX = mouseX - e.clientX;
-            deltaY = mouseY - e.clientY;
-        } else if (isTouch(e)) {
-            var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-            deltaX = mouseX - touch.pageX;
-            deltaY = mouseY - touch.pageY;
-        }
-        // calculate new object position
-        const newLeft = ogLeft - deltaX;
-        const newTop = ogTop - deltaY;
-        draggable.style.left = newLeft + "px";
-        draggable.style.top = newTop + "px";
-        // store in memory
-        localStorage.setItem('clock-left', newLeft);
-        localStorage.setItem('clock-top', newTop);
-        console.log('touch move');
-    }
-    function closeDragElement() {
-        // stop moving when mouse button is released:
-        document.onmouseup = null;
-        document.ontouchend = null;
-        document.onmousemove = null;
-        document.ontouchmove = null;
-        console.log('touch end');
-    }
-}
-const clockLeft = localStorage.getItem('clock-left');
-if (clockLeft) timer.style.left = clockLeft + 'px';
-const clockTop = localStorage.getItem('clock-top');
-if (clockTop) timer.style.top = clockTop + 'px';
-
-// Change size of clock text based on selection
-const setClockSize = size => {
-    timer.style.fontSize = size + 'vw';
-    $('#clock-fontsize').value = size;
-    localStorage.setItem('clock-size', size);
-};
-$('#clock-fontsize').addEventListener('change', e => setClockSize(e.target.value));
-const storedClockSize = localStorage.getItem('clock-size');
-if (storedClockSize) setClockSize(storedClockSize);
-
-// Change color of clock based on selection
-const lightClock = { color: 'white', shadow: 'black' };
-const darkClock = { color: 'black', shadow: 'white' };
-const setClockColor = (choice) => {
-    const theme = choice === 'light' ? lightClock : darkClock;
-    timer.style.color = theme.color;
-    timer.style.textShadow = '0 0 4px ' + theme.shadow;
-    $('#clock-color').value = choice;
-    localStorage.setItem('clock-color', choice);
-};
-$('#clock-color').addEventListener('change', e => setClockColor(e.target.value));
-const storedClockColor = localStorage.getItem('clock-color');
-if (storedClockColor) setClockColor(storedClockColor);
 
 /* Open fullscreen */
 const elem = document.documentElement;

@@ -1,14 +1,16 @@
-import { trips } from "./trips";
-import { convert, DAY } from "./utilities.mjs";
+import { convert, DAY, dispatch, store } from "./utilities.mjs";
 
 const playheadChanged = new CustomEvent('playheadChanged');
 
 export default class Playback {
     isPlaying = false;
     isPaused = false;
-    speed = localStorage.getItem('playback_speed') ?? 32;
+    speed = localStorage.getItem('playback-speed') ?? 32;
     playhead = convert.nowInSeconds();
     #animationFrame;
+
+    static SPEED_CHANGED = 'playback-speed-changed';
+    static PLAYHEAD_CHANGED = 'playback-playhead-changed';
 
     constructor(simulation) {
         this.render = seconds => simulation.render(seconds);
@@ -16,7 +18,6 @@ export default class Playback {
 
     setSpeed(speed) {
         this.speed = speed;
-        localStorage.setItem('playback_speed', speed);
         if (this.isPlaying) {
             window.cancelAnimationFrame(this.animationFrame);
             this.startTimestamp = performance.now();
@@ -25,6 +26,8 @@ export default class Playback {
         } else {
             this.dispatchUpdate();
         }
+        store('playback-speed', speed);
+        dispatch(Playback.SPEED_CHANGED, speed);
     }
 
     setPlayhead = (seconds) => {
@@ -33,7 +36,7 @@ export default class Playback {
     };
 
     dispatchUpdate() {
-        window.dispatchEvent(playheadChanged);
+        dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
     }
 
     pulse(timestamp) {

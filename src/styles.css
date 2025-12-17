@@ -151,7 +151,7 @@ body {
     z-index: 2;
 }
 
-#time-indicator {
+#clock {
     white-space: nowrap;
     font-size: 48px;
     opacity: 1;
@@ -167,7 +167,7 @@ body {
     cursor: move;
     margin: 0;
     padding: 0;
-    text-shadow: 0 0 4px #000;
+    /* text-shadow: 0 0 4px #000; */
     top: 0;
     left: 60px;
 }

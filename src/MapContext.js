@@ -4,33 +4,40 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import * as turf from '@turf/turf';
 import L, { Map as LeafletMap } from 'leaflet';
 import { sectionIndex as fixtures, getSpecialShape as getFixtureShape } from './special';
+import { dispatch, getStored, store } from './utilities.mjs';
 
 const defaultCoords = [32.780694233921906, -96.79930204561467]; // Downtown Dallas
 const defaultZoomLevel = 13;
-const defaultMapStyle = maptilersdk.MapStyle['STREETS']['DARK'];
+const defaultMapStyleCode = 'STREETS.DARK';
 
 export default class MapContext extends LeafletMap {
     activeTrips = new Set();
     drawnFixtures = new Map();
+
+    static STYLE_CHANGED = 'map-style-changed';
+
     constructor(containerId) {
         super(containerId);
         this.setView(
             getStoredCoords() ?? defaultCoords,
-            localStorage.getItem('last_map_zoom') ?? defaultZoomLevel,
+            getStored('map-zoom') ?? defaultZoomLevel,
         );
         this.tileLayer = new MaptilerLayer({
             apiKey: import.meta.env.VITE_MAPTILER_API_KEY,
-            style: getStoredMapStyle() ?? defaultMapStyle,
-            opacity: localStorage.getItem('last_map_opacity') ?? defaultMapStyle,
+            opacity: getStored('map-opacity') ?? 1,
         }).addTo(this);
+        this.setStyle(getStored('map-style') ?? defaultMapStyleCode);
         this.on('zoomend', this.handleZoom);
         this.on('moveend', this.handleMove);
     }
-    setStyle(styleString) {
-        const code = styleString.split(".");
+    setStyle(styleCode) {
+        this.style = styleCode;
+        const code = styleCode.split(".");
         const styles = maptilersdk.MapStyle;
         this.tileLayer.setStyle(code.length === 2 ? styles[code[0]][code[1]] : styles[code[0]]);
-        localStorage.setItem('last_map_style', styleString);
+        store('map-style', styleCode);
+        console.log('style changed here!');
+        dispatch(MapContext.STYLE_CHANGED, styleCode);
     }
     activate(trip) {
         this.activeTrips.add(trip);
@@ -64,11 +71,11 @@ export default class MapContext extends LeafletMap {
         }
     }
     handleZoom(e) {
-        localStorage.setItem('last_map_zoom', this.getZoom());
+        store('map-zoom', this.getZoom());
         this.redrawFixtures();
     }
     handleMove(e) {
-        localStorage.setItem('last_map_coords', JSON.stringify(this.getCenter()));
+        store('map-coords', JSON.stringify(this.getCenter()));
     }
     redrawFixtures = () => {
         Object.keys(fixtures).forEach(fixtureIndex => {
@@ -125,16 +132,6 @@ export default class MapContext extends LeafletMap {
 }
 
 function getStoredCoords() {
-    const stored = localStorage.getItem('last_map_coords');
+    const stored = getStored('map-coords');
     return stored ? JSON.parse(stored) : undefined;
-}
-
-export function getStoredMapStyle() {
-    const stored = localStorage.getItem('last_map_style');
-    if (stored) {
-        const code = stored.split(".");
-        const styles = maptilersdk.MapStyle;
-        return code.length === 2 ? styles[code[0]][code[1]] : styles[code[0]];
-    }
-    return undefined;
 }

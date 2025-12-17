@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div id="time-indicator"></div>
+  <div id="clock"></div>
   <div id="loading">
     <span class="loader"></span>
     <h1>Loading...</h1>
@@ -43,7 +43,7 @@
   </div>
   <button id="leave-fullscreen">Exit Full screen</button>
   <div id="floating-options">
-    <label for="clock-fontsize">Map Style</label>
+    <label for="style-select">Map Style</label>
     <select id="style-select">
       <optgroup label="Navigation and city exploration">
         <option value="STREETS">STREETS</option>
@@ -61,24 +61,18 @@
         <option value="DATAVIZ.LIGHT">DATAVIZ.LIGHT</option>
       </optgroup>
     </select><br />
-    <label for="clock-fontsize">Clock Size</label>
-    <select id="clock-fontsize">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3" selected>3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
+    <label for="clock-size">Clock Size</label>
+    <select id="clock-size">
+      <option value="12px">12</option>
+      <option value="24px">24</option>
+      <option value="48px">48</option>
+      <option value="96px">96</option>
+      <option value="192px">192</option>
     </select>
     <label for="clock-color">Color</label>
     <select id="clock-color">
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
+      <option value="white">White</option>
+      <option value="black">Black</option>
     </select>
   </div>
 

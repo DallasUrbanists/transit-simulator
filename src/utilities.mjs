@@ -12,6 +12,25 @@ export async function fetchText(sourceFile) {
     return file.text();
 }
 
+export function getStored(localStorageKey, defaultValue = undefined) {
+    return localStorage.getItem(localStorageKey) ?? defaultValue;
+}
+
+export function store(localStorageKey, value) {
+    localStorage.setItem(localStorageKey, value);
+    return value;
+}
+
+export function dispatch(eventKey, detail) {
+    window.dispatchEvent(new CustomEvent(eventKey, { detail }));
+}
+
+export function when(eventHappened, doThis) {
+    window.addEventListener(eventHappened, ({ detail }) => {
+        doThis(detail)
+    });
+}
+
 export function sanitize(string) {
     if (string === null || string === undefined) return '';
     return string.toString().trim();
@@ -112,3 +131,6 @@ export function setIfNotHas(property, value, map) {
 }
 
 export const DAY = convert.daysToSeconds(1);
+
+export const isTouch = e => e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel';
+export const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave';
