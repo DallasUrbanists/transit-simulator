@@ -4,7 +4,7 @@ import { processShapesFromSource } from "./shapes";
 import { processStopsFromSource } from "./stops";
 import { processTripsFromSource } from "./trips";
 
-export const agencies = ['DART', 'TrinityMetro', 'DCTA', 'Amtrak', 'AmtrakTexas'];
+export const agencies = ['DART', 'TrinityMetro', 'DCTA', 'Amtrak', 'AmtrakTexas', 'FlixbusGreyhoundDallas'];
 export const sources = new Map(agencies.map(agency => [agency, {
     processedRoutes: false,
     processedStops: false,

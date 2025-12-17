@@ -1,22 +1,22 @@
 import fs from 'fs';
 import { convert } from './utilities.mjs';
 
-const inputDirectory = '../public/GTFS/Amtrak/';
-const outputDirectory = '../public/GTFS/AmtrakTexas/';
+const inputDirectory = '../public/GTFS/FlixbusGreyhound/';
+const outputDirectory = '../public/GTFS/FlixbusGreyhoundDallas/';
 const read = filename => fs.readFileSync(inputDirectory+filename, { encoding: 'utf8', flag: 'r' });
 const write = (filename, txt) => fs.writeFile(outputDirectory+filename, txt, () => { console.log('Wrote output to ' + filename) });
 
 async function getRoutesIds() {
     const inputTxt = fs.readFileSync(outputDirectory+'routes.txt', { encoding: 'utf8', flag: 'r' });
-    return convert.csvToArray(inputTxt).slice(1).map(row => row[0]);
+    return convert.csvToArray(inputTxt).slice(1).map(row => row[1]);
 } 
 
 async function getTripsForRoutes(routes) {
     const trips = [];
     const shapes = [];
     const routeIdColumn = 0;
-    const tripIdColumn = 2;
-    const shapeIdColumn = 5;
+    const tripIdColumn = 1;
+    const shapeIdColumn = 7;
     write('trips.txt', read('trips.txt').split('\n').filter((rowTxt, index) => {
         if (index === 0) return true;
         const rowArray = rowTxt.split(',');
@@ -46,7 +46,7 @@ async function getShapes(shapeIds) {
 async function getStopTimes(tripIds) {
     const stops = [];
     const tripIdColumn = 0;
-    const stopIdColumn = 3;
+    const stopIdColumn = 1;
     write('stop_times.txt', read('stop_times.txt').split('\n').filter((rowTxt, index) => {
         if (index === 0) return true;
         const rowArray = rowTxt.split(',');

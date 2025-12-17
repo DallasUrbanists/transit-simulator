@@ -1,0 +1,24 @@
+﻿agency_id,route_id,route_short_name,route_long_name,route_type,route_desc,route_url,route_color,route_text_color,bikes_allowed,route_sort_order
+FLIXBUS-us,2240,FlixBus 2240,Dallas - Houston,3,,,73D700,FFFFFF
+FLIXBUS-us,US1166,FlixBus US1166,Dallas - McAllen - Brownsville,3,,,73D700,FFFFFF
+GREYHOUND-us,2221,Greyhound 2221,Dallas - New Orleans,3,,,004963,FFFFFF
+GREYHOUND-us,US1160,Greyhound US1160,Dallas - San Antonio - Monterrey,3,,,004963,FFFFFF
+GREYHOUND-us,US1100s,Greyhound US1100s,Dallas - Houston,3,,,004963,FFFFFF
+FLIXBUS-us,2230,FlixBus 2230,San Antonio - Austin - Dallas,3,,,73D700,FFFFFF
+GREYHOUND-us,US0135,Greyhound US0135,Dallas - Nashville - Detroit,3,,,004963,FFFFFF
+GREYHOUND-us,US1100,Greyhound US1100,Dallas - Ft Worth - Houston,3,,,004963,FFFFFF
+FLIXBUS-us,US1161,FlixBus US1161,Dallas - San Antonio - Laredo,3,,,73D700,FFFFFF
+GREYHOUND-us,US1146,Greyhound US1146,Dallas - Tulsa,3,,,004963,FFFFFF
+GREYHOUND-us,US1142,Greyhound US1142,Dallas - Oklahoma City - Kansas City,3,,,004963,FFFFFF
+GREYHOUND-us,US0604,Greyhound US0604,Atlanta - Birmingham - Dallas,3,,,004963,FFFFFF
+GREYHOUND-us,US1142s,Greyhound US1142s,Dallas - Oklahoma City,3,,,004963,FFFFFF
+FLIXBUS-us,2242,FlixBus 2242,Houston - Dallas - Oklahoma City,3,,,73D700,FFFFFF
+GREYHOUND-us,US0601,Greyhound US0601,Dallas - Nashville,3,,,004963,FFFFFF
+GREYHOUND-us,US0136,Greyhound US0136,Dallas - St Louis,3,,,004963,FFFFFF
+GREYHOUND-us,US1170s,Greyhound US1170s,New Orleans - Shreveport - Dallas,3,,,004963,FFFFFF
+GREYHOUND-us,US1159,Greyhound US1159,Dallas - San Antonio,3,,,004963,FFFFFF
+FLIXBUS-us,US1164,FlixBus US1164,Dallas - San Antonio - Corpus Christi - Brownsville,3,,,73D700,FFFFFF
+GREYHOUND-us,US1000,Greyhound US1000,Los Angeles - Phoenix - Dallas,3,,,004963,FFFFFF
+GREYHOUND-us,US1159S,Greyhound US1159S,Dallas - San Antonio,3,,,004963,FFFFFF
+GREYHOUND-us,US0600,Greyhound US0600,Dallas - Nashville - Washington,3,,,004963,FFFFFF
+GREYHOUND-us,US1144,Greyhound US1144,Dallas - Lubbock - Amarillo - Denver,3,,,004963,FFFFFF

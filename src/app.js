@@ -13,7 +13,7 @@ const playback = new Playback(simulation);
 
 window.debug = debug(map);
 
-loadAgencies(['DART', 'TrinityMetro', 'DCTA']).then(() => {
+loadAgencies(['DART', 'DCTA', 'TrinityMetro']).then(() => {
     console.log('Finished loading agency sources.');
     map.redrawFixtures();
     window.dispatchEvent(new CustomEvent('loadFinished'));
@@ -61,14 +61,11 @@ simulation.setTripCriteria(trip => {
         '112760676348',
         '112760676348',
     ];
-    const enableRoutesByAgencyAndRouteId = [
-        ['51', '86'],
-        ['51', '87'],
-    ];
 
     if (enableTripsByServiceId.includes(trip.get('service_id'))) {
         return true;
     }
+
     return false;
 });
 

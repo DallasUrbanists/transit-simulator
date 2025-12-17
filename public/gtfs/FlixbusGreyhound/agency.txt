@@ -1,0 +1,3 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url
+FLIXBUS-us,FlixBus-us,https://www.flixbus.com,UTC,en,,https://shop.flixbus.com
+GREYHOUND-us,Greyhound-us,https://www.greyhound.com,UTC,en,,https://shop.greyhound.com
