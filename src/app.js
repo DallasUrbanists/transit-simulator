@@ -1,6 +1,6 @@
 import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
-import MapContext from "./MapContext";
+import MapContext, { getStoredMapStyle } from "./MapContext";
 import { $, convert, DAY, minValMax } from './utilities.mjs';
 import Playback from './Playback';
 import Simulation from './Simulation';
@@ -79,7 +79,9 @@ window.addEventListener('loadProgress', (event) => $('#loading-progress').innerT
 window.addEventListener('loadFinished', () => {
     playback.scrub(playback.playhead);
     $('#loading').style.display = 'none';
-    updateControlBar();
+    $('#speed-select').value = localStorage.getItem('playback_speed') ?? 32;
+    $('#style-select').value = localStorage.getItem('last_map_style') ?? 'STREETS.DARK';
+    // updateControlBar();
 });
 
 // Handle user interaction with UI for playback control
@@ -88,6 +90,20 @@ $('#style-select').addEventListener('change', (e) => map.setStyle(e.target.value
 $('#play-button').onclick = () => playback.toggle();
 $('#enter-fullscreen').onclick = openFullscreen;
 $('#leave-fullscreen').onclick = closeFullscreen;
+$('#reset-time').onclick = () => {
+    if (playback.isPlaying) {
+        playback.pause();
+    }
+    playback.setPlayhead(convert.nowInSeconds());
+    playback.unpause();
+};
+$('#reset-clock-pos').onclick = () => {
+    $('#time-indicator').style.left = '60px';
+    $('#time-indicator').style.top = '60px';
+    localStorage.setItem('clock-left', 60);
+    localStorage.setItem('clock-top', 60);
+};
+
 
 // Handle when user clicks and drags on progress bar to "scrub" timeline.
 let scrubTimer;

@@ -129,7 +129,7 @@ function getStoredCoords() {
     return stored ? JSON.parse(stored) : undefined;
 }
 
-function getStoredMapStyle() {
+export function getStoredMapStyle() {
     const stored = localStorage.getItem('last_map_style');
     if (stored) {
         const code = stored.split(".");

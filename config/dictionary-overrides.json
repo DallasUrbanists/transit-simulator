@@ -3,7 +3,7 @@
         "3": {
             "tail": {
                 "visible": true,
-                "length": 2640
+                "length": 5280
             }
         },
         "5": {
@@ -31,7 +31,19 @@
             "marker": {
                 "label": "A"
             }
-        }
+        },
+        "26745": { "tail": { "visible": true, "length": 26400 } },
+        "26746": { "tail": { "visible": true, "length": 26400 } },
+        "26747": { "tail": { "visible": true, "length": 26400 } },
+        "26748": { "tail": { "visible": true, "length": 26400 } },
+        "26749": { "tail": { "visible": true, "length": 26400 } },
+        "7674": { "tail": { "visible": true, "length": 26400 } },
+        "7675": { "tail": { "visible": true, "length": 26400 } },
+        "7676": { "tail": { "visible": true, "length": 26400 } },
+        "7677": { "tail": { "visible": true, "length": 26400 } },
+        "19568": { "tail": {"visible": true, "length": 26400 }},
+        "19659-1": { "tail": {"visible": true, "length": 26400 }},
+        "19659": { "tail": { "visible": true, "length": 26400 }}
     },
     "tripsById": {
     }
