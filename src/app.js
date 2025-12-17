@@ -15,7 +15,7 @@ const clock = new ClockWidget('clock', playback);
 
 window.debug = debug(map);
 
-loadAgencies([/*'DART', 'TrinityMetro',*/ 'DCTA']).then(() => {
+loadAgencies(['DART', 'TrinityMetro', 'DCTA']).then(() => {
     console.log('Finished loading agency sources.');
     map.redrawFixtures();
     window.dispatchEvent(new CustomEvent('loadFinished'));
