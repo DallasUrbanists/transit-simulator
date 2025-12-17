@@ -2,16 +2,18 @@ import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
 import MapContext from "./MapContext";
 import { debug } from './misc/debug.js';
-import { $, closeFullscreen, convert, doThisNowThatLater, openFullscreen, when, show, hide } from './misc/utilities.mjs';
+import { $, closeFullscreen, convert, doThisNowThatLater, hide, openFullscreen, show, when } from './misc/utilities.mjs';
 import { loadAgencies } from './models/sources.js';
 import Playback from './Playback';
 import Simulation from './Simulation';
 import ClockWidget from "./widgets/ClockWidget.js";
 import PlayPauseButton from "./widgets/PlayPauseButton.js";
 import ProgressBarWidget from "./widgets/ProgressBarWidget.js";
+import UserPreferences from "./UserPreferences.js";
 
+const preferences = new UserPreferences();
 const map = new MapContext('map');
-const simulation = new Simulation(map);
+const simulation = new Simulation(map, preferences);
 const playback = new Playback(simulation);
 const clock = new ClockWidget('clock', playback);
 new ProgressBarWidget('progress-track', playback);
@@ -19,63 +21,10 @@ new PlayPauseButton('play-button', playback);
 
 window.debug = debug(map);
 
-loadAgencies([/*'DART', 'TrinityMetro',*/ 'DCTA']).then(() => {
+loadAgencies(preferences.enableAgencies).then(() => {
     console.log('Finished loading agency sources.');
     map.redrawFixtures();
     window.dispatchEvent(new CustomEvent('loadFinished'));
-});
-
-// TO-DO:
-// - Verify what all the various Service IDs mean
-// - Attach each service code to UI checkboxes
-simulation.setTripCriteria(trip => {
-    // DART SERVICE CODES
-    const BUS_WEEKDAY_SERVICE = '2';
-    const BUS_SATURDAY_SERVICE = '3';
-    const BUS_SUNDAY_SERVICE = '4';
-    const RAIL_WEEKDAY_SERVICE = '14';
-    const RAIL_IDK1_SERVICE = '19'; // Probably Rail Saturday service?
-    const RAIL_IDK2_SERVICE = '20'; // Probably Rail Sunday service?
-    const RAIL_IDK3_SERVICE = '21'; // Probably Rail Special service?
-    const MATA_IDK1_SERVICE = '402'; // M Line Trolley is covered by RAIL_WEEKDAY_SERVICE
-    const MATA_IDK2_SERVICE = '502'; // M Line Trolley is covered by RAIL_WEEKDAY_SERVICE
-    const UTD_IDK1_SERVICE = '902'; // UTD 883 Routes are covered by BUS_WEEKDAY_SERVICE
-    const UTD_IDK2_SERVICE = '1002'; // UTD 883 Routes are covered by BUS_WEEKDAY_SERVICE
-    const TRE_IDK1_SERVICE = '1621'; // Trinity Railray Express is covered by RAIL_WEEKDAY_SERVICE
-    const TRE_IDK2_SERVICE = '1521'; // Trinity Railray Express is covered by RAIL_WEEKDAY_SERVICE
-
-    // DENTON COUNTY TRANSITY AUTHORITY SERVICE CODES
-    const DCTA_BUS_WEEKDAY = '2026_Spring_-Weekday';
-    const DCTA_RAIL_WEEKDAY = 'A-Train-Mo-Th';
-
-    // TRINITY METRO SERVICE CODES
-    const TRINITY_MON_FRI = '140.0.1';
-    const TRINITY_XMAS_CAPITAL_EXPRESS = '140.CCEX.1';
-    const TRINITY_XMAS_PALACE_THEATRE = '140.CCPT.1';
-
-    // Choose specific routes/trips to enable
-    const enableTripsByServiceId = [
-        BUS_WEEKDAY_SERVICE,
-        RAIL_WEEKDAY_SERVICE,
-        DCTA_BUS_WEEKDAY,
-        DCTA_RAIL_WEEKDAY,
-        TRINITY_MON_FRI,
-        TRINITY_XMAS_CAPITAL_EXPRESS,
-        TRINITY_XMAS_PALACE_THEATRE,
-        '312753486348',
-        '312753486348',
-        '112760676348',
-        '112760676348',
-    ];
-    const enableRoutesByAgencyAndRouteId = [
-        ['51', '86'],
-        ['51', '87'],
-    ];
-
-    if (enableTripsByServiceId.includes(trip.get('service_id'))) {
-        return true;
-    }
-    return false;
 });
 
 // Listen for non-UI events

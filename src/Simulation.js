@@ -6,18 +6,13 @@ import { findActiveTrips } from './models/trips';
 import { $, DAY, ease, isLight, minValMax } from './misc/utilities.mjs';
 
 export default class Simulation {
-    tripCriteria = (trip) => true;
-
-    constructor(map) {
+    constructor(map, preferences) {
         this.map = map;
-    }
-
-    setTripCriteria(callableCriteria) {
-        this.tripCriteria = callableCriteria;
+        this.preferences = preferences;
     }
 
     render(playhead) {
-        const newActiveTrips = findActiveTrips(playhead, this.tripCriteria);
+        const newActiveTrips = findActiveTrips(playhead, (trip) => this.preferences.tripCriteria(trip));
         newActiveTrips.forEach(trip => {
             this.map.activate(trip);
             const t = key => trip.get(key);
