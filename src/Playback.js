@@ -11,6 +11,7 @@ export default class Playback {
 
     static SPEED_CHANGED = 'playback-speed-changed';
     static PLAYHEAD_CHANGED = 'playback-playhead-changed';
+    static TOGGLED = 'playback-toggled';
 
     constructor(simulation) {
         this.render = seconds => simulation.render(seconds);
@@ -23,8 +24,7 @@ export default class Playback {
             this.startTimestamp = performance.now();
             this.startPlayhead = this.playhead;
             this.animationFrame = requestAnimationFrame(t => this.pulse(t));
-        } else {
-            this.dispatchUpdate();
+            dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
         }
         store('playback-speed', speed);
         dispatch(Playback.SPEED_CHANGED, speed);
@@ -32,12 +32,8 @@ export default class Playback {
 
     setPlayhead = (seconds) => {
         this.playhead = seconds;
-        this.dispatchUpdate();
-    };
-
-    dispatchUpdate() {
         dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
-    }
+    };
 
     pulse(timestamp) {
         const deltaMilliseconds = Math.max(0, timestamp - this.startTimestamp);
@@ -61,7 +57,8 @@ export default class Playback {
         this.startTimestamp = performance.now();
         this.startPlayhead = this.playhead;
         this.animationFrame = requestAnimationFrame(t => this.pulse(t));
-        this.dispatchUpdate();
+        dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
+        dispatch(Playback.TOGGLED);
     }
 
     pause() {
@@ -79,7 +76,8 @@ export default class Playback {
     stop() {
         this.isPlaying = false;
         window.cancelAnimationFrame(this.animationFrame);
-        this.dispatchUpdate();
+        dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
+        dispatch(Playback.TOGGLED);
     }
 
     toggle() {

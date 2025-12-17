@@ -19,8 +19,8 @@
     <div id="map"></div>
     <div id="playback-controls">
       <button id="play-button"><img src="./icons/play.svg" alt="PLAY" /></button>
-      <div id="progress-track">
-        <div id="progress-bar"></div>
+      <div id="progress-track" class="progress-track">
+        <div id="progress-bar" class="progress-bar"></div>
       </div>
       <button id="enter-fullscreen">Full screen</button>
       <button id="reset-time">Set time to now</button>
@@ -61,16 +61,16 @@
         <option value="DATAVIZ.LIGHT">DATAVIZ.LIGHT</option>
       </optgroup>
     </select><br />
-    <label for="clock-size">Clock Size</label>
-    <select id="clock-size">
+    <label for="clock-size-select">Clock Size</label>
+    <select id="clock-size-select">
       <option value="12px">12</option>
       <option value="24px">24</option>
       <option value="48px">48</option>
       <option value="96px">96</option>
       <option value="192px">192</option>
     </select>
-    <label for="clock-color">Color</label>
-    <select id="clock-color">
+    <label for="clock-color-select">Color</label>
+    <select id="clock-color-select">
       <option value="white">White</option>
       <option value="black">Black</option>
     </select>

@@ -136,7 +136,7 @@ export const isTouch = e => e.type == 'touchstart' || e.type == 'touchmove' || e
 export const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave';
 
 /* Open fullscreen */
-export function openFullscreen() {
+export function openFullscreen(elem) {
     document.body.classList.add('fullscreen-mode');
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
@@ -157,4 +157,20 @@ export function closeFullscreen() {
     } else if (document.msExitFullscreen) { /* IE11 */
         document.msExitFullscreen();
     }
+}
+
+export function show(element, opacity = 1) {
+    element.style.opacity = opacity;
+}
+
+export function hide(element) {
+    element.style.opacity = 0;
+}
+
+const timerMap = new Map();
+export function doThisNowThatLater(doNow, doLater, secondsLater) {
+    clearTimeout(timerMap.get(doNow.toString()));
+    doNow();
+    const newTimer = setTimeout(doLater, secondsLater * 1000);
+    timerMap.set(doNow.toString(), newTimer);
 }

@@ -2,20 +2,24 @@ import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
 import MapContext from "./MapContext";
 import { debug } from './misc/debug.js';
-import { $, closeFullscreen, convert, DAY, minValMax, openFullscreen, when } from './misc/utilities.mjs';
+import { $, closeFullscreen, convert, doThisNowThatLater, openFullscreen, when, show, hide } from './misc/utilities.mjs';
 import { loadAgencies } from './models/sources.js';
 import Playback from './Playback';
 import Simulation from './Simulation';
 import ClockWidget from "./widgets/ClockWidget.js";
+import PlayPauseButton from "./widgets/PlayPauseButton.js";
+import ProgressBarWidget from "./widgets/ProgressBarWidget.js";
 
 const map = new MapContext('map');
 const simulation = new Simulation(map);
 const playback = new Playback(simulation);
 const clock = new ClockWidget('clock', playback);
+new ProgressBarWidget('progress-track', playback);
+new PlayPauseButton('play-button', playback);
 
 window.debug = debug(map);
 
-loadAgencies(['DART', 'TrinityMetro', 'DCTA']).then(() => {
+loadAgencies([/*'DART', 'TrinityMetro',*/ 'DCTA']).then(() => {
     console.log('Finished loading agency sources.');
     map.redrawFixtures();
     window.dispatchEvent(new CustomEvent('loadFinished'));
@@ -75,27 +79,25 @@ simulation.setTripCriteria(trip => {
 });
 
 // Listen for non-UI events
-when('resize', updateControlBar);
 when('loadFinished', () => {
-    playback.scrub(playback.playhead);
     $('#loading').style.display = 'none';
     $('#speed-select').value = playback.speed;
     $('#style-select').value = map.style;
-    $('#clock-size').value = clock.size;
-    $('#clock-color').value = clock.color;
+    $('#clock-size-select').value = clock.size;
+    $('#clock-color-select').value = clock.color;
+    playback.scrub(playback.playhead); // This is just to trigger update in progress bar and any other elements listening for playhead changes
 });
-when(Playback.PLAYHEAD_CHANGED, updateControlBar);
 when(Playback.SPEED_CHANGED, speed => $('#speed-select').value = speed);
-when(ClockWidget.COLOR_CHANGED, color => $('#clock-color').value = color);
+when(ClockWidget.COLOR_CHANGED, color => $('#clock-color-select').value = color);
+when(ClockWidget.SIZE_CHANGED, color => $('#clock-size-select').value = color);
 when(MapContext.STYLE_CHANGED, style => $('#style-select').value = style);
 
 // Handle user interaction with UI
 $('#speed-select').onchange = e => playback.setSpeed(e.target.value);
 $('#style-select').onchange = e => map.setStyle(e.target.value);
-$('#clock-size').onchange = e => clock.setSize(e.target.value);
-$('#clock-color').onchange = e => clock.setColor(e.target.value);
-$('#play-button').onclick = () => playback.toggle();
-$('#enter-fullscreen').onclick = openFullscreen;
+$('#clock-size-select').onchange = e => clock.setSize(e.target.value);
+$('#clock-color-select').onchange = e => clock.setColor(e.target.value);
+$('#enter-fullscreen').onclick = () => openFullscreen($('body'));
 $('#leave-fullscreen').onclick = closeFullscreen;
 $('#reset-clock-pos').onclick = () => clock.resetPosition();
 $('#reset-time').onclick = () => {
@@ -104,55 +106,12 @@ $('#reset-time').onclick = () => {
     playback.unpause();
 };
 
-// Handle when user clicks and drags on progress bar to "scrub" timeline.
-let scrubTimer;
-const progressTrack = $('#progress-track');
-const getClickRatio = click => Math.max(0, (click.clientX - progressTrack.getBoundingClientRect().left)) / progressTrack.offsetWidth;
-const scrubOnce = event => {
-    const playhead = DAY * getClickRatio(event);
-    playback.scrub(playhead);
-    updateControlBar(playhead);
-};
-const keepScrubbing = event => {
-    updateControlBar(DAY * getClickRatio(event));
-    clearTimeout(scrubTimer);
-    scrubTimer = setTimeout(() => scrubOnce(event), 10);
-};
-const startScrubbing = event => {
-    if (playback.isPlaying) playback.pause();
-    progressTrack.addEventListener('mousemove', keepScrubbing, true);
-    scrubOnce(event);
-};
-const stopScrubbing = () => {
-    playback.unpause();
-    progressTrack.removeEventListener('mousemove', keepScrubbing, true);
-};
-progressTrack.addEventListener('mousedown', startScrubbing);
-window.addEventListener('mouseup', stopScrubbing);
-
-// Briefly show the "Exit Fullscreen" button when user moves mouse
-let showTimeout;
-window.addEventListener('mousemove', () => {
-    $('#leave-fullscreen').classList.add('show');
-    clearTimeout(showTimeout);
-    showTimeout = setTimeout(() => $('#leave-fullscreen').classList.remove('show'), 1000);
-});
-
 // Press spacebar to toggle playback
-window.addEventListener('keypress', e => e.key == " " || e.code == "Space" ? playback.toggle() : null);
+when('keypress', e => e.key == " " || e.code == "Space" ? playback.toggle() : null);
 
-// Update the control bar UI to show the current playhead time, adjust progress bar width, and toggle play button
-function updateControlBar() {
-    const targetPlayhead = playback.playhead;
-    const barWidth = progressTrack.offsetWidth * minValMax(0, targetPlayhead / DAY, 1);
-    $('#progress-bar').style.width = barWidth + 'px';
-    if (playback.isPlaying) {
-        document.body.classList.add('playing');
-        $('#progress-bar').classList.add('pulsing-element');
-        $('#play-button img').src = './icons/pause.svg';
-    } else {
-        document.body.classList.remove('playing');
-        $('#progress-bar').classList.remove('pulsing-element');
-        $('#play-button img').src = './icons/play.svg';
-    }
-}
+// When mouse moves, briefly show the leave fullscreen button
+when('mousemove', () => doThisNowThatLater(
+    () => show($('#leave-fullscreen'), 0.5),
+    () => hide($('#leave-fullscreen')),
+    1 // seconds
+));
