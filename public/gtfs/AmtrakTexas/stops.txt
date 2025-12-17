@@ -1,0 +1,50 @@
+stop_id,stop_name,stop_url,stop_timezone,stop_lat,stop_lon
+ACD,Arcadia Valley Station,https://www.amtrak.com/stations/acd,America/Chicago,37.592161,-90.624403
+ADM,Ardmore Amtrak Station,https://www.amtrak.com/stations/adm,America/Chicago,34.172465,-97.12551
+ALN,Alton Amtrak Station,https://www.amtrak.com/stations/aln,America/Chicago,38.921007,-90.157298
+ALP,Alpine Amtrak Station,https://www.amtrak.com/stations/alp,America/Chicago,30.357302,-103.661513
+ARK,Arkadelphia Amtrak Station,https://www.amtrak.com/stations/ark,America/Chicago,34.113919,-93.053284
+AUS,Austin,https://www.amtrak.com/stations/aus,America/Chicago,30.269449,-97.75694
+BEN,Benson Amtrak,https://www.amtrak.com/stations/ben,America/Denver,31.968758,-110.296904
+BNL,Bloomington-Normal,https://www.amtrak.com/stations/bnl,America/Chicago,40.50901,-88.984306
+CBR,Cleburne Amtrak Station,https://www.amtrak.com/stations/cbr,America/Chicago,32.349743,-97.382333
+CHI,Chicago Union Station,https://www.amtrak.com/stations/chi,America/Chicago,41.878684,-87.639443
+CRV,Carlinville Amtrak Station,https://www.amtrak.com/stations/crv,America/Chicago,39.279295,-89.889276
+DAL,Dallas,https://www.amtrak.com/stations/dal,America/Chicago,32.776094,-96.807235
+DEM,Deming Amtrak,https://www.amtrak.com/stations/dem,America/Denver,32.27177,-107.754346
+ELP,El Paso,https://www.amtrak.com/stations/elp,America/Denver,31.757346,-106.495644
+DRT,Del Rio Amtrak Station,https://www.amtrak.com/stations/drt,America/Chicago,29.362202,-100.902662
+JOL,Joliet Gateway Center,https://www.amtrak.com/stations/jol,America/Chicago,41.524647,-88.078731
+FTW,Fort Worth,https://www.amtrak.com/stations/ftw,America/Chicago,32.7515305,-97.3257888
+GLE,Gainesville Amtrak Station,https://www.amtrak.com/stations/gle,America/Chicago,33.625159,-97.140896
+HOP,Hope Amtrak Station,https://www.amtrak.com/stations/hop,America/Chicago,33.668913,-93.592247
+LVW,Longview,https://www.amtrak.com/stations/lvw,America/Chicago,32.494032,-94.728322
+LAX,Los Angeles,https://www.amtrak.com/stations/lax,America/Los_Angeles,34.056177,-118.236778
+LCN,Lincoln Amtrak Station,https://www.amtrak.com/stations/lcn,America/Chicago,40.148199,-89.363051
+LDB,Lordsburg Amtrak,https://www.amtrak.com/stations/ldb,America/Denver,32.35007,-108.707025
+LRK,Little Rock Union Station,https://www.amtrak.com/stations/lrk,America/Chicago,34.750298,-92.286785
+MCG,Mcgregor Amtrak,https://www.amtrak.com/stations/mcg,America/Chicago,31.443352,-97.404756
+MHL,Marshall Amtrak Station,https://www.amtrak.com/stations/mhl,America/Chicago,32.551549,-94.366995
+MIN,Mineola,https://www.amtrak.com/stations/min,America/Chicago,32.662049,-95.4891
+MRC,Maricopa,https://www.amtrak.com/stations/mrc,America/Denver,33.056284,-112.047137
+MVN,Malvern Amtrak,https://www.amtrak.com/stations/mvn,America/Chicago,34.365484,-92.814018
+NOR,Norman Amtrak Station,https://www.amtrak.com/stations/nor,America/Chicago,35.219963,-97.443013
+OKC,Oklahoma City,https://www.amtrak.com/stations/okc,America/Chicago,35.46549,-97.512749
+ONA,Ontario Amtrak,https://www.amtrak.com/stations/ona,America/Los_Angeles,34.061672,-117.649569
+PON,Pontiac Amtrak Station,https://www.amtrak.com/stations/pon,America/Chicago,40.878687,-88.637198
+POS,Pomona Amtrak,https://www.amtrak.com/stations/pos,America/Los_Angeles,34.059224,-117.750621
+PBF,Poplar Bluff Amtrak Station,https://www.amtrak.com/stations/pbf,America/Chicago,36.753995,-90.393341
+YUM,Yuma Amtrak,http://www.amtrak.com/yum,America/Denver,32.723139,-114.615571
+PUR,Purcell Amtrak Station,https://www.amtrak.com/stations/pur,America/Chicago,35.012033,-97.357416
+PVL,Pauls Valley Amtrak Station,https://www.amtrak.com/stations/pvl,America/Chicago,34.741735,-97.21846
+PSN,Palm Springs Amtrak,https://www.amtrak.com/stations/psn,America/Los_Angeles,33.897491,-116.547913
+SND,Sanderson Amtrak,https://www.amtrak.com/stations/snd,America/Chicago,30.139951,-102.398746
+SAS,San Antonio Amtrak Station,https://www.amtrak.com/stations/sas,America/Chicago,29.41935,-98.478143
+SMC,San Marcos Amtrak,https://www.amtrak.com/stations/smc,America/Chicago,29.876571,-97.941049
+SPI,Springfield,https://www.amtrak.com/stations/spi,America/Chicago,39.802323,-89.651384
+STL,St. Louis,https://www.amtrak.com/stations/stl,America/Chicago,38.624195,-90.203973
+TAY,Taylor Amtrak,https://www.amtrak.com/stations/tay,America/Chicago,30.567667,-97.407763
+TPL,Temple,https://www.amtrak.com/stations/tpl,America/Chicago,31.095883,-97.345792
+TUS,Tucson Amtrak Station,https://www.amtrak.com/stations/tus,America/Denver,32.222977,-110.96677
+TXA,Texarkana Amtrak Station,https://www.amtrak.com/stations/txa,America/Chicago,33.420067,-94.043082
+WNR,Walnut Ridge Amtrak Station,https://www.amtrak.com/stations/wnr,America/Chicago,36.06766,-90.956766

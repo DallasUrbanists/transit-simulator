@@ -4,21 +4,20 @@ import MapContext from "./MapContext";
 import { $, convert, DAY, minValMax } from './utilities.mjs';
 import Playback from './Playback';
 import Simulation from './Simulation';
-import { agencies, isFullyLoaded, processSource } from './sources.js';
+import { loadAgencies } from './sources.js';
+import { debug } from './debug.js';
 
 const map = new MapContext('map');
 const simulation = new Simulation(map);
 const playback = new Playback(simulation);
 
-agencies.forEach(agency => processSource(agency).then(() => {
-    if (isFullyLoaded()) {
-        console.log('Finished loading all available agency sources.');
-        map.redrawFixtures();
-        window.dispatchEvent(new CustomEvent('loadFinished'));
-    } else {
-        console.log('Not yet finished. More agencies left to load.');
-    }
-}));
+window.debug = debug(map);
+
+loadAgencies(['DART', 'TrinityMetro', 'DCTA']).then(() => {
+    console.log('Finished loading agency sources.');
+    map.redrawFixtures();
+    window.dispatchEvent(new CustomEvent('loadFinished'));
+});
 
 // TO-DO:
 // - Verify what all the various Service IDs mean
@@ -48,7 +47,8 @@ simulation.setTripCriteria(trip => {
     const TRINITY_XMAS_CAPITAL_EXPRESS = '140.CCEX.1';
     const TRINITY_XMAS_PALACE_THEATRE = '140.CCPT.1';
 
-    return [
+    // Choose specific routes/trips to enable
+    const enableTripsByServiceId = [
         BUS_WEEKDAY_SERVICE,
         RAIL_WEEKDAY_SERVICE,
         DCTA_BUS_WEEKDAY,
@@ -56,7 +56,20 @@ simulation.setTripCriteria(trip => {
         TRINITY_MON_FRI,
         TRINITY_XMAS_CAPITAL_EXPRESS,
         TRINITY_XMAS_PALACE_THEATRE,
-    ].includes(trip.get('service_id'));
+        '312753486348',
+        '312753486348',
+        '112760676348',
+        '112760676348',
+    ];
+    const enableRoutesByAgencyAndRouteId = [
+        ['51', '86'],
+        ['51', '87'],
+    ];
+
+    if (enableTripsByServiceId.includes(trip.get('service_id'))) {
+        return true;
+    }
+    return false;
 });
 
 // Listen for non-UI events

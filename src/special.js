@@ -38,6 +38,8 @@ export const sectionIndex = {
 
 export function getSpecialShape(key) {
     const details = sectionIndex[key];
-    const refSegments = segments.get(details.refShape).filter((v, index) => details.refIndexes.includes(index));
+    const refShape = segments.get(details.refShape);
+    if (!refShape) return undefined;
+    const refSegments = refShape.filter((v, index) => details.refIndexes.includes(index));
     return turf.multiLineString(refSegments.map(segment => turf.getCoords(segment)), { colors: details.colors } );
 }

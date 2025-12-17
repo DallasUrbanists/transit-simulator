@@ -1,4 +1,4 @@
-import { absURL, convert, convertCSVToDictionary, fetchText, saniKey, setIfNotHas as setIfNotHave } from './utilities.mjs';
+import { absURL, convert, convertCSVToDictionary, DAY, fetchText, saniKey, setIfNotHas as setIfNotHave } from './utilities.mjs';
 import { getShape } from './shapes.js';
 import { getTimepointsForTrip } from './stops.js';
 import * as turf from '@turf/turf';
@@ -20,7 +20,7 @@ export async function processTripsFromSource(agency) {
         set('startPosition', points[0]);
         set('startSeconds', t('startPosition').properties.arrival_seconds);
         set('endPosition', points[points.length - 1]);
-        set('endSeconds', t('endPosition').properties.arrival_seconds);
+        set('endSeconds', t('endPosition').properties.departure_seconds);
         set('durationSeconds', t('endSeconds') - t('startSeconds'));
         set('isFinal', true);
         trips.set(t('trip_id'), trip);
@@ -72,10 +72,11 @@ export function findActiveTrips(playhead, filters) {
     trips.forEach(trip => {
         if (!trip) return;
         const t = key => trip.get(key);
+        const isMultiDay = t('durationSeconds') > DAY;
         const isActive = t('startSeconds') <= playhead && t('endSeconds') >= playhead;
         const qualifies = typeof filters !== 'function' ? true : filters(trip);
         if (qualifies) {
-            if (isActive) {
+            if (isActive || isMultiDay) {
                 results.add(trip);
                 return;
             }

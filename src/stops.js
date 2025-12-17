@@ -9,11 +9,13 @@ export async function processStopsFromSource(source) {
     const stopsFromSource = await convertCSVToDictionary(stopsTxt, primaryKey);
     stopsFromSource.forEach((stop, stopId) => {
         const f = p => parseFloat(stop.get(p));
-        stops.set(stopId, turf.point(
+        const feature = turf.point(
             [f('stop_lon'), f('stop_lat')],
             { name: stop.get('stop_name'), description: stop.get('stop_desc') },
             { id: stopId }
-        ));
+        );
+        stops.set(stopId, feature);
+        stopsFromSource.set(stopId, feature);
     });
 
     const timingSource = absURL(`./gtfs/${source}/stop_times.txt`);
@@ -31,26 +33,32 @@ export async function processStopsFromSource(source) {
         })
         .filter(r => sanitize(r[timingColumns.get('timepoint')]) === '1')
         .forEach((row) => {
-            const c = prop => sanitize(row[timingColumns.get(prop)]);
-            const f = prop => parseFloat(c(prop));
-            const timepoint = turf.clone(getStop(c('stop_id')));
-            const tripId = c('trip_id');
-            timepoint.properties = {
-                ...timepoint.properties,
-                arrival_time: c('arrival_time'),
-                arrival_seconds: convert.timeStringToSeconds(c('arrival_time')),
-                departure_time: c('departure_time'),
-                departure_seconds: convert.timeStringToSeconds(c('departure_time')),
-                sequence: parseInt(c('stop_sequence')),
-                distance_in_miles: f('shape_dist_traveled'),
-            };
-            if (!timepoints.has(tripId)) {
-                timepoints.set(tripId, [timepoint]);
-            } else {
-                const x = timepoints.get(tripId);
-                x.push(timepoint);
-                timepoints.set(tripId, x);
-            }
+            let timepoint, tripId, stopObj;
+                const c = prop => sanitize(row[timingColumns.get(prop)]);
+                const f = prop => parseFloat(c(prop));
+                if (!c('stop_id') || c('stop_id') === '') return;
+                stopObj = stopsFromSource.get(c('stop_id'));
+                timepoint = turf.clone(stopObj);
+                if (!timepoint) return;
+                tripId = c('trip_id');
+                if (!tripId) return;
+                timepoint.properties = {
+                    ...timepoint.properties,
+                    arrival_time: c('arrival_time'),
+                    arrival_seconds: convert.timeStringToSeconds(c('arrival_time')),
+                    departure_time: c('departure_time'),
+                    departure_seconds: convert.timeStringToSeconds(c('departure_time')),
+                    sequence: parseInt(c('stop_sequence')),
+                    distance_in_miles: f('shape_dist_traveled'),
+                };
+                if (!timepoints.has(tripId)) {
+                    timepoints.set(tripId, [timepoint]);
+                } else {
+                    const x = timepoints.get(tripId);
+                    x.push(timepoint);
+                    timepoints.set(tripId, x);
+                }
+
         });
 }
 

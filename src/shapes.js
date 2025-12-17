@@ -27,14 +27,9 @@ export async function processShapesFromSource(source) {
         if (!shapePoints) return;
         shapePoints.sort((a, b) => a.seq - b.seq);
         let latLngs, shapeFeature;
-//        try {
-            latLngs = shapePoints.map(({ lon, lat }) => [lon, lat]);
-            shapeFeature = turf.lineString(latLngs);
-            shapeFeature.properties.lengthInFeet = turf.length(shapeFeature, { units: 'feet' });
-        // } catch (e) {
-        //     console.log({latLngs, shapePoints});
-        //     throw e;
-        // }
+        latLngs = shapePoints.map(({ lon, lat }) => [lon, lat]);
+        shapeFeature = turf.lineString(latLngs);
+        shapeFeature.properties.lengthInFeet = turf.length(shapeFeature, { units: 'feet' });
         shapes.set(shapeId, shapeFeature);
         sourcedShapes.set(shapeId, shapeFeature);
     });

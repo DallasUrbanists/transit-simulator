@@ -1,0 +1,3 @@
+﻿route_id,agency_id,route_short_name,route_long_name,route_type,route_url,route_color,route_text_color
+86,51,,Heartland Flyer,2,https://www.amtrak.com/heartland-flyer-train,CAE4F1,000000
+87,51,,Texas Eagle,2,https://www.amtrak.com/texas-eagle-train,CAE4F1,000000

@@ -77,8 +77,10 @@ export default class MapContext extends LeafletMap {
                 prior.forEach(layer => this.removeLayer(layer));
                 this.drawnFixtures.delete(fixtureIndex);
             }
+            const fixtureFeature = getFixtureShape(fixtureIndex);
+            if (!fixtureFeature) return;
             const fixtureShape = turf.simplify(
-                getFixtureShape(fixtureIndex),
+                fixtureFeature,
                 { tolerance: this.getZoomTolerance() }
             );
             const totalWidth = 12;
