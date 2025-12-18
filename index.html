@@ -10,6 +10,14 @@
 
 <body>
   <div id="clock"></div>
+  <div id="main-menu">
+    <h1>TRANSIT SIMULATOR (BETA)</h1>
+    <h2>Select agencies</h2>
+    <div class="select-agencies"></div>
+    <h2>Select routes</h2>
+    <div class="select-routes"></div>
+    <button id="load-simulation-button">Load simulation</button>
+  </div>
   <div id="loading">
     <span class="loader"></span>
     <h1>Loading...</h1>
@@ -23,6 +31,7 @@
         <div id="progress-bar" class="progress-bar"></div>
       </div>
       <button id="enter-fullscreen">Full screen</button>
+      <button id="show-menu-button">Show menu</button>
       <button id="reset-time">Set time to now</button>
       <button id="reset-clock-pos">Reset clock pos</button>
       <select id="speed-select">

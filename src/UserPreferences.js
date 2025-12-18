@@ -1,4 +1,5 @@
 import { getRoute } from "./models/routes";
+import { agencies } from "./models/sources";
 
 // TO-DO: Verify what all the various Service IDs mean
 const BUS_WEEKDAY_SERVICE = '2';
@@ -22,13 +23,17 @@ const TRINITY_MON_FRI = '140.0.1';
 const TRINITY_XMAS_CAPITAL_EXPRESS = '140.CCEX.1';
 const TRINITY_XMAS_PALACE_THEATRE = '140.CCPT.1';
 
-const ALL_AVAILABLE = 'all available';
+// agency_id values per agency
+const DART = 'DART';
+const TrinityMetro = 'Trinity Metro';
+const DCTA = '581';
 
 // Choose specific routes/trips to enable
 export default class UserPreferences {
-    enableAgencies = ['DART', 'TrinityMetro', 'DCTA'];
-    enableRoutes = ALL_AVAILABLE;
-    enableServiceIDs = [
+    static ALL_AVAILABLE = 'all available';
+    enableAgencies = new Set([DART, TrinityMetro, DCTA]);
+    enableRoutes = UserPreferences.ALL_AVAILABLE;
+    enableServiceIDs = new Set([
         BUS_WEEKDAY_SERVICE,
         RAIL_WEEKDAY_SERVICE,
         DCTA_BUS_WEEKDAY,
@@ -40,15 +45,24 @@ export default class UserPreferences {
         '312753486348',
         '112760676348',
         '112760676348',
-    ];
+    ]);
     tripCriteria(trip) {
-        if (!this.enableServiceIDs.includes(trip.get('service_id'))) {
+        if (!this.enableServiceIDs.has(trip.get('service_id'))) {
             return false;
         }
         const route = getRoute(trip);
-        if (this.enableRoutes !== ALL_AVAILABLE && !this.enableRoutes.includes(route.get('route_id'))) {
+        if (!this.enableAgencies.has(route.get('agency_id'))) {
+            return false;
+        }
+        if (this.enableRoutes !== UserPreferences.ALL_AVAILABLE && !this.enableRoutes.has(route.get('route_id'))) {
             return false;
         }
         return true;
     };
+    isRouteEnabled(route) {
+        if (this.enableRoutes === UserPreferences.ALL_AVAILABLE) {
+            return true;
+        }
+        return this.enableRoutes.has(route);
+    }
 }

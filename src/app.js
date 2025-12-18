@@ -2,7 +2,7 @@ import "leaflet-polylineoffset";
 import 'leaflet/dist/leaflet.css';
 import MapContext from "./MapContext";
 import { debug } from './misc/debug.js';
-import { $, closeFullscreen, convert, doThisNowThatLater, hide, openFullscreen, show, when } from './misc/utilities.mjs';
+import { $, closeFullscreen, convert, displayNone, displayShow, doThisNowThatLater, hide, openFullscreen, show, when } from './misc/utilities.mjs';
 import { loadAgencies } from './models/sources.js';
 import Playback from './Playback';
 import Simulation from './Simulation';
@@ -10,26 +10,38 @@ import ClockWidget from "./widgets/ClockWidget.js";
 import PlayPauseButton from "./widgets/PlayPauseButton.js";
 import ProgressBarWidget from "./widgets/ProgressBarWidget.js";
 import UserPreferences from "./UserPreferences.js";
+import MainMenuWidget from "./widgets/MainMenuWidget.js";
 
 const preferences = new UserPreferences();
 const map = new MapContext('map');
 const simulation = new Simulation(map, preferences);
 const playback = new Playback(simulation);
 const clock = new ClockWidget('clock', playback);
+const mainmenu = new MainMenuWidget('main-menu', preferences);
 new ProgressBarWidget('progress-track', playback);
 new PlayPauseButton('play-button', playback);
 
 window.debug = debug(map);
 
-loadAgencies(preferences.enableAgencies).then(() => {
-    console.log('Finished loading agency sources.');
-    map.redrawFixtures();
-    window.dispatchEvent(new CustomEvent('loadFinished'));
-});
+function showMenu() {
+    displayShow(mainmenu.element);
+    displayNone($('#loading'));
+}
+
+function loadSimulation() {
+    displayNone(mainmenu.element);
+    displayShow($('#loading'));
+    loadAgencies(preferences.enableAgencies).then(() => {
+        map.redrawFixtures();
+        window.dispatchEvent(new CustomEvent('loadFinished'));
+    });
+}
+
+showMenu();
 
 // Listen for non-UI events
 when('loadFinished', () => {
-    $('#loading').style.display = 'none';
+    displayNone($('#loading'));
     $('#speed-select').value = playback.speed;
     $('#style-select').value = map.style;
     $('#clock-size-select').value = clock.size;
@@ -42,6 +54,8 @@ when(ClockWidget.SIZE_CHANGED, color => $('#clock-size-select').value = color);
 when(MapContext.STYLE_CHANGED, style => $('#style-select').value = style);
 
 // Handle user interaction with UI
+$('#show-menu-button').onclick = showMenu;
+$('#load-simulation-button').onclick = loadSimulation;
 $('#speed-select').onchange = e => playback.setSpeed(e.target.value);
 $('#style-select').onchange = e => map.setStyle(e.target.value);
 $('#clock-size-select').onchange = e => clock.setSize(e.target.value);

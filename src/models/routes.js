@@ -1,4 +1,4 @@
-import { absURL, convertCSVToDictionary, fetchText, saniKey } from '../misc/utilities.mjs';
+import { absURL, convert, convertCSVToDictionary, fetchText, saniKey } from '../misc/utilities.mjs';
 
 const primaryKey = 'route_id';
 export const routes = new Map();
@@ -8,6 +8,7 @@ export async function processRoutesFromSource(source) {
     const routesFromSource = await convertCSVToDictionary(routesTxt, primaryKey);
     routesFromSource.forEach((route, routeId) => routes.set(routeId, route));
     console.log(`Total routes from ${source}: ${routesFromSource.size}`);
+    return routesFromSource;
 }
 
 export function getRoute(search) {

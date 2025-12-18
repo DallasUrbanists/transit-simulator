@@ -167,6 +167,17 @@ export function hide(element) {
     element.style.opacity = 0;
 }
 
+const displayMap = new WeakMap();
+export function displayShow(element) {
+    element.style.display = displayMap.get(element) ?? 'auto';
+}
+export function displayNone(element) {
+    if (!displayMap.has(element)) {
+        displayMap.set(element, element.style.display);
+    }
+    element.style.display = 'none';
+}
+
 const timerMap = new Map();
 export function doThisNowThatLater(doNow, doLater, secondsLater) {
     clearTimeout(timerMap.get(doNow.toString()));
