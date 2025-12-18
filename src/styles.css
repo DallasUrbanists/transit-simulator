@@ -23,8 +23,8 @@ body {
     bottom: calc(50px + 2em);
     right: 1em;
     z-index: 1;
-    
-    
+
+
 
     select {
         margin-bottom: 1em;
@@ -34,6 +34,7 @@ body {
         padding: 1em;
         border-radius: 0.25em;
     }
+
     label {
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
@@ -222,16 +223,21 @@ body {
     #map {
         height: 100svh;
     }
+
     #leave-fullscreen {
         z-index: 1;
         display: block;
     }
-    #floating-options, .leaflet-control-container {
+
+    #floating-options,
+    .leaflet-control-container {
         display: none;
     }
+
     #playback-controls {
         display: none;
     }
+
     a[href="https://www.maptiler.com"] {
         opacity: 0;
     }
@@ -341,6 +347,22 @@ body {
     color: #CCC;
     text-align: left;
     padding: 2rem;
+    padding-bottom: 6rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     h1 {
         font-weight: bold;
     }
@@ -453,7 +475,7 @@ a[href="https://www.maptiler.com"] {
         -ms-user-select: none;
         user-select: none;
     }
-    
+
     .route-option {
         margin-left: 1rem;
     }
@@ -465,4 +487,91 @@ a[href="https://www.maptiler.com"] {
         background-color: black;
         padding: 1rem;
     }
+}
+
+#load-simulation-button {
+    left: 0;
+    position: fixed;
+    display: block;
+    width: 100vw;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: hsl(0, 100%, 27%);
+    color: white;
+    bottom: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#load-simulation-button:hover {
+    background-color: hsl(0, 100%, 38%);
+}
+
+#load-simulation-button:active {
+    background-color: hsl(0, 100%, 50%);
+}
+
+.agency-option {
+    opacity: 0.5;
+    background-color: #AAA;
+    display: inline-block;
+    width: 250px;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    aspect-ratio: 4/5;
+    vertical-align: top;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    transition: opacity 100ms, scale 100ms;
+    text-align: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+    * {
+        cursor: pointer;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        margin: 1rem auto;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+
+    input[type=checkbox] {
+        display: none;
+    }
+}
+
+.agency-option:hover {
+    opacity: 0.9;
+    scale: 1.01;
+}
+
+.agency-option:active {
+    opacity: 1;
+    background-color: white;
+    scale: 1.05;
+}
+
+.agency-option:has(:checked) {
+    background-color: white;
+    opacity: 1;
+    font-weight: bold;
+    border: solid 5px lightgreen;
+    ;
 }

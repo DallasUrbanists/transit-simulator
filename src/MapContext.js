@@ -36,7 +36,6 @@ export default class MapContext extends LeafletMap {
         const styles = maptilersdk.MapStyle;
         this.tileLayer.setStyle(code.length === 2 ? styles[code[0]][code[1]] : styles[code[0]]);
         store('map-style', styleCode);
-        console.log('style changed here!');
         dispatch(MapContext.STYLE_CHANGED, styleCode);
     }
     activate(trip) {

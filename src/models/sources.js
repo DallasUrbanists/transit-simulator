@@ -5,9 +5,24 @@ import { processStopsFromSource } from "./stops";
 import { processTripsFromSource } from "./trips";
 
 export const agencies = new Map([
-    ['DART', { agency_id: 'DART', name: 'Dallas Area Rapid Transit (DART)', folder: 'DART' } ],
-    ['Trinity Metro', { agency_id: 'Trinity Metro', name: 'Trinity Metro', folder: 'TrinityMetro' }],
-    ['581', { agency_id: '581', name: 'Denton Country Transit Authority (DCTA)', folder: 'DCTA' } ],
+    ['DART', {
+        agency_id: 'DART',
+        name: 'Dallas Area Rapid Transit (DART)',
+        folder: 'DART',
+        logo: 'Dallas Area Rapid Transit.svg',
+    }],
+    ['Trinity Metro', {
+        agency_id: 'Trinity Metro',
+        name: 'Trinity Metro',
+        folder: 'TrinityMetro',
+        logo: 'Trinity Metro.svg',
+    }],
+    ['581', {
+        agency_id: '581',
+        name: 'Denton Country Transit Authority (DCTA)',
+        folder: 'DCTA',
+        logo: 'DCTA.svg',
+    }],
 ]);
 export const sources = new Map(agencies.keys().map(agency => [agency, {
     processedRoutes: false,
@@ -72,7 +87,7 @@ function isLoaded(agency) {
 export function isFullyLoaded() {
     const sourcesAsArray = Array.from(sources.values());
     for (let i = 0; i < sources.size; i++) {
-        for (let x in sourcesAsArray[i]) {            
+        for (let x in sourcesAsArray[i]) {
             if (sourcesAsArray[i][x] === false) {
                 return false;
             }

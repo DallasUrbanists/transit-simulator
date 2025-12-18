@@ -20,11 +20,10 @@ export default class MainMenuWidget {
         this.routesContainer = this.element.querySelector('.select-routes');
         this.serviceIDsContainer = this.element.querySelector('.select-service-ids');
 
-        console.log(preferences);
-
         agencies.forEach((agency, agencyId) => {
             const div = create('div', 'agency-option');
             const id = 'agency-checkbox-' + agencyId;
+            const img = create('img', 'agency-logo', { src: `./logos/${agency.logo}`, alt: agency.name });
             const checkbox = create('input', 'agency-option-checkbox', {
                 id,
                 type: 'checkbox',
@@ -40,9 +39,14 @@ export default class MainMenuWidget {
                 this.updateRouteOptions(agencyId);
             };
             const label = create('label', 'agency-option-label', { for: id });
-            label.innerText = agency.name;
+            const span = create('span', 'agency-label-name');
+            span.innerText = agency.name;
+            label.appendChild(img);
+            label.appendChild(span);
             div.appendChild(checkbox);
             div.appendChild(label);
+            div.onclick = e => checkbox.click();
+            label.onclick = e => checkbox.click();
             this.agencyContainer.appendChild(div);
         });
     }
@@ -57,7 +61,6 @@ export default class MainMenuWidget {
     updateRouteOptions(agencyId) {
         const agency = agencies.get(agencyId);
         const divId = 'agency-routes-' + agency.folder;
-        console.log(divId);
         const toggleId = 'select-all-routes-' + agencyId;
         let div = $('#'+divId);
         if (this.preferences.enableAgencies.has(agencyId)) {
@@ -98,7 +101,6 @@ export default class MainMenuWidget {
         } else if (div) {
             displayNone(div);
         }
-        console.log(this.preferences);
     }
     updateRouteSelections() {
         this.preferences.enableRoutes = new Set();
@@ -108,15 +110,12 @@ export default class MainMenuWidget {
             }
             this.preferences.enableRoutes.add(checkbox.value);
         });
-        console.log(this.preferences);
     }
     toggleAllRoutes(agencyId) {
-        console.log(`.route-option-checkbox[data-agency='${agencyId}']`);
         const checkboxes = $$(`.route-option-checkbox[data-agency='${agencyId}']`);
         const total = checkboxes.length;
         const checked = $$(`.route-option-checkbox[data-agency='${agencyId}']:checked`).length;
         checkboxes.forEach(checkbox => checkbox.checked = checked < total);
         this.updateRouteSelections();
-        console.log(this.preferences);
     }
 }
