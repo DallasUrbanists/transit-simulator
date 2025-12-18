@@ -1,16 +1,7 @@
-import { $, $$, displayNone, displayShow } from "../misc/utilities.mjs";
+import { $, $$, displayNone, displayShow, create } from "../misc/utilities.mjs";
 import { processRoutesFromSource } from "../models/routes";
 import { agencies } from "../models/sources";
 import UserPreferences from "../UserPreferences";
-
-const create = (tagName, className, attributes = {}) => {
-    const elem = document.createElement(tagName);
-    elem.className = className;
-    for (let attr in attributes) {
-        elem.setAttribute(attr, attributes[attr]);
-    }
-    return elem;
-};
 
 export default class MainMenuWidget {
     constructor(elementId, preferences) {

@@ -325,15 +325,24 @@ body {
     height: 100vh;
     z-index: 999;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     justify-content: center;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(15px) saturate(0);
+
+    > * {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
 
     h1 {
         font-weight: bold;
+    }
+    p {
+        text-align: left;
     }
 }
 
@@ -348,21 +357,6 @@ body {
     text-align: left;
     padding: 2rem;
     padding-bottom: 6rem;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     h1 {
         font-weight: bold;
     }
@@ -492,6 +486,9 @@ a[href="https://www.maptiler.com"] {
 #load-simulation-button {
     left: 0;
     position: fixed;
+    bottom: 0;
+}
+.big-red-button {
     display: block;
     width: 100vw;
     padding: 2rem 1rem;
@@ -501,7 +498,6 @@ a[href="https://www.maptiler.com"] {
     font-weight: bold;
     background-color: hsl(0, 100%, 27%);
     color: white;
-    bottom: 0;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -509,11 +505,11 @@ a[href="https://www.maptiler.com"] {
     user-select: none;
 }
 
-#load-simulation-button:hover {
+.big-red-button:hover {
     background-color: hsl(0, 100%, 38%);
 }
 
-#load-simulation-button:active {
+.big-red-button:active {
     background-color: hsl(0, 100%, 50%);
 }
 
@@ -574,4 +570,107 @@ a[href="https://www.maptiler.com"] {
     font-weight: bold;
     border: solid 5px lightgreen;
     ;
+}
+.agency-load-list-header {
+    margin-bottom: 0.25rem;
+}
+.load-list-item {
+    opacity: 0.6;
+    line-height: 1rem;
+    text-align: left;
+    border: solid 1px #999;
+    padding: 0.5rem;
+    padding-left: 3rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: -1px;
+    position: relative;
+    transition: background-color 500ms ease-in-out;
+    .load-animation {
+        height: 2rem;
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0.4rem;
+        width: 2rem;
+    };
+    .checkmark {
+        width: 0.75rem;
+        position: absolute;
+        height: 1.5rem;
+        display: none;
+        top: 0;
+        left: 1rem;
+        margin: 0;
+    }
+}
+.load-list-item:first-of-type {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.load-list-item:last-of-type {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+.load-list-item.inprogress {
+    opacity: 1;
+    background-color: #999;
+    color: black;
+    font-weight: bold;
+    .load-animation { display: block; }
+}
+.load-list-item.finished {
+    display: block;
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+    .checkmark { display: block; }
+}
+.load-list-item.error {
+    background-color: darkred;
+}
+
+/* https://css-loaders.com/line/ */
+/* HTML: <div class="loader"></div> */
+.load-spinner {
+  width:50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.load-spinner:before,
+.load-spinner:after {
+  content: "";
+  grid-area: 1/1;
+  --c:#0000 calc(100%/3),#ffffff 0 calc(2*100%/3),#0000 0;
+  --c1:linear-gradient(90deg,var(--c));
+  --c2:linear-gradient( 0deg,var(--c));
+  background: var(--c1),var(--c2),var(--c1),var(--c2);
+  background-size: 300% 4px,4px 300%;
+  background-repeat: no-repeat;
+  animation: l11 1s infinite linear;
+}
+.load-spinner:after {
+  margin: 10px;
+  transform: scaleX(-1);
+  animation-delay: -.25s;
+}
+@keyframes l11 {
+  0%   {background-position: 50%  0,100% 100%,0    100%,0 0}
+  25%  {background-position: 0    0,100% 50% ,0    100%,0 0}
+  50%  {background-position: 0    0,100% 0   ,50%  100%,0 0}
+  75%  {background-position: 0    0,100% 0   ,100% 100%,0 50%}
+ 75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
+  100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
+}
+
+/* https://www.geeksforgeeks.org/web-templates/how-to-draw-a-checkmark-tick-using-css/ */
+/* HTML: <div class="checkmark"></div> */
+.checkmark {
+    height: 50px;
+    width: 18px;
+    border-bottom: 5px solid green;
+    border-right: 5px solid green;
+    transform: rotate(45deg);
+    margin: 20px;
 }

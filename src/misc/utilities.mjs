@@ -185,3 +185,12 @@ export function doThisNowThatLater(doNow, doLater, secondsLater) {
     const newTimer = setTimeout(doLater, secondsLater * 1000);
     timerMap.set(doNow.toString(), newTimer);
 }
+
+export const create = (tagName, className, attributes = {}) => {
+    const elem = document.createElement(tagName);
+    elem.className = className;
+    for (let attr in attributes) {
+        elem.setAttribute(attr, attributes[attr]);
+    }
+    return elem;
+};

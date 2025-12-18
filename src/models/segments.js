@@ -2,7 +2,8 @@ import { trips } from './trips.js';
 import * as turf from '@turf/turf';
 
 export const segments = new Map();
-export function processSegmentsFromShapes(shapes) {
+export async function processSegmentsFromShapes(shapes) {
+    let segmentCount = 0;
     shapes.forEach((value, shapeId) => {
         const shape = turf.clone(value);
         const sampleTrip = trips.values().find(trip => trip.get('shape_id') == shapeId);
@@ -37,7 +38,9 @@ export function processSegmentsFromShapes(shapes) {
             shapeSegments.push(turf.clone(segmentShape));
         }
         segments.set(shapeId, shapeSegments);
+        segmentCount += shapeSegments.length;
     });
+    return segmentCount;
 }
 
 export function getSegmentsFor(trip) {

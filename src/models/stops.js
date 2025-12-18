@@ -60,6 +60,8 @@ export async function processStopsFromSource(source) {
                 }
 
         });
+
+    return stopsFromSource;
 }
 
 /**

@@ -57,11 +57,5 @@ export default class UserPreferences {
             return false;
         }
         return true;
-    };
-    isRouteEnabled(route) {
-        if (this.enableRoutes === UserPreferences.ALL_AVAILABLE) {
-            return true;
-        }
-        return this.enableRoutes.has(route);
     }
 }

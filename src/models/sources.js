@@ -1,3 +1,5 @@
+import { dispatch } from "../misc/utilities.mjs";
+import Loader from "../widgets/LoaderWidget";
 import { processRoutesFromSource } from "./routes";
 import { processSegmentsFromShapes } from "./segments";
 import { processShapesFromSource } from "./shapes";
@@ -31,37 +33,48 @@ export const sources = new Map(agencies.keys().map(agency => [agency, {
     processedTrips: false,
     processedSegments: false
 }]));
-
 export async function processSource(agency) {
     const source = sources.get(agency);
     const folder = agencies.get(agency).folder;
-    let shapes;
-    if (!source.processedRoutes) {
-        console.log(`Processing routes from ${agency}`);
-        await processRoutesFromSource(folder);
+    const inprogress = (key) => dispatch(Loader.PROGRESS, { agency_id: agency, key, status: 'inprogress' });
+    const finished = (key, count) => dispatch(Loader.PROGRESS, { agency_id: agency, key, status: 'finished', count });
+    let shapes, routes, stops, tripCount, segmentCount;
+
+    if (isLoaded(agency)) {
+        dispatch(Loader.FINISHED, { agency_id: agency })
+    }
+
+    inprogress('routes');
+    processRoutesFromSource(folder).then(result => {
+        routes = result;
         source.processedRoutes = true;
-    }
-    if (!source.processedStops) {
-        console.log(`Processing stops from ${agency}`);
-        await processStopsFromSource(folder);
-        source.processedStops = true;
-    }
-    if (!source.processedShapes) {
-        console.log(`Processing shapes from ${agency}`);
-        shapes = await processShapesFromSource(folder);
-        source.processedShapes = true;
-    }
-    if (!source.processedTrips) {
-        console.log(`Processing trips from ${agency}`);
-        await processTripsFromSource(folder);
-        source.processedTrips = true;
-    }
-    if (!source.processedSegments) {
-        console.log(`Processing segments from ${agency}`);
-        processSegmentsFromShapes(shapes);
-        source.processedSegments = true;
-    }
-    console.log(`Finished processing all GTFS data for ${agency}`);
+        finished('routes', routes.size);
+        inprogress('stops');
+        processStopsFromSource(folder).then(result => {
+            stops = result;
+            source.processedStops = true;
+            finished('stops', stops.size);
+            inprogress('shapes');
+            processShapesFromSource(folder).then(result => {
+                shapes = result;
+                source.processedShapes = true;
+                finished('shapes', shapes.size);
+                inprogress('trips');
+                processTripsFromSource(folder).then(result => {
+                    tripCount = result;
+                    source.processedTrips = true;
+                    finished('trips', tripCount);
+                    inprogress('segments');
+                    processSegmentsFromShapes(shapes).then(result => {
+                        segmentCount = result;
+                        source.processedSegments = true;
+                        finished('segments', segmentCount);
+                        dispatch(Loader.FINISHED, { agency_id: agency })
+                    });
+                });
+            });
+        });
+    });
 }
 
 export async function loadAgencies(agencies) {
@@ -84,13 +97,11 @@ function isLoaded(agency) {
     return true;
 }
 
-export function isFullyLoaded() {
-    const sourcesAsArray = Array.from(sources.values());
-    for (let i = 0; i < sources.size; i++) {
-        for (let x in sourcesAsArray[i]) {
-            if (sourcesAsArray[i][x] === false) {
-                return false;
-            }
+export function isFullyLoaded(agenciesSet) {
+    const agenciesAsArray = Array.from(agenciesSet);
+    for (let agencyId of agenciesAsArray) {
+        if (!isLoaded(agencyId)) {
+            return false;
         }
     }
     return true;

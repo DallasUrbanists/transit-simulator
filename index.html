@@ -16,12 +16,15 @@
     <div class="select-agencies"></div>
     <h2>Select routes</h2>
     <div class="select-routes"></div>
-    <button id="load-simulation-button" class="pulsing-element">Load simulation</button>
+    <button id="load-simulation-button" class="big-red-button pulsing-element">Load simulation</button>
   </div>
   <div id="loading">
-    <span class="loader"></span>
-    <h1>Loading...</h1>
-    <p>This will take just a few seconds.</p>
+    <button id="enter-simulation-button" class="big-red-button pulsing-element">Enter simulation</button>
+    <div id="load-inprogress-text">
+      <h1>Loading...</h1>
+      <p>Please wait, large agencies take longer to load and process.</p>
+    </div>
+    <div id="load-list"></div>
   </div>
   <div id="viewport">
     <div id="map"></div>

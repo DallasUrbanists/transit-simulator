@@ -8,7 +8,8 @@ const primaryKey = 'trip_id';
 
 export async function processTripsFromSource(agency) {
     const tripsTxt = await fetchText(absURL(`./gtfs/${agency}/trips.txt`));
-    return convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
+    let tripCount = 0;
+    convertCSVToDictionary(tripsTxt, primaryKey, (trip) => {
         if (trip === undefined) return undefined;
         const t = key => trip.get(key);
         if (t(primaryKey) === '') return undefined;
@@ -24,7 +25,9 @@ export async function processTripsFromSource(agency) {
         set('durationSeconds', t('endSeconds') - t('startSeconds'));
         set('isFinal', true);
         trips.set(t('trip_id'), trip);
+        tripCount++;
     });
+    return tripCount;
 }
 
 export function getTrip(search) {

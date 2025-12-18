@@ -17,7 +17,11 @@ export default class MapContext extends LeafletMap {
     static STYLE_CHANGED = 'map-style-changed';
 
     constructor(containerId) {
-        super(containerId);
+        super(containerId, {
+            zoomDelta: 0.1,
+            zoomSnap: 0,
+            keyboardPanDelta: 5
+        });
         this.setView(
             getStoredCoords() ?? defaultCoords,
             getStored('map-zoom') ?? defaultZoomLevel,
@@ -105,28 +109,12 @@ export default class MapContext extends LeafletMap {
     }
 
     getZoomTolerance() {
-        switch (this.getZoom()) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9: return 1;
-            case 10: return 0.01;
-            case 11: return 0.001;
-            case 12:
-            case 13: return 0.0001;
-            case 14:
-            case 15:
-            case 16:
-            case 17:
-            case 18:
-            case 19:
-            case 20: return 0.00001;
-        }
+        const zoom = this.getZoom();
+        if (zoom <= 9) return 1;
+        if (zoom <= 10) return 0.01;
+        if (zoom <= 11) return 0.001;
+        if (zoom <= 13) return 0.0001;
+        return 0.00001;
     }
 }
 
