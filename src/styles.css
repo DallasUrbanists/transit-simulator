@@ -321,6 +321,8 @@ body {
 }
 
 #loading {
+    padding: 2em;
+    overflow-y: auto;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -332,6 +334,25 @@ body {
     flex-direction: column;
     justify-content: center;
     backdrop-filter: blur(15px) saturate(0);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     > * {
         width: 100%;
@@ -490,6 +511,12 @@ a[href="https://www.maptiler.com"] {
     left: 0;
     position: fixed;
     bottom: 0;
+}
+#enter-simulation-button {
+    margin-bottom: 250px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .big-red-button {
     display: block;

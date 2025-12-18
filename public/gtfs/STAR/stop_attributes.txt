@@ -1,0 +1,137 @@
+stop_id,stop_city
+831913,Mesquite
+831914,Mesquite
+831916,Mesquite
+831917,Mesquite
+831918,Mesquite
+831920,Balch Springs
+831921,Balch Springs
+831922,Dallas
+831923,Mesquite
+831924,Mesquite
+831925,Mesquite
+831926,Balch Springs
+831927,Mesquite
+831928,Mesquite
+831929,Kaufman
+831930,Kaufman
+831931,Kaufman
+831932,Kaufman
+831933,Kaufman
+831934,Kaufman
+831935,Kaufman
+831936,Kaufman
+831937,Kaufman
+831938,Kaufman
+831939,Kaufman
+831940,Kaufman
+831941,Kaufman
+831942,Kaufman
+831943,Kaufman
+831944,Kaufman
+831945,Mesquite
+831946,Mesquite
+835839,Seagoville
+835841,Seagoville
+835842,Seagoville
+835843,Seagoville
+835844,Seagoville
+835845,Seagoville
+835846,Seagoville
+835847,Seagoville
+835848,Seagoville
+835849,Seagoville
+835850,Seagoville
+2326141,Balch Springs
+2326142,Balch Springs
+2326143,Balch Springs
+2382395,Balch Springs
+2382396,Balch Springs
+2382397,Balch Springs
+2382398,Balch Springs
+2382400,Balch Springs
+2382401,Balch Springs
+2382403,Balch Springs
+2382404,Balch Springs
+2382405,Balch Springs
+2382406,Balch Springs
+2382407,Balch Springs
+2382408,Balch Springs
+2382409,Balch Springs
+2382410,Balch Springs
+2382411,Balch Springs
+2387291,Balch Springs
+2387292,Balch Springs
+2428301,Terrell
+2428302,Terrell
+2428303,Terrell
+2428304,Terrell
+2428305,Terrell
+2428306,Terrell
+2428307,Terrell
+2428308,Terrell
+2428309,Terrell
+2428342,Terrell
+2428343,Terrell
+2428354,Terrell
+2428355,Terrell
+2428356,Terrell
+2428358,Terrell
+2428359,Terrell
+2428360,Terrell
+2428361,Terrell
+2428362,Terrell
+2428363,Terrell
+2428364,Terrell
+2428365,Terrell
+2428366,Terrell
+2428367,Terrell
+2428368,Terrell
+2428369,Terrell
+2430336,Hutchins
+2430337,Hutchins
+2430338,DeSoto
+2430339,Hutchins
+2430342,DeSoto
+2430343,Hutchins
+2430344,Hutchins
+2430345,Hutchins
+2430346,DeSoto
+2430347,DeSoto
+2430348,Hutchins
+2430349,Lancaster
+2430350,Hutchins
+2441010,Dallas
+2441012,Hutchins
+2452903,DeSoto
+2452904,DeSoto
+2452905,DeSoto
+2452906,DeSoto
+2452907,DeSoto
+2452908,DeSoto
+2452909,DeSoto
+2452910,DeSoto
+2452911,DeSoto
+2452912,DeSoto
+2452913,DeSoto
+2452914,DeSoto
+2455651,Terrell
+2501530,Hutchins
+2502232,Hutchins
+2502233,Hutchins
+2502553,Terrell
+2502554,Terrell
+2502555,Terrell
+2502556,Terrell
+2502557,Terrell
+2502558,Terrell
+2502559,Terrell
+2502560,Terrell
+2512572,Balch Springs
+2512574,Balch Springs
+2512575,Balch Springs
+2512576,Balch Springs
+2512577,Balch Springs
+2561411,Mesquite
+2561422,Dallas
+2629067,Dallas

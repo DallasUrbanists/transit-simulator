@@ -25,6 +25,24 @@ export const agencies = new Map([
         folder: 'DCTA',
         logo: 'DCTA.svg',
     }],
+    ['556', {
+        agency_id: '556',
+        name: 'STAR Transit',
+        folder: 'STAR',
+        logo: 'star_transit.jfif',
+    }],
+    ['MARTA', {
+        agency_id: 'MARTA',
+        name: 'Metropolitan Atlanta Rapid Transit Authority (MARTA)',
+        folder: 'MARTA',
+        logo: 'MARTA.png',
+    }],
+    ['CTA', {
+        agency_id: 'CTA',
+        name: 'Chicago Transit Authority (CTA)',
+        folder: 'CTA',
+        logo: 'Chicago_Transit_Authority_Logo.svg',
+    }],
 ]);
 export const sources = new Map(agencies.keys().map(agency => [agency, {
     processedRoutes: false,
@@ -38,6 +56,10 @@ export async function processSource(agency) {
     const folder = agencies.get(agency).folder;
     const inprogress = (key) => dispatch(Loader.PROGRESS, { agency_id: agency, key, status: 'inprogress' });
     const finished = (key, count) => dispatch(Loader.PROGRESS, { agency_id: agency, key, status: 'finished', count });
+    const error = (key, message) => {
+        dispatch(Loader.PROGRESS, { agency_id: agency, key, status: 'error', message })
+        console.error(message);
+    };
     let shapes, routes, stops, tripCount, segmentCount;
 
     if (isLoaded(agency)) {
@@ -70,11 +92,11 @@ export async function processSource(agency) {
                         source.processedSegments = true;
                         finished('segments', segmentCount);
                         dispatch(Loader.FINISHED, { agency_id: agency })
-                    });
-                });
-            });
-        });
-    });
+                    }, e => error('segments', e));
+                }, e => error('trips', e));
+            }, e => error('shapes', e));
+        }, e => error('stops', e));
+    }, e => error('routes', e));
 }
 
 export async function loadAgencies(agencies) {

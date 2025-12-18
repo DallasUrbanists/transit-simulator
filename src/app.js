@@ -40,7 +40,6 @@ function loadSimulation() {
         preferences.enableAgencies.forEach(enabledAgency => {
             const loadListDivId = 'agency-load-list-'+enabledAgency.replace(/\W/g, '');
             let agencyLoadListDiv = $('#'+loadListDivId);
-            console.log(agencyLoadListDiv);
             const agency = agencies.get(enabledAgency);
                 // If load list does not exist yet, create a new one
             if (!agencyLoadListDiv) {
@@ -77,7 +76,7 @@ function loadSimulation() {
                                     stepDiv.classList.add('finished');
                                     break;
                                 case 'error':
-                                    span.innerText = `Unexpected error ${during.toLowerCase()}`;
+                                    span.innerText = `Unexpected error ${during.toLowerCase()}: ` + detail.message;
                                     stepDiv.classList.add('error');
                                     break;
                                 case 'inprogress':

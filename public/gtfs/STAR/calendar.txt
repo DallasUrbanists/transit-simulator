@@ -1,0 +1,2 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+c_24294_b_33975_d_31,Midtown Express - Year Round (Copy) (Weekday),1,1,1,1,1,0,0,20220302,20271231

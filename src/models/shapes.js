@@ -12,7 +12,7 @@ export async function processShapesFromSource(source) {
         const c = prop => sanitize(row[columns.get(prop)]);
         const f = prop => parseFloat(c(prop));
         const shapeId = c(primaryKey);
-        if (!shapeId || shapeId === '') return undefined;
+        if (!shapeId || shapeId === '') return map;
         if (!map.has(shapeId)) map.set(shapeId, []);
         map.get(shapeId).push({
             lat: f('shape_pt_lat'),

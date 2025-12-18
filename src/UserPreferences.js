@@ -21,16 +21,15 @@ const DCTA_RAIL_WEEKDAY = 'A-Train-Mo-Th';
 const TRINITY_MON_FRI = '140.0.1';
 const TRINITY_XMAS_CAPITAL_EXPRESS = '140.CCEX.1';
 const TRINITY_XMAS_PALACE_THEATRE = '140.CCPT.1';
-
-// agency_id values per agency
-const DART = 'DART';
-const TrinityMetro = 'Trinity Metro';
-const DCTA = '581';
+// MARTA SERVICE CODES
+const MARTA_BUS_WEEKDAY = '5';
+// STAR TRANSIT CODES
+const STAR_TRANSIT = 'c_24294_b_33975_d_31';
 
 // Choose specific routes/trips to enable
 export default class UserPreferences {
     static ALL_AVAILABLE = 'all available';
-    enableAgencies = new Set([DART]);
+    enableAgencies = new Set([]);
     enableRoutes = UserPreferences.ALL_AVAILABLE;
     enableServiceIDs = new Set([
         BUS_WEEKDAY_SERVICE,
@@ -44,6 +43,8 @@ export default class UserPreferences {
         '312753486348',
         '112760676348',
         '112760676348',
+        MARTA_BUS_WEEKDAY,
+        STAR_TRANSIT,
     ]);
     tripCriteria(trip) {
         if (!this.enableServiceIDs.has(trip.get('service_id'))) {

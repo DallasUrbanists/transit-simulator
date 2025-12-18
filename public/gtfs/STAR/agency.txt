@@ -1,0 +1,2 @@
+agency_id,agency_url,agency_lang,agency_name,agency_phone,agency_timezone,agency_fare_url,tts_agency_name
+556,http://www.startransit.org/,en,STAR Transit,877-631-5278,US/Central,https://www.startransit.org/how-to-ride/fares/,
