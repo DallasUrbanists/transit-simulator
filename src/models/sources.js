@@ -21,7 +21,7 @@ export const agencies = new Map([
     }],
     ['581', {
         agency_id: '581',
-        name: 'Denton Country Transit Authority (DCTA)',
+        name: 'Denton County Transit Authority (DCTA)',
         folder: 'DCTA',
         logo: 'DCTA.svg',
     }],

@@ -6,6 +6,7 @@ body {
     background-color: #555;
 }
 
+
 #viewport {
     display: flex;
     flex-direction: column;
@@ -359,7 +360,9 @@ body {
     padding-bottom: 6rem;
     h1 {
         font-weight: bold;
+        color: white;
     }
+    a { color: white; }
 }
 
 .leaflet-container .leaflet-control-attribution {
@@ -516,40 +519,40 @@ a[href="https://www.maptiler.com"] {
 .agency-option {
     opacity: 0.5;
     background-color: #AAA;
-    display: inline-block;
-    width: 250px;
+    display: block;
+    max-width: 800px;
     color: black;
-    padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
-    aspect-ratio: 4/5;
-    vertical-align: top;
     margin-right: 1rem;
-    margin-bottom: 1rem;
-    flex-direction: column;
+    margin-bottom: 0.5rem;
     transition: opacity 100ms, scale 100ms;
-    text-align: center;
-
+    text-align: left;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-
+    user-select: none;    
 
     * {
         cursor: pointer;
     }
 
     img {
-        display: block;
-        width: 100%;
-        margin: 1rem auto;
+        display: inline-block;
+        width: 50px;
+        margin: 1rem;
         cursor: pointer;
-        margin-bottom: 1rem;
+        vertical-align: middle;
     }
 
     input[type=checkbox] {
         display: none;
+    }
+
+    label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
