@@ -1,5 +1,4 @@
 import { getRoute } from "./models/routes";
-import { agencies } from "./models/sources";
 
 // TO-DO: Verify what all the various Service IDs mean
 const BUS_WEEKDAY_SERVICE = '2';
@@ -31,7 +30,7 @@ const DCTA = '581';
 // Choose specific routes/trips to enable
 export default class UserPreferences {
     static ALL_AVAILABLE = 'all available';
-    enableAgencies = new Set([DART, TrinityMetro, DCTA]);
+    enableAgencies = new Set([DART]);
     enableRoutes = UserPreferences.ALL_AVAILABLE;
     enableServiceIDs = new Set([
         BUS_WEEKDAY_SERVICE,
