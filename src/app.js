@@ -78,3 +78,10 @@ when('mousemove', () => doThisNowThatLater(
     () => hide($('#leave-fullscreen')),
     1 // seconds
 ));
+
+// Detect when user exits fullscreen (by means other than by clicking the button) and exit full screen mode when they do
+when('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        closeFullscreen();
+    }
+});
