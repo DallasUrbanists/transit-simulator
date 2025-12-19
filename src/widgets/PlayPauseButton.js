@@ -5,8 +5,8 @@ const pauseIcon = './icons/pause.svg';
 const playIcon = './icons/play.svg';
 
 export default class PlayPauseButton {
-    constructor(elementId, playback) {
-        this.element = $('#'+elementId);
+    constructor(element, playback) {
+        this.element = element;
         this.image = this.element.getElementsByTagName('img')[0];
         this.playback = playback;
         this.element.onclick = () => this.playback.toggle();

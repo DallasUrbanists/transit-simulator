@@ -26,6 +26,13 @@ export default class MapContext extends LeafletMap {
             getStoredCoords() ?? defaultCoords,
             getStored('map-zoom') ?? defaultZoomLevel,
         );
+        // this.tileLayer = L.tileLayer(
+        //     'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        //     {
+        //         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar GeoEye, USDA, USGS, AEX, ...',
+        //         maxZoom: 19
+        //     }
+        // ).addTo(this);
         this.tileLayer = new MaptilerLayer({
             apiKey: import.meta.env.VITE_MAPTILER_API_KEY,
             opacity: getStored('map-opacity') ?? 1,

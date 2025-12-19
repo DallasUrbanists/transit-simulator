@@ -1,7 +1,7 @@
 const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/transit-simulator/';
 
-export const $ = query => document.querySelector(query);
-export const $$ = query => document.querySelectorAll(query);
+export const $ = (query, w = window) => w.document.querySelector(query);
+export const $$ = (query, w = window) => w.document.querySelectorAll(query);
 
 export function absURL(path) {
     return (new URL(path, BASE_URL)).href;
@@ -23,12 +23,13 @@ export function store(localStorageKey, value) {
 
 export function dispatch(eventKey, detail) {
     window.dispatchEvent(new CustomEvent(eventKey, { detail }));
+    if (window.child) {
+        window.child.dispatchEvent(new CustomEvent(eventKey, { detail }));
+    }
 }
 
 export function when(eventHappened, doThis) {
-    window.addEventListener(eventHappened, ({ detail }) => {
-        doThis(detail)
-    });
+    window.addEventListener(eventHappened, ({ detail }) => doThis(detail));
 }
 
 export function sanitize(string) {
@@ -67,18 +68,21 @@ export function minValMax(min, val, max) {
 export const convert = {
     milesToFeet: (miles = 1) => miles * 5280,
     daysToSeconds: (days = 1) => days * 24 * 60 * 60,
-    secondsToTimeString: timestamp => {
+    secondsToTimeString: (timestamp, mode = '12') => {
         const dateObj = new Date(parseInt(timestamp) * 1000);
         const hours = dateObj.getUTCHours();
         const f = s => s.toString().padStart(2, '0');
         let h = hours;
-        if (hours === 0) h = 12;
-        else if (hours > 12) h = hours - 12;
-        return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
+        if (mode === '12') {
+            if (hours === 0) h = 12;
+            else if (hours > 12) h = hours - 12;
+            return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
+        }
+        return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())}`;
     },
     timeStringToSeconds: timeString => {
         const n = timeString.split(':');
-        return parseInt(n[0]) * 3600 + parseInt(n[1]) * 60 + parseInt(n[2]);
+        return parseInt(n[0] ?? 0) * 3600 + parseInt(n[1] ?? 0) * 60 + parseInt(n[2] ?? 0);
     },
     secondsToHour: timestamp => parseInt(new Date(parseInt(timestamp) * 1000).getUTCHours()),
     nowInSeconds: () => {

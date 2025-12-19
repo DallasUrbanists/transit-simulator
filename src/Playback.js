@@ -1,12 +1,19 @@
-import { convert, DAY, dispatch, store } from "./misc/utilities.mjs";
+import { convert, DAY, dispatch, minValMax, store } from "./misc/utilities.mjs";
 
 const playheadChanged = new CustomEvent('playheadChanged');
+const defaultLoopStart = 0;
+const defaultLoopEnd = DAY-1;
 
 export default class Playback {
     isPlaying = false;
     isPaused = false;
     speed = localStorage.getItem('playback-speed') ?? 32;
     playhead = convert.nowInSeconds();
+    loopstart = 0;
+    loopend = DAY - 1;
+    playForward = true;
+    isBouncing = false;
+
     #animationFrame;
 
     static SPEED_CHANGED = 'playback-speed-changed';
@@ -31,16 +38,37 @@ export default class Playback {
     }
 
     setPlayhead = (seconds) => {
-        this.playhead = seconds;
+        this.playhead = minValMax(this.loopstart, seconds, this.loopend);
         dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
     };
 
     pulse(timestamp) {
         const deltaMilliseconds = Math.max(0, timestamp - this.startTimestamp);
         const deltaSeconds = (deltaMilliseconds * this.speed) / 1000;
-        let newPlayhead = this.startPlayhead + deltaSeconds;
-        if (newPlayhead > DAY) {
-            newPlayhead = newPlayhead - DAY;
+        let newPlayhead = this.playForward
+            ? this.startPlayhead + deltaSeconds
+            : this.startPlayhead - deltaSeconds;
+        if (newPlayhead > this.loopend) {
+            if (this.isBouncing) {
+                newPlayhead = this.loopend;
+                this.playForward = false;
+            } else {
+                const loopduration = this.loopend - this.loopstart;
+                const loopdelta = newPlayhead - this.loopend;
+                if (loopdelta < loopduration) {
+                    newPlayhead = this.loopstart + loopdelta;
+                } else {
+                    newPlayhead = this.loopstart;
+                }
+            }
+            this.startTimestamp = timestamp;
+            this.startPlayhead = newPlayhead;
+        } else if (newPlayhead < this.loopstart) {
+            if (this.isBouncing) {
+                this.playForward = true;
+            }
+            console.log('this happend');
+            newPlayhead = this.loopstart;
             this.startTimestamp = timestamp;
             this.startPlayhead = newPlayhead;
         }
@@ -52,6 +80,20 @@ export default class Playback {
     }
 
     start() {
+        this.stop();
+        this.playForward = true;
+        this.isPlaying = true;
+        this.isPaused = false;
+        this.startTimestamp = performance.now();
+        this.startPlayhead = this.playhead;
+        this.animationFrame = requestAnimationFrame(t => this.pulse(t));
+        dispatch(Playback.PLAYHEAD_CHANGED, this.playhead);
+        dispatch(Playback.TOGGLED);
+    }
+
+    rewind() {
+        this.stop();
+        this.playForward = false;
         this.isPlaying = true;
         this.isPaused = false;
         this.startTimestamp = performance.now();

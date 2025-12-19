@@ -1,0 +1,31 @@
+#main-menu,
+#loading,
+#leave-fullscreen,
+#playback-controls,
+#floating-options {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+#map {
+    height: 100svh;
+}
+
+#leave-fullscreen {
+    z-index: 1;
+    display: block;
+}
+
+#floating-options,
+.leaflet-control-container {
+    display: none;
+}
+
+#playback-controls {
+    display: none;
+}
+
+a[href="https://www.maptiler.com"] {
+    opacity: 0;
+}

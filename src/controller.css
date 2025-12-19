@@ -1,0 +1,143 @@
+@import url('./reset.css');
+
+#clock,
+#main-menu,
+#loading,
+#viewport,
+#leave-fullscreen,
+#floating-options {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    background-color: #333;
+    color: #EEE;
+    font-family: monospace;
+}
+
+.control-set {
+    display: flex;
+    flex-wrap: wrap;
+
+    * {
+        flex-grow: 1;
+    }
+
+    h1 {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5em;
+        width: 100%;
+        margin: 0.25rem;
+        text-align: left;
+    }
+    h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+    }
+
+    button img {
+        width: 1em;
+    }
+
+    .control-item.button-text-pair {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        label {
+            margin-left: 1rem;
+        }
+        button.control-item {
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin: 0;
+        }
+        input {
+            margin: 0 1rem;
+            border: none;
+            text-align: center;
+        }
+    }
+
+    .control-item {
+        display: block;
+        margin: 0.25rem;
+        background-color: #444;
+        color: white;
+        padding: 1rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        input,
+        select {
+            cursor: pointer;
+            vertical-align: middle;
+            height: 2em;
+        }
+
+        input[type=checkbox] {
+            aspect-ratio: 1 / 1;
+        }
+
+        input[data-jscolor],
+        input[type=number],
+        input[type=text] {
+            width: 8em;
+            background-color: transparent;
+            color: white;
+        }
+
+        select {
+            background-color: transparent;
+            color: white;
+
+            option, optgroup {
+                color: black;
+            }
+        }
+    }
+    table.control-item {
+        display: table;
+        width: 100%;
+        padding: 0;
+        thead, tbody, tfoot {
+            width: 100%;
+        }
+        thead, tfoot {
+            background-color: #555;
+        }
+        td, th {
+            text-align: center;
+            input {
+                margin: 0;
+            }
+        }
+        td:has(input[type=checkbox]), 
+        th:has(input[type=checkbox]) {
+            width: 2rem;
+        }
+    }
+}
+.control-set.button-set {
+    flex-wrap: nowrap;
+    .control-item {
+        margin: 0.25rem 0;
+    }
+    .control-item:first-child {
+        margin-left: 0.25rem;
+    }
+    .control-item:last-child {
+        margin-right: 0.25rem;
+    }
+}

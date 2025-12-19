@@ -5,14 +5,322 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transit Simulator (BETA)</title>
-  <link rel="stylesheet" href="./src/styles.css" />
+  <link id="main-stylesheet" rel="stylesheet" href="./src/styles.css" />
+  <link id="controller-stylesheet" rel="stylesheet" href="./src/controller.css" disabled="true" />
+  <link id="viewport-mode-stylesheet" rel="stylesheet" href="./src/viewport-mode.css" disabled="true" />
+  <script src="./src/widgets/jscolor.js"></script>
 </head>
 
 <body>
   <div id="clock"></div>
+  <div id="controller">
+    <div class="control-set">
+      <h1>Playback</h1>
+      <div class="control-item button-text-pair">
+        <button class="control-item " name="playback-toggle" id="play-button-2"><img src="./icons/play.svg" alt="PLAY" /></button>
+        <input id="playback-time" type="text" class="time-select" value="00:00:00" style="width: 5.5em;">
+      </div>
+      <label class="control-item">Speed <input id="playback-speed" type="number" value="1024" style="width: 3.5em;">
+        x</label>
+    </div>
+    <div class="control-set button-set" id="playback-jog-buttons">
+      <button class="control-item" data-direction="rewind" data-minutes=30 name="playback-rw-30">30</button>
+      <button class="control-item" data-direction="rewind" data-minutes=15 name="playback-rw-15">15</button>
+      <button class="control-item" data-direction="rewind" data-minutes=1 name="playback-rw-1">1</button>
+      <button class="control-item" name="playback-now">Now</button>
+      <button class="control-item" data-direction="forward" data-minutes=1 name="playback-ff-1">1</button>
+      <button class="control-item" data-direction="forward" data-minutes=15 name="playback-ff-15">15</button>
+      <button class="control-item" data-direction="forward" data-minutes=30 name="playback-ff-30">30</button>
+    </div>
+    <div class="control-set">
+      <div class="control-item button-text-pair" id="timemark-controls">
+        <button class="control-item" name="playback-timemark-set">Set timemark</button>
+        <button class="control-item" name="playback-timemark-go">Go</button>
+        <input name="playback-timemark-txt" type="text" class="time-select" value="00:00:00" style="width: 5.5em;">
+      </div>
+    </div>
+    <div class="control-set" id="playback-loop-controls" style="flex-wrap: nowrap;">
+      <label class="control-item">Loop start <input name="playback-loop-start" type="text" class="time-select"
+          value="00:00:00" style="width: 5.5em;"></label>
+      <label class="control-item">Loop end <input name="playback-loop-end" type="text" class="time-select"
+          value="23:59:59" style="width: 5.5em;"></label>
+      <label class="control-item">Bounce <input id="playback-bounce" type="checkbox"></label>
+    </div>
+    <div class="control-set">
+      <h1>Clock</h1>
+      <label class="control-item">Visible <input name="clock-visible" type="checkbox"></label>
+      <label class="control-item">Seconds <input name="clock-seconds" type="checkbox"></label>
+      <label class="control-item">Shadow <input name="clock-shadow" type="checkbox"></label>
+      <label class="control-item">Color <input name="clock-color" value="#FFFFFF" data-jscolor="{}" data-family="clock"
+          class="color-select"></label>
+      <label class="control-item">Font
+        <select name="clock-font" id="clock-font-select" class="font-select" data-family="clock">
+          <option value="system-ui"
+            style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">System UI
+          </option>
+          <option value="Segoe UI, Tahoma, Arial" style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif;">Segoe UI
+          </option>
+          <option value="Roboto, Arial" style="font-family: Roboto, Arial, sans-serif;">Roboto</option>
+          <option value="Arial, Helvetica" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
+          <option value="Verdana, Geneva" style="font-family: Verdana, Geneva, sans-serif;">Verdana</option>
+          <option value="Tahoma, Verdana" style="font-family: Tahoma, Verdana, sans-serif;">Tahoma</option>
+          <option value="'Times New Roman', Times" style="font-family: 'Times New Roman', Times, serif;">Times New Roman
+          </option>
+          <option value="Georgia, 'Times New Roman', Times"
+            style="font-family: Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+          <option value="'Courier New', Courier" style="font-family: 'Courier New', Courier, monospace;">Courier New
+          </option>
+          <option value="Consolas, 'Courier New', monospace" style="font-family: Consolas, 'Courier New', monospace;">
+            Consolas</option>
+        </select>
+      </label>
+      <label class="control-item">Weight
+        <select name="clock-weight" id="clock-weight-select" class="weight-select" data-family="clock">
+          <option value="100" style="font-weight: 100;">100</option>
+          <option value="200" style="font-weight: 200;">200</option>
+          <option value="300" style="font-weight: 300;">300</option>
+          <option value="400" style="font-weight: 400;">400</option>
+          <option value="500" style="font-weight: 500;">500</option>
+          <option value="600" style="font-weight: 600;">600</option>
+          <option value="700" style="font-weight: 700;">700</option>
+          <option value="800" style="font-weight: 800;">800</option>
+          <option value="900" style="font-weight: 900;">900</option>
+        </select>
+      </label>
+      <label class="control-item">Size <input name="clock-size" type="number" value="48" class="size-select"
+          style="width: 4em;"> px</label>
+      <label class="control-item">Opacity <input name="clock-opacity" type="number" value="1" class="opacity-select"
+          style="width: 3em;"></label>
+    </div>
+    <div class="control-set">
+      <div class="control-item button-text-pair">
+        <label>X</label> <input name="clock-x" type="number" value="0" class="pos-left-select" style="width: 4em;">
+        <button class="control-item" name="clock-center-x">Center</button>
+      </div>
+      <div class="control-item button-text-pair">
+        <label>Y</label> <input name="clock-y" type="number" value="0" class="pos-top-select" style="width: 4em;">
+        <button class="control-item" name="clock-center-y">Center</button>
+      </div>
+    </div>
+    <div class="control-set">
+      <h1>Map</h1>
+      <div class="control-item button-text-pair">
+        <input name="map-search-txt" type="text" value="">
+        <button class="control-item" name="map-search-btn">Search</button>
+      </div>
+    </div>
+    <div class="control-set">
+      <label class="control-item">Vertical frame <input name="map-vertical-frame" type="checkbox"></label>
+      <label class="control-item">Style
+        <select class="map-style">
+          <optgroup label="Navigation and city exploration">
+            <option value="STREETS">STREETS</option>
+            <option value="STREETS.DARK" selected>STREETS.DARK</option>
+            <option value="STREETS.LIGHT">STREETS.LIGHT</option>
+            <option value="STREETS.PASTEL">STREETS.PASTEL</option>
+          </optgroup>
+          <option value="OUTDOOR">OUTDOOR</option>
+          <option value="WINTER">WINTER</option>
+          <option value="SATELLITE">SATELLITE</option>
+          <option value="HYBRID">HYBRID</option>
+          <optgroup label="Data visualization">
+            <option value="DATAVIZ">DATAVIZ</option>
+            <option value="DATAVIZ.DARK" selected>DATAVIZ.DARK</option>
+            <option value="DATAVIZ.LIGHT">DATAVIZ.LIGHT</option>
+          </optgroup>
+        </select></label>
+      <label class="control-item">Zoom <input name="map-zoom" type="number" value="20" class="zoom-select"
+          style="width: 3em;"></label>
+      <label class="control-item">Opacity <input name="map-opacity" type="number" value="1" class="ratio-select"
+          style="width: 3em;"></label>
+      <label class="control-item">Brightness <input name="map-contrast" type="number" value="1" class="ratio-select"
+          style="width: 3em;"></label>
+      <label class="control-item">Saturation <input name="map-saturation" type="number" value="1" class="ratio-select"
+          style="width: 3em;"></label>
+      <label class="control-item">Contrast <input name="map-contrast" type="number" value="1" class="ratio-select"
+          style="width: 3em;"></label>
+      <label class="control-item">Blur <input name="map-contrast" type="number" value="1" class="ratio-select"
+          style="width: 3em;"></label>
+    </div>
+    <div class="control-set button-set">
+      <button class="control-item" name="map-slide-left">Slide</button>
+      <button class="control-item" name="map-nudge-left">Nudge</button>
+      <button class="control-item" name="map-recenter">Center</button>
+      <button class="control-item" name="map-nudge-right">Nudge</button>
+      <button class="control-item" name="map-slide-right">Slide</button>
+    </div>
+    <div class="control-set">
+      <h1>Routes</h1>
+      <div class="control-item button-text-pair">
+        <input name="routes-search-txt" type="text" value="">
+        <button class="control-item" name="routes-search-btn">Search</button>
+      </div>
+      <table class="control-item" style="margin-top: 0;">
+        <thead>
+          <tr>
+            <th><input type="checkbox" class="select-all-checkbox" /></th>
+            <th>Agency</th>
+            <th>Short</th>
+            <th>Long</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>DART</td>
+            <td>003</td>
+            <td>Ross</td>
+            <td>Bus</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>DART</td>
+            <td>003</td>
+            <td>Ross</td>
+            <td>Bus</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>DART</td>
+            <td>003</td>
+            <td>Ross</td>
+            <td>Bus</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>DART</td>
+            <td>003</td>
+            <td>Ross</td>
+            <td>Bus</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>DART</td>
+            <td>003</td>
+            <td>Ross</td>
+            <td>Bus</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><input id="routes-only-selected" name="routes-only-selected" type="checkbox"></td>
+            <td colspan="4"><label for="routes-only-selected">List only selected routes</label></td>
+          </tr>
+        </tfoot>
+      </table>
+      <label class="control-item">Enable routes in simulation? <input name="route-visible" type="checkbox"></label>
+    </div>
+    <div class="control-set">
+      <H3>ROUTE LABEL</H3>
+      <label class="control-item">LABEL <input name="route-label" type="text" class="route-input" /></label>
+      <label class="control-item">Color <input name="route-marker-color" value="#FFFFFF" data-jscolor="{}"
+          data-family="route" class="color-select"></label>
+      <label class="control-item">Size <input name="route-marker-size" type="number" value="64"
+          style="width: 3em;"></label>
+      <label class="control-item">Weight
+        <select name="clock-weight" id="clock-weight-select" class="weight-select" data-family="clock">
+          <option value="100" style="font-weight: 100;">100</option>
+          <option value="200" style="font-weight: 200;">200</option>
+          <option value="300" style="font-weight: 300;">300</option>
+          <option value="400" style="font-weight: 400;">400</option>
+          <option value="500" style="font-weight: 500;">500</option>
+          <option value="600" style="font-weight: 600;">600</option>
+          <option value="700" style="font-weight: 700;">700</option>
+          <option value="800" style="font-weight: 800;">800</option>
+          <option value="900" style="font-weight: 900;">900</option>
+        </select>
+      </label>
+      <label class="control-item">Position
+        <select name="route-marker-style">
+          <option value="INSIDE">Inside</option>
+          <option value="OUTSIDE">Outside</option>
+        </select></label>
+      <label class="control-item">Shadow <input name="route-label-shadow" type="checkbox"></label>
+      <H3>ROUTE MARKER</H3>
+      <label class="control-item">Visible <input name="route-marker-visible" type="checkbox"></label>
+      <label class="control-item">Color <input name="route-marker-color" value="#FFFFFF" data-jscolor="{}"
+          data-family="route" class="color-select"></label>
+      <label class="control-item">Size <input name="route-marker-size" type="number" value="64"
+          style="width: 3em;"></label>
+      <label class="control-item">Style
+        <select name="route-marker-style">
+          <option value="CIRCLE">CIRCLE</option>
+          <option value="SQUARE">SQUARE</option>
+          <option value="RECTANGLE">RECTANGLE</option>
+        </select></label>
+      <label class="control-item">Rotate <input name="route-marker-rotate" type="checkbox"></label>
+      <label class="control-item">Border width <input name="route-marker-border-width" type="number" value="64"
+          style="width: 3em;"></label>
+      <label class="control-item">Border color <input name="route-marker-border-color" value="#FFFFFF" data-jscolor="{}"
+          data-family="route" class="color-select"></label>
+      <label class="control-item">Shadow <input name="route-marker-shadow" type="checkbox"></label>
+      <H3>ROUTE TAIL</H3>
+      <label class="control-item">Visible <input name="route-tail-visible" type="checkbox"></label>
+      <label class="control-item">Color <input name="route-tail-color" value="#FFFFFF" data-jscolor="{}"
+          data-family="route" class="color-select"></label>
+      <label class="control-item">Weight <input name="route-tail-weight" type="number" value="12"
+          style="width: 3em;"></label>
+      <label class="control-item">Length (miles) <input name="route-marker-size" type="number" value="10"
+          style="width: 3em;"></label>
+      <label class="control-item">Opacity <input name="route-tail-opacity" type="number" value="1"
+          class="opacity-select" style="width: 3em;"></label>
+      <H3>ROUTE TRACK</H3>
+      <label class="control-item">Visible <input name="route-tail-visible" type="checkbox"></label>
+      <label class="control-item">Color <input name="route-tail-color" value="#FFFFFF" data-jscolor="{}"
+          data-family="route" class="color-select"></label>
+      <label class="control-item">Weight <input name="route-tail-weight" type="number" value="12"
+          style="width: 3em;"></label>
+      <label class="control-item">Opacity <input name="route-track-opacity" type="number" value="1"
+          class="opacity-select" style="width: 3em;"></label>
+    </div>
+    <div class="control-set">
+      <h1>Effects</h1>
+      <H3>HIGHLIGHT</H3>
+      <label class="control-item">Highlight strength <input name="route-tail-opacity" type="number" value="1"
+          class="opacity-select" style="width: 3em;"></label>
+      <div class="control-set button-set">
+
+        <button class="control-item">Highlight track</button>
+        <button class="control-item">Highlight marker</button>
+      </div>
+      <div class="control-set button-set">
+
+        <button class="control-item">Remove highlights from others</button>
+        <button class="control-item">Remove highlights from all</button>
+      </div>
+      <H3>DIM</H3>
+      <label class="control-item">Dim strength <input name="route-tail-opacity" type="number" value="1"
+          class="opacity-select" style="width: 3em;"></label>
+      <button class="control-item">Dim map</button>
+      <div class="control-set button-set">
+        <button class="control-item">Dim selected tracks</button>
+        <button class="control-item">Dim selected markers</button>
+        <button class="control-item">Dim others</button>
+      </div>
+      <div class="control-set button-set">
+
+        <button class="control-item">Undim selected</button>
+        <button class="control-item">Undim others</button>
+      </div>
+      <H3>TRACK REVEAL</H3>
+      <label class="control-item">Slide from
+        <select name="route-marker-style">
+          <option value="TOP">Top down</option>
+          <option value="BOTTOM">bottom up</option>
+          <option value="LEFT">Left to right</option>
+          <option value="RIGHT">Right to left</option>
+        </select></label>
+      <div class="control-set button-set">
+        <button class="control-item">Slide in</button>
+        <button class="control-item">Slide out</button>
+      </div>
+    </div>
+  </div>
   <div id="main-menu">
     <h1>TRANSIT SIMULATOR (BETA)</h1>
-    <p>Code contributors welcome! <a href="https://github.com/DallasUrbanists/transit-simulator">Find source code on Github.</a></p>
+    <p>Code contributors welcome! <a href="https://github.com/DallasUrbanists/transit-simulator">Find source code on
+        Github.</a></p>
     <h2>Select agencies</h2>
     <div class="select-agencies"></div>
     <h2>Select routes</h2>
@@ -34,6 +342,7 @@
       <div id="progress-track" class="progress-track">
         <div id="progress-bar" class="progress-bar"></div>
       </div>
+      <button id="enter-video-mode">Video mode</button>
       <button id="enter-fullscreen">Full screen</button>
       <button id="show-menu-button">Show menu</button>
       <button id="reset-time">Set time to now</button>
@@ -91,6 +400,27 @@
 
 
   <script type="module" src="./src/app.js"></script>
+
+  <script>
+    (function () {
+      const $ = s => document.querySelector(s);
+      const $$ = s => document.querySelectorAll(s);
+      const updateFamily = family => {
+        const font = $(`.font-select[data-family=${family}]`).value;
+        const weight = $(`.weight-select[data-family=${family}]`).value;
+        const color = $(`.color-select[data-family=${family}]`).value;
+        $$(`[data-family=${family}]`).forEach(fam => {
+          fam.style.fontFamily = font;
+          fam.style.fontWeight = weight;
+          fam.style.color = color;
+        });
+      };
+      $$('.font-select, .weight-select, .color-select').forEach(
+        i => i.addEventListener('change', ({ target }) => updateFamily(target.dataset.family))
+      );
+      updateFamily('clock');
+    })();
+  </script>
 </body>
 
 </html>

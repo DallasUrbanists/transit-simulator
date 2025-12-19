@@ -4,8 +4,10 @@
     "@maptiler/leaflet-maptilersdk": "^4.1.1",
     "@maptiler/sdk": "^3.9.0",
     "@turf/turf": "^7.3.1",
+    "dexie": "^4.2.1",
     "leaflet": "^1.9.4",
     "leaflet-polylineoffset": "^1.1.1",
+    "leaflet-rotatedmarker": "^0.2.0",
     "luxon": "^3.7.2"
   },
   "devDependencies": {
