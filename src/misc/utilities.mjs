@@ -85,7 +85,21 @@ export const convert = {
         const now = new Date();
         return now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
     },
-    csvToArray: string => string.split('\n').map(row => row.split(',')),
+    csvToArray: text => {
+        let p = '', row = [''], ret = [row], i = 0, r = 0, s = !0, l;
+        for (l of text) {
+            if ('"' === l) {
+                if (s && l === p) row[i] += l;
+                s = !s;
+            } else if (',' === l && s) l = row[++i] = '';
+            else if ('\n' === l && s) {
+                if ('\r' === p) row[i] = row[i].slice(0, -1);
+                row = ret[++r] = [l = '']; i = 0;
+            } else row[i] += l;
+            p = l;
+        }
+        return ret;
+    },
     arrayToColumnIndex: array => array.reduce((map, column, index) => map.set(saniKey(column), index), new Map()),
 };
 

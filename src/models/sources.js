@@ -25,6 +25,12 @@ export const agencies = new Map([
         folder: 'DCTA',
         logo: 'DCTA.svg',
     }],
+    ['556', {
+        agency_id: '556',
+        name: 'STAR Transit',
+        folder: 'STAR',
+        logo: 'star_transit.jfif',
+    }]
 ]);
 export const sources = new Map(agencies.keys().map(agency => [agency, {
     processedRoutes: false,
