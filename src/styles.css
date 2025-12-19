@@ -321,6 +321,7 @@ body {
 }
 
 #loading {
+    overflow-y: auto;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -345,6 +346,11 @@ body {
     p {
         text-align: left;
     }
+}
+
+#load-list {
+    overflow-y: auto;
+    padding-bottom: 1em;
 }
 
 #main-menu {
@@ -490,6 +496,8 @@ a[href="https://www.maptiler.com"] {
     left: 0;
     position: fixed;
     bottom: 0;
+}
+#enter-simulation-button {
 }
 .big-red-button {
     display: block;
