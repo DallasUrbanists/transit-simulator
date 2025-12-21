@@ -29,9 +29,20 @@ function showMenu() {
     displayNone($('#loading'));
 }
 
+function lockBackground() {
+    document.body.classList.add("is-loading");
+}
+
+function unlockBackground() {
+    document.body.classList.remove("is-loading");
+}
+
+
 function loadSimulation() {
     displayNone(mainmenu.element);
     displayShow($('#loading'));
+    lockBackground();
+
     if (!isFullyLoaded(preferences.enableAgencies)) {
         displayNone($('#enter-simulation-button'));
         displayShow($('#load-inprogress-text'));
@@ -119,7 +130,10 @@ when(ClockWidget.SIZE_CHANGED, color => $('#clock-size-select').value = color);
 when(MapContext.STYLE_CHANGED, style => $('#style-select').value = style);
 
 // Handle user interaction with UI
-$('#enter-simulation-button').onclick = () => displayNone($('#loading'));
+$('#enter-simulation-button').onclick = () => {
+    displayNone($('#loading'));
+    unlockBackground();
+};
 $('#show-menu-button').onclick = showMenu;
 $('#load-simulation-button').onclick = loadSimulation;
 $('#speed-select').onchange = e => playback.setSpeed(e.target.value);
