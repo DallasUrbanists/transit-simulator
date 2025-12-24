@@ -5,8 +5,20 @@ import TransitLand from "./providers/TransitLand";
 
 
 const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
-const gtfs = new GTFS('http://localhost:3000/proxy?url=' + encodeURIComponent(remoteGTFS));
+
+const gtfs = new GTFS(remoteGTFS);
 gtfs.download();
+
+/*
+// Determine proxy prefix in a deploy-friendly way:
+// - If `VITE_PROXY_URL` is set at build time (Vite), use it.
+// - Otherwise use a relative `/proxy` path so the same host will be used in production.
+const viteProxy = (typeof import !== 'undefined' && typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_PROXY_URL) ? import.meta.env.VITE_PROXY_URL : '';
+const PROXY_PREFIX = viteProxy ? viteProxy.replace(/\/$/, '') + '/proxy?url=' : '/proxy?url=';
+
+const gtfs = new GTFS(PROXY_PREFIX + encodeURIComponent(remoteGTFS));
+gtfs.download();
+*/
 
 // o-9vg-dallasarearapidtransit
 
