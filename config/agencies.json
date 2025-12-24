@@ -1,0 +1,26 @@
+{
+    "o-9vg-dallasarearapidtransit": {
+        "long_name": "Dallas Area Rapid Transit",
+        "short_name": "DART",
+        "gtfs_folder": "DART",
+        "gtfs_url": "http://www.dart.org/transitdata/latest/google_transit.zip"
+    },
+    "o-9vfu-dentoncountytransportationauthority": {
+        "long_name": "Denton County Transportation Authority",
+        "short_name": "DCTA",
+        "gtfs_folder": "DCTA",
+        "gtfs_url": "https://gtfs.remix.com/dcta_denton_tx_us.zip"
+    },
+    "f-9vff-fortworthtransportationauthority": {
+        "long_name": "Trinity Metro",
+        "short_name": "Trinity",
+        "gtfs_folder": "TrinityMetro",
+        "gtfs_url": "http://sched.ridetm.org/gtfs/fwtatransitdata.zip"
+    },
+    "f-9vg3-startransit~tx~us": {
+        "long_name": "STAR Transit",
+        "short_name": "STAR",
+        "gtfs_folder": "STAR",
+        "gtfs_url": "https://data.trilliumtransit.com/gtfs/startransit-tx-us/startransit-tx-us.zip"
+    }
+}

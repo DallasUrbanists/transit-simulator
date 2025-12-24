@@ -112,7 +112,7 @@ export const ease = {
 };
 
 export function convertCSVToDictionary(sourceText, primaryKey, transform) {
-    const rowsAsArray = convert.csvToArray(sourceText);
+    const rowsAsArray = convert.csvToArray(sourceText.trim());
     const columnIndex = convert.arrayToColumnIndex(rowsAsArray[0]);
     const pk = saniKey(primaryKey);
     if (!columnIndex.has(pk)) {
