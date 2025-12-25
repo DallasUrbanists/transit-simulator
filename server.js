@@ -61,6 +61,10 @@ app.get('/proxy', async (req, res) => {
 
 app.use(express.static(__dirname + '/dist'));
 
+app.get('/transit-simulator/', async (req, res) => {
+  res.redirect('https://transit-simulator.onrender.com/');
+});
+
 // Define a route to serve the HTML file
 app.get('/', (req, res) => {
     // Send the HTML file as the response
