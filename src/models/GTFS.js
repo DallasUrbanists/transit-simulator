@@ -10,10 +10,7 @@ import Stop from "./Stop";
 import Agency from "./Agency";
 
 // Add a table to store feed metadata so we can detect unchanged feeds
-db.version(1).stores({
-    // feedMetadata keyed by URL; stores hash and lastFetched timestamp
-    feedMetadata: '&url,hash,lastFetched'
-});
+db.version(1).stores({ feedMetadata: '&url,hash,lastFetched' });
 
 export default class GTFS {
     agencies = new Map();
@@ -35,7 +32,7 @@ export default class GTFS {
         this.url = url;
     }
 
-    async download() {
+    async download(forceDownload = false) {
         console.log(`GTFS.download: starting fetch for ${this.url}`);
         const response = await axios.get(this.url, {
             responseType: 'blob',
@@ -59,7 +56,7 @@ export default class GTFS {
         console.log(`GTFS.download: computed hash ${hashHex}`);
 
         const existing = await db.feedMetadata.get(this.url);
-        if (existing && existing.hash === hashHex) {
+        if (!forceDownload && existing && existing.hash === hashHex) {
             console.log(`GTFS: no changes for ${this.url} (hash ${hashHex}), skipping parse.`);
             await db.feedMetadata.put({ url: this.url, hash: hashHex, lastFetched: Date.now() });
             return;
@@ -113,15 +110,7 @@ export default class GTFS {
     parseAgency(text) {
         console.log('parseAgency: start');
         convertCSVToDictionary(text, 'agency_id').forEach((data, agency_id) => {
-            this.agencies.set(agency_id, new Agency(
-                data.get('agency_id'),
-                data.get('agency_name'),
-                data.get('agency_phone'),
-                data.get('agency_url'),
-                data.get('agency_timezone'),
-                data.get('agency_language'),
-                data.get('agency_fare_url'),
-            ));
+            this.agencies.set(agency_id, Agency.fromMap(data));
         });
         Agency.bulkSave(this.agencies);
         this.files.agency.isDownloaded = true;
@@ -131,14 +120,7 @@ export default class GTFS {
     parseRoutes(text) {
         console.log('parseRoutes: start');
         convertCSVToDictionary(text, 'route_id').forEach((data, route_id) => {
-            this.routes.set(route_id, new Route(
-                data.get('agency_id'),
-                data.get('route_id'),
-                data.get('route_long_name'),
-                data.get('route_short_name'),
-                data.get('route_type'),
-                fixHexValue(data.get('route_color')),
-            ));
+            this.routes.set(route_id, Route.fromMap(data));
         });
         Route.bulkSave(this.routes);
         this.files.routes.isDownloaded = true;
@@ -148,15 +130,7 @@ export default class GTFS {
     parseTrips(text) {
         console.log('parseTrips: start');
         convertCSVToDictionary(text, 'trip_id').forEach((data, trip_id) => {
-            this.trips.set(trip_id, new Trip(
-                data.get('route_id'),
-                data.get('trip_id'),
-                data.get('service_id'),
-                data.get('trip_headsign'),
-                data.get('direction_id'),
-                data.get('block_id'),
-                data.get('shape_id'),
-            ));
+            this.trips.set(trip_id, Trip.fromMap(data));
         });
         console.log(`parseTrips: parsed ${this.trips.length} trips`);
         Trip.bulkSave(this.trips);
@@ -198,13 +172,9 @@ export default class GTFS {
     parseStops(text) {
         console.log('parseStops: start');
         convertCSVToDictionary(text, 'stop_id').forEach((data, stop_id) => {
-            this.stops.set(stop_id, new Stop(
-                data.get('stop_id'),
-                data.get('stop_code'),
-                data.get('stop_name'),
-                data.get('stop_lat'),
-                data.get('stop_lon'),
-            ));
+            data.set('stop_lat', parseFloat(data.get('stop_lat')));
+            data.set('stop_lon', parseFloat(data.get('stop_lon')));
+            this.stops.set(stop_id, Stop.fromMap(data));
         });
         Stop.bulkSave(this.stops);
         this.files.stops.isDownloaded = true;
@@ -233,6 +203,17 @@ export default class GTFS {
     postDownloadParse() {
         console.log('postDownloadParse: start');
 
+        console.log('postDownloadParse: assign timezones to routes');
+        this.agencies.forEach((agency, agency_id) => {
+            this.routes.forEach((route, route_id, map) => {
+                if (route.agency_id === agency_id) {
+                    route.timezone = agency.agency_timezone;
+                    map.set(route_id, route);
+                }
+            });
+        });
+        Route.bulkSave(this.routes);
+
         console.log('postDownloadParse: assign stop times to trips');
         let counter = 0;
         this.stopTimes.forEach(stopTime => {
@@ -248,6 +229,12 @@ export default class GTFS {
         console.log('postDownloadParse: for each trip, sort stop times');
         this.trips.forEach(trip => {
             trip.stop_times.sort(({ stop_sequence: a }, { stop_sequence: b }) => a - b);
+            const firstStop = trip.stop_times[0];
+            const lastStop = trip.stop_times[trip.stop_times.length - 1];
+            trip.start_seconds = convert.timeStringToSeconds(firstStop.arrival_time);
+            trip.end_seconds = convert.timeStringToSeconds(lastStop.departure_time);
+            const route = this.routes.get(trip.route_id);
+            trip.timezone = route.timezone;
         });
         Trip.bulkSave(this.trips);
         console.log(`postDownloadParse: saved ${this.trips.size} trips with stop times`);

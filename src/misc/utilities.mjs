@@ -224,3 +224,27 @@ export function proxyURL(url) {
     const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
     const gtfs = new GTFS('http://localhost:3000/proxy?url=' + encodeURIComponent(remoteGTFS));
 }
+
+const tzDiffCache = new Map();
+export function getTimezoneDifference(timezoneA, timezoneB, units = 'seconds') {
+    const cacheKey = timezoneA+timezoneB;
+    let diffSeconds;
+    if (tzDiffCache.has(cacheKey)) {
+        console.log('cached answer');
+        diffSeconds = tzDiffCache.get(cacheKey);
+    } else {
+        console.log('new answer');
+        const date = new Date();
+        const timeA = new Date(date.toLocaleString('en-US', { timeZone: timezoneA }));
+        const timeB = new Date(date.toLocaleString('en-US', { timeZone: timezoneB }));
+        diffSeconds = (timeB - timeA) / 1000;
+        tzDiffCache.set(cacheKey, diffSeconds);
+    }
+    switch (units) {
+        case 'minutes': return diffSeconds / 60;
+        case 'hours': return diffSeconds / 3600;
+        case 'seconds':
+        default:
+            return diffSeconds;
+    }
+}

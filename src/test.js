@@ -1,10 +1,20 @@
+//import Trip from "./models/Trip";
+
+
 import GTFS from "./models/GTFS";
 
 const proxyBase = import.meta.env.VITE_BASE_URL + 'proxy?url=';
 const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
 
 const gtfs = new GTFS(proxyBase + encodeURIComponent(remoteGTFS));
-gtfs.download();
+gtfs.download(true);
+
+// console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));
+// console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));
+// console.log(getTimezoneDifference('America/Chicago', 'America/Chicago'));
+// console.log(getTimezoneDifference('America/Chicago', 'America/Chicago'));
+// console.log(getTimezoneDifference('America/New_York', 'America/Los_Angeles'));
+// console.log(getTimezoneDifference('America/New_York', 'America/Los_Angeles'));
 
 /*
 // Determine proxy prefix in a deploy-friendly way:

@@ -1,34 +1,45 @@
-import { db } from "../db.js";
+import { convert, DAY, getTimezoneDifference } from "../misc/utilities.mjs";
+import Entity from "./Entity.js";
 
-db.version(1).stores({ trips: '[route_id+trip_id]' });
+Entity.defineEntityTable('trips', '[route_id+trip_id]');
 
-export default class Trip {
-    constructor(
-        route_id,
-        trip_id,
-        service_id,
-        headsign,
-        direction_id,
-        block_id,
-        shape_id,
-    ) {
-        this.route_id = route_id;
-        this.trip_id = trip_id;
-        this.service_id = service_id;
-        this.headsign = headsign;
-        this.direction_id = direction_id;
-        this.block_id = block_id;
-        this.shape_id = shape_id;
-    }
-
-    save() {
-        db.trips.put(this).then(() => console.log(`Successfully saved Trip ${this.headsign}`));
-    }
-
-    static bulkSave(trips) {
-        if (trips instanceof Map) {
-            trips = Array.from(trips.values());
+export default class Trip extends Entity {
+    static TABLE = 'trips';
+    static PRIMARY_KEY = 'trip_id';
+    getDuration(units = 'seconds') {
+        if (!this.start_seconds || !this.end_seconds) {
+            return undefined;
         }
-        db.trips.bulkPut(trips).then(() => console.log(`Successfully stored ${trips.length} trips in idb`));
+        const durationSeconds = this.end_seconds - this.start_seconds;
+        switch (units) {
+            case 'timestring':
+                return convert.secondsToTimeString(durationSeconds);
+            case 'hours':
+                return durationSeconds / 60 / 60;
+            case 'minutes':
+                return durationSeconds / 60;
+            case 'seconds':
+            default:
+                return durationSeconds;
+        }
+    }
+    isActiveAt(seconds, timezone) {
+        if (this.getDuration() >= DAY) {
+            return true;
+        }
+        if (timezone !== this.timezone) {
+            seconds = seconds + getTimezoneDifference(timezone, this.timezone);
+        }
+        const simpleComparison = seconds >= this.start_seconds && seconds <= this.end_seconds;
+        if (simpleComparison) {
+            return true;
+        } else {
+            // If simple comparison failed, and trip runs past midnight, consider possibility that clock just wrapped around
+            if (this.end_seconds >= DAY) {
+                const altSeconds = seconds + DAY;
+                return altSeconds >= this.start_seconds && altSeconds <= this.end_seconds;
+            }
+        }
+        return false;
     }
 }
