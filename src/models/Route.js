@@ -4,7 +4,7 @@ Entity.defineEntityTable('routes', '[agency_id+route_id]');
 
 export default class Route extends Entity {
     static TABLE = 'routes';
-    static PRIMARY_KEY = 'route_id';
+    static PRIMARY_KEY = ['agency_id', 'route_id'];
     // constructor(
     //     agency_id,
     //     route_id,

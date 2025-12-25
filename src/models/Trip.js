@@ -5,10 +5,10 @@ Entity.defineEntityTable('trips', '[route_id+trip_id]');
 
 export default class Trip extends Entity {
     static TABLE = 'trips';
-    static PRIMARY_KEY = 'trip_id';
+    static PRIMARY_KEY = ['route_id', 'trip_id'];
     getDuration(units = 'seconds') {
         if (!this.start_seconds || !this.end_seconds) {
-            return undefined;
+            return 0;
         }
         const durationSeconds = this.end_seconds - this.start_seconds;
         switch (units) {

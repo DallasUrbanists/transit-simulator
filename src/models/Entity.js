@@ -13,13 +13,31 @@ export default class Entity {
         Object.assign(instance, Object.fromEntries(map));
         return instance;
     }
+    static async get(id) {
+        const query = {};
+        if (typeof this.PRIMARY_KEY === 'string') {
+            query[this.PRIMARY_KEY] = id;
+        } else if (this.PRIMARY_KEY instanceof Array) {
+            this.PRIMARY_KEY.forEach((key, index) => query[key] = id[index]);
+        } else {
+            console.log(this.PRIMARY_KEY, typeof this.PRIMARY_KEY, id);
+            throw new Error('Unexpected PRIMARY_KEY type');
+        }
+        const data = await db[this.TABLE].where(query).first();
+        if (!data) {
+            return undefined;
+        }
+        const instance = new this();
+        Object.assign(instance, data);
+        return instance;
+    }
     onPreSave() {
         // optionally add functionality in child class
         return;
     }
     save() {
         this.onPreSave();
-        db[this.TABLE].put(this).then(() => console.log(`Successfully saved ${this.constructor.name} ${this[this.PRIMARY_KEY]}`));
+        db[this.TABLE].put(this).then(() => console.log(`Successfully saved ${this.constructor.name}`));
     }
     static bulkSave(entities) {
         if (entities instanceof Map) {

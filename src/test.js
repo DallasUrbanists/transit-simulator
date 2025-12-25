@@ -1,13 +1,15 @@
-//import Trip from "./models/Trip";
+import Route from "./models/Route";
+import Trip from "./models/Trip";
 
-
-import GTFS from "./models/GTFS";
+Trip.get(['26670', '8641281']).then(console.log);
+Route.get(['DART', '26670']).then(console.log);
+/*import GTFS from "./models/GTFS";
 
 const proxyBase = import.meta.env.VITE_BASE_URL + 'proxy?url=';
 const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
 
 const gtfs = new GTFS(proxyBase + encodeURIComponent(remoteGTFS));
-gtfs.download(true);
+gtfs.download(true);*/
 
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));
