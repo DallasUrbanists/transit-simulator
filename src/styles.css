@@ -321,6 +321,7 @@ body {
 }
 
 #loading {
+    display: none;
     overflow-y: auto;
     position: fixed;
     pointer-events: all;
@@ -695,4 +696,10 @@ a[href="https://www.maptiler.com"] {
     border-right: 5px solid green;
     transform: rotate(45deg);
     margin: 20px;
+}
+
+div#controller {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }

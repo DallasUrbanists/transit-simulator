@@ -1,13 +1,20 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/transit-simulator/';
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/';
 
-export const $ = query => document.querySelector(query);
-export const $$ = query => document.querySelectorAll(query);
+export const $ = (query, w = window) => w.document.querySelector(query);
+export const $$ = (query, w = window) => w.document.querySelectorAll(query);
 
 export function absURL(path) {
+    // If script executing in browser, extract base URL from browser location
+    if (window) {
+        const fullHost = window.location.protocol + "//" + window.location.host;
+        return (new URL(path, fullHost)).href;
+    }
+    // Otherwise (if executing from terminal), use ENV variable as base URL
     return (new URL(path, BASE_URL)).href;
 }
 
 export async function fetchText(sourceFile) {
+    console.log(sourceFile);
     const file = await fetch(sourceFile);
     return file.text();
 }
@@ -23,12 +30,13 @@ export function store(localStorageKey, value) {
 
 export function dispatch(eventKey, detail) {
     window.dispatchEvent(new CustomEvent(eventKey, { detail }));
+    if (window.child) {
+        window.child.dispatchEvent(new CustomEvent(eventKey, { detail }));
+    }
 }
 
 export function when(eventHappened, doThis) {
-    window.addEventListener(eventHappened, ({ detail }) => {
-        doThis(detail)
-    });
+    window.addEventListener(eventHappened, ({ detail }) => doThis(detail));
 }
 
 export function sanitize(string) {
@@ -67,18 +75,21 @@ export function minValMax(min, val, max) {
 export const convert = {
     milesToFeet: (miles = 1) => miles * 5280,
     daysToSeconds: (days = 1) => days * 24 * 60 * 60,
-    secondsToTimeString: timestamp => {
+    secondsToTimeString: (timestamp, mode = '12') => {
         const dateObj = new Date(parseInt(timestamp) * 1000);
         const hours = dateObj.getUTCHours();
         const f = s => s.toString().padStart(2, '0');
         let h = hours;
-        if (hours === 0) h = 12;
-        else if (hours > 12) h = hours - 12;
-        return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
+        if (mode === '12') {
+            if (hours === 0) h = 12;
+            else if (hours > 12) h = hours - 12;
+            return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())} ${hours >= 12 ? 'PM' : 'AM'}`;
+        }
+        return `${h.toString()}:${f(dateObj.getUTCMinutes())}:${f(dateObj.getSeconds())}`;
     },
     timeStringToSeconds: timeString => {
         const n = timeString.split(':');
-        return parseInt(n[0]) * 3600 + parseInt(n[1]) * 60 + parseInt(n[2]);
+        return parseInt(n[0] ?? 0) * 3600 + parseInt(n[1] ?? 0) * 60 + parseInt(n[2] ?? 0);
     },
     secondsToHour: timestamp => parseInt(new Date(parseInt(timestamp) * 1000).getUTCHours()),
     nowInSeconds: () => {
@@ -108,7 +119,7 @@ export const ease = {
 };
 
 export function convertCSVToDictionary(sourceText, primaryKey, transform) {
-    const rowsAsArray = convert.csvToArray(sourceText);
+    const rowsAsArray = convert.csvToArray(sourceText.trim());
     const columnIndex = convert.arrayToColumnIndex(rowsAsArray[0]);
     const pk = saniKey(primaryKey);
     if (!columnIndex.has(pk)) {
@@ -147,7 +158,7 @@ export function setIfNotHas(property, value, map) {
 export const DAY = convert.daysToSeconds(1);
 
 export const isTouch = e => e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel';
-export const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave';
+export const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover' || e.type == 'mouseout' || e.type == 'mouseenter' || e.type == 'mouseleave';
 
 /* Open fullscreen */
 export function openFullscreen(elem) {
@@ -208,3 +219,8 @@ export const create = (tagName, className, attributes = {}) => {
     }
     return elem;
 };
+
+export function proxyURL(url) {
+    const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
+    const gtfs = new GTFS('http://localhost:3000/proxy?url=' + encodeURIComponent(remoteGTFS));
+}

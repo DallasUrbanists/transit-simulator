@@ -1,5 +1,6 @@
 import * as turf from '@turf/turf';
 import L from 'leaflet';
+import '../node_modules/leaflet-rotatedmarker/leaflet.rotatedMarker.js';
 import dictionary from './models/dictionary';
 import { getSegmentsFor } from "./models/segments";
 import { findActiveTrips } from './models/trips';
@@ -38,7 +39,8 @@ export default class Simulation {
                         if (trip.has('priorPosition')) {
                             const priorPosition = trip.get('priorPosition');
                             const bearing = turf.bearing(headPosition, priorPosition);
-                            $(`.tripId-${tripId}.transit-icon`).style.transform += 'rotate(' + bearing + 'deg)';
+                            t('marker').setRotationAngle(bearing);
+                            //$(`.tripId-${tripId}.transit-icon`).style.transform += 'rotate(' + bearing + 'deg)';
                         }
                         trip.set('priorPosition', headPosition);
                     }
@@ -52,7 +54,9 @@ export default class Simulation {
                         }
                     } else {
                         const tailLatLngs = calculateTailLatLngs(trip, totalLengthTraveled);
-                        trip.get('tail').setLatLngs(tailLatLngs);
+                        if (tailLatLngs) {
+                            trip.get('tail').setLatLngs(tailLatLngs);
+                        }
                     }
                 }
                 // If trip takes place across multiple days (greater than 24 hours)...

@@ -12,6 +12,11 @@ import ProgressBarWidget from "./widgets/ProgressBarWidget.js";
 import UserPreferences from "./UserPreferences.js";
 import MainMenuWidget from "./widgets/MainMenuWidget.js";
 import Loader from "./widgets/LoaderWidget.js";
+import PlayheadControlWidget from "./widgets/PlayheadControlWidget.js";
+import SpeedControlWidget from "./widgets/SpeedControlWidget.js";
+import PlayheadJogWidget from "./widgets/PlayheadJogWidget.js";
+import TimemarkControlWidget from "./widgets/TimemarkControlWidget.js";
+import TimeLoopWidget from "./widgets/TimeLoopWidget.js";
 
 const preferences = new UserPreferences();
 const map = new MapContext('map');
@@ -20,7 +25,7 @@ const playback = new Playback(simulation);
 const clock = new ClockWidget('clock', playback);
 const mainmenu = new MainMenuWidget('main-menu', preferences);
 new ProgressBarWidget('progress-track', playback);
-new PlayPauseButton('play-button', playback);
+new PlayPauseButton($('#play-button'), playback);
 
 window.debug = debug(map);
 
@@ -49,11 +54,10 @@ function loadSimulation() {
         const format = (number) => new Intl.NumberFormat().format(number);
         // create a load list for each enabled agency
         preferences.enableAgencies.forEach(enabledAgency => {
-            const loadListDivId = 'agency-load-list-'+enabledAgency.replace(/\W/g, '');
-            let agencyLoadListDiv = $('#'+loadListDivId);
-            console.log(agencyLoadListDiv);
+            const loadListDivId = 'agency-load-list-' + enabledAgency.replace(/\W/g, '');
+            let agencyLoadListDiv = $('#' + loadListDivId);
             const agency = agencies.get(enabledAgency);
-                // If load list does not exist yet, create a new one
+            // If load list does not exist yet, create a new one
             if (!agencyLoadListDiv) {
                 agencyLoadListDiv = create('div', 'agency-load-list', { id: loadListDivId });
                 const h3 = create('h3', 'agency-load-list-header');
@@ -62,7 +66,7 @@ function loadSimulation() {
                 $('#load-list').appendChild(agencyLoadListDiv);
                 // create a div for each load step
                 Loader.STEPS.forEach(({ key, before, during, after }) => {
-                    const stepDiv = create('div', 'load-list-item load-'+key);
+                    const stepDiv = create('div', 'load-list-item load-' + key);
                     const spinner = create('img', 'load-animation', { src: './icons/walking-animated-black.png' });
                     const checkmark = create('div', 'checkmark');
                     const span = create('span');
@@ -95,13 +99,13 @@ function loadSimulation() {
                                 default:
                                     span.innerText = during;
                                     stepDiv.classList.add('inprogress');
-                                    break;                            
+                                    break;
                             }
                         }
                     });
                 });
             }
-        }); 
+        });
         loadAgencies(preferences.enableAgencies);
     } else {
         displayShow($('#enter-simulation-button'));
@@ -133,6 +137,7 @@ when(MapContext.STYLE_CHANGED, style => $('#style-select').value = style);
 $('#enter-simulation-button').onclick = () => {
     displayNone($('#loading'));
     unlockBackground();
+    dispatch('entersimulation');
 };
 $('#show-menu-button').onclick = showMenu;
 $('#load-simulation-button').onclick = loadSimulation;
@@ -149,22 +154,105 @@ $('#reset-time').onclick = () => {
     playback.unpause();
 };
 
-// Press spacebar to toggle playback
-window.addEventListener('keypress', e => {
-    if (e.key == " " || e.code == "Space") {
-        playback.toggle();
-    } else if (e.key == "q" || e.key == "Q") {
-        map.zoomOut(0.5, { animate: true });
-    } else if (e.key == "e" || e.key == "E") {
-        map.zoomIn(0.5, { animate: true });
-    } else if (e.key == "f" || e.key == "F") {
-        openFullscreen($('body'));
-    }
-});
-
 // When mouse moves, briefly show the leave fullscreen button
 when('mousemove', () => doThisNowThatLater(
     () => show($('#leave-fullscreen'), 0.5),
     () => hide($('#leave-fullscreen')),
     1 // seconds
 ));
+
+window.control = { playback, map, clock, preferences };
+window.child = null;
+$('#enter-video-mode').onclick = () => {
+    openControllerWindow();
+    window.enterViewportMode();
+};
+const url = new URL(window.location.href);
+window.enterControllerMode = () => {
+    url.searchParams.set("mode", "controller");
+    window.history.pushState({}, "", url);
+    $('#main-stylesheet').disabled = true;
+    $('#viewport-mode-stylesheet').disabled = true;
+    $('#controller-stylesheet').disabled = false;
+    const openerPlayback = window.opener.control.playback;
+    new PlayPauseButton($('#play-button-2', window), openerPlayback);
+    new PlayheadControlWidget($('#playback-time', window), openerPlayback);
+    new SpeedControlWidget($('#playback-speed', window), openerPlayback);
+    new PlayheadJogWidget($('#playback-jog-buttons', window), openerPlayback);
+    new TimemarkControlWidget($('#timemark-controls', window), openerPlayback);
+    new TimeLoopWidget($('#playback-loop-controls', window), openerPlayback);
+    $('#playback-bounce', window).onchange = e => openerPlayback.isBouncing = e.target.checked;
+};
+window.enterMainMode = () => {
+    url.searchParams.set("mode", "");
+    window.history.pushState({}, "", url);
+    $('#main-stylesheet').disabled = false;
+    $('#viewport-mode-stylesheet').disabled = true;
+    $('#controller-stylesheet').disabled = true;
+};
+window.enterViewportMode = () => {
+    url.searchParams.set("mode", "viewport");
+    window.history.pushState({}, "", url);
+    $('#main-stylesheet').disabled = false;
+    $('#viewport-mode-stylesheet').disabled = false;
+    $('#controller-stylesheet').disabled = true;
+};
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const mode = urlParams.get('mode');
+if (mode === 'controller') {
+    window.enterControllerMode();
+    if (window.opener) {
+        window.opener.child = window;
+    }
+}
+
+// Press spacebar to toggle playback
+window.addEventListener('keypress', e => {
+    if (mode !== 'controller') {
+        if (e.key == " " || e.code == "Space") {
+            playback.toggle();
+        } else if (e.key == "q" || e.key == "Q") {
+            map.zoomOut(0.5, { animate: true });
+        } else if (e.key == "e" || e.key == "E") {
+            map.zoomIn(0.5, { animate: true });
+        } else if (e.key == "f" || e.key == "F") {
+            openFullscreen($('body'));
+        } else if (e.key == 'm' || e.key == 'M') {
+            if (mode !== 'controller') {
+                window.enterMainMode();
+            }
+        } else if (e.key == 'v' || e.key == 'V') {
+            if (mode !== 'controller') {
+                window.enterViewportMode();
+            }
+        }
+    }
+});
+
+window.addEventListener('entersimulation', () => {
+    if (mode === 'viewport') {
+        window.enterViewportMode();
+        openControllerWindow();
+    }
+});
+
+function openControllerWindow() {
+    const params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=500,height=980,left=0,top=100`;
+    window.child = open('/?mode=controller', 'controller-window', params);
+    window.child.focus();
+    window.child.onload = (e) => {
+        e.currentTarget.control = {
+            playback,
+            map,
+            clock,
+            preferences
+        };
+        e.currentTarget.enterControllerMode();
+        e.currentTarget.onunload = () => {
+            console.log('unload!');
+            window.enterMainMode();
+        };
+    };
+}
