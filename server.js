@@ -1,6 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import { pipeline, Readable } from 'stream';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 app.use(cors());
@@ -53,5 +59,13 @@ app.get('/proxy', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+app.use(express.static(__dirname + '/dist'));
+
+// Define a route to serve the HTML file
+app.get('/', (req, res) => {
+    // Send the HTML file as the response
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
+
+const PORT = process.env.PORT || 80;
 app.listen(PORT, () => console.log(`proxy listening on http://localhost:${PORT}`));

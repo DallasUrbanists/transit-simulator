@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: process.env.BASE_URL || '/transit-simulator/',
+  base: process.env.BASE_URL || '/',
   build: {
     rollupOptions: {
       input: {

@@ -1,13 +1,20 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/transit-simulator/';
+const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/';
 
 export const $ = (query, w = window) => w.document.querySelector(query);
 export const $$ = (query, w = window) => w.document.querySelectorAll(query);
 
 export function absURL(path) {
+    // If script executing in browser, extract base URL from browser location
+    if (window) {
+        const fullHost = window.location.protocol + "//" + window.location.host;
+        return (new URL(path, fullHost)).href;
+    }
+    // Otherwise (if executing from terminal), use ENV variable as base URL
     return (new URL(path, BASE_URL)).href;
 }
 
 export async function fetchText(sourceFile) {
+    console.log(sourceFile);
     const file = await fetch(sourceFile);
     return file.text();
 }
@@ -151,7 +158,7 @@ export function setIfNotHas(property, value, map) {
 export const DAY = convert.daysToSeconds(1);
 
 export const isTouch = e => e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel';
-export const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave';
+export const isClick = e => e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover' || e.type == 'mouseout' || e.type == 'mouseenter' || e.type == 'mouseleave';
 
 /* Open fullscreen */
 export function openFullscreen(elem) {
@@ -212,3 +219,8 @@ export const create = (tagName, className, attributes = {}) => {
     }
     return elem;
 };
+
+export function proxyURL(url) {
+    const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
+    const gtfs = new GTFS('http://localhost:3000/proxy?url=' + encodeURIComponent(remoteGTFS));
+}

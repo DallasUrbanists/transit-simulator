@@ -1,12 +1,9 @@
 import GTFS from "./models/GTFS";
-import Route from "./models/Route";
-import Trip from "./models/Trip";
-import TransitLand from "./providers/TransitLand";
 
-
+const proxyBase = import.meta.env.VITE_BASE_URL + 'proxy?url=';
 const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
 
-const gtfs = new GTFS(remoteGTFS);
+const gtfs = new GTFS(proxyBase + encodeURIComponent(remoteGTFS));
 gtfs.download();
 
 /*
