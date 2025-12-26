@@ -31,6 +31,10 @@ export default class Entity {
         Object.assign(instance, data);
         return instance;
     }
+    static async all() {
+        const array = await db[this.TABLE].toArray();
+        return array.map(data => this.fromObject(data));
+    }
     onPreSave() {
         // optionally add functionality in child class
         return;

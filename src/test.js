@@ -1,15 +1,48 @@
+import { DAY } from "./misc/utilities.mjs";
 import Route from "./models/Route";
 import Trip from "./models/Trip";
 
-Trip.get(['26670', '8641281']).then(console.log);
-Route.get(['DART', '26670']).then(console.log);
-/*import GTFS from "./models/GTFS";
+// Trip.get(['26670', '8641281']).then(trip => {
+//     console.log(trip);
+//     console.log(trip.isActiveAt(14759));
+//     console.log(trip.isActiveAt(14760)); // right at start
+//     console.log(trip.isActiveAt(14761));
+//     console.log(trip.isActiveAt(16979));
+//     console.log(trip.isActiveAt(16980)); // right at end
+//     console.log(trip.isActiveAt(16981));
+// });
+
+async function main() {
+    console.time('DB fetch time');
+    const trips = await Trip.all();
+    console.timeEnd('DB fetch time');
+    console.time('Find active 1');
+    Trip.findActiveAmong(14761, 'America/Chicago', trips)
+    console.timeEnd('Find active 1');
+    console.time('Find active 2');
+    Trip.findActiveAmong(0, 'America/Chicago', trips)
+    console.timeEnd('Find active 2');
+    console.time('Find active 3');
+    Trip.findActiveAmong(1, 'America/Chicago', trips)
+    console.timeEnd('Find active 3');
+    console.time('Find active 4');
+    Trip.findActiveAmong(DAY, 'America/Chicago', trips)
+    console.timeEnd('Find active 4');
+    console.time('Find active 5');
+    Trip.findActiveAmong(DAY + 1, 'America/Chicago', trips)
+    console.timeEnd('Find active 5');
+}
+
+//main();
+
+//Route.get(['DART', '26670']).then(console.log);
+import GTFS from "./models/GTFS";
 
 const proxyBase = import.meta.env.VITE_BASE_URL + 'proxy?url=';
 const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
 
 const gtfs = new GTFS(proxyBase + encodeURIComponent(remoteGTFS));
-gtfs.download(true);*/
+gtfs.download(true);
 
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));

@@ -42,4 +42,7 @@ export default class Trip extends Entity {
         }
         return false;
     }
+    static findActiveAmong(seconds, timezone, trips) {
+        return trips.filter(trip => trip.isActiveAt(seconds, timezone));
+    }
 }

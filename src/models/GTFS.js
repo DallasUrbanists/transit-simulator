@@ -162,7 +162,7 @@ export default class GTFS {
             const latLngs = shapePoints.map(({ lon, lat }) => [lon, lat]);
             const shapeFeature = turf.lineString(latLngs);
             const lengthInFeet = turf.length(shapeFeature, { units: 'feet' });
-            this.shapes.set(shape_id, new Shape(shape_id, shapePoints, lengthInFeet));
+            this.shapes.set(shape_id, new Shape(shape_id, shapePoints, lengthInFeet, shapeFeature));
         });
         Shape.bulkSave(this.shapes);
         this.files.shapes.isDownloaded = true;
@@ -212,7 +212,6 @@ export default class GTFS {
                 }
             });
         });
-        Route.bulkSave(this.routes);
 
         console.log('postDownloadParse: assign stop times to trips');
         let counter = 0;
@@ -225,18 +224,87 @@ export default class GTFS {
             }
         });
         console.log(`postDownloadParse: assigned stops for ${counter} stops.`);
-
         console.log('postDownloadParse: for each trip, sort stop times');
         this.trips.forEach(trip => {
+            // Sort the stop times
             trip.stop_times.sort(({ stop_sequence: a }, { stop_sequence: b }) => a - b);
+
+            // Find the trip start and end times
             const firstStop = trip.stop_times[0];
             const lastStop = trip.stop_times[trip.stop_times.length - 1];
             trip.start_seconds = convert.timeStringToSeconds(firstStop.arrival_time);
             trip.end_seconds = convert.timeStringToSeconds(lastStop.departure_time);
+
+            // Match the trip timezone to the route timezone
             const route = this.routes.get(trip.route_id);
             trip.timezone = route.timezone;
+            trip.agency_id = route.agency_id;
         });
+
+        console.log('postDownloadParse: for each shape, derive segments using a sample trip');
+        this.shapes.forEach(shape => {
+            // If shape already has segments defined, then skip
+            if (shape.segments instanceof Array && shape.segments.length > 0) return;
+
+            // Begin with blank array of segments
+            shape.segments = [];
+
+            // Find one trip to use as a "sample" trip. We assume that all trips that follow the same shape have the same timepoints
+            // TO-DO: It is unknown whether this assumption causes problems. If the processing of segments can be handled in advance (i.e. via a cron job)
+            // that may justify the more time-consuming operation of analyzing every trip individually
+            const sampleTrip = this.trips.values().find(trip => trip.shape_id === shape.shape_id);
+            const timepoints = sampleTrip.stop_times.filter(stop_time => stop_time?.timepoint === '1');
+            const firstStop = sampleTrip.stop_times[0];
+            const startSeconds = convert.timeStringToSeconds(firstStop.arrival_time);
+
+            // Derive shape segments based on timepoints
+            // If there are less than 3 timepoints, then treat the entire trip as one long segment
+            if (timepoints.length < 3) {
+                const lastStop = sampleTrip.stop_times[sampleTrip.stop_times.length - 1];
+                const departSeconds = convert.timeStringToSeconds(firstStop.departure_time);
+                const endSeconds = convert.timeStringToSeconds(lastStop.arrival_time);
+                shape.segments.push({
+                    length_in_feet: shape.length_in_feet,
+                    // The segment timing will be relative to the start of the trip. So the start time of the first segment will always be 0 seconds.
+                    start_seconds: 0,
+                    // The time between `start_seconds` and `depart_seconds` is the dwell time at the stop/station when the vehicle is not moving
+                    // For most stops on most transit trips, these two values are the same (i.e. there's no planned dwell time at the station)
+                    // Dwell time is more common with major stops of intercity routes, such as Amtrak lines, when the train can sit 10-20 minutes at station
+                    depart_seconds: departSeconds - startSeconds,
+                    // Since dwell time is factored into the beginning of the segment, each segment "ends" as soon as it arrives at the next timepoint
+                    // i.e. time spent sitting at the next timepoint is not considered part of the current segment
+                    end_seconds: endSeconds - startSeconds,
+                });
+            } else {
+                // All segments have two timepoints. The ending timepoint of one segment is the starting timepoint of the next segment.
+                // Therefore, the quantity of segments equals the quantity of timepoints minus one
+                const segmentCount = timepoints.length - 1;
+                for (let i = 0; i < segmentCount; i++) {
+                    const startpoint = timepoints[i];
+                    const startstop = this.stops.get(startpoint.stop_id);
+                    const endpoint = timepoints[i+1];
+                    const endstop = this.stops.get(endpoint.stop_id);
+                    const segmentLine = turf.lineSlice(
+                        turf.point([startstop.stop_lon, startstop.stop_lat]),
+                        turf.point([endstop.stop_lon, endstop.stop_lat]),
+                        shape.asFeature()
+                    );
+                    const segmentStartSeconds = convert.timeStringToSeconds(startpoint.arrival_time);
+                    const segmentDepartSeconds = convert.timeStringToSeconds(startpoint.departure_time);
+                    const segmentEndSeconds = convert.timeStringToSeconds(endpoint.arrival_time);
+                    shape.segments.push({
+                        length_in_feet: turf.length(segmentLine, { units: 'feet' }),
+                        start_seconds: segmentStartSeconds - startSeconds,
+                        depart_seconds: segmentDepartSeconds - startSeconds,
+                        end_seconds: segmentEndSeconds - startSeconds,
+                    });
+                }
+            }
+        });
+
+        Route.bulkSave(this.routes);
         Trip.bulkSave(this.trips);
+        Shape.bulkSave(this.shapes);
         console.log(`postDownloadParse: saved ${this.trips.size} trips with stop times`);
     }
 }
