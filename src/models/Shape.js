@@ -1,7 +1,7 @@
 import Entity from "./Entity.js";
 import * as turf from "@turf/turf";
 
-Entity.defineEntityTable('shapes', 'shape_id');
+Entity.defineEntityTable('shapes', 'shape_id,agency_id');
 
 export default class Shape extends Entity {
     static TABLE = 'shapes';

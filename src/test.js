@@ -38,11 +38,10 @@ async function main() {
 //Route.get(['DART', '26670']).then(console.log);
 import GTFS from "./models/GTFS";
 
-const proxyBase = import.meta.env.VITE_BASE_URL + 'proxy?url=';
-const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
-
-const gtfs = new GTFS(proxyBase + encodeURIComponent(remoteGTFS));
-gtfs.download(true);
+const gtfs = new GTFS('https://www.dart.org/transitdata/latest/google_transit.zip');
+//gtfs.download();
+gtfs.processSegments();
+//gtfs.importFromDatabase();
 
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));

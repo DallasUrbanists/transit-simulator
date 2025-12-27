@@ -221,8 +221,9 @@ export const create = (tagName, className, attributes = {}) => {
 };
 
 export function proxyURL(url) {
-    const remoteGTFS = 'https://www.dart.org/transitdata/latest/google_transit.zip';
-    const gtfs = new GTFS('http://localhost:3000/proxy?url=' + encodeURIComponent(remoteGTFS));
+    const proxyBase = import.meta.env.VITE_BASE_URL + 'proxy?url=';
+    const proxyURL = proxyBase + encodeURIComponent(url);
+    return proxyURL;
 }
 
 const tzDiffCache = new Map();

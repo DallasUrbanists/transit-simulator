@@ -1,7 +1,7 @@
 import { convert, DAY, getTimezoneDifference } from "../misc/utilities.mjs";
 import Entity from "./Entity.js";
 
-Entity.defineEntityTable('trips', '[route_id+trip_id]');
+Entity.defineEntityTable('trips', '[route_id+trip_id],route_id,agency_id,shape_id');
 
 export default class Trip extends Entity {
     static TABLE = 'trips';

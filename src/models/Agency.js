@@ -1,6 +1,6 @@
 import Entity from "./Entity.js";
 
-Entity.defineEntityTable('agencies', 'agency_id');
+Entity.defineEntityTable('agencies', 'agency_id,gtfs_feed_url');
 
 export default class Agency extends Entity {
     static TABLE = 'agencies';

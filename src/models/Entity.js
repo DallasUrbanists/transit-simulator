@@ -13,6 +13,11 @@ export default class Entity {
         Object.assign(instance, Object.fromEntries(map));
         return instance;
     }
+    static toMap(array) {
+        return new Map(
+            array.map(instance => [instance.primaryKey(), instance])
+        );
+    }
     static async get(id) {
         const query = {};
         if (typeof this.PRIMARY_KEY === 'string') {
@@ -35,19 +40,32 @@ export default class Entity {
         const array = await db[this.TABLE].toArray();
         return array.map(data => this.fromObject(data));
     }
+    static async find(query, returnAs = 'array') {
+        const array = await db[this.TABLE].where(query).toArray();
+        const entities = array.map(data => this.fromObject(data));
+        if (returnAs === 'map') {
+            return entities.reduce((map, entity) => map.set(entity.primaryKey(), entity), new Map());
+        }
+        return entities;
+    }
+    static where(param) {
+        return db[this.TABLE].where(param);
+    }
+    primaryKey() {
+        return this[this.constructor.PRIMARY_KEY];
+    }
     onPreSave() {
         // optionally add functionality in child class
         return;
     }
     save() {
         this.onPreSave();
-        db[this.TABLE].put(this).then(() => console.log(`Successfully saved ${this.constructor.name}`));
+        db[this.constructor.TABLE].put(this);//.then(() => console.log(`Successfully saved ${this.constructor.name}`));
     }
     static bulkSave(entities) {
         if (entities instanceof Map) {
             entities = Array.from(entities.values());
         }
-        console.log(this.TABLE);
         entities.forEach(entity => entity.onPreSave());
         db[this.TABLE].bulkPut(entities).then(() => console.log(`Successfully stored ${entities.length} ${this.constructor.name}s in idb`));
     }

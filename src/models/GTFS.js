@@ -2,7 +2,7 @@ import * as turf from "@turf/turf";
 import * as zip from "@zip.js/zip.js";
 import axios from "axios";
 import { db } from "../db";
-import { convert, convertCSVToDictionary, sanitize } from "../misc/utilities.mjs";
+import { convert, convertCSVToDictionary, proxyURL, sanitize } from "../misc/utilities.mjs";
 import Route from "./Route";
 import Shape from "./Shape";
 import Trip from "./Trip";
@@ -34,7 +34,7 @@ export default class GTFS {
 
     async download(forceDownload = false) {
         console.log(`GTFS.download: starting fetch for ${this.url}`);
-        const response = await axios.get(this.url, {
+        const response = await axios.get(proxyURL(this.url), {
             responseType: 'blob',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -90,7 +90,7 @@ export default class GTFS {
                     console.error(`GTFS.download: parse error for ${filename}`, err);
                 }
                 if (this.allFilesDownloaded()) {
-                    try { await reader.close(); } catch (e) {}
+                    try { await reader.close(); } catch (e) { }
                     console.log('GTFS.download: all files downloaded, running postDownloadParse');
                     this.postDownloadParse();
                     // update metadata after successful parse/save
@@ -103,6 +103,18 @@ export default class GTFS {
         });
     }
 
+    async importFromDatabase() {
+        this.agencies = await Agency.find({ 'gtfs_feed_url': this.url }, 'map');
+        for (let agency of this.agencies.values()) {
+            this.routes = await Route.find({ 'agency_id': agency.agency_id }, 'map');
+            this.trips = await Trip.find({ 'agency_id': agency.agency_id }, 'map');
+            this.shapes = await Shape.find({ 'agency_id': agency.agency_id }, 'map');
+            this.stops = await Stop.find({ 'agency_id': agency.agency_id }, 'map');
+        }
+        console.log('imported');
+        //return Object.values(this.files).reduce((prev, curr) => prev && curr.isDownloaded, true);
+    }
+
     allFilesDownloaded() {
         return Object.values(this.files).reduce((prev, curr) => prev && curr.isDownloaded, true);
     }
@@ -110,6 +122,7 @@ export default class GTFS {
     parseAgency(text) {
         console.log('parseAgency: start');
         convertCSVToDictionary(text, 'agency_id').forEach((data, agency_id) => {
+            data.set('gtfs_feed_url', this.url);
             this.agencies.set(agency_id, Agency.fromMap(data));
         });
         Agency.bulkSave(this.agencies);
@@ -241,10 +254,28 @@ export default class GTFS {
             trip.agency_id = route.agency_id;
         });
 
-        console.log('postDownloadParse: for each shape, derive segments using a sample trip');
-        this.shapes.forEach(shape => {
+        Route.bulkSave(this.routes);
+        Trip.bulkSave(this.trips);
+        console.log(`postDownloadParse: saved ${this.trips.size} trips with stop times`);
+
+        //this.processSegmentsAlt();
+    }
+
+    processSegmentsAlt() {
+        console.log('processSegments: for each shape, derive segments using a sample trip');
+        console.time('Segment processing time');
+        const totalShapes = this.shapes.size;
+        console.log({ totalShapes });
+        let shapesProcessed = 0;
+        this.shapes.values().forEach(shape => {
             // If shape already has segments defined, then skip
-            if (shape.segments instanceof Array && shape.segments.length > 0) return;
+            if (shape.segments instanceof Array && shape.segments.length > 0) {
+                shapesProcessed += 1;
+                if (shapesProcessed >= totalShapes) {
+                    console.timeEnd('Segment processing time');
+                }
+                return;
+            }
 
             // Begin with blank array of segments
             shape.segments = [];
@@ -253,6 +284,17 @@ export default class GTFS {
             // TO-DO: It is unknown whether this assumption causes problems. If the processing of segments can be handled in advance (i.e. via a cron job)
             // that may justify the more time-consuming operation of analyzing every trip individually
             const sampleTrip = this.trips.values().find(trip => trip.shape_id === shape.shape_id);
+
+            if (!sampleTrip) {
+                console.log(`Failed to find sample trip for Shape ID ${shape.shape_id}`);
+                return;
+            }
+
+            //console.log(`Found sample trip for Shape ID ${shape.shape_id}`);
+
+            // Use sample trip to associate the agency with the shape
+            shape.agency_id = sampleTrip.agency_id;
+
             const timepoints = sampleTrip.stop_times.filter(stop_time => stop_time?.timepoint === '1');
             const firstStop = sampleTrip.stop_times[0];
             const startSeconds = convert.timeStringToSeconds(firstStop.arrival_time);
@@ -282,7 +324,7 @@ export default class GTFS {
                 for (let i = 0; i < segmentCount; i++) {
                     const startpoint = timepoints[i];
                     const startstop = this.stops.get(startpoint.stop_id);
-                    const endpoint = timepoints[i+1];
+                    const endpoint = timepoints[i + 1];
                     const endstop = this.stops.get(endpoint.stop_id);
                     const segmentLine = turf.lineSlice(
                         turf.point([startstop.stop_lon, startstop.stop_lat]),
@@ -300,12 +342,130 @@ export default class GTFS {
                     });
                 }
             }
+            shapesProcessed += 1;
+            //console.log(`${shapesProcessed} / ${totalShapes}`);
+            if (shapesProcessed >= totalShapes) {
+                console.timeEnd('Segment processing time');
+            }
         });
+    }
 
-        Route.bulkSave(this.routes);
-        Trip.bulkSave(this.trips);
-        Shape.bulkSave(this.shapes);
-        console.log(`postDownloadParse: saved ${this.trips.size} trips with stop times`);
+    processSegments() {
+        console.log('processSegments: for each shape, derive segments using a sample trip');
+        console.time('Segment processing time');
+        const processedTrips = [];
+        Shape.all().then(async (shapes) => {
+
+            // Keep track of the total shapes processed so we know when we're finished
+            const totalShapes = shapes.length;
+            const finishedShapes = new Set();
+            let shapesProcessed = 0;
+            const isFinished = () => finishedShapes.size >= totalShapes;
+            const finishShape = (shape) => {
+                finishedShapes.add(shape);
+                if (isFinished()) {
+                    console.timeEnd('Segment processing time');
+                    console.log(processedTrips);
+                }
+            };
+
+            // Keep track of the unique combinations of shapes + timepoints
+            // so that we can avoid duplicate effort when multiple trips have identical segments
+            const shapeTimepointsMap = new Map();
+            const getStpKey = ({ shape_id }, timepoints) => shape_id + '-' + timepoints.map(t => t.stop_id).join('-');
+
+            // Process
+            for (let shape of shapes) {
+                // Find all trips that use this shape ID
+                const trips = await Trip.find({ shape_id: shape.shape_id });
+
+                shapesProcessed += 1;
+                //console.log(`Processing shape ${shapesProcessed} / ${totalShapes}`);
+
+                // For each trip, calculate segments
+                for (let t = 0; t < trips.length; t++) {
+                    const trip = trips[t];
+                    //console.log(`Processing trip ${t+1} / ${trips.length}`);
+                    // Skip if this trip already has segments defined
+                    if (trip?.segments instanceof Array && trip.segments.length > 0) {
+                        //console.log(`Trip ${trip.trip_id} already has segments. Skipping.`);
+                        if (t >= trips.length - 1) finishShape(shape);
+                        continue;
+                    }
+
+                    // Get timepoints for this trip
+                    const timepoints = trip.stop_times.filter(stop_time => stop_time?.timepoint === '1');
+
+                    // Check if we already calculated segments for a near identical trip
+                    const stpKey = getStpKey(shape, timepoints);
+                    if (shapeTimepointsMap.has(stpKey)) {
+                        trip.segments = shapeTimepointsMap.get(stpKey);
+                        processedTrips.push(trip);
+                        //console.log(`Trip ${trip.trip_id} reuses past timepoints.`);
+                        if (t >= trips.length - 1) finishShape(shape);
+                        continue;
+                    }
+
+                    // Start with a blank array of segments
+                    trip.segments = [];
+
+                    // Get details about when this trip starts
+                    const firstStop = trip.stop_times[0];
+                    const startSeconds = convert.timeStringToSeconds(firstStop.arrival_time);
+
+                    // If there are less than 3 timepoints, then treat the entire trip as one long segment
+                    if (timepoints.length < 3) {
+                        //console.log(`Trip ${trip.trip_id} is one large segment.`);
+                        const lastStop = trip.stop_times[trip.stop_times.length - 1];
+                        const departSeconds = convert.timeStringToSeconds(firstStop.departure_time);
+                        const endSeconds = convert.timeStringToSeconds(lastStop.arrival_time);
+                        trip.segments.push({
+                            length_in_feet: shape.length_in_feet,
+                            // The segment timing will be relative to the start of the trip. So the start time of the first segment will always be 0 seconds.
+                            start_seconds: 0,
+                            // The time between `start_seconds` and `depart_seconds` is the dwell time at the stop/station when the vehicle is not moving
+                            // For most stops on most transit trips, these two values are the same (i.e. there's no planned dwell time at the station)
+                            // Dwell time is more common with major stops of intercity routes, such as Amtrak lines, when the train can sit 10-20 minutes at station
+                            depart_seconds: departSeconds - startSeconds,
+                            // Since dwell time is factored into the beginning of the segment, each segment "ends" as soon as it arrives at the next timepoint
+                            // i.e. time spent sitting at the next timepoint is not considered part of the current segment
+                            end_seconds: endSeconds - startSeconds,
+                        });
+                    } else {
+                        // All segments have two timepoints. The ending timepoint of one segment is the starting timepoint of the next segment.
+                        // Therefore, the quantity of segments equals the quantity of timepoints minus one
+                        const segmentCount = timepoints.length - 1;
+                        //console.log(`Trip ${trip.trip_id} has ${segmentCount} segments.`);
+                        for (let i = 0; i < segmentCount; i++) {
+                            const startpoint = timepoints[i];
+                            const startstop = await Stop.get(startpoint.stop_id);
+                            const endpoint = timepoints[i + 1];
+                            const endstop = await Stop.get(endpoint.stop_id);
+                            const segmentLine = turf.lineSlice(
+                                turf.point([startstop.stop_lon, startstop.stop_lat]),
+                                turf.point([endstop.stop_lon, endstop.stop_lat]),
+                                shape.asFeature()
+                            );
+                            const segmentStartSeconds = convert.timeStringToSeconds(startpoint.arrival_time);
+                            const segmentDepartSeconds = convert.timeStringToSeconds(startpoint.departure_time);
+                            const segmentEndSeconds = convert.timeStringToSeconds(endpoint.arrival_time);
+                            trip.segments.push({
+                                length_in_feet: turf.length(segmentLine, { units: 'feet' }),
+                                start_seconds: segmentStartSeconds - startSeconds,
+                                depart_seconds: segmentDepartSeconds - startSeconds,
+                                end_seconds: segmentEndSeconds - startSeconds,
+                            });
+                        }
+                    }
+                    // Save segments for potential reuse
+                    shapeTimepointsMap.set(stpKey, trip.segments);
+                    processedTrips.push(trip);
+
+                    //console.log(`Finished segmenting Trip ${trip.trip_id}`);
+                    if (t >= trips.length - 1) finishShape(shape);
+                }
+            };
+        });
     }
 }
 
