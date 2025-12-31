@@ -19,8 +19,13 @@ export default class Shape extends Entity {
         this.geojson = geojson;
     }
     asFeature() {
-        //console.log(this.points);
         this.feature ??= turf.lineString(this.points.map(({lon, lat}) => [lon, lat]));
         return this.feature;
+    }
+    subFeature(portion = 'front') {
+        const points = portion === 'front'
+            ? this.points.slice(0, -2)
+            : this.points.slice(2);
+        return turf.lineString(points.map(({lon, lat}) => [lon, lat]));
     }
 }

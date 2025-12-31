@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Add 3D model with source-driven interactions</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.17.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.17.0/mapbox-gl.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.1.4/dist/tweakpane.min.js"></script>
+    <div id="map"></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaGV4ZWwiLCJhIjoiY2w3ZjEyYTd2MDV0ejQwcWU3bGR4aW8ybyJ9.kcdx6xRXYsxeGEv8ub_Jqg';
+        const style = 'mapbox://styles/hexel/cmjp42xzb008s01qnh3l772ey/draft';
+        // const style = 'mapbox://styles/hexel/cmjp7tzsz002901s43iuk2xf5/draft';
+        const startPos = [-96.79964156313854, 32.78137541324938];
+
+
+        const map = (window.map = new mapboxgl.Map({
+            container: 'map',
+            devtools: true,
+            projection: 'globe',
+            style,
+            pitch: 60,
+            zoom: 19.3,
+            bearing: 45,
+            center: startPos,
+            config: {
+                basemap: {
+                    show3dObjects: true,
+                    show3dBuildings: false,
+                    show3dFacades: true,
+                    show3dLandmarks: false,
+                    show3dTrees: true,
+                }
+            },
+        }));
+
+        const vehicleURI = './public/3d/Bus2.glb'; // 'https://docs.mapbox.com/mapbox-gl-js/assets/ego_car.glb';
+
+        // Add the 3D model source and layer once the basemap style has loaded.
+        map.on('load', () => {
+            //new mapboxgl.Marker({ color: "#e11d48" }).setLngLat(startPos).addTo(map);
+
+            map.addSource('3d-model-source', {
+                type: 'model',
+                models: {
+                    'car': {
+                        'uri': vehicleURI,
+                        'position': startPos,
+                        'orientation': [0, 0, 0],
+                    }
+                }
+            });
+
+            map.addLayer({
+                id: '3d-model-layer-for-source-based-updates',
+                type: 'model',
+                source: '3d-model-source',
+                paint: {
+                    'model-scale': [1, 1, 1],
+                    'model-translation': [0, 0, 0],
+                    'model-type': 'location-indicator',
+                }
+            });
+
+            updateModelState();
+        });
+
+        const vehicleParams = {
+            rotation: 0,
+            scale: 1,
+            offsetLong: 0,
+            offsetLat: 0,
+            offsetAlt: 0,
+            doorsFrontLeft: 0.5,
+            doorsFrontRight: 0,
+            trunk: 0,
+            hood: 0,
+            brakeLights: 0,
+            color: { r: 255, g: 255, b: 255, a: 1 }
+        };
+
+        function mix(t, a, b) {
+            return b * t - a * (t - 1);
+        }
+
+        function updateModelState() {
+            const doorOpeningDegMax = 80;
+
+            // Update contents of model source
+            const modelSource = map.getSource('3d-model-source');
+            if (modelSource) {
+                const modelsSpec = {
+                    'car': {
+                        'uri': vehicleURI,
+                        'position': startPos,
+                        'orientation': [0, 0, vehicleParams.rotation],
+                        'materialOverrides': {
+                            'body': {
+                                'model-color': [
+                                    vehicleParams.color.r / 255.0,
+                                    vehicleParams.color.g / 255.0,
+                                    vehicleParams.color.b / 255.0
+                                ],
+                                'model-color-mix-intensity': 1.0
+                            },
+                            'lights_brakes': {
+                                'model-color': [0.88, 0.0, 0.0],
+                                'model-color-mix-intensity':
+                                    vehicleParams.brakeLights,
+                                'model-emissive-strength': vehicleParams.brakeLights
+                            },
+                            'lights-brakes_reverse': {
+                                'model-color': [0.88, 0.0, 0.0],
+                                'model-color-mix-intensity':
+                                    vehicleParams.brakeLights,
+                                'model-emissive-strength': vehicleParams.brakeLights
+                            },
+                            'lights_brakes_volume': {
+                                'model-color': [0.88, 0.0, 0.0],
+                                'model-color-mix-intensity': 1.0,
+                                'model-emissive-strength': 0.8,
+                                'model-opacity': vehicleParams.brakeLights
+                            },
+                            'lights-brakes_reverse_volume': {
+                                'model-color': [0.88, 0.0, 0.0],
+                                'model-color-mix-intensity': 1.0,
+                                'model-emissive-strength': 0.8,
+                                'model-opacity': vehicleParams.brakeLights
+                            }
+                        },
+                        'nodeOverrides': {
+                            'doors_front-left': {
+                                'orientation': [
+                                    0.0,
+                                    mix(
+                                        vehicleParams.doorsFrontLeft,
+                                        0,
+                                        -doorOpeningDegMax
+                                    ),
+                                    0.0
+                                ]
+                            },
+                            'doors_front-right': {
+                                'orientation': [
+                                    0.0,
+                                    mix(
+                                        vehicleParams.doorsFrontRight,
+                                        0,
+                                        doorOpeningDegMax
+                                    ),
+                                    0.0
+                                ]
+                            },
+                            'hood': {
+                                'orientation': [
+                                    mix(vehicleParams.hood, 0, 45),
+                                    0.0,
+                                    0.0
+                                ]
+                            },
+                            'trunk': {
+                                'orientation': [
+                                    mix(vehicleParams.trunk, 0, -60),
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        }
+                    }
+                };
+
+                modelSource.setModels(modelsSpec);
+                map.setPaintProperty('3d-model-layer-for-source-based-updates', 'model-scale', [
+                    vehicleParams.scale,
+                    vehicleParams.scale,
+                    vehicleParams.scale
+                ]);
+                map.setPaintProperty('3d-model-layer-for-source-based-updates', 'model-translation', [
+                    vehicleParams.offsetLong,
+                    vehicleParams.offsetLat,
+                    vehicleParams.offsetAlt
+                ]);
+            }
+        }
+
+        // Set up UI for parameters
+        {
+            // eslint-disable-next-line no-undef
+            const pane = new Tweakpane.Pane();
+
+            const carFolder = pane.addFolder({ title: 'Bus' });
+
+            carFolder
+                .addInput(vehicleParams, 'rotation', {
+                    label: 'Rotation',
+                    min: -365,
+                    max: 365,
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'scale', {
+                    label: 'Scale',
+                    min: 0.1,
+                    max: 100,
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'offsetLong', {
+                    label: 'Offset Longitude',
+                    min: -10,
+                    max: 10,
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'offsetLat', {
+                    label: 'Offset Latitude',
+                    min: -10,
+                    max: 10,
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'offsetAlt', {
+                    label: 'Offset Altitude',
+                    min: -10,
+                    max: 10,
+                })
+                .on('change', updateModelState);
+
+
+            carFolder
+                .addInput(vehicleParams, 'color', {
+                    label: 'Vehicle Color',
+                    picker: 'inline'
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'trunk', {
+                    label: 'Trunk',
+                    min: 0,
+                    max: 1.0
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'hood', {
+                    label: 'Hood',
+                    min: 0,
+                    max: 1.0
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'doorsFrontLeft', {
+                    label: 'Front Left',
+                    min: 0,
+                    max: 1.0
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'doorsFrontRight', {
+                    label: 'Front Right',
+                    min: 0,
+                    max: 1.0
+                })
+                .on('change', updateModelState);
+
+            carFolder
+                .addInput(vehicleParams, 'brakeLights', {
+                    label: 'Brake',
+                    min: 0,
+                    max: 1.0
+                })
+                .on('change', updateModelState);
+        }
+
+        map.on('load', () => {
+            updateModelState();
+        });
+    </script>
+
+</body>
+
+</html>

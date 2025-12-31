@@ -1,6 +1,9 @@
 import { DAY } from "./misc/utilities.mjs";
 import Route from "./models/Route";
 import Trip from "./models/Trip";
+import { map } from "./widgets/MapboxContext.js";
+
+
 
 // Trip.get(['26670', '8641281']).then(trip => {
 //     console.log(trip);
@@ -13,34 +16,59 @@ import Trip from "./models/Trip";
 // });
 
 async function main() {
-    console.time('DB fetch time');
-    const trips = await Trip.all();
-    console.timeEnd('DB fetch time');
-    console.time('Find active 1');
-    Trip.findActiveAmong(14761, 'America/Chicago', trips)
-    console.timeEnd('Find active 1');
-    console.time('Find active 2');
-    Trip.findActiveAmong(0, 'America/Chicago', trips)
-    console.timeEnd('Find active 2');
-    console.time('Find active 3');
-    Trip.findActiveAmong(1, 'America/Chicago', trips)
-    console.timeEnd('Find active 3');
-    console.time('Find active 4');
-    Trip.findActiveAmong(DAY, 'America/Chicago', trips)
-    console.timeEnd('Find active 4');
-    console.time('Find active 5');
-    Trip.findActiveAmong(DAY + 1, 'America/Chicago', trips)
-    console.timeEnd('Find active 5');
+    // console.time('DB fetch time');
+    // const trips = await Trip.all();
+    // console.timeEnd('DB fetch time');
+    // console.time('Find active 1');
+    // Trip.findActiveAmong(14761, 'America/Chicago', trips)
+    // console.timeEnd('Find active 1');
+    // console.time('Find active 2');
+    // Trip.findActiveAmong(0, 'America/Chicago', trips)
+    // console.timeEnd('Find active 2');
+    // console.time('Find active 3');
+    // Trip.findActiveAmong(1, 'America/Chicago', trips)
+    // console.timeEnd('Find active 3');
+    // console.time('Find active 4');
+    // Trip.findActiveAmong(DAY, 'America/Chicago', trips)
+    // console.timeEnd('Find active 4');
+    // console.time('Find active 5');
+    // Trip.findActiveAmong(DAY + 1, 'America/Chicago', trips)
+    // console.timeEnd('Find active 5');
 }
 
 //main();
 
 //Route.get(['DART', '26670']).then(console.log);
-import GTFS from "./models/GTFS";
+//import GTFS from "./models/GTFS";
 
-const gtfs = new GTFS('https://www.dart.org/transitdata/latest/google_transit.zip');
-//gtfs.download();
-gtfs.processSegments();
+// Trip.get(['26670', '8641317']).then(async (trip) => {
+//     //console.log({ start: trip.start_seconds, end: trip.end_seconds });
+
+//     // Now, re-examine segments
+//     console.log(trip.segments);
+//     // Next, add a timepoint
+//     await trip.addTimepointAtStopId('24234');
+//     // Now, re-examine segments
+//     console.log(trip.segments);
+//     // Next, remove a timepoint
+//     await trip.removeTimepointAtStopId('24234');
+//     // Now, re-examine segments
+//     console.log(trip.segments);
+//     // Test getActiveSegmentAfter()
+//     const testSeconds = [0, 150, 300, 725, 965, 1325, 2399, 2400, 2401];
+//     testSeconds.forEach(seconds => {
+//         console.log(seconds, trip.getDistanceTraveledAfter(seconds));
+//     });
+// });
+
+
+/*const gtfs = new GTFS('https://www.dart.org/transitdata/latest/google_transit.zip');
+gtfs.download();
+gtfs.processSegments();*/
+
+
+
+
 //gtfs.importFromDatabase();
 
 // console.log(getTimezoneDifference('America/Chicago', 'America/New_York'));

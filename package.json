@@ -13,6 +13,7 @@
     "leaflet-polylineoffset": "^1.1.1",
     "leaflet-rotatedmarker": "^0.2.0",
     "luxon": "^3.7.2",
+    "mapbox-gl": "^3.17.0",
     "ol": "^10.7.0",
     "papaparse": "^5.5.3"
   },

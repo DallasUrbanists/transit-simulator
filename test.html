@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>OpenLayers</title>
-    <style>
-        @import "node_modules/ol/ol.css";
-    </style>
-    <style>
-        html,
-        body,
-        #map-container {
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            font-family: sans-serif;
-        }
-
-        #year {
-            position: absolute;
-            bottom: 1em;
-            left: 1em;
-            color: white;
-            -webkit-text-stroke: 1px black;
-            font-size: 2em;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transit Simulator (EARLY ACCESS)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link id="main-stylesheet" rel="stylesheet" href="./src/styles.css" />
 </head>
 
 <body>
-    <div id="map-container"></div>
-    <div id="year"></div>
-    <script src="./src/test.js" type="module"></script>
+  <div id="viewport">
+    <div id="map"></div>
+    <div id="playback-controls">
+      <button id="play-button"><img src="./public/icons/play.svg" alt="PLAY" /></button>
+      <div id="progress-track" class="progress-track">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <button id="reset-time">Set time to now</button>
+      <button id="reset-clock-pos">Reset clock pos</button>
+      <select id="speed-select">
+        <option value="1">1x</option>
+        <option value="2">2x</option>
+        <option value="4">4x</option>
+        <option value="8">8x</option>
+        <option value="16">16x</option>
+        <option value="32">32x</option>
+        <option value="64">64x</option>
+        <option value="128">128x</option>
+        <option value="256">256x</option>
+        <option value="512">512x</option>
+        <option value="1024">1024x</option>
+        <option value="2048">2048x</option>
+      </select>
+    </div>
+  </div>
+  <script type="module" src="./src/app2.js"></script>
 </body>
 
 </html>

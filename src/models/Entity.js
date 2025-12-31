@@ -34,11 +34,21 @@ export default class Entity {
         }
         const instance = new this();
         Object.assign(instance, data);
-        return instance;
+        return instance.onPostGet();
     }
-    static async all() {
-        const array = await db[this.TABLE].toArray();
-        return array.map(data => this.fromObject(data));
+    static async all(returnAs = 'array') {
+        const objectArray = await db[this.TABLE].toArray();
+        const instanceArray = objectArray.map(data => this.fromObject(data));
+        if (returnAs === 'map') {
+            return new Map(instanceArray.map(instance => {
+                let pk = instance.primaryKey();
+                if (pk instanceof Array) {
+                    pk = pk.join('-');
+                }
+                return [pk, instance];
+            }));
+        }
+        return instanceArray;
     }
     static async find(query, returnAs = 'array') {
         const array = await db[this.TABLE].where(query).toArray();
@@ -52,11 +62,18 @@ export default class Entity {
         return db[this.TABLE].where(param);
     }
     primaryKey() {
+        if (this.constructor.PRIMARY_KEY instanceof Array) {
+            return this.constructor.PRIMARY_KEY.map(key => this[key]);
+        }
         return this[this.constructor.PRIMARY_KEY];
     }
     onPreSave() {
         // optionally add functionality in child class
         return;
+    }
+    async onPostGet() {
+        // optionally add functionality in child class
+        return this;
     }
     save() {
         this.onPreSave();

@@ -206,7 +206,7 @@ export default class GTFS {
                 stop_sequence: c('stop_sequence'),
                 arrival_time: c('arrival_time'),
                 departure_time: c('departure_time'),
-                timepoint: c('timepoint'),
+                timepoint: c('timepoint') ?? '0',
             };
         });
         this.files.stop_times.isDownloaded = true;
@@ -244,9 +244,13 @@ export default class GTFS {
 
             // Find the trip start and end times
             const firstStop = trip.stop_times[0];
-            const lastStop = trip.stop_times[trip.stop_times.length - 1];
+            const finalStop = trip.stop_times[trip.stop_times.length - 1];
             trip.start_seconds = convert.timeStringToSeconds(firstStop.arrival_time);
-            trip.end_seconds = convert.timeStringToSeconds(lastStop.departure_time);
+            trip.end_seconds = convert.timeStringToSeconds(finalStop.departure_time);
+
+            // Make sure the first and last stops are always considered timepoints
+            firstStop.timepoint = '1';
+            finalStop.timepoint = '1';
 
             // Match the trip timezone to the route timezone
             const route = this.routes.get(trip.route_id);
@@ -387,7 +391,7 @@ export default class GTFS {
                     const trip = trips[t];
                     //console.log(`Processing trip ${t+1} / ${trips.length}`);
                     // Skip if this trip already has segments defined
-                    if (trip?.segments instanceof Array && trip.segments.length > 0) {
+                    if (trip.hasSegments()) {
                         //console.log(`Trip ${trip.trip_id} already has segments. Skipping.`);
                         if (t >= trips.length - 1) finishShape(shape);
                         continue;
