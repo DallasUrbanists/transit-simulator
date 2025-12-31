@@ -9,8 +9,7 @@ export default defineConfig(({mode}) => {
     build: {
       rollupOptions: {
         input: {
-          appMain: resolve(__dirname, 'index.html'),
-          appTest: resolve(__dirname, 'test.html'),
+          appMain: resolve(__dirname, 'index.html')
         },
       },
     },
