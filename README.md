@@ -12,6 +12,14 @@ This simulator visualizes all fixed modes of transit (local bus, express bus, sh
 
 My goal with this project is to provide a visual aid for educators, advocates, policy makers, planners, content creators... anyone who ever finds themselves needing to explain anything about how public transit works. Before this tool, there were very little options for creating engaging animated visuals of public transit. The idea is that anyone can use this tool to showcase the transportation options availabe in a certain area, and use the screen-recording functionality on their smartphone or computer to produce shareable videos.
 
+## Setting up Local Development
+1. Confirm that you have node installed. `node -v`
+2. Run `npm install` to install the needed packages
+3. Visit (Maptiler.com)[https://www.maptiler.com/] to create a free account, and copy that API key.
+4. If you intend to use (Transitland)[https://www.transit.land/], they also have a free tier. Create a free account there as well.
+5. Save both the API keys to `\.env`, following the template from `.env.example`
+6. Run `npm run dev` to enable hot reloads. Now saving your changes to any file will automatically load those changes.
+
 ## Current Features
 * Play/pause based on actual transit schedules (not real-time). Press spacebar to toggle playback.
 * Click-and-drag to scrub timeline.
