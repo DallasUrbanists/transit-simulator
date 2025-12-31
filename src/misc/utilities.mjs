@@ -1,16 +1,14 @@
-const BASE_URL = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_URL) ? import.meta.env?.VITE_BASE_URL : '/';
-
 export const $ = (query, w = window) => w.document.querySelector(query);
 export const $$ = (query, w = window) => w.document.querySelectorAll(query);
 
 export function absURL(path) {
-    // If script executing in browser, extract base URL from browser location
-    if (window) {
-        const fullHost = window.location.protocol + "//" + window.location.host;
-        return (new URL(path, fullHost)).href;
-    }
-    // Otherwise (if executing from terminal), use ENV variable as base URL
-    return (new URL(path, BASE_URL)).href;
+    const basePath = import.meta.env.VITE_BASE_PATH ?? '/';
+    const host = window
+        ? window.location.protocol + "//" + window.location.host
+        : `localhost:${process.env.PORT}`
+    const url = new URL(host + basePath + path);
+    console.log(url);
+    return url.href;
 }
 
 export async function fetchText(sourceFile) {
